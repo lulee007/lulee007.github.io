@@ -14,7 +14,8 @@
 <meta property="og:site_name" content="小灰灰写代码">
 <meta property="og:description" content="前言
 之前一直都是把工作学习中的笔记写在Wiz笔记里的，当然也尝试过其他博客：Wordpress、csnd、cnblog。笔记不利于分享，wordpress之类的用起来太麻烦，最近在github上浏览学习了不少代码，也看到了不少基于github的博文，然后就搜了一下关于静态博客的资源，觉得hexo比较流行，经过google一番，找了一些教程来搭建一个个人静态博客。其间看到阮一峰的一篇博文中提到的,">
-<meta property="og:updated_time" content="2016-01-07T14:48:47.000Z">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160108-0%402x.png">
+<meta property="og:updated_time" content="2016-01-08T01:38:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac下使用Github与Hexo搭建静态博客">
 <meta name="twitter:description" content="前言
@@ -264,12 +265,46 @@
 <li>互联网的身份识别</li>
 </ol>
 </blockquote>
-<h1 id="u73AF_u5883_u642D_u5EFA"><a href="#u73AF_u5883_u642D_u5EFA" class="headerlink" title="环境搭建"></a>环境搭建</h1><p>这里主要记录自己在mac下进行博客搭建的过程，主要通过Terminal来完成</p>
+<h1 id="u73AF_u5883_u642D_u5EFA"><a href="#u73AF_u5883_u642D_u5EFA" class="headerlink" title="环境搭建"></a>环境搭建</h1><p>这里主要记录自己在mac下进行博客搭建的过程，主要通过Terminal来完成。<br>主要涉及到的hexo和github。其中hexo是基于nodejs，这里通过Terminal来安装。</p>
+<blockquote>
+<p>Installing Hexo is quite easy. However, you do need to have a couple of other things installed first:  </p>
+<ul>
+<li>Node.js  </li>
+<li>Git</li>
+</ul>
+</blockquote>
+<h2 id="u5B89_u88C5Node-js"><a href="#u5B89_u88C5Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><p>安装nodejs最佳方式是通过nvm来安装</p>
+<h3 id="u901A_u8FC7nvm_u5B89_u88C5"><a href="#u901A_u8FC7nvm_u5B89_u88C5" class="headerlink" title="通过nvm安装"></a>通过nvm安装</h3><p>通过cUrl安装nvm：<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl  http<span class="variable">s:</span>//raw.github.<span class="keyword">com</span>/creationix/nvm/master/install.<span class="keyword">sh</span> | <span class="keyword">sh</span></span><br></pre></td></tr></table></figure></p>
+<p>Once nvm is installed, restart the terminal and run the following command to install Node.js.<br>当nvm安装完成后，关闭terminal 然后再重新打开，并输入以下命令来安装Node.js:<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm <span class="keyword">install</span> <span class="number">4</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="u901A_u8FC7_u5B89_u88C5_u5305_u6765_u5B89_u88C5"><a href="#u901A_u8FC7_u5B89_u88C5_u5305_u6765_u5B89_u88C5" class="headerlink" title="通过安装包来安装"></a>通过安装包来安装</h3><p>直接在<a href="http://nodejs.org/" target="_blank" rel="external">官网</a>下载并运行<a href="https://nodejs.org/dist/v5.4.0/node-v5.4.0.pkg" target="_blank" rel="external">安装包v5.4.0 Stable</a></p>
+<h2 id="u5B89_u88C5Hexo"><a href="#u5B89_u88C5Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>当Node.js安装完成后，这时就可以通过npm来安装hexo了：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> -<span class="keyword">g</span> hexo-cli</span></span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>You may encounter some problems when compiling. Please install Xcode from App Store first. After Xcode is installed, open Xcode and go to Preferences -&gt; Download -&gt; Command Line Tools -&gt; Install to install command line tools.  </p>
+</blockquote>
+<p>如果在安装过程中编译出现了问题，请先从App Store安装Xcode，安装完Xcode后打开Xcode打开菜单栏 Preferences -&gt; Download -&gt; Command Line Tools -&gt; Install来安装xcode命令行工具。<br>或者直接通过命令行进行安装：<br><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcode-<span class="built_in">select</span> <span class="comment">--install</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="Hexo_u521D_u59CB_u5316_u914D_u7F6E"><a href="#Hexo_u521D_u59CB_u5316_u914D_u7F6E" class="headerlink" title="Hexo初始化配置"></a>Hexo初始化配置</h2><p>这里参考了:  </p>
+<ul>
+<li>wsgzao的<a href="http://wsgzao.github.io/post/hexo-guide/" target="_blank" rel="external">使用GitHub和Hexo搭建免费静态Blog</a>  </li>
+<li>zipperary的<a href="http://zipperary.com/2013/05/29/hexo-guide-3/" target="_blank" rel="external">hexo系列教程</a></li>
+</ul>
+<h3 id="u521D_u59CB_u5316hexo"><a href="#u521D_u59CB_u5316hexo" class="headerlink" title="初始化hexo"></a>初始化hexo</h3><p>在Terminal里切换到一个空的目录下，我们将用来初始化hexo，假设我们选择的目录是<code>hexo</code><br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将会在我们的`hexo`目录下生成一个新的文件夹`blog`</span></span><br><span class="line">hexo init blog</span><br><span class="line"><span class="comment"># 切换到新生成的blog目录下</span></span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line"><span class="comment"># 安装hexo的依赖项</span></span><br><span class="line">hexo install</span><br></pre></td></tr></table></figure></p>
+<p>最终会得到以下的目录结构<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── scripts</span><br><span class="line">├── source</span><br><span class="line"><span class="string">|      ├── _drafts</span></span><br><span class="line"><span class="string">|      └── _posts</span></span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure></p>
+<h3 id="u672C_u5730_u67E5_u770B"><a href="#u672C_u5730_u67E5_u770B" class="headerlink" title="本地查看"></a>本地查看</h3><p>现在我们已经搭建起本地的hexo博客了，在我们的<code>blog</code>目录下执行以下命令，然后到浏览器输入<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> 看看效果。<br><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">hexo <span class="keyword">server</span></span><br></pre></td></tr></table></figure></p>
+<p>至此我们的本地博客就搭建好了。</p>
+<h2 id="u521B_u5EFA_u4E00_u4E2AGithub_Repository"><a href="#u521B_u5EFA_u4E00_u4E2AGithub_Repository" class="headerlink" title="创建一个Github Repository"></a>创建一个Github Repository</h2><p>在自己Github主页右下角，创建一个新的repository。比如我的Github账号是<code>lulee007</code>，那么我应该创建的repository名字应该是<code>lulee.github.io</code>。</p>
 <h2 id="u914D_u7F6EGithu_SSH_keys"><a href="#u914D_u7F6EGithu_SSH_keys" class="headerlink" title="配置Githu SSH keys"></a>配置Githu SSH keys</h2><p>因为目前已经在使用Github,而且注册也比较简单，也可以参考：<a href="http://pchou.info/web-build/2013/01/03/build-github-blog-page-01.html" target="_blank" rel="external">一步步在GitHub上创建博客主页 全系列</a>by pchou，所以直接说一下SSH keys的配置。</p>
 <blockquote>
 <p>SSH keys are a way to identify trusted computers, without involving passwords.</p>
 </blockquote>
 <p>利用ssh keys 可以直接和github建立链接而不必每次pull request都输入用户名密码。<br>有英语阅读能力的直接参考官方的<a href="https://help.github.com/articles/generating-ssh-keys/" target="_blank" rel="external">Generating SSH keys</a>。里面讲的很详细，包括如何利用已有的ssh keys，加入到github上。</p>
+<h2 id="u90E8_u7F72"><a href="#u90E8_u7F72" class="headerlink" title="部署"></a>部署</h2><h3 id="u4FEE_u6539Hexo_u7684_config-yml_u90E8_u7F72_u5230github_u4E0A"><a href="#u4FEE_u6539Hexo_u7684_config-yml_u90E8_u7F72_u5230github_u4E0A" class="headerlink" title="修改Hexo的_config.yml部署到github上"></a>修改Hexo的<code>_config.yml</code>部署到github上</h3><p><code>_config.yml</code>在<code>blog</code>目录下，要把下面的<code>lulee007</code>都换成你的账号名：<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: git</span><br><span class="line">  <span class="attribute">repository</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:lulee007/lulee007.github.io.git</span><br><span class="line">  <span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure></p>
+<p><strong><em>注意：</em></strong> 每个冒号后面都要有一个空格<br><code>repository</code> 这个链接也可以直接在github上复制：<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160108-0%402x.png" alt="copyssh"></p>
+<h3 id="u5B89_u88C5git_u63D2_u4EF6_u5230hexo_u4E2D"><a href="#u5B89_u88C5git_u63D2_u4EF6_u5230hexo_u4E2D" class="headerlink" title="安装git插件到hexo中"></a>安装git插件到hexo中</h3><p>由于默认hexo没有没安装此插件，所以得手动安装<br>在Terminal中在<code>blog</code>目录下输入：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> hexo-deployer-git <span class="comment">--save</span></span></span><br></pre></td></tr></table></figure></p>
+<p>这样就安装好了git插件了，配合上面的配置，很方便就能把博客部署到github上。</p>
+<h3 id="u90E8_u7F72_u5230github"><a href="#u90E8_u7F72_u5230github" class="headerlink" title="部署到github"></a>部署到github</h3><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">hexo</span> generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<p><strong><em>注意：</em></strong>每次修改文章后，都需要执行：  </p>
+<pre><code>hexo generate
+</code></pre><p>这样才能把修改后的文章重新生成静态网页。<br>最后：<br>在浏览器访问zippera.github.io就能看到你的成就了</p>
 
       
     </div>
