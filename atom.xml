@@ -4,7 +4,7 @@
   <subtitle><![CDATA[码农，程序猿]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://lulee007.github.io/"/>
-  <updated>2016-01-08T04:20:45.000Z</updated>
+  <updated>2016-01-09T06:17:17.000Z</updated>
   <id>http://lulee007.github.io/</id>
   
   <author>
@@ -15,11 +15,173 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[Hexo常用命令笔记]]></title>
+    <link href="http://lulee007.github.io/2016/01/09/Hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0/"/>
+    <id>http://lulee007.github.io/2016/01/09/Hexo常用命令笔记/</id>
+    <published>2016-01-09T04:20:23.000Z</published>
+    <updated>2016-01-09T06:17:17.000Z</updated>
+    <content type="html"><![CDATA[<p>参考：<a href="http://segmentfault.com/a/1190000002632530" target="_blank" rel="external">http://segmentfault.com/a/1190000002632530</a></p>
+<h2 id="hexo_u5B89_u88C5_u5347_u7EA7"><a href="#hexo_u5B89_u88C5_u5347_u7EA7" class="headerlink" title="hexo安装升级"></a>hexo安装升级</h2><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">npm</span> install hexo -g <span class="comment">#安装  </span></span><br><span class="line"><span class="built_in">npm</span> update hexo -g <span class="comment">#升级  </span></span><br><span class="line">hexo init <span class="comment">#初始化</span></span><br></pre></td></tr></table></figure>
+<h2 id="u5E38_u7528_u7B80_u5199"><a href="#u5E38_u7528_u7B80_u5199" class="headerlink" title="常用简写"></a>常用简写</h2><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo n <span class="string">"我的博客"</span> == hexo <span class="keyword">new</span> <span class="string">"我的博客"</span> <span class="preprocessor">#新建文章</span></span><br><span class="line">hexo p == hexo publish</span><br><span class="line">hexo g == hexo generate<span class="preprocessor">#生成</span></span><br><span class="line">hexo s == hexo <span class="keyword">server</span> <span class="preprocessor">#启动服务预览</span></span><br><span class="line">hexo d == hexo deploy<span class="preprocessor">#部署</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="u542F_u52A8_u672C_u5730_u670D_u52A1"><a href="#u542F_u52A8_u672C_u5730_u670D_u52A1" class="headerlink" title="启动本地服务"></a>启动本地服务</h2><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">server</span> <span class="preprocessor">#Hexo #会监视文件变动并自动更新，您无须重启服务器。</span></span><br><span class="line">hexo <span class="keyword">server</span> -s <span class="preprocessor">#静态模式</span></span><br><span class="line">hexo <span class="keyword">server</span> -p <span class="number">5000</span> <span class="preprocessor">#更改端口</span></span><br><span class="line">hexo <span class="keyword">server</span> -i <span class="number">192.168</span><span class="number">.1</span><span class="number">.1</span> <span class="preprocessor">#自定义 IP</span></span><br></pre></td></tr></table></figure>
+<h2 id="u76D1_u89C6_u6587_u4EF6_u53D8_u52A8"><a href="#u76D1_u89C6_u6587_u4EF6_u53D8_u52A8" class="headerlink" title="监视文件变动"></a>监视文件变动</h2><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">hexo</span> generate <span class="comment">#使用 Hexo 生成静态文件快速而且简单</span></span><br><span class="line">hexo generate --watch <span class="comment">#监视文件变动</span></span><br><span class="line">hexo clean <span class="comment">#清除缓存 网页正常情况下可以忽略此条命令</span></span><br></pre></td></tr></table></figure>
+<h2 id="u90E8_u7F72"><a href="#u90E8_u7F72" class="headerlink" title="部署"></a>部署</h2><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#两个命令的作用是相同的</span><br><span class="line">hexo <span class="keyword">generate</span> --deploy</span><br><span class="line">hexo deploy --<span class="keyword">generate</span></span><br><span class="line">hexo deploy -<span class="keyword">g</span></span><br><span class="line">hexo server -<span class="keyword">g</span></span><br></pre></td></tr></table></figure>
+<h2 id="u8349_u7A3F"><a href="#u8349_u7A3F" class="headerlink" title="草稿"></a>草稿</h2><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># 新建草稿</span></span><br><span class="line">hexo <span class="keyword">new</span> draft &lt;title&gt;</span><br><span class="line"><span class="preprocessor"># 发布草稿为post</span></span><br><span class="line">hexo publish draft &lt;title&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="u6A21_u7248"><a href="#u6A21_u7248" class="headerlink" title="模版"></a>模版</h2><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> <span class="string">"postName"</span> <span class="preprocessor">#新建文章</span></span><br><span class="line">hexo <span class="keyword">new</span> page <span class="string">"pageName"</span> <span class="preprocessor">#新建页面</span></span><br><span class="line">hexo generate <span class="preprocessor">#生成静态页面至public目录</span></span><br><span class="line">hexo <span class="keyword">server</span> <span class="preprocessor">#开启预览访问端口（默认端口4000，'ctrl + c'关闭server）</span></span><br><span class="line">hexo deploy <span class="preprocessor">#将.deploy目录部署到GitHub</span></span><br><span class="line"></span><br><span class="line">hexo <span class="keyword">new</span> [layout] &lt;title&gt;</span><br><span class="line">hexo <span class="keyword">new</span> photo <span class="string">"My Gallery"</span></span><br><span class="line">hexo <span class="keyword">new</span> <span class="string">"Hello World"</span> --lang tw</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>layout</td>
+<td>布局</td>
+</tr>
+<tr>
+<td>title</td>
+<td>标题</td>
+</tr>
+<tr>
+<td>date</td>
+<td>文件建立日期</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">title</span>: <span class="string">使用Hexo搭建个人博客</span></span><br><span class="line"><span class="attribute">layout</span>: <span class="string">post</span></span><br><span class="line"><span class="attribute">date</span>: <span class="string">2014-03-03 19:07:43</span></span><br><span class="line"><span class="attribute">comments</span>: <span class="string">true</span></span><br><span class="line"><span class="attribute">categories</span>: <span class="string">Blog</span></span><br><span class="line"><span class="attribute">tags</span>: <span class="string">[Hexo]</span></span><br><span class="line"><span class="attribute">keywords</span>: <span class="string">Hexo, Blog</span></span><br><span class="line"><span class="attribute">description</span>: <span class="string">生命在于折腾，又把博客折腾到Hexo了。给Hexo点赞。</span></span><br></pre></td></tr></table></figure>
+<h2 id="u6A21_u7248_uFF08Scaffold_uFF09"><a href="#u6A21_u7248_uFF08Scaffold_uFF09" class="headerlink" title="模版（Scaffold）"></a>模版（Scaffold）</h2><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> photo <span class="string">"My Gallery"</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>layout</td>
+<td>布局</td>
+</tr>
+<tr>
+<td>title</td>
+<td>标题</td>
+</tr>
+<tr>
+<td>date</td>
+<td>文件建立日期</td>
+</tr>
+</tbody>
+</table>
+<h2 id="u8BBE_u7F6E_u6587_u7AE0_u6458_u8981"><a href="#u8BBE_u7F6E_u6587_u7AE0_u6458_u8981" class="headerlink" title="设置文章摘要"></a>设置文章摘要</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#以上是文章摘要</span><br><span class="line"><span class="comment">&lt;!--more--&gt;</span></span><br><span class="line">#以下是余下全文</span><br></pre></td></tr></table></figure>
+<h2 id="u5199_u4F5C"><a href="#u5199_u4F5C" class="headerlink" title="写作"></a>写作</h2><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="built_in">new</span> page &lt;title&gt;</span><br><span class="line">hexo <span class="built_in">new</span> <span class="built_in">post</span> &lt;title&gt;</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>:title</td>
+<td>标题</td>
+</tr>
+<tr>
+<td>:year</td>
+<td>建立的年份（4 位数）</td>
+</tr>
+<tr>
+<td>:month</td>
+<td>建立的月份（2 位数）</td>
+</tr>
+<tr>
+<td>:i_month</td>
+<td>建立的月份（去掉开头的零）</td>
+</tr>
+<tr>
+<td>:day</td>
+<td>建立的日期（2 位数）</td>
+</tr>
+<tr>
+<td>:i_day</td>
+<td>建立的日期（去掉开头的零）</td>
+</tr>
+</tbody>
+</table>
+<h2 id="u63A8_u9001_u5230_u670D_u52A1_u5668_u4E0A"><a href="#u63A8_u9001_u5230_u670D_u52A1_u5668_u4E0A" class="headerlink" title="推送到服务器上"></a>推送到服务器上</h2><p>一般步骤：<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">n</span> #写文章</span><br><span class="line">hexo <span class="keyword">g</span> #生成</span><br><span class="line">hexo <span class="keyword">d</span> #部署 #可与hexo <span class="keyword">g</span>合并为 hexo <span class="keyword">d</span> -<span class="keyword">g</span></span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>参考：<a href="http://segmentfault.com/a/1190000002632530">http://segmentfault.com/a/1190000002632530</a></p>
+<h2 id="hexo_u5B89_u88C5_u5347_u7EA7"><a href="#hexo_u5B89_u88C5_u5347_u7EA7" class="headerlink" title="hexo安装升级"></a>hexo安装升级</h2><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">npm</span> install hexo -g <span class="comment">#安装  </span></span><br><span class="line"><span class="built_in">npm</span> update hexo -g <span class="comment">#升级  </span></span><br><span class="line">hexo init <span class="comment">#初始化</span></span><br></pre></td></tr></table></figure>
+<h2 id="u5E38_u7528_u7B80_u5199"><a href="#u5E38_u7528_u7B80_u5199" class="headerlink" title="常用简写"></a>常用简写</h2><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo n <span class="string">"我的博客"</span> == hexo <span class="keyword">new</span> <span class="string">"我的博客"</span> <span class="preprocessor">#新建文章</span></span><br><span class="line">hexo p == hexo publish</span><br><span class="line">hexo g == hexo generate<span class="preprocessor">#生成</span></span><br><span class="line">hexo s == hexo <span class="keyword">server</span> <span class="preprocessor">#启动服务预览</span></span><br><span class="line">hexo d == hexo deploy<span class="preprocessor">#部署</span></span><br></pre></td></tr></table></figure>]]>
+    
+    </summary>
+    
+      <category term="Hexo" scheme="http://lulee007.github.io/tags/Hexo/"/>
+    
+      <category term="命令" scheme="http://lulee007.github.io/tags/%E5%91%BD%E4%BB%A4/"/>
+    
+      <category term="笔记" scheme="http://lulee007.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Hexo博客优化配置]]></title>
+    <link href="http://lulee007.github.io/2016/01/08/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E9%85%8D%E7%BD%AE/"/>
+    <id>http://lulee007.github.io/2016/01/08/Hexo博客优化配置/</id>
+    <published>2016-01-08T04:13:10.000Z</published>
+    <updated>2016-01-09T06:27:14.000Z</updated>
+    <content type="html"><![CDATA[<h3 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h3><p>记录一下搭建此博客期间的做的优化配置：</p>
+<ul>
+<li>语言配置</li>
+<li>访问统计</li>
+<li>分享</li>
+<li>评论</li>
+<li>Rss<a id="more"></a>
+<h3 id="u8BED_u8A00_u914D_u7F6E"><a href="#u8BED_u8A00_u914D_u7F6E" class="headerlink" title="语言配置"></a>语言配置</h3><code>_config.yml</code>中的<code>language</code>要配置为选定的主题<code>yilia</code>文件夹下的<code>language</code>目录下的文件，如：<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">language</span>: <span class="string">zh-Hans</span></span><br><span class="line"><span class="attribute">language</span>: <span class="string">en</span></span><br><span class="line"><span class="attribute">language</span>: <span class="string">zh-hk</span></span><br><span class="line"><span class="attribute">language</span>: <span class="string">zh-tw</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="u535A_u5BA2_u8BBF_u95EE_u7EDF_u8BA1"><a href="#u535A_u5BA2_u8BBF_u95EE_u7EDF_u8BA1" class="headerlink" title="博客访问统计"></a>博客访问统计</h3><h4 id="u4E0D_u849C_u5B50_u7EDF_u8BA1_u663E_u793A"><a href="#u4E0D_u849C_u5B50_u7EDF_u8BA1_u663E_u793A" class="headerlink" title="不蒜子统计显示"></a>不蒜子统计显示</h4><p>添加站点统计配置为<a href="http://busuanzi.ibruce.info/" target="_blank" rel="external">不蒜子</a>统计，并且可开关<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">busuanzi:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="u767E_u5EA6_u7EDF_u8BA1"><a href="#u767E_u5EA6_u7EDF_u8BA1" class="headerlink" title="百度统计"></a>百度统计</h4><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">baidu_tongji:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<h3 id="u5206_u4EAB"><a href="#u5206_u4EAB" class="headerlink" title="分享"></a>分享</h3><p>配置自己的分享</p>
+<h4 id="u56FD_u5185_u7684jiathis"><a href="#u56FD_u5185_u7684jiathis" class="headerlink" title="国内的jiathis"></a>国内的jiathis</h4><p>将<code>themes/yilia/_partial/share_jia.ejs</code>中的内容替换为：<br><figure class="highlight erb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"jiathis_style"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"jiathis_txt"</span>&gt;</span></span>&lt;%=<span class="ruby"> _<span class="number">_</span>(<span class="string">'post.share'</span>) </span>%&gt;<span class="xml">: &amp;nbsp; <span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"jiathis_button_weixin"</span>&gt;</span>微信<span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"jiathis_button_cqq"</span>&gt;</span>QQ好友<span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"jiathis_button_qzone"</span>&gt;</span>QQ空间<span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"jiathis_button_tsina"</span>&gt;</span>新浪微博<span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"http://www.jiathis.com/share?uid=2080230"</span> <span class="attribute">class</span>=<span class="value">"jiathis jiathis_txt jiathis_separator jtico jtico_jiathis"</span> <span class="attribute">target</span>=<span class="value">"_blank"</span>&gt;</span>更多<span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"jiathis_counter_style"</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"http://v3.jiathis.com/code/jia.js?uid=2080230"</span> <span class="attribute">charset</span>=<span class="value">"utf-8"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>
+<p>其中<code>uid</code>为自己在<a href="/www.jiathis.com">jiathis</a>注册的<code>uid</code></p>
+<h4 id="u56FD_u5916_u7684addthis"><a href="#u56FD_u5916_u7684addthis" class="headerlink" title="国外的addthis"></a>国外的addthis</h4><p>将<code>themes/yilia/_partial/share_jia.ejs</code>中的内容替换为：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Go to www.addthis.com/dashboard to customize your tools --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"addthis_sharing_toolbox"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-568f54bcfd6a7b04"</span> <span class="attribute">async</span>=<span class="value">"async"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>其中<code>pubid</code>为在<a href="https://www.addthis.com/" target="_blank" rel="external">addthis</a>自己注册的<code>pubid</code></p>
+<h3 id="u8BC4_u8BBA"><a href="#u8BC4_u8BBA" class="headerlink" title="评论"></a>评论</h3><p>配置多说<br>注册登录<a href="http://duoshuo.com/" target="_blank" rel="external">多说</a>点击进入后台管理，然后添加一个新的站点，<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20160108-1%402x.png" alt="addproject"></p>
+<p>记住其中的shotname</p>
+<p><img src="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20160108-3%402x.png" alt="filldetail"><br>然后填写到<code>themes/yilia/_config.yml</code>的<code>duoshuo: lulee007blog</code>即可。</p>
+<h3 id="Rss"><a href="#Rss" class="headerlink" title="Rss"></a>Rss</h3><p>添加Rss，需要先安装rss生成模块：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> hexo-generator-feed <span class="comment">--save</span></span></span><br></pre></td></tr></table></figure></p>
+<p>然后在<code>themes/yilia/_config.yml</code>开启rss<br><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">rss</span>: <span class="string">/atom.xml</span></span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h3><p>记录一下搭建此博客期间的做的优化配置：</p>
+<ul>
+<li>语言配置</li>
+<li>访问统计</li>
+<li>分享</li>
+<li>评论</li>
+<li>Rss]]>
+    
+    </summary>
+    
+      <category term="Hexo" scheme="http://lulee007.github.io/tags/Hexo/"/>
+    
+      <category term="配置" scheme="http://lulee007.github.io/tags/%E9%85%8D%E7%BD%AE/"/>
+    
+      <category term="笔记" scheme="http://lulee007.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[Mac下使用Github与Hexo搭建静态博客]]></title>
     <link href="http://lulee007.github.io/2016/01/07/Mac%E4%B8%8B%E4%BD%BF%E7%94%A8Github%E4%B8%8EHexo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/"/>
     <id>http://lulee007.github.io/2016/01/07/Mac下使用Github与Hexo搭建静态博客/</id>
     <published>2016-01-07T11:55:30.000Z</published>
-    <updated>2016-01-08T04:20:45.000Z</updated>
+    <updated>2016-01-09T04:15:05.000Z</updated>
     <content type="html"><![CDATA[<h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>之前一直都是把工作学习中的笔记写在<code>Wiz笔记</code>里的，当然也尝试过其他博客：<code>Wordpress</code>、<code>csnd</code>、<code>cnblog</code>。笔记不利于分享，wordpress之类的用起来太麻烦，最近在github上浏览学习了不少代码，也看到了不少基于github的博文，然后就搜了一下关于静态博客的资源，觉得hexo比较流行，经过google一番，找了一些教程来搭建一个个人静态博客。<br>其间看到阮一峰的一篇<a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html" target="_blank" rel="external">博文</a>中提到的,喜欢写Blog的人会经历三个阶段:</p>
 <blockquote>
 <p>第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。<br>第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。<br>第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。</p>
@@ -116,7 +278,7 @@
     
       <category term="Mac" scheme="http://lulee007.github.io/tags/Mac/"/>
     
-      <category term="blog" scheme="http://lulee007.github.io/categories/blog/"/>
+      <category term="笔记" scheme="http://lulee007.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
