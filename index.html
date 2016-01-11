@@ -22,6 +22,7 @@
     <link rel="icon" href="/favicon.png">
   
   <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <meta name="baidu-site-verification" content="0h1O00seDi" />
 </head>
 
 <body>
@@ -114,7 +115,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tagsCN/Github/" style="font-size: 10px;">Github</a> <a href="/tagsCN/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tagsCN/Mac/" style="font-size: 10px;">Mac</a> <a href="/tagsCN/命令/" style="font-size: 10px;">命令</a> <a href="/tagsCN/配置/" style="font-size: 10px;">配置</a>
+						<a href="/tagsCN/Android-Studio/" style="font-size: 15px;">Android Studio</a> <a href="/tagsCN/Cent-OS/" style="font-size: 10px;">Cent OS</a> <a href="/tagsCN/Countly-Web-Server/" style="font-size: 10px;">Countly Web Server</a> <a href="/tagsCN/Github/" style="font-size: 10px;">Github</a> <a href="/tagsCN/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tagsCN/Instrumentation/" style="font-size: 10px;">Instrumentation</a> <a href="/tagsCN/Mac/" style="font-size: 20px;">Mac</a> <a href="/tagsCN/SVN/" style="font-size: 10px;">SVN</a> <a href="/tagsCN/Subversion/" style="font-size: 10px;">Subversion</a> <a href="/tagsCN/Unit-Test/" style="font-size: 10px;">Unit Test</a> <a href="/tagsCN/单元测试/" style="font-size: 10px;">单元测试</a> <a href="/tagsCN/命令/" style="font-size: 10px;">命令</a> <a href="/tagsCN/配置/" style="font-size: 10px;">配置</a>
 					</div>
 				</section>
 				
@@ -192,6 +193,61 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-2016年度计划" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/01/10/2016年度计划/" class="article-date">
+  	<time datetime="2016-01-10T13:45:22.000Z" itemprop="datePublished">2016-01-10</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/01/10/2016年度计划/">2016年度计划</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>自从毕业后到现在2年半了的时间了，感觉一直忙忙碌碌的工作、生活，从来都没有进行过年度规划。从学校到工作，接触到了很多东西：<br>C# PHP（Yii框架，ThinkPhp），Mongodb，Arcgis，ArcEngine，Android，Web，SSM，iOS，Windows Phone，Python，Html5 Hybrid App 。<br>看得很多，总结的很少。<br>最近正着手把之前在工作学习中的记下来笔记整理一下，也是对工作学习到现在的一个『交代』。新年伊始，已经过去了三十六分之一左右了，得约束下自己，先给自己列一个计划。<br>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/01/10/2016年度计划/#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+<div class="share">
+  
+
+  
+</div>
+
+
+
   
     <article id="post-Hexo常用命令笔记" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -457,6 +513,200 @@
       
       
 
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+<div class="share">
+  
+
+  
+</div>
+
+
+
+  
+    <article id="post-Mac下AndroidStudio与Subversion集成的问题" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/06/28/Mac下AndroidStudio与Subversion集成的问题/" class="article-date">
+  	<time datetime="2015-06-28T12:35:17.000Z" itemprop="datePublished">2015-06-28</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/06/28/Mac下AndroidStudio与Subversion集成的问题/">Mac下Android Studio与Subversion集成的问题</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>由于Mac10.10下的subversion版本是1.7，而使用smartsvn8.6 <code>checkout</code>版本提示需要<code>upgrade to 1.8</code><br>这样一来，使得android studio import 进来的svn项目无法使用集成好的subversion进行管理了，会出现如下错误：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">svn: E155021: This client is too old to work  </span><br><span class="line">with the working copy at xxx (format <span class="string">'31'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>进过一番搜索得到的解决方法记录如下：<br>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Android-Studio/">Android Studio</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Mac/">Mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/SVN/">SVN</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Subversion/">Subversion</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/笔记/">笔记</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/06/28/Mac下AndroidStudio与Subversion集成的问题/#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+<div class="share">
+  
+
+  
+</div>
+
+
+
+  
+    <article id="post-Mac10-10-3下AndroidStudio单元测试——instrumentation" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/06/21/Mac10-10-3下AndroidStudio单元测试——instrumentation/" class="article-date">
+  	<time datetime="2015-06-21T11:45:37.000Z" itemprop="datePublished">2015-06-21</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/06/21/Mac10-10-3下AndroidStudio单元测试——instrumentation/">Mac10.10.3下AndroidStudio单元测试——instrumentation</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>测试环境：</p>
+<ul>
+<li>Android Studio 1.2.2</li>
+<li>Mac OS 10.10.3</li>
+</ul>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Android-Studio/">Android Studio</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Instrumentation/">Instrumentation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Mac/">Mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Unit-Test/">Unit Test</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/单元测试/">单元测试</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/笔记/">笔记</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/06/21/Mac10-10-3下AndroidStudio单元测试——instrumentation/#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+<div class="share">
+  
+
+  
+</div>
+
+
+
+  
+    <article id="post-CentOS5-5下安装Countly-Web-Server过程记录" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/06/12/CentOS5-5下安装Countly-Web-Server过程记录/" class="article-date">
+  	<time datetime="2015-06-12T13:57:12.000Z" itemprop="datePublished">2015-06-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/06/12/CentOS5-5下安装Countly-Web-Server过程记录/">CentOS5.5下安装Countly-Web-Server过程记录</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>由于工作需要，需要在CentOS 5.5 下安装Countly Web Server，把过程记录下来</p>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Cent-OS/">Cent OS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Countly-Web-Server/">Countly Web Server</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/笔记/">笔记</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/06/12/CentOS5-5下安装Countly-Web-Server过程记录/#more">阅读全文 >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>

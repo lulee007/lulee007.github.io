@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>CentOS5.5下安装Countly-Web-Server过程记录 | 小灰灰写代码</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="前言由于工作需要，需要在CentOS 5.5 下安装Countly Web Server，把过程记录下来">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CentOS5.5下安装Countly-Web-Server过程记录">
+<meta property="og:url" content="http://lulee007.github.io/2015/06/12/CentOS5-5下安装Countly-Web-Server过程记录/index.html">
+<meta property="og:site_name" content="小灰灰写代码">
+<meta property="og:description" content="前言由于工作需要，需要在CentOS 5.5 下安装Countly Web Server，把过程记录下来">
+<meta property="og:updated_time" content="2016-01-11T13:03:02.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CentOS5.5下安装Countly-Web-Server过程记录">
+<meta name="twitter:description" content="前言由于工作需要，需要在CentOS 5.5 下安装Countly Web Server，把过程记录下来">
+  
+    <link rel="alternative" href="/atom.xml" title="小灰灰写代码" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <meta name="baidu-site-verification" content="0h1O00seDi" />
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xjzst.com1.z0.glb.clouddn.com/blog/pic/avatar/1.pic_hd.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Lulee007</a></h1>
+		</hgroup>
+		
+		<p class="header-subtitle">码农，程序猿</p>
+		
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/lulee007/" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/lulee007/" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+					        
+								<a class="mail" target="_blank" href="mailto:lulee007@live.com" title="mail">mail</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tagsCN/Android-Studio/" style="font-size: 15px;">Android Studio</a> <a href="/tagsCN/Cent-OS/" style="font-size: 10px;">Cent OS</a> <a href="/tagsCN/Countly-Web-Server/" style="font-size: 10px;">Countly Web Server</a> <a href="/tagsCN/Github/" style="font-size: 10px;">Github</a> <a href="/tagsCN/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tagsCN/Instrumentation/" style="font-size: 10px;">Instrumentation</a> <a href="/tagsCN/Mac/" style="font-size: 20px;">Mac</a> <a href="/tagsCN/SVN/" style="font-size: 10px;">SVN</a> <a href="/tagsCN/Subversion/" style="font-size: 10px;">Subversion</a> <a href="/tagsCN/Unit-Test/" style="font-size: 10px;">Unit Test</a> <a href="/tagsCN/单元测试/" style="font-size: 10px;">单元测试</a> <a href="/tagsCN/命令/" style="font-size: 10px;">命令</a> <a href="/tagsCN/配置/" style="font-size: 10px;">配置</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://devswl.gitcafe.io/">SunBlog</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的火火…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    
+      <a id="fork_me_on_github" href="https://github.com/lulee007"><img style="position: fixed; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/c6286ade715e9bea433b4705870de482a654f78a/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_white_ffffff.png"></a>
+    
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Lulee007</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://7xjzst.com1.z0.glb.clouddn.com/blog/pic/avatar/1.pic_hd.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Lulee007</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">码农，程序猿</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/lulee007/" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/lulee007/" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+			        
+						<a class="mail" target="_blank" href="mailto:lulee007@live.com" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-CentOS5-5下安装Countly-Web-Server过程记录" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/06/12/CentOS5-5下安装Countly-Web-Server过程记录/" class="article-date">
+  	<time datetime="2015-06-12T13:57:12.000Z" itemprop="datePublished">2015-06-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      CentOS5.5下安装Countly-Web-Server过程记录
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Cent-OS/">Cent OS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Countly-Web-Server/">Countly Web Server</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/笔记/">笔记</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+                      
+            <div id="toc" class="article-toc">
+            <h2>目录</h2>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u524D_u8A00"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-__u7CFB_u7EDF_u66F4_u65B0_u4E0E_u4E2D_u6587_u8BED_u8A00_u5305_u5B89_u88C5"><span class="toc-number">2.</span> <span class="toc-text">1. 系统更新与中文语言包安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-__u57FA_u672C_u73AF_u5883_u914D_u7F6E_uFF1A"><span class="toc-number">3.</span> <span class="toc-text">2. 基本环境配置：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-_NodeJS_u5B89_u88C5"><span class="toc-number">3.1.</span> <span class="toc-text">2.1. NodeJS安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2_Ngnix_u5B89_u88C5"><span class="toc-number">3.2.</span> <span class="toc-text">2.2 Ngnix安装</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-__u914D_u7F6E_u670D_u52A1_u81EA_u542F_u52A8"><span class="toc-number">4.</span> <span class="toc-text">4. 配置服务自启动</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1__u5B89_u88C5supervisor__u8FDB_u7A0B_u7BA1_u7406_uFF0C_u8BBE_u7F6E_u81EA_u542F_u52A8"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 安装supervisor 进程管理，设置自启动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2__u914D_u7F6ENginx_u81EA_u542F_u52A8"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 配置Nginx自启动</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-__u8BF4_u660E"><span class="toc-number">5.</span> <span class="toc-text">5. 说明</span></a></li></ol>  
+            </div>
+            <script type="text/javascript">
+              var _article = document.getElementsByClassName('article')[0];
+              <!-- setTimeout("_article.style.marginRight = '211px'",0);  -->
+              setTimeout("_article.className += ' article2'",0); 
+              setTimeout("document.getElementById('toc').style.right = '15px'", 0);                
+            </script>
+          
+        
+        <h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>由于工作需要，需要在CentOS 5.5 下安装Countly Web Server，把过程记录下来</p>
+<a id="more"></a>
+<h2 id="1-__u7CFB_u7EDF_u66F4_u65B0_u4E0E_u4E2D_u6587_u8BED_u8A00_u5305_u5B89_u88C5"><a href="#1-__u7CFB_u7EDF_u66F4_u65B0_u4E0E_u4E2D_u6587_u8BED_u8A00_u5305_u5B89_u88C5" class="headerlink" title="1. 系统更新与中文语言包安装"></a>1. 系统更新与中文语言包安装</h2><h2 id="2-__u57FA_u672C_u73AF_u5883_u914D_u7F6E_uFF1A"><a href="#2-__u57FA_u672C_u73AF_u5883_u914D_u7F6E_uFF1A" class="headerlink" title="2. 基本环境配置："></a>2. 基本环境配置：</h2><h3 id="2-1-_NodeJS_u5B89_u88C5"><a href="#2-1-_NodeJS_u5B89_u88C5" class="headerlink" title="2.1. NodeJS安装"></a>2.1. NodeJS安装</h3><ol>
+<li><p>依赖项安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install gcc gcc-c++ openssl-devel</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>下载并解压安装 nodejs</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt</span><br><span class="line">wget –c http://nodejs.org/dist/v0.<span class="number">12.4</span>/node-v0.<span class="number">12.4</span>.tar.gz</span><br><span class="line">tar zxvf node-v0.<span class="number">12.4</span>.tar.gz</span><br><span class="line"><span class="built_in">cd</span> node-v0.<span class="number">12.4</span></span><br><span class="line">./configure --prefix=/usr/<span class="built_in">local</span>/nodejs</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+<p>注意此时会有错误输出信息：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./configure  File <span class="string">"./configure"</span>, line <span class="number">442</span></span><br><span class="line">fpu = <span class="string">'vfpv3'</span> <span class="keyword">if</span> armv7 <span class="keyword">else</span> <span class="string">'vfpv2'</span></span><br><span class="line">^ <span class="built_in">SyntaxError</span>: invalid syntax</span><br></pre></td></tr></table></figure>
+<p>这是因为Python当前版本 2.4.3 不够,需要升级Python</p>
+</li>
+<li><p>升级Python：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd /opt</span><br><span class="line">wget -c http:<span class="comment">//www.python.org/ftp/python/2.7.3/Python-2.7.3.tar.bz2</span></span><br><span class="line">tar jxvf Python-<span class="number">2.7</span><span class="number">.3</span>.tar.bz2</span><br><span class="line">cd Python-<span class="number">2.7</span><span class="number">.3</span></span><br><span class="line">./configure</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+<p>正常情况下即使python2.7安装成功后，系统默认指向的python仍然是2.4.3版本，考虑到yum是基于python2.4.3才能正常工作，不敢轻易卸载。<br><em>解决方法：</em></p>
+<ul>
+<li><p>建立软连接</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mv /usr/bin/python /usr/bin/python.bak</span><br><span class="line">ln <span class="operator">-s</span> /usr/<span class="built_in">local</span>/bin/python2.<span class="number">7</span> /usr/bin/python</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使yum配置指向特定版本python2.4</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /usr/bin/yum</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>将第一行显示的<code>#/usr/bin/python</code>修改为<code>#/usr/bin/python2.4</code><br>保存修改<code>:wq</code></p>
+</li>
+<li><p>继续上面的步骤重新安装NodeJS：</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /opt/<span class="keyword">node</span><span class="identifier"></span><span class="title">-v0</span>.<span class="number">12.4</span></span><br><span class="line">./configure --<span class="variable">prefix=</span>/usr/local/nodejs</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+<p>注意，又有新的错误：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ImportError: No module named bz2</span><br><span class="line">make[<span class="number">1</span>]: *** [/opt/node-v0.<span class="number">12.4</span>/out/Release/obj/gen/libraries.cc] 错误 <span class="number">1</span></span><br><span class="line">make[<span class="number">1</span>]: Leaving directory <span class="string">'/opt/node-v0.12.4/out'</span></span><br><span class="line">make: *** [node] 错误 <span class="number">2</span></span><br></pre></td></tr></table></figure>
+<p>这个错误是由于python中没有装bz2的库导致的</p>
+</li>
+<li><p>继续安装bz2</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">yum install -y bzip2*</span><br><span class="line"><span class="built_in">cd</span> /opt/Python-<span class="number">2.7</span>.<span class="number">2</span>/Modules/zlib</span><br><span class="line">./configure</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+<p>重新安装python</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /opt/Python-<span class="number">2.7</span><span class="number">.2</span>/</span><br><span class="line">python2<span class="number">.7</span> setup.py install</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>继续上面的步骤重新安装NodeJS：</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /opt/<span class="keyword">node</span><span class="identifier"></span><span class="title">-v0</span>.<span class="number">12.4</span></span><br><span class="line">./configure --<span class="variable">prefix=</span>/usr/local/nodejs</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+<p>这次应该可以安装成功了</p>
+</li>
+<li><p>配置NodeJS环境变量</p>
+<ul>
+<li>进入profile编辑环境变量<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/profile</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>在<code>export PATH USER LOGNAME MAIL HOSTNAME HISTSIZE HISTCONTROL</code> 一行的【上面】添加如下内容:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#set for nodejs</span></span><br><span class="line"><span class="built_in">export</span> NODE_HOME=/usr/<span class="built_in">local</span>/nodejs</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$NODE_HOME</span>/bin:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
+<p><code>:wq</code>保存并退出，编译/etc/profile 使配置生效</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> /etc/profile</span><br></pre></td></tr></table></figure>
+<p>输入测试：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
+<p>得到版本号<code>v0.12.4</code></p>
+</li>
+</ol>
+<h3 id="2-2_Ngnix_u5B89_u88C5"><a href="#2-2_Ngnix_u5B89_u88C5" class="headerlink" title="2.2 Ngnix安装"></a>2.2 Ngnix安装</h3><ol>
+<li><p>在安装nginx前，需要确保系统安装了g++、gcc、openssl-devel、pcre-devel和zlib-devel 和libevent</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum install pcre-devel  libevent  openssl</span><br><span class="line">yum -y install zlib zlib-devel  pcre</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>下载、解压安装Nginx</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">wget -c http://nginx.org/download/nginx-<span class="number">1.8</span>.<span class="number">0</span>.tar.gz</span><br><span class="line">tar –zxv –f nginx-<span class="number">1.8</span>.<span class="number">0</span>.tar.gz</span><br><span class="line"><span class="built_in">cd</span> nginx-<span class="number">1.8</span>.<span class="number">0</span></span><br><span class="line">./configure --prefix=/usr/<span class="built_in">local</span>/nginx</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>测试nginx<br>开启：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/<span class="built_in">local</span>/nginx/sbin/nginx</span><br></pre></td></tr></table></figure>
+<p>测试http访问</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl localhost</span><br></pre></td></tr></table></figure>
+<p>得到以下输出信息表示成功安装并开启nginx</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">  &lt;!DOCTYPE html&gt;</span><br><span class="line">  &lt;html&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">  &lt;title&gt;Welcome to nginx!&lt;/title&gt;</span><br><span class="line">  &lt;style&gt;</span><br><span class="line">      body &#123;</span><br><span class="line">          width: <span class="number">35</span>em;</span><br><span class="line">          margin: <span class="number">0</span> auto;</span><br><span class="line">          font-family: Tahoma, Verdana, Arial, sans-serif;</span><br><span class="line">      &#125;</span><br><span class="line">  &lt;/style&gt;</span><br><span class="line">  &lt;/head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">  &lt;h1&gt;Welcome to nginx!&lt;/h1&gt;</span><br><span class="line">  &lt;p&gt;If you see this page, the nginx web server is successfully installed and</span><br><span class="line">  working. Further configuration is required.&lt;/p&gt;</span><br><span class="line">  &lt;p&gt;For online documentation and support please refer to</span><br><span class="line">  &lt;a href=<span class="string">"http://nginx.org/"</span>&gt;nginx.org&lt;/a&gt;.&lt;br/&gt;</span><br><span class="line">  Commercial support is available at</span><br><span class="line">  &lt;a href=<span class="string">"http://nginx.com/"</span>&gt;nginx.com&lt;/a&gt;.&lt;/p&gt;</span><br><span class="line">  &lt;p&gt;&lt;em&gt;Thank you <span class="keyword">for</span> using nginx.&lt;/em&gt;&lt;/p&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">  &lt;/html&gt;</span><br><span class="line">  &lt;/pre&gt;</span><br><span class="line">  ```  </span><br><span class="line"></span><br><span class="line"><span class="comment">## 3. 安装Countly Web Server</span></span><br><span class="line"></span><br><span class="line"><span class="number">1</span>. 下载到/opt，并解压</span><br><span class="line">  ```bash</span><br><span class="line">  <span class="built_in">cd</span> /opt</span><br><span class="line">  wget –c https://github.com/Countly/countly-server/archive/master.zip</span><br><span class="line">  unzip countly-server-master.zip</span><br><span class="line">  mv ./countly-server-master ./countly</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>复制countly web配置文件，并修改配置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/countly/frontend/express/</span><br><span class="line">cp config.sample.js  config.js</span><br><span class="line">vi config.js</span><br></pre></td></tr></table></figure>
+<p>将<code>mongodb</code>服务器地址<code>host</code>修改为<code>192.168.8.16</code>，保存并退出<br><code>:wq</code></p>
+</li>
+<li><p>复制api配置文件，并修改mongodb host</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ../../api/</span><br><span class="line">cp config.sample.js  config.js</span><br><span class="line">vi config.js</span><br></pre></td></tr></table></figure>
+<p>将<code>mongodb</code>服务器地址<code>host</code>修改为<code>192.168.8.16</code>，保存并退出<br><code>:wq</code></p>
+</li>
+<li><p>复制 countly.config.js</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/countly/frontend/express/public/javascripts/countly/</span><br><span class="line">cp countly.config.sample.js  countly.config.js</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>此时如果执行<code>node /opt/countly/api/api.js</code> node会报错误，没有time 组件，需要安装<code>time</code>组件<br>使用淘宝提供的源进行安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm --registry http://registry.cnpmjs.org/ install time</span><br></pre></td></tr></table></figure>
+<p>这个时间比较长，会进行<code>node-gyp rebuild</code>,安装完成后，就可以测试<code>node /opt/countly/api/api.js</code>和 <code>node /opt/countly/frontend/express/app.js</code>了</p>
+</li>
+</ol>
+<h2 id="4-__u914D_u7F6E_u670D_u52A1_u81EA_u542F_u52A8"><a href="#4-__u914D_u7F6E_u670D_u52A1_u81EA_u542F_u52A8" class="headerlink" title="4. 配置服务自启动"></a>4. 配置服务自启动</h2><h3 id="4-1__u5B89_u88C5supervisor__u8FDB_u7A0B_u7BA1_u7406_uFF0C_u8BBE_u7F6E_u81EA_u542F_u52A8"><a href="#4-1__u5B89_u88C5supervisor__u8FDB_u7A0B_u7BA1_u7406_uFF0C_u8BBE_u7F6E_u81EA_u542F_u52A8" class="headerlink" title="4.1 安装supervisor 进程管理，设置自启动"></a>4.1 安装supervisor 进程管理，设置自启动</h3><ol>
+<li><p>下载并安装supervisor</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt &amp;&amp; wget -c --no-check-certificate https://pypi.python.org/packages/<span class="built_in">source</span>/s/supervisor/supervisor-<span class="number">3.1</span>.<span class="number">1</span>.tar.gz</span><br><span class="line">tar zxvf supervisor-<span class="number">3.1</span>.<span class="number">1</span>.tar.gz</span><br><span class="line"><span class="built_in">cd</span> supervisor-<span class="number">3.1</span>.<span class="number">1</span></span><br><span class="line">python setup.py install</span><br></pre></td></tr></table></figure>
+<p><em>如果出现错误：</em></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"setup.py"</span>, line <span class="number">32</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    from setuptools import setup, find_packages</span><br><span class="line">ImportError: No module named setuptools</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>下载安装python组件：setuptools17.0</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">unzip setuptools-<span class="number">17.0</span>.zip</span><br><span class="line"><span class="built_in">cd</span> setuptools-<span class="number">17.0</span></span><br><span class="line">python setup.py install</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>继续用python安装 supervisor</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/supervisor-<span class="number">3.1</span>.<span class="number">1</span></span><br><span class="line">python setup.py install</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>编辑countly-supervisor.conf</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /opt/countly/bin/config/supervisord.conf</span><br></pre></td></tr></table></figure>
+<p>将<code>%(here)s/../..</code>和<code>%(here)s</code> 替换为<code>/opt/countly</code>,保存修改<code>:wq</code></p>
+</li>
+<li><p>配置supervisor文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span>_supervisord_conf &gt; /etc/supervisord.conf</span><br><span class="line">vi /etc/supervisord.conf</span><br></pre></td></tr></table></figure>
+<p>将最后两行取消注释，改为：</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="keyword">include</span>]</span><br><span class="line">files = <span class="regexp">/opt/countly</span><span class="regexp">/bin/config</span><span class="regexp">/supervisord.conf</span></span><br></pre></td></tr></table></figure>
+<p>保存 <code>:wq</code></p>
+</li>
+<li><p>配置supervisor 自启动</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/init.d/supervisor</span><br></pre></td></tr></table></figure>
+<p>添加加入代码：  </p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span></span><br><span class="line"><span class="comment"># supervisor Startup script for the Countly HTTP Server</span></span><br><span class="line"><span class="comment"># it is v.0.0.2 version.</span></span><br><span class="line"><span class="comment"># chkconfig: - 85 15</span></span><br><span class="line"><span class="comment"># description: Countly</span></span><br><span class="line"><span class="comment"># processname: supervisor</span></span><br><span class="line"><span class="comment"># pidfile: /var/run/supervisor.pid</span></span><br><span class="line"><span class="comment"># config: /etc/supervisord.conf</span></span><br><span class="line"></span><br><span class="line">supervisordd=/usr/<span class="built_in">local</span>/bin/supervisord</span><br><span class="line">supervisor_config=/etc/supervisord.conf</span><br><span class="line">supervisor_pid=/var/run/supervisor.pid</span><br><span class="line"></span><br><span class="line">RETVAL=<span class="number">0</span></span><br><span class="line">prog=<span class="string">"supervisor"</span></span><br><span class="line"><span class="comment"># Source function library.</span></span><br><span class="line">. /etc/rc.d/init.d/<span class="built_in">functions</span></span><br><span class="line"><span class="comment"># Source networking configuration.</span></span><br><span class="line">. /etc/sysconfig/network</span><br><span class="line"><span class="comment"># Check that networking is up.</span></span><br><span class="line"></span><br><span class="line">[ <span class="variable">$&#123;NETWORKING&#125;</span> = <span class="string">"no"</span> ] &amp;&amp; <span class="built_in">exit</span> <span class="number">0</span></span><br><span class="line">[ -x <span class="variable">$supervisordd</span> ] || <span class="built_in">exit</span> <span class="number">0</span></span><br><span class="line"><span class="comment"># Start supervisor daemons functions.</span></span><br><span class="line"><span class="function"><span class="title">start</span></span>() &#123;</span><br><span class="line">PATH=/sbin:/usr/sbin:/bin:/usr/bin:/usr/<span class="built_in">local</span>/nodejs/bin</span><br><span class="line"><span class="keyword">if</span> [ <span class="operator">-e</span> <span class="variable">$supervisor_pid</span> ];<span class="keyword">then</span></span><br><span class="line">   <span class="built_in">echo</span> <span class="string">"supervisor already running...."</span></span><br><span class="line">   <span class="built_in">exit</span> <span class="number">1</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line">   <span class="built_in">echo</span>  $<span class="string">"Starting <span class="variable">$prog</span> with conf:<span class="variable">$supervisor_config</span>"</span></span><br><span class="line">daemon <span class="variable">$supervisordd</span> --configuration <span class="variable">$&#123;supervisor_config&#125;</span></span><br><span class="line">   RETVAL=$?</span><br><span class="line">   <span class="built_in">echo</span></span><br><span class="line">   [ <span class="variable">$RETVAL</span> = <span class="number">0</span> ] &amp;&amp; touch /var/lock/subsys/supervisor</span><br><span class="line">   <span class="built_in">return</span> <span class="variable">$RETVAL</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Stop supervisor daemons functions.</span></span><br><span class="line"><span class="function"><span class="title">stop</span></span>() &#123;</span><br><span class="line">        <span class="built_in">echo</span> -n $<span class="string">"Stopping <span class="variable">$prog</span>: "</span></span><br><span class="line">        killproc <span class="variable">$supervisordd</span></span><br><span class="line">        RETVAL=$?</span><br><span class="line">        <span class="built_in">echo</span></span><br><span class="line">        [ <span class="variable">$RETVAL</span> = <span class="number">0</span> ] &amp;&amp; rm <span class="operator">-f</span> /var/lock/subsys/supervisor /var/run/supervisor.pid</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># reload supervisor service functions.</span></span><br><span class="line"><span class="function"><span class="title">reload</span></span>() &#123;</span><br><span class="line"> PATH=/sbin:/usr/sbin:/bin:/usr/bin:/usr/<span class="built_in">local</span>/nodejs/bin</span><br><span class="line">    <span class="built_in">echo</span> -n $<span class="string">"Reloading <span class="variable">$prog</span>: "</span></span><br><span class="line">    <span class="comment">#kill -HUP `cat $&#123;supervisor_pid&#125;`</span></span><br><span class="line">    killproc <span class="variable">$supervisordd</span> -HUP</span><br><span class="line">    RETVAL=$?</span><br><span class="line">    <span class="built_in">echo</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># See how we were called.</span></span><br><span class="line"><span class="keyword">case</span> <span class="string">"<span class="variable">$1</span>"</span> <span class="keyword">in</span></span><br><span class="line">start)</span><br><span class="line">        start</span><br><span class="line">        ;;</span><br><span class="line">stop)</span><br><span class="line">        stop</span><br><span class="line">        ;;</span><br><span class="line">reload)</span><br><span class="line">        reload</span><br><span class="line">        ;;</span><br><span class="line">restart)</span><br><span class="line">        stop</span><br><span class="line">        start</span><br><span class="line">        ;;</span><br><span class="line">status)</span><br><span class="line">        status <span class="variable">$prog</span></span><br><span class="line">        RETVAL=$?</span><br><span class="line">        ;;</span><br><span class="line">*)</span><br><span class="line">        <span class="built_in">echo</span> $<span class="string">"Usage: <span class="variable">$prog</span> &#123;start|stop|restart|reload|status|help&#125;"</span></span><br><span class="line">        <span class="built_in">exit</span> <span class="number">1</span></span><br><span class="line"><span class="keyword">esac</span></span><br><span class="line"><span class="built_in">exit</span> <span class="variable">$RETVAL</span></span><br></pre></td></tr></table></figure>
+<p>保存修改 <code>:wq</code><br>设置文件属性为可执行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod a+x /etc/init.d/supervisor</span><br></pre></td></tr></table></figure>
+<p>测试：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service supervisor start</span><br></pre></td></tr></table></figure>
+<p>可以看到：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Starting supervisor with conf:/etc/supervisord.conf</span><br><span class="line"></span><br><span class="line">                                                           [确定]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加到开机启动项中：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/rc.local</span><br></pre></td></tr></table></figure>
+<p>加入：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/supervisor start</span><br></pre></td></tr></table></figure>
+<p>保存 <code>:wq</code></p>
+</li>
+</ol>
+<h3 id="4-2__u914D_u7F6ENginx_u81EA_u542F_u52A8"><a href="#4-2__u914D_u7F6ENginx_u81EA_u542F_u52A8" class="headerlink" title="4.2 配置Nginx自启动"></a>4.2 配置Nginx自启动</h3><ol>
+<li><p>添加nginx脚本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/init.d/nginx</span><br></pre></td></tr></table></figure>
+<p>加入下面的内容：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span></span><br><span class="line"><span class="comment"># nginx Startup script for the Nginx HTTP Server</span></span><br><span class="line"><span class="comment"># it is v.0.0.2 version.</span></span><br><span class="line"><span class="comment"># chkconfig: - 85 15</span></span><br><span class="line"><span class="comment"># description: Nginx is a high-performance web and proxy server.</span></span><br><span class="line"><span class="comment">#              It has a lot of features, but it's not for everyone.</span></span><br><span class="line"><span class="comment"># processname: nginx</span></span><br><span class="line"><span class="comment"># pidfile: /var/run/nginx.pid</span></span><br><span class="line"><span class="comment"># config: /usr/local/nginx/conf/nginx.conf</span></span><br><span class="line">nginxd=/usr/<span class="built_in">local</span>/nginx/sbin/nginx</span><br><span class="line">nginx_config=/usr/<span class="built_in">local</span>/nginx/conf/nginx.conf</span><br><span class="line">nginx_pid=/var/run/nginx.pid</span><br><span class="line">RETVAL=<span class="number">0</span></span><br><span class="line">prog=<span class="string">"nginx"</span></span><br><span class="line"><span class="comment"># Source function library.</span></span><br><span class="line">. /etc/rc.d/init.d/<span class="built_in">functions</span></span><br><span class="line"><span class="comment"># Source networking configuration.</span></span><br><span class="line">. /etc/sysconfig/network</span><br><span class="line"><span class="comment"># Check that networking is up.</span></span><br><span class="line">[ <span class="variable">$&#123;NETWORKING&#125;</span> = <span class="string">"no"</span> ] &amp;&amp; <span class="built_in">exit</span> <span class="number">0</span></span><br><span class="line">[ -x <span class="variable">$nginxd</span> ] || <span class="built_in">exit</span> <span class="number">0</span></span><br><span class="line"><span class="comment"># Start nginx daemons functions.</span></span><br><span class="line"><span class="function"><span class="title">start</span></span>() &#123;</span><br><span class="line"><span class="keyword">if</span> [ <span class="operator">-e</span> <span class="variable">$nginx_pid</span> ];<span class="keyword">then</span></span><br><span class="line">   <span class="built_in">echo</span> <span class="string">"nginx already running...."</span></span><br><span class="line">   <span class="built_in">exit</span> <span class="number">1</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line">   <span class="built_in">echo</span> -n $<span class="string">"Starting <span class="variable">$prog</span>: "</span></span><br><span class="line">   daemon <span class="variable">$nginxd</span> -c <span class="variable">$&#123;nginx_config&#125;</span></span><br><span class="line">   RETVAL=$?</span><br><span class="line">   <span class="built_in">echo</span></span><br><span class="line">   [ <span class="variable">$RETVAL</span> = <span class="number">0</span> ] &amp;&amp; touch /var/lock/subsys/nginx</span><br><span class="line">   <span class="built_in">return</span> <span class="variable">$RETVAL</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment"># Stop nginx daemons functions.</span></span><br><span class="line"><span class="function"><span class="title">stop</span></span>() &#123;</span><br><span class="line">        <span class="built_in">echo</span> -n $<span class="string">"Stopping <span class="variable">$prog</span>: "</span></span><br><span class="line">        killproc <span class="variable">$nginxd</span></span><br><span class="line">        RETVAL=$?</span><br><span class="line">        <span class="built_in">echo</span></span><br><span class="line">        [ <span class="variable">$RETVAL</span> = <span class="number">0</span> ] &amp;&amp; rm <span class="operator">-f</span> /var/lock/subsys/nginx /var/run/nginx.pid</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment"># reload nginx service functions.</span></span><br><span class="line"><span class="function"><span class="title">reload</span></span>() &#123;</span><br><span class="line">    <span class="built_in">echo</span> -n $<span class="string">"Reloading <span class="variable">$prog</span>: "</span></span><br><span class="line">    <span class="comment">#kill -HUP `cat $&#123;nginx_pid&#125;`</span></span><br><span class="line">    killproc <span class="variable">$nginxd</span> -HUP</span><br><span class="line">    RETVAL=$?</span><br><span class="line">    <span class="built_in">echo</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment"># See how we were called.</span></span><br><span class="line"><span class="keyword">case</span> <span class="string">"<span class="variable">$1</span>"</span> <span class="keyword">in</span></span><br><span class="line">start)</span><br><span class="line">        start</span><br><span class="line">        ;;</span><br><span class="line">stop)</span><br><span class="line">        stop</span><br><span class="line">        ;;</span><br><span class="line">reload)</span><br><span class="line">        reload</span><br><span class="line">        ;;</span><br><span class="line">restart)</span><br><span class="line">        stop</span><br><span class="line">        start</span><br><span class="line">        ;;</span><br><span class="line">status)</span><br><span class="line">        status <span class="variable">$prog</span></span><br><span class="line">        RETVAL=$?</span><br><span class="line">        ;;</span><br><span class="line">*)</span><br><span class="line">        <span class="built_in">echo</span> $<span class="string">"Usage: <span class="variable">$prog</span> &#123;start|stop|restart|reload|status|help&#125;"</span></span><br><span class="line">        <span class="built_in">exit</span> <span class="number">1</span></span><br><span class="line"><span class="keyword">esac</span></span><br><span class="line"><span class="built_in">exit</span> <span class="variable">$RETVAL</span></span><br></pre></td></tr></table></figure>
+<p>保存并退出<code>:wq</code><br>设置文件的访问权限(<code>a+x</code> ==&gt; all user can execute  所有用户可执行)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod a+x /etc/init.d/nginx</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加到开机启动项中</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/rc.local</span><br></pre></td></tr></table></figure>
+<p>加入一行<code>/etc/init.d/nginx start</code>保存并退出，下次重启会生效。</p>
+</li>
+<li><p>完成所有配置,重启服务器。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reboot</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>重新打开terminal输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl localhost</span><br></pre></td></tr></table></figure>
+<p>得到：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Moved Temporarily. Redirecting to /login</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="5-__u8BF4_u660E"><a href="#5-__u8BF4_u660E" class="headerlink" title="5. 说明"></a>5. 说明</h2><p>过程中参考了这些文章<br>安装中文语言支持包<br><a href="http://www.xshell.net/linux/GNOM.html" target="_blank" rel="external">http://www.xshell.net/linux/GNOM.html</a></p>
+<p>CentOS安装NodeJS<br><a href="http://zhaohe162.blog.163.com/blog/static/38216797201402234212981/" target="_blank" rel="external">http://zhaohe162.blog.163.com/blog/static/38216797201402234212981/</a></p>
+<p>给nodejs的npm更换源<br><a href="http://blog.sina.com.cn/s/blog_77a8ce670101cdd3.html" target="_blank" rel="external">http://blog.sina.com.cn/s/blog_77a8ce670101cdd3.html</a></p>
+<p>升级CentOS5.6_X64 python2.4.3到2.7<br><a href="http://hxl2009.blog.51cto.com/779549/1031310" target="_blank" rel="external">http://hxl2009.blog.51cto.com/779549/1031310</a></p>
+<p>python中没有装bz2的库<br><a href="http://flyer2010.iteye.com/blog/1699946" target="_blank" rel="external">http://flyer2010.iteye.com/blog/1699946</a></p>
+<p>配置环境变量<br><a href="http://blog.csdn.net/zhaoweitco/article/details/12677089" target="_blank" rel="external">http://blog.csdn.net/zhaoweitco/article/details/12677089</a></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/06/21/Mac10-10-3下AndroidStudio单元测试——instrumentation/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Mac10.10.3下AndroidStudio单元测试——instrumentation
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+<div class="share">
+  
+  <div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_weixin">微信</a>
+		<a class="jiathis_button_cqq">QQ好友</a>
+		<a class="jiathis_button_qzone">QQ空间</a>
+		<a class="jiathis_button_tsina">新浪微博</a>
+		<a href="http://www.jiathis.com/share?uid=2080230" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+		<a class="jiathis_counter_style"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=2080230" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+<!-- JiaThis Button BEGIN -->
+
+  
+
+  
+</div>
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="CentOS5-5下安装Countly-Web-Server过程记录" data-title="CentOS5.5下安装Countly-Web-Server过程记录" data-url="http://lulee007.github.io/2015/06/12/CentOS5-5下安装Countly-Web-Server过程记录/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"lulee007blog"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Lulee007
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+        <div>
+        <span id="busuanzi_container_site_pv">
+            本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        </span>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+<script type="text/javascript">
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?a2a85b6d42c0590a3d83962acea64b71";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+
+
+  </div>
+
+</body>
+</html>

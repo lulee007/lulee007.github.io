@@ -467,9 +467,6 @@ a {
   #container #footer .footer-right {
     float: initial;
   }
-  #container #fork_me_on_github img {
-    display: none;
-  }
 }
 .header-author {
   text-align: center;
