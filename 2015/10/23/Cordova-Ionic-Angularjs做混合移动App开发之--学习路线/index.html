@@ -6,16 +6,31 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>Cordova+Ionic+AngularJs做混合移动App开发之--学习路线 | 小灰灰写代码</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
+  <meta name="description" content="环境搭建参考另一篇：Mac下安装cordova+ionic+angularjs做混合移动app开发
+常规开发：标准的mvc模式:
+
+m: 模型 service api获取数据
+c: 控制器 controller
+v: 视图 数据绑定，展示数据 html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Cordova+Ionic+AngularJs做混合移动App开发之--学习路线">
 <meta property="og:url" content="http://lulee007.github.io/2015/10/23/Cordova-Ionic-Angularjs做混合移动App开发之--学习路线/index.html">
 <meta property="og:site_name" content="小灰灰写代码">
-<meta property="og:description">
-<meta property="og:updated_time" content="2016-01-12T07:06:57.000Z">
+<meta property="og:description" content="环境搭建参考另一篇：Mac下安装cordova+ionic+angularjs做混合移动app开发
+常规开发：标准的mvc模式:
+
+m: 模型 service api获取数据
+c: 控制器 controller
+v: 视图 数据绑定，展示数据 html">
+<meta property="og:updated_time" content="2016-01-12T11:57:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Cordova+Ionic+AngularJs做混合移动App开发之--学习路线">
-<meta name="twitter:description">
+<meta name="twitter:description" content="环境搭建参考另一篇：Mac下安装cordova+ionic+angularjs做混合移动app开发
+常规开发：标准的mvc模式:
+
+m: 模型 service api获取数据
+c: 控制器 controller
+v: 视图 数据绑定，展示数据 html">
   
     <link rel="alternative" href="/atom.xml" title="小灰灰写代码" type="application/atom+xml">
   
@@ -124,7 +139,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tagsCN/Android-Studio/" style="font-size: 13.33px;">Android Studio</a> <a href="/tagsCN/AngularJs/" style="font-size: 13.33px;">AngularJs</a> <a href="/tagsCN/Cent-OS/" style="font-size: 10px;">Cent OS</a> <a href="/tagsCN/Cordova/" style="font-size: 13.33px;">Cordova</a> <a href="/tagsCN/Countly-Web-Server/" style="font-size: 10px;">Countly Web Server</a> <a href="/tagsCN/Github/" style="font-size: 10px;">Github</a> <a href="/tagsCN/HTML5/" style="font-size: 13.33px;">HTML5</a> <a href="/tagsCN/Hexo/" style="font-size: 16.67px;">Hexo</a> <a href="/tagsCN/Hybrid-App/" style="font-size: 13.33px;">Hybrid App</a> <a href="/tagsCN/Instrumentation/" style="font-size: 10px;">Instrumentation</a> <a href="/tagsCN/Ionic/" style="font-size: 13.33px;">Ionic</a> <a href="/tagsCN/Mac/" style="font-size: 20px;">Mac</a> <a href="/tagsCN/SVN/" style="font-size: 10px;">SVN</a> <a href="/tagsCN/Subversion/" style="font-size: 10px;">Subversion</a> <a href="/tagsCN/Unit-Test/" style="font-size: 10px;">Unit Test</a> <a href="/tagsCN/单元测试/" style="font-size: 10px;">单元测试</a> <a href="/tagsCN/命令/" style="font-size: 10px;">命令</a> <a href="/tagsCN/混合型应用/" style="font-size: 10px;">混合型应用</a> <a href="/tagsCN/混合型移动应用/" style="font-size: 10px;">混合型移动应用</a> <a href="/tagsCN/配置/" style="font-size: 10px;">配置</a>
+						<a href="/tagsCN/Android-Studio/" style="font-size: 13.33px;">Android Studio</a> <a href="/tagsCN/AngularJs/" style="font-size: 13.33px;">AngularJs</a> <a href="/tagsCN/Cent-OS/" style="font-size: 10px;">Cent OS</a> <a href="/tagsCN/Cordova/" style="font-size: 13.33px;">Cordova</a> <a href="/tagsCN/Countly-Web-Server/" style="font-size: 10px;">Countly Web Server</a> <a href="/tagsCN/Github/" style="font-size: 10px;">Github</a> <a href="/tagsCN/HTML5/" style="font-size: 13.33px;">HTML5</a> <a href="/tagsCN/Hexo/" style="font-size: 16.67px;">Hexo</a> <a href="/tagsCN/Hybrid-App/" style="font-size: 13.33px;">Hybrid App</a> <a href="/tagsCN/Instrumentation/" style="font-size: 10px;">Instrumentation</a> <a href="/tagsCN/Ionic/" style="font-size: 13.33px;">Ionic</a> <a href="/tagsCN/Mac/" style="font-size: 20px;">Mac</a> <a href="/tagsCN/SVN/" style="font-size: 10px;">SVN</a> <a href="/tagsCN/Subversion/" style="font-size: 10px;">Subversion</a> <a href="/tagsCN/Unit-Test/" style="font-size: 10px;">Unit Test</a> <a href="/tagsCN/单元测试/" style="font-size: 10px;">单元测试</a> <a href="/tagsCN/命令/" style="font-size: 10px;">命令</a> <a href="/tagsCN/混合型移动应用/" style="font-size: 13.33px;">混合型移动应用</a> <a href="/tagsCN/配置/" style="font-size: 10px;">配置</a>
 					</div>
 				</section>
 				
@@ -187,13 +202,21 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="https://github.com/lulee007/" title="github">github</a>
+						<a target="_blank" href="https://github.com/lulee007/" title="github">
+							<i class="iconfont icon-github"></i>
+						</a>
 			        
-						<a class="weibo" target="_blank" href="http://weibo.com/lulee007/" title="weibo">weibo</a>
+						<a target="_blank" href="http://weibo.com/lulee007/" title="weibo">
+							<i class="iconfont icon-weibo"></i>
+						</a>
 			        
-						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+						<a target="_blank" href="/atom.xml" title="rss">
+							<i class="iconfont icon-rss"></i>
+						</a>
 			        
-						<a class="mail" target="_blank" href="mailto:lulee007@live.com" title="mail">mail</a>
+						<a target="_blank" href="mailto:lulee007@live.com" title="mail">
+							<i class="iconfont icon-mail"></i>
+						</a>
 			        
 				</div>
 			</nav>
@@ -244,9 +267,28 @@
       
         <!-- Table of Contents -->
         
+                      
+            <div id="toc" class="article-toc">
+            <h2>目录</h2>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u73AF_u5883_u642D_u5EFA"><span class="toc-number">1.</span> <span class="toc-text">环境搭建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u5E38_u89C4_u5F00_u53D1_uFF1A"><span class="toc-number">2.</span> <span class="toc-text">常规开发：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u63D2_u4EF6_u5F00_u53D1_uFF1A"><span class="toc-number">3.</span> <span class="toc-text">插件开发：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u5E38_u7528_u547D_u4EE4_uFF1A"><span class="toc-number">4.</span> <span class="toc-text">常用命令：</span></a></li></ol>  
+            </div>
+            <script type="text/javascript">
+              var _article = document.getElementsByClassName('article')[0];
+              <!-- setTimeout("_article.style.marginRight = '211px'",0);  -->
+              setTimeout("_article.className += ' article2'",0); 
+              setTimeout("document.getElementById('toc').style.right = '15px'", 0);                
+            </script>
           
         
-        <a id="more"></a>
+        <h2 id="u73AF_u5883_u642D_u5EFA"><a href="#u73AF_u5883_u642D_u5EFA" class="headerlink" title="环境搭建"></a>环境搭建</h2><p>参考另一篇：<a href="/lulee007.github.io/">Mac下安装cordova+ionic+angularjs做混合移动app开发</a></p>
+<h2 id="u5E38_u89C4_u5F00_u53D1_uFF1A"><a href="#u5E38_u89C4_u5F00_u53D1_uFF1A" class="headerlink" title="常规开发："></a>常规开发：</h2><p>标准的mvc模式:</p>
+<ul>
+<li>m: 模型 service api获取数据</li>
+<li>c: 控制器 controller</li>
+<li>v: 视图 数据绑定，展示数据 html</li>
+</ul>
+<a id="more"></a>
+<h2 id="u63D2_u4EF6_u5F00_u53D1_uFF1A"><a href="#u63D2_u4EF6_u5F00_u53D1_uFF1A" class="headerlink" title="插件开发："></a>插件开发：</h2><h2 id="u5E38_u7528_u547D_u4EE4_uFF1A"><a href="#u5E38_u7528_u547D_u4EE4_uFF1A" class="headerlink" title="常用命令："></a>常用命令：</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 构建所有平台代码</span></span><br><span class="line">ionic build</span><br><span class="line"><span class="comment"># 构建Android</span></span><br><span class="line">ionic build android</span><br><span class="line"><span class="comment"># 构建ios 模拟器</span></span><br><span class="line">ionic build ios</span><br><span class="line"><span class="comment"># 构建ios 设备</span></span><br><span class="line">ionic build --device ios</span><br><span class="line"><span class="comment"># 运行app到设备上</span></span><br><span class="line">ionic run --device ios/android</span><br><span class="line"><span class="comment"># 运行在模拟器上（android genymotion 请用--device）</span></span><br><span class="line">ionic run --emulate ios/android</span><br><span class="line"></span><br><span class="line"><span class="comment"># 开启本地浏览器调试</span></span><br><span class="line">ionic serve</span><br><span class="line"><span class="comment"># 添加ios平台</span></span><br><span class="line">ionic platform add ios</span><br><span class="line"><span class="comment"># 移除android平台</span></span><br><span class="line">ionic platform remove android</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装插件 xxx可以为id，目录，url</span></span><br><span class="line">cordova plugin add xxx</span><br><span class="line"><span class="comment"># 移除插件 xxx只能为插件id</span></span><br><span class="line">cordova plugin remove xxxx</span><br></pre></td></tr></table></figure>
 
       
     </div>
