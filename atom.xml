@@ -4,7 +4,7 @@
   <subtitle><![CDATA[码农，程序猿]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://lulee007.github.io/"/>
-  <updated>2016-01-11T14:16:01.000Z</updated>
+  <updated>2016-01-12T05:46:15.000Z</updated>
   <id>http://lulee007.github.io/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://lulee007.github.io/2016/01/10/2016%E5%B9%B4%E5%BA%A6%E8%AE%A1%E5%88%92/"/>
     <id>http://lulee007.github.io/2016/01/10/2016年度计划/</id>
     <published>2016-01-10T13:45:22.000Z</published>
-    <updated>2016-01-11T14:16:01.000Z</updated>
+    <updated>2016-01-12T05:46:15.000Z</updated>
     <content type="html"><![CDATA[<h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>自从毕业后到现在2年半了的时间了，感觉一直忙忙碌碌的工作、生活，从来都没有进行过年度规划。从学校到工作，接触到了很多东西：<br>C# PHP（Yii框架，ThinkPhp），Mongodb，Arcgis，ArcEngine，Android，Web，SSM，iOS，Windows Phone，Python，Html5 Hybrid App 。<br>看得很多，总结的很少。<br>最近正着手把之前在工作学习中的记下来笔记整理一下，也是对工作学习到现在的一个『交代』。新年伊始，已经过去了三十六分之一左右了，得约束下自己，先给自己列一个计划。<br><a id="more"></a></p>
 <h2 id="u6E90_u7801_u5B66_u4E60"><a href="#u6E90_u7801_u5B66_u4E60" class="headerlink" title="源码学习"></a>源码学习</h2><p>平时在github上看到不少很棒的开源代码，也用了其中的一部分，但仅限于此。我觉得还不够，知其然还得知其所以然。<a href="https://github.com/ibireme/YYKit" target="_blank" rel="external">YYKit</a>的作者<a href="https://github.com/ibireme" target="_blank" rel="external">ibireme</a>这个大神很牛逼啊。在devtang对他得专访他说的：</p>
 <blockquote>
@@ -34,9 +34,20 @@
 </ul>
 <h3 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h3><p><a href="http://a.codekk.com/" target="_blank" rel="external">源码解析网站</a>经常发布一些开源项目的源代码解析</p>
 <ul>
-<li>Glide<br>*</li>
+<li>Glide</li>
+<li>android-Ultra-Pull-To-Refresh</li>
+<li>NineOldAnimations</li>
+<li>FlycoTabLayout</li>
 </ul>
-<h2 id="u8BFB_u4E66"><a href="#u8BFB_u4E66" class="headerlink" title="读书"></a>读书</h2><h2 id="u535A_u5BA2"><a href="#u535A_u5BA2" class="headerlink" title="博客"></a>博客</h2><p>每月至少一篇</p>
+<h2 id="UWP__u5F00_u53D1Universal_Windows__u5E94_u7528"><a href="#UWP__u5F00_u53D1Universal_Windows__u5E94_u7528" class="headerlink" title="UWP 开发Universal Windows 应用"></a>UWP 开发Universal Windows 应用</h2><p>通用 Windows 平台 (UWP) 应用是一种基于通用 Windows 平台 (UWP) 生成的 Windows 体验<br>最近windows10份额也在逐渐增长，有机会尝试把之前的windows phone8 app转为UWP的。</p>
+<h2 id="u8BFB_u4E66"><a href="#u8BFB_u4E66" class="headerlink" title="读书"></a>读书</h2><p>书读的少，一直静不下来。<br>小说类：</p>
+<ul>
+<li>三体全集</li>
+<li>乖，摸摸头</li>
+<li>阿弥陀佛 么么哒<br>管理类：</li>
+<li>带队伍、抓执行</li>
+</ul>
+<h2 id="u535A_u5BA2"><a href="#u535A_u5BA2" class="headerlink" title="博客"></a>博客</h2><p>每月至少一篇</p>
 ]]></content>
     <summary type="html">
     <![CDATA[<h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>自从毕业后到现在2年半了的时间了，感觉一直忙忙碌碌的工作、生活，从来都没有进行过年度规划。从学校到工作，接触到了很多东西：<br>C# PHP（Yii框架，ThinkPhp），Mongodb，Arcgis，ArcEngine，Android，Web，SSM，iOS，Windows Phone，Python，Html5 Hybrid App 。<br>看得很多，总结的很少。<br>最近正着手把之前在工作学习中的记下来笔记整理一下，也是对工作学习到现在的一个『交代』。新年伊始，已经过去了三十六分之一左右了，得约束下自己，先给自己列一个计划。<br>]]>
@@ -392,7 +403,7 @@
     <link href="http://lulee007.github.io/2015/06/21/Mac10-10-3%E4%B8%8BAndroidStudio%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E2%80%94%E2%80%94instrumentation/"/>
     <id>http://lulee007.github.io/2015/06/21/Mac10-10-3下AndroidStudio单元测试——instrumentation/</id>
     <published>2015-06-21T11:45:37.000Z</published>
-    <updated>2016-01-11T12:55:30.000Z</updated>
+    <updated>2016-01-11T12:55:04.000Z</updated>
     <content type="html"><![CDATA[<p>测试环境：</p>
 <ul>
 <li>Android Studio 1.2.2</li>
