@@ -223,7 +223,7 @@
     <link href="http://lulee007.github.io/2016/01/07/Mac%E4%B8%8B%E4%BD%BF%E7%94%A8Github%E4%B8%8EHexo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/"/>
     <id>http://lulee007.github.io/2016/01/07/Mac下使用Github与Hexo搭建静态博客/</id>
     <published>2016-01-07T11:55:30.000Z</published>
-    <updated>2016-01-09T04:15:05.000Z</updated>
+    <updated>2016-01-12T12:03:08.000Z</updated>
     <content type="html"><![CDATA[<h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>之前一直都是把工作学习中的笔记写在<code>Wiz笔记</code>里的，当然也尝试过其他博客：<code>Wordpress</code>、<code>csnd</code>、<code>cnblog</code>。笔记不利于分享，wordpress之类的用起来太麻烦，最近在github上浏览学习了不少代码，也看到了不少基于github的博文，然后就搜了一下关于静态博客的资源，觉得hexo比较流行，经过google一番，找了一些教程来搭建一个个人静态博客。<br>其间看到阮一峰的一篇<a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html" target="_blank" rel="external">博文</a>中提到的,喜欢写Blog的人会经历三个阶段:</p>
 <blockquote>
 <p>第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。<br>第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。<br>第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。</p>
@@ -351,7 +351,7 @@
     <link href="http://lulee007.github.io/2015/10/23/Cordova-Ionic-Angularjs%E5%81%9A%E6%B7%B7%E5%90%88%E7%A7%BB%E5%8A%A8App%E5%BC%80%E5%8F%91%E4%B9%8B--%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/"/>
     <id>http://lulee007.github.io/2015/10/23/Cordova-Ionic-Angularjs做混合移动App开发之--学习路线/</id>
     <published>2015-10-23T06:59:23.000Z</published>
-    <updated>2016-01-12T11:57:59.000Z</updated>
+    <updated>2016-01-12T12:03:05.000Z</updated>
     <content type="html"><![CDATA[<h2 id="u73AF_u5883_u642D_u5EFA"><a href="#u73AF_u5883_u642D_u5EFA" class="headerlink" title="环境搭建"></a>环境搭建</h2><p>参考另一篇：<a href="/lulee007.github.io/">Mac下安装cordova+ionic+angularjs做混合移动app开发</a></p>
 <h2 id="u5E38_u89C4_u5F00_u53D1_uFF1A"><a href="#u5E38_u89C4_u5F00_u53D1_uFF1A" class="headerlink" title="常规开发："></a>常规开发：</h2><p>标准的mvc模式:</p>
 <ul>
