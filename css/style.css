@@ -1140,6 +1140,56 @@ a {
   font: 17px FontAwesome;
   margin-right: 10px;
 }
+.article-gallery {
+  background: #000;
+  position: relative;
+}
+.article-gallery-photos {
+  position: relative;
+  overflow: hidden;
+}
+.article-gallery-img {
+  display: none;
+  max-width: 100%;
+}
+.article-gallery-img:first-child {
+  display: block;
+}
+.article-gallery-img.loaded {
+  position: absolute;
+  display: block;
+}
+.article-gallery-img img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+  webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  -ms-transition: all 0.8s;
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -ms-transition: all 0.8s;
+  transition: all 0.8s;
+}
+.article-gallery-img img:hover {
+  -webkit-transform: scale(1.1, 1.1);
+  -moz-transform: scale(1.1, 1.1);
+  -o-transform: scale(1.1, 1.1);
+  -ms-transform: scale(1.1, 1.1);
+  -webkit-transform: scale(1.1, 1.1);
+  -moz-transform: scale(1.1, 1.1);
+  -ms-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  -ms-transition: all 0.8s;
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -ms-transition: all 0.8s;
+  transition: all 0.8s;
+}
 .article-more-link {
   margin-top: 5px;
   text-align: right;
@@ -2382,8 +2432,33 @@ pre .css ~ * .id {
   -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
 }
-.iconfont:hover {
-  font-size: 34px;
+.social .iconfont {
+  webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.social .iconfont:hover {
+  -webkit-transform: scale(1.2, 1.2);
+  -moz-transform: scale(1.2, 1.2);
+  -o-transform: scale(1.2, 1.2);
+  -ms-transform: scale(1.2, 1.2);
+  -webkit-transform: scale(1.2, 1.2);
+  -moz-transform: scale(1.2, 1.2);
+  -ms-transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .icon-rss:before {
   color: #ef7522;
@@ -2413,45 +2488,45 @@ pre .css ~ * .id {
 .icon-github:before:hover {
   color: #909ab6;
 }
-.icon-facebook :before {
+.icon-facebook:before {
   color: #3b5998;
   content: "\e604";
 }
-.icon-facebook :before:hover {
+.icon-facebook:before:hover {
   color: #2d4373;
 }
-.icon-google :before {
+.icon-google:before {
   color: #c83d20;
   content: "\e609";
 }
-.icon-google :before:hover {
+.icon-google:before:hover {
   color: #9c3019;
 }
-.icon-twitter :before {
+.icon-twitter:before {
   color: #55cff8;
   content: "\e607";
 }
-.icon-twitter :before:hover {
+.icon-twitter:before:hover {
   color: #24c1f6;
 }
-.icon-linkedin :before {
+.icon-linkedin:before {
   color: #005a87;
   content: "\e605";
 }
-.icon-linkedin :before:hover {
+.icon-linkedin:before:hover {
   color: #006b98;
 }
-.icon-zhihu :before {
+.icon-zhihu:before {
   color: #0078d8;
   content: "\e60a";
 }
-.icon-zhihu :before:hover {
+.icon-zhihu:before:hover {
   color: #0088d8;
 }
-.icon-douban :before {
+.icon-douban:before {
   color: #06c611;
   content: "\e608";
 }
-.icon-douban :before:hover {
+.icon-douban:before:hover {
   color: #06d611;
 }
