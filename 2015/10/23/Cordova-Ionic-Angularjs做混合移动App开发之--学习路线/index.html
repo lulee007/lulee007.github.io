@@ -22,7 +22,7 @@ v: 视图 数据绑定，展示数据 html">
 m: 模型 service api获取数据
 c: 控制器 controller
 v: 视图 数据绑定，展示数据 html">
-<meta property="og:updated_time" content="2016-01-12T12:03:05.000Z">
+<meta property="og:updated_time" content="2016-01-14T02:47:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Cordova+Ionic+AngularJs做混合移动App开发之--学习路线">
 <meta name="twitter:description" content="环境搭建参考另一篇：Mac下安装cordova+ionic+angularjs做混合移动app开发
@@ -45,6 +45,12 @@ v: 视图 数据绑定，展示数据 html">
     <div class="left-col">
     <div class="overlay"></div>
 <div class="intrude-less">
+	
+	<form class="search" action="/search/index.html" method="get" accept-charset="utf-8">
+		<label>搜索</label>
+		<input type="text" id="st-search-input" class="st-search-input_my" maxlength="30" placeholder="搜索" />
+	</form>
+	
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
 			
@@ -58,6 +64,7 @@ v: 视图 数据绑定，展示数据 html">
 		
 		<p class="header-subtitle">码农，程序猿</p>
 		
+
 		
 			<div class="switch-btn">
 				<div class="icon">
@@ -271,7 +278,7 @@ v: 视图 数据绑定，展示数据 html">
                       
             <div id="toc" class="article-toc">
             <h2>目录</h2>
-              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u73AF_u5883_u642D_u5EFA"><span class="toc-number">1.</span> <span class="toc-text">环境搭建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u5E38_u89C4_u5F00_u53D1_uFF1A"><span class="toc-number">2.</span> <span class="toc-text">常规开发：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u63D2_u4EF6_u5F00_u53D1_uFF1A"><span class="toc-number">3.</span> <span class="toc-text">插件开发：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u5E38_u7528_u547D_u4EE4_uFF1A"><span class="toc-number">4.</span> <span class="toc-text">常用命令：</span></a></li></ol>  
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u73AF_u5883_u642D_u5EFA"><span class="toc-number">1.</span> <span class="toc-text">环境搭建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u5E38_u89C4_u5F00_u53D1_uFF1A"><span class="toc-number">2.</span> <span class="toc-text">常规开发：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u63D2_u4EF6_u5F00_u53D1_uFF1A"><span class="toc-number">3.</span> <span class="toc-text">插件开发：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u771F_u673A_u6A21_u62DF_u5668_u8C03_u8BD5"><span class="toc-number">4.</span> <span class="toc-text">真机模拟器调试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#android"><span class="toc-number">4.1.</span> <span class="toc-text">android</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ios"><span class="toc-number">4.2.</span> <span class="toc-text">ios</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u5E38_u7528_u547D_u4EE4_uFF1A"><span class="toc-number">5.</span> <span class="toc-text">常用命令：</span></a></li></ol>  
             </div>
             <script type="text/javascript">
               var _article = document.getElementsByClassName('article')[0];
@@ -289,7 +296,7 @@ v: 视图 数据绑定，展示数据 html">
 <li>v: 视图 数据绑定，展示数据 html</li>
 </ul>
 <a id="more"></a>
-<h2 id="u63D2_u4EF6_u5F00_u53D1_uFF1A"><a href="#u63D2_u4EF6_u5F00_u53D1_uFF1A" class="headerlink" title="插件开发："></a>插件开发：</h2><h2 id="u5E38_u7528_u547D_u4EE4_uFF1A"><a href="#u5E38_u7528_u547D_u4EE4_uFF1A" class="headerlink" title="常用命令："></a>常用命令：</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 构建所有平台代码</span></span><br><span class="line">ionic build</span><br><span class="line"><span class="comment"># 构建Android</span></span><br><span class="line">ionic build android</span><br><span class="line"><span class="comment"># 构建ios 模拟器</span></span><br><span class="line">ionic build ios</span><br><span class="line"><span class="comment"># 构建ios 设备</span></span><br><span class="line">ionic build --device ios</span><br><span class="line"><span class="comment"># 运行app到设备上</span></span><br><span class="line">ionic run --device ios/android</span><br><span class="line"><span class="comment"># 运行在模拟器上（android genymotion 请用--device）</span></span><br><span class="line">ionic run --emulate ios/android</span><br><span class="line"></span><br><span class="line"><span class="comment"># 开启本地浏览器调试</span></span><br><span class="line">ionic serve</span><br><span class="line"><span class="comment"># 添加ios平台</span></span><br><span class="line">ionic platform add ios</span><br><span class="line"><span class="comment"># 移除android平台</span></span><br><span class="line">ionic platform remove android</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装插件 xxx可以为id，目录，url</span></span><br><span class="line">cordova plugin add xxx</span><br><span class="line"><span class="comment"># 移除插件 xxx只能为插件id</span></span><br><span class="line">cordova plugin remove xxxx</span><br></pre></td></tr></table></figure>
+<h2 id="u63D2_u4EF6_u5F00_u53D1_uFF1A"><a href="#u63D2_u4EF6_u5F00_u53D1_uFF1A" class="headerlink" title="插件开发："></a>插件开发：</h2><h2 id="u771F_u673A_u6A21_u62DF_u5668_u8C03_u8BD5"><a href="#u771F_u673A_u6A21_u62DF_u5668_u8C03_u8BD5" class="headerlink" title="真机模拟器调试"></a>真机模拟器调试</h2><h3 id="android"><a href="#android" class="headerlink" title="android"></a>android</h3><h3 id="ios"><a href="#ios" class="headerlink" title="ios"></a>ios</h3><h2 id="u5E38_u7528_u547D_u4EE4_uFF1A"><a href="#u5E38_u7528_u547D_u4EE4_uFF1A" class="headerlink" title="常用命令："></a>常用命令：</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 构建所有平台代码</span></span><br><span class="line">ionic build</span><br><span class="line"><span class="comment"># 构建Android</span></span><br><span class="line">ionic build android</span><br><span class="line"><span class="comment"># 构建ios 模拟器</span></span><br><span class="line">ionic build ios</span><br><span class="line"><span class="comment"># 构建ios 设备</span></span><br><span class="line">ionic build --device ios</span><br><span class="line"><span class="comment"># 运行app到设备上</span></span><br><span class="line">ionic run --device ios/android</span><br><span class="line"><span class="comment"># 运行在模拟器上（android genymotion 请用--device）</span></span><br><span class="line">ionic run --emulate ios/android</span><br><span class="line"></span><br><span class="line"><span class="comment"># 开启本地浏览器调试</span></span><br><span class="line">ionic serve</span><br><span class="line"><span class="comment"># 添加ios平台</span></span><br><span class="line">ionic platform add ios</span><br><span class="line"><span class="comment"># 移除android平台</span></span><br><span class="line">ionic platform remove android</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装插件 xxx可以为id，目录，url</span></span><br><span class="line">cordova plugin add xxx</span><br><span class="line"><span class="comment"># 移除插件 xxx只能为插件id</span></span><br><span class="line">cordova plugin remove xxxx</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -426,6 +433,23 @@ var _hmt = _hmt || [];
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
 
+
+
+<script type="text/javascript">
+    (function (w, d, t, u, n, s, e) {
+        w['SwiftypeObject'] = n;
+        w[n] = w[n] || function () {
+                    (w[n].q = w[n].q || []).push(arguments);
+                };
+        s = d.createElement(t);
+        e = d.getElementsByTagName(t)[0];
+        s.async = 1;
+        s.src = u;
+        e.parentNode.insertBefore(s, e);
+    })(window, document, 'script', '//s.swiftypecdn.com/install/v2/st.js', '_st');
+
+    _st('install', 'Wsg1VfrWwgVwjWiNyJEx', '2.0.0');
+</script>
 
 
   </div>
