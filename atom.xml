@@ -3,9 +3,9 @@
   <title><![CDATA[小灰灰写代码]]></title>
   <subtitle><![CDATA[码农，程序猿]]></subtitle>
   <link href="/atom.xml" rel="self"/>
-  <link href="http://lulee007.github.io/"/>
+  <link href="http://lulee007.gitcafe.io/"/>
   <updated>2016-01-12T05:46:15.000Z</updated>
-  <id>http://lulee007.github.io/</id>
+  <id>http://lulee007.gitcafe.io/</id>
   
   <author>
     <name><![CDATA[Lulee007]]></name>
@@ -16,8 +16,8 @@
   
   <entry>
     <title><![CDATA[2016年度计划]]></title>
-    <link href="http://lulee007.github.io/2016/01/10/2016%E5%B9%B4%E5%BA%A6%E8%AE%A1%E5%88%92/"/>
-    <id>http://lulee007.github.io/2016/01/10/2016年度计划/</id>
+    <link href="http://lulee007.gitcafe.io/2016/01/10/2016%E5%B9%B4%E5%BA%A6%E8%AE%A1%E5%88%92/"/>
+    <id>http://lulee007.gitcafe.io/2016/01/10/2016年度计划/</id>
     <published>2016-01-10T13:45:22.000Z</published>
     <updated>2016-01-12T05:46:15.000Z</updated>
     <content type="html"><![CDATA[<h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>自从毕业后到现在2年半了的时间了，感觉一直忙忙碌碌的工作、生活，从来都没有进行过年度规划。从学校到工作，接触到了很多东西：<br>C# PHP（Yii框架，ThinkPhp），Mongodb，Arcgis，ArcEngine，Android，Web，SSM，iOS，Windows Phone，Python，Html5 Hybrid App 。<br>看得很多，总结的很少。<br>最近正着手把之前在工作学习中的记下来笔记整理一下，也是对工作学习到现在的一个『交代』。新年伊始，已经过去了三十六分之一左右了，得约束下自己，先给自己列一个计划。<br><a id="more"></a></p>
@@ -58,8 +58,8 @@
   
   <entry>
     <title><![CDATA[Hexo常用命令笔记]]></title>
-    <link href="http://lulee007.github.io/2016/01/09/Hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0/"/>
-    <id>http://lulee007.github.io/2016/01/09/Hexo常用命令笔记/</id>
+    <link href="http://lulee007.gitcafe.io/2016/01/09/Hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0/"/>
+    <id>http://lulee007.gitcafe.io/2016/01/09/Hexo常用命令笔记/</id>
     <published>2016-01-09T04:20:23.000Z</published>
     <updated>2016-01-09T06:17:17.000Z</updated>
     <content type="html"><![CDATA[<p>参考：<a href="http://segmentfault.com/a/1190000002632530" target="_blank" rel="external">http://segmentfault.com/a/1190000002632530</a></p>
@@ -162,18 +162,18 @@
     
     </summary>
     
-      <category term="Hexo" scheme="http://lulee007.github.io/tagsCN/Hexo/"/>
+      <category term="Hexo" scheme="http://lulee007.gitcafe.io/tagsCN/Hexo/"/>
     
-      <category term="命令" scheme="http://lulee007.github.io/tagsCN/%E5%91%BD%E4%BB%A4/"/>
+      <category term="命令" scheme="http://lulee007.gitcafe.io/tagsCN/%E5%91%BD%E4%BB%A4/"/>
     
-      <category term="笔记" scheme="http://lulee007.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="http://lulee007.gitcafe.io/categories/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Hexo博客优化配置]]></title>
-    <link href="http://lulee007.github.io/2016/01/08/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E9%85%8D%E7%BD%AE/"/>
-    <id>http://lulee007.github.io/2016/01/08/Hexo博客优化配置/</id>
+    <link href="http://lulee007.gitcafe.io/2016/01/08/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E9%85%8D%E7%BD%AE/"/>
+    <id>http://lulee007.gitcafe.io/2016/01/08/Hexo博客优化配置/</id>
     <published>2016-01-08T04:13:10.000Z</published>
     <updated>2016-01-09T06:27:14.000Z</updated>
     <content type="html"><![CDATA[<h3 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h3><p>记录一下搭建此博客期间的做的优化配置：</p>
@@ -210,18 +210,18 @@
     
     </summary>
     
-      <category term="Hexo" scheme="http://lulee007.github.io/tagsCN/Hexo/"/>
+      <category term="Hexo" scheme="http://lulee007.gitcafe.io/tagsCN/Hexo/"/>
     
-      <category term="配置" scheme="http://lulee007.github.io/tagsCN/%E9%85%8D%E7%BD%AE/"/>
+      <category term="配置" scheme="http://lulee007.gitcafe.io/tagsCN/%E9%85%8D%E7%BD%AE/"/>
     
-      <category term="笔记" scheme="http://lulee007.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="http://lulee007.gitcafe.io/categories/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Mac下使用Github与Hexo搭建静态博客]]></title>
-    <link href="http://lulee007.github.io/2016/01/07/Mac%E4%B8%8B%E4%BD%BF%E7%94%A8Github%E4%B8%8EHexo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://lulee007.github.io/2016/01/07/Mac下使用Github与Hexo搭建静态博客/</id>
+    <link href="http://lulee007.gitcafe.io/2016/01/07/Mac%E4%B8%8B%E4%BD%BF%E7%94%A8Github%E4%B8%8EHexo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://lulee007.gitcafe.io/2016/01/07/Mac下使用Github与Hexo搭建静态博客/</id>
     <published>2016-01-07T11:55:30.000Z</published>
     <updated>2016-01-12T12:03:08.000Z</updated>
     <content type="html"><![CDATA[<h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>之前一直都是把工作学习中的笔记写在<code>Wiz笔记</code>里的，当然也尝试过其他博客：<code>Wordpress</code>、<code>csnd</code>、<code>cnblog</code>。笔记不利于分享，wordpress之类的用起来太麻烦，最近在github上浏览学习了不少代码，也看到了不少基于github的博文，然后就搜了一下关于静态博客的资源，觉得hexo比较流行，经过google一番，找了一些教程来搭建一个个人静态博客。<br>其间看到阮一峰的一篇<a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html" target="_blank" rel="external">博文</a>中提到的,喜欢写Blog的人会经历三个阶段:</p>
@@ -314,20 +314,20 @@
     
     </summary>
     
-      <category term="Github" scheme="http://lulee007.github.io/tagsCN/Github/"/>
+      <category term="Github" scheme="http://lulee007.gitcafe.io/tagsCN/Github/"/>
     
-      <category term="Hexo" scheme="http://lulee007.github.io/tagsCN/Hexo/"/>
+      <category term="Hexo" scheme="http://lulee007.gitcafe.io/tagsCN/Hexo/"/>
     
-      <category term="Mac" scheme="http://lulee007.github.io/tagsCN/Mac/"/>
+      <category term="Mac" scheme="http://lulee007.gitcafe.io/tagsCN/Mac/"/>
     
-      <category term="笔记" scheme="http://lulee007.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="http://lulee007.gitcafe.io/categories/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Hello World]]></title>
-    <link href="http://lulee007.github.io/2016/01/07/hello-world/"/>
-    <id>http://lulee007.github.io/2016/01/07/hello-world/</id>
+    <link href="http://lulee007.gitcafe.io/2016/01/07/hello-world/"/>
+    <id>http://lulee007.gitcafe.io/2016/01/07/hello-world/</id>
     <published>2016-01-07T11:28:47.000Z</published>
     <updated>2016-01-07T11:28:47.000Z</updated>
     <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
@@ -348,8 +348,8 @@
   
   <entry>
     <title><![CDATA[Cordova+Ionic+AngularJs做混合移动App开发之--学习路线]]></title>
-    <link href="http://lulee007.github.io/2015/10/23/Cordova-Ionic-Angularjs%E5%81%9A%E6%B7%B7%E5%90%88%E7%A7%BB%E5%8A%A8App%E5%BC%80%E5%8F%91%E4%B9%8B--%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/"/>
-    <id>http://lulee007.github.io/2015/10/23/Cordova-Ionic-Angularjs做混合移动App开发之--学习路线/</id>
+    <link href="http://lulee007.gitcafe.io/2015/10/23/Cordova-Ionic-Angularjs%E5%81%9A%E6%B7%B7%E5%90%88%E7%A7%BB%E5%8A%A8App%E5%BC%80%E5%8F%91%E4%B9%8B--%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/"/>
+    <id>http://lulee007.gitcafe.io/2015/10/23/Cordova-Ionic-Angularjs做混合移动App开发之--学习路线/</id>
     <published>2015-10-23T06:59:23.000Z</published>
     <updated>2016-01-14T02:47:12.000Z</updated>
     <content type="html"><![CDATA[<h2 id="u73AF_u5883_u642D_u5EFA"><a href="#u73AF_u5883_u642D_u5EFA" class="headerlink" title="环境搭建"></a>环境搭建</h2><p>参考另一篇：<a href="/lulee007.github.io/">Mac下安装cordova+ionic+angularjs做混合移动app开发</a></p>
@@ -373,26 +373,26 @@
     
     </summary>
     
-      <category term="AngularJs" scheme="http://lulee007.github.io/tagsCN/AngularJs/"/>
+      <category term="AngularJs" scheme="http://lulee007.gitcafe.io/tagsCN/AngularJs/"/>
     
-      <category term="Cordova" scheme="http://lulee007.github.io/tagsCN/Cordova/"/>
+      <category term="Cordova" scheme="http://lulee007.gitcafe.io/tagsCN/Cordova/"/>
     
-      <category term="HTML5" scheme="http://lulee007.github.io/tagsCN/HTML5/"/>
+      <category term="HTML5" scheme="http://lulee007.gitcafe.io/tagsCN/HTML5/"/>
     
-      <category term="Hybrid App" scheme="http://lulee007.github.io/tagsCN/Hybrid-App/"/>
+      <category term="Hybrid App" scheme="http://lulee007.gitcafe.io/tagsCN/Hybrid-App/"/>
     
-      <category term="Ionic" scheme="http://lulee007.github.io/tagsCN/Ionic/"/>
+      <category term="Ionic" scheme="http://lulee007.gitcafe.io/tagsCN/Ionic/"/>
     
-      <category term="混合型移动应用" scheme="http://lulee007.github.io/tagsCN/%E6%B7%B7%E5%90%88%E5%9E%8B%E7%A7%BB%E5%8A%A8%E5%BA%94%E7%94%A8/"/>
+      <category term="混合型移动应用" scheme="http://lulee007.gitcafe.io/tagsCN/%E6%B7%B7%E5%90%88%E5%9E%8B%E7%A7%BB%E5%8A%A8%E5%BA%94%E7%94%A8/"/>
     
-      <category term="笔记" scheme="http://lulee007.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="http://lulee007.gitcafe.io/categories/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Mac下cordova+ionic+angularjs做混合移动app开发之--安装环境配置]]></title>
-    <link href="http://lulee007.github.io/2015/10/09/Mac%E4%B8%8BCordova-Ionic-AngularJs%E5%81%9A%E6%B7%B7%E5%90%88%E7%A7%BB%E5%8A%A8App%E5%BC%80%E5%8F%91%E4%B9%8B--%E5%AE%89%E8%A3%85%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
-    <id>http://lulee007.github.io/2015/10/09/Mac下Cordova-Ionic-AngularJs做混合移动App开发之--安装环境配置/</id>
+    <link href="http://lulee007.gitcafe.io/2015/10/09/Mac%E4%B8%8BCordova-Ionic-AngularJs%E5%81%9A%E6%B7%B7%E5%90%88%E7%A7%BB%E5%8A%A8App%E5%BC%80%E5%8F%91%E4%B9%8B--%E5%AE%89%E8%A3%85%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    <id>http://lulee007.gitcafe.io/2015/10/09/Mac下Cordova-Ionic-AngularJs做混合移动App开发之--安装环境配置/</id>
     <published>2015-10-09T06:49:59.000Z</published>
     <updated>2016-01-12T11:57:23.000Z</updated>
     <content type="html"><![CDATA[<h3 id="u5B89_u88C5Nodejs_3A"><a href="#u5B89_u88C5Nodejs_3A" class="headerlink" title="安装Nodejs:"></a>安装Nodejs:</h3><p>下载并打开<code>node-v0.12.4.pkg</code>进行安装</p>
@@ -420,28 +420,28 @@
     
     </summary>
     
-      <category term="AngularJs" scheme="http://lulee007.github.io/tagsCN/AngularJs/"/>
+      <category term="AngularJs" scheme="http://lulee007.gitcafe.io/tagsCN/AngularJs/"/>
     
-      <category term="Cordova" scheme="http://lulee007.github.io/tagsCN/Cordova/"/>
+      <category term="Cordova" scheme="http://lulee007.gitcafe.io/tagsCN/Cordova/"/>
     
-      <category term="HTML5" scheme="http://lulee007.github.io/tagsCN/HTML5/"/>
+      <category term="HTML5" scheme="http://lulee007.gitcafe.io/tagsCN/HTML5/"/>
     
-      <category term="Hybrid App" scheme="http://lulee007.github.io/tagsCN/Hybrid-App/"/>
+      <category term="Hybrid App" scheme="http://lulee007.gitcafe.io/tagsCN/Hybrid-App/"/>
     
-      <category term="Ionic" scheme="http://lulee007.github.io/tagsCN/Ionic/"/>
+      <category term="Ionic" scheme="http://lulee007.gitcafe.io/tagsCN/Ionic/"/>
     
-      <category term="Mac" scheme="http://lulee007.github.io/tagsCN/Mac/"/>
+      <category term="Mac" scheme="http://lulee007.gitcafe.io/tagsCN/Mac/"/>
     
-      <category term="混合型移动应用" scheme="http://lulee007.github.io/tagsCN/%E6%B7%B7%E5%90%88%E5%9E%8B%E7%A7%BB%E5%8A%A8%E5%BA%94%E7%94%A8/"/>
+      <category term="混合型移动应用" scheme="http://lulee007.gitcafe.io/tagsCN/%E6%B7%B7%E5%90%88%E5%9E%8B%E7%A7%BB%E5%8A%A8%E5%BA%94%E7%94%A8/"/>
     
-      <category term="笔记" scheme="http://lulee007.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="http://lulee007.gitcafe.io/categories/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Mac下Android Studio与Subversion集成的问题]]></title>
-    <link href="http://lulee007.github.io/2015/06/28/Mac%E4%B8%8BAndroidStudio%E4%B8%8ESubversion%E9%9B%86%E6%88%90%E7%9A%84%E9%97%AE%E9%A2%98/"/>
-    <id>http://lulee007.github.io/2015/06/28/Mac下AndroidStudio与Subversion集成的问题/</id>
+    <link href="http://lulee007.gitcafe.io/2015/06/28/Mac%E4%B8%8BAndroidStudio%E4%B8%8ESubversion%E9%9B%86%E6%88%90%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>http://lulee007.gitcafe.io/2015/06/28/Mac下AndroidStudio与Subversion集成的问题/</id>
     <published>2015-06-28T12:35:17.000Z</published>
     <updated>2016-01-11T13:12:32.000Z</updated>
     <content type="html"><![CDATA[<p>由于Mac10.10下的subversion版本是1.7，而使用smartsvn8.6 <code>checkout</code>版本提示需要<code>upgrade to 1.8</code><br>这样一来，使得android studio import 进来的svn项目无法使用集成好的subversion进行管理了，会出现如下错误：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">svn: E155021: This client is too old to work  </span><br><span class="line">with the working copy at xxx (format <span class="string">'31'</span>)</span><br></pre></td></tr></table></figure></p>
@@ -478,22 +478,22 @@
     
     </summary>
     
-      <category term="Android Studio" scheme="http://lulee007.github.io/tagsCN/Android-Studio/"/>
+      <category term="Android Studio" scheme="http://lulee007.gitcafe.io/tagsCN/Android-Studio/"/>
     
-      <category term="Mac" scheme="http://lulee007.github.io/tagsCN/Mac/"/>
+      <category term="Mac" scheme="http://lulee007.gitcafe.io/tagsCN/Mac/"/>
     
-      <category term="SVN" scheme="http://lulee007.github.io/tagsCN/SVN/"/>
+      <category term="SVN" scheme="http://lulee007.gitcafe.io/tagsCN/SVN/"/>
     
-      <category term="Subversion" scheme="http://lulee007.github.io/tagsCN/Subversion/"/>
+      <category term="Subversion" scheme="http://lulee007.gitcafe.io/tagsCN/Subversion/"/>
     
-      <category term="笔记" scheme="http://lulee007.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="http://lulee007.gitcafe.io/categories/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Mac10.10.3下AndroidStudio单元测试——instrumentation]]></title>
-    <link href="http://lulee007.github.io/2015/06/21/Mac10-10-3%E4%B8%8BAndroidStudio%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E2%80%94%E2%80%94instrumentation/"/>
-    <id>http://lulee007.github.io/2015/06/21/Mac10-10-3下AndroidStudio单元测试——instrumentation/</id>
+    <link href="http://lulee007.gitcafe.io/2015/06/21/Mac10-10-3%E4%B8%8BAndroidStudio%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E2%80%94%E2%80%94instrumentation/"/>
+    <id>http://lulee007.gitcafe.io/2015/06/21/Mac10-10-3下AndroidStudio单元测试——instrumentation/</id>
     <published>2015-06-21T11:45:37.000Z</published>
     <updated>2016-01-11T12:55:30.000Z</updated>
     <content type="html"><![CDATA[<p>测试环境：</p>
@@ -524,24 +524,24 @@
     
     </summary>
     
-      <category term="Android Studio" scheme="http://lulee007.github.io/tagsCN/Android-Studio/"/>
+      <category term="Android Studio" scheme="http://lulee007.gitcafe.io/tagsCN/Android-Studio/"/>
     
-      <category term="Instrumentation" scheme="http://lulee007.github.io/tagsCN/Instrumentation/"/>
+      <category term="Instrumentation" scheme="http://lulee007.gitcafe.io/tagsCN/Instrumentation/"/>
     
-      <category term="Mac" scheme="http://lulee007.github.io/tagsCN/Mac/"/>
+      <category term="Mac" scheme="http://lulee007.gitcafe.io/tagsCN/Mac/"/>
     
-      <category term="Unit Test" scheme="http://lulee007.github.io/tagsCN/Unit-Test/"/>
+      <category term="Unit Test" scheme="http://lulee007.gitcafe.io/tagsCN/Unit-Test/"/>
     
-      <category term="单元测试" scheme="http://lulee007.github.io/tagsCN/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
+      <category term="单元测试" scheme="http://lulee007.gitcafe.io/tagsCN/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
     
-      <category term="笔记" scheme="http://lulee007.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="http://lulee007.gitcafe.io/categories/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[CentOS5.5下安装Countly-Web-Server过程记录]]></title>
-    <link href="http://lulee007.github.io/2015/06/12/CentOS5-5%E4%B8%8B%E5%AE%89%E8%A3%85Countly-Web-Server%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/"/>
-    <id>http://lulee007.github.io/2015/06/12/CentOS5-5下安装Countly-Web-Server过程记录/</id>
+    <link href="http://lulee007.gitcafe.io/2015/06/12/CentOS5-5%E4%B8%8B%E5%AE%89%E8%A3%85Countly-Web-Server%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/"/>
+    <id>http://lulee007.gitcafe.io/2015/06/12/CentOS5-5下安装Countly-Web-Server过程记录/</id>
     <published>2015-06-12T13:57:12.000Z</published>
     <updated>2016-01-11T13:03:02.000Z</updated>
     <content type="html"><![CDATA[<h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>由于工作需要，需要在CentOS 5.5 下安装Countly Web Server，把过程记录下来</p>
@@ -701,11 +701,11 @@
     
     </summary>
     
-      <category term="Cent OS" scheme="http://lulee007.github.io/tagsCN/Cent-OS/"/>
+      <category term="Cent OS" scheme="http://lulee007.gitcafe.io/tagsCN/Cent-OS/"/>
     
-      <category term="Countly Web Server" scheme="http://lulee007.github.io/tagsCN/Countly-Web-Server/"/>
+      <category term="Countly Web Server" scheme="http://lulee007.gitcafe.io/tagsCN/Countly-Web-Server/"/>
     
-      <category term="笔记" scheme="http://lulee007.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="http://lulee007.gitcafe.io/categories/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
