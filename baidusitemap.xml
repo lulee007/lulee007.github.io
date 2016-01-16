@@ -5,6 +5,52 @@
     
     
   <url>
+    <loc>http://lulee007.gitcafe.io/2016/01/08/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E9%85%8D%E7%BD%AE/</loc>
+    <lastmod>2016-01-16T07:21:26.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo博客优化配置</title>
+        <pubTime>2016-01-08T04:13:10.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+        <tag>配置</tag>
+         
+         
+           
+             
+              <breadCrumb title="笔记" url="http://lulee007.gitcafe.io/categories/%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://lulee007.gitcafe.io/2016/01/07/Mac%E4%B8%8B%E4%BD%BF%E7%94%A8Github%E4%B8%8EHexo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2016-01-16T07:08:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>Mac下使用Github与Hexo搭建静态博客</title>
+        <pubTime>2016-01-07T11:55:30.000Z</pubTime>
+        
+        <tag>Github</tag>
+         
+        <tag>Hexo</tag>
+         
+        <tag>Mac</tag>
+         
+         
+           
+             
+              <breadCrumb title="笔记" url="http://lulee007.gitcafe.io/categories/%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://lulee007.gitcafe.io/2015/10/23/Cordova-Ionic-Angularjs%E5%81%9A%E6%B7%B7%E5%90%88%E7%A7%BB%E5%8A%A8App%E5%BC%80%E5%8F%91%E4%B9%8B--%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/</loc>
     <lastmod>2016-01-14T02:47:12.000Z</lastmod>
     <data>
@@ -34,30 +80,6 @@
     </url>
 
     
-    
-  <url>
-    <loc>http://lulee007.gitcafe.io/2016/01/07/Mac%E4%B8%8B%E4%BD%BF%E7%94%A8Github%E4%B8%8EHexo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2016-01-12T12:03:08.000Z</lastmod>
-    <data>
-        <display>
-        <title>Mac下使用Github与Hexo搭建静态博客</title>
-        <pubTime>2016-01-07T11:55:30.000Z</pubTime>
-        
-        <tag>Github</tag>
-         
-        <tag>Hexo</tag>
-         
-        <tag>Mac</tag>
-         
-         
-           
-             
-              <breadCrumb title="笔记" url="http://lulee007.gitcafe.io/categories/%E7%AC%94%E8%AE%B0/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>http://lulee007.gitcafe.io/2015/10/09/Mac%E4%B8%8BCordova-Ionic-AngularJs%E5%81%9A%E6%B7%B7%E5%90%88%E7%A7%BB%E5%8A%A8App%E5%BC%80%E5%8F%91%E4%B9%8B--%E5%AE%89%E8%A3%85%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</loc>
@@ -171,28 +193,6 @@
         <tag>Unit Test</tag>
          
         <tag>单元测试</tag>
-         
-         
-           
-             
-              <breadCrumb title="笔记" url="http://lulee007.gitcafe.io/categories/%E7%AC%94%E8%AE%B0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://lulee007.gitcafe.io/2016/01/08/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E9%85%8D%E7%BD%AE/</loc>
-    <lastmod>2016-01-09T06:27:14.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hexo博客优化配置</title>
-        <pubTime>2016-01-08T04:13:10.000Z</pubTime>
-        
-        <tag>Hexo</tag>
-         
-        <tag>配置</tag>
          
          
            
