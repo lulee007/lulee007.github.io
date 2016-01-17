@@ -77,6 +77,32 @@ var _hmt = _hmt || [];
 		
 		<p class="header-subtitle">码农，程序猿</p>
 		
+		<script type="text/javascript">
+			var cse;
+
+			//处理结果回调函数示例
+			function display (data) {
+				console.log(data);
+			}
+
+			//初始化回调函数示例
+			function init () {
+				cse = new BCse.Search("15280128949200064399");    //参数为您的API引擎ID，已自动填写，必需。
+
+				cse.getResult("关键词", display);    //此方法获取搜索结果，参数1为搜索词，参数2为您获取到结果后想要执行的回调函数。
+			}
+
+			function loadScript () {
+				var script = document.createElement("script");
+				script.type = "text/javascript";
+				script.charset = "utf-8";
+				script.src = "http://zhannei.baidu.com/api/customsearch/apiaccept?sid=15280128949200064399&v=2.0&callback=init";
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(script, s);
+			}
+
+			loadScript();
+		</script>
 		<script>
 			(function() {
 				var cx = '015410210664254622126:iaoif_30spo';
