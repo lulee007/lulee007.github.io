@@ -1,106 +1,329 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title><![CDATA[小灰灰写代码]]></title>
-  <subtitle><![CDATA[码农，程序猿]]></subtitle>
-  <link href="/atom.xml" rel="self"/>
-  <link href="http://lulee007.gitcafe.io/"/>
-  <updated>2016-01-19T00:36:52.000Z</updated>
-  <id>http://lulee007.gitcafe.io/</id>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="google-site-verification" content="Ljf6H5Bl2Y_66M4IZ9apV-PT4h4LzKxEdqskSCRan00" />
+
+  <meta charset="utf-8">
   
-  <author>
-    <name><![CDATA[Lulee007]]></name>
-    
-  </author>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>SSM：Struts2+Spring+Mybatis Web 项目搭建 | 小灰灰写代码</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="前言在 Intellij 中配置 SSM Web 开发框架。
+
+Struts2 主要用它的视图统筹
+Spring 整个框架的统筹
+Mybatis3 持久层,MyBatis 是支持定制化SQL、存储过程以及高级映射的优秀的持久层框架
+
+参考：夕下奕林:Idea SpringMVC+Spring+MyBatis+Maven整合">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SSM：Struts2+Spring+Mybatis Web 项目搭建">
+<meta property="og:url" content="http://lulee007.gitcafe.io/2016/01/14/SSM-Struts2-Spring-Mybatis-Jersey-Web-项目搭建/index.html">
+<meta property="og:site_name" content="小灰灰写代码">
+<meta property="og:description" content="前言在 Intellij 中配置 SSM Web 开发框架。
+
+Struts2 主要用它的视图统筹
+Spring 整个框架的统筹
+Mybatis3 持久层,MyBatis 是支持定制化SQL、存储过程以及高级映射的优秀的持久层框架
+
+参考：夕下奕林:Idea SpringMVC+Spring+MyBatis+Maven整合">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160119-0%402x.png">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160119-1%402x.png">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160119-2%402x.png">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160119-3%402x.png">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160119-4%402x.png">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160119-5%402x.png">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160119-6%402x.png">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160119-7%402x.png">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160120-0%402x.png">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160121-0%402x.png">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160121-1%402x.png">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_addtomcat.gif">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160122-0%402x.png">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160122-1%402x.png">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160122-2%402x.png">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160122-3%402x.png">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160122-4%402x.png">
+<meta property="og:updated_time" content="2016-01-22T03:07:47.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SSM：Struts2+Spring+Mybatis Web 项目搭建">
+<meta name="twitter:description" content="前言在 Intellij 中配置 SSM Web 开发框架。
+
+Struts2 主要用它的视图统筹
+Spring 整个框架的统筹
+Mybatis3 持久层,MyBatis 是支持定制化SQL、存储过程以及高级映射的优秀的持久层框架
+
+参考：夕下奕林:Idea SpringMVC+Spring+MyBatis+Maven整合">
   
-  <generator uri="http://hexo.io/">Hexo</generator>
+    <link rel="alternative" href="/atom.xml" title="小灰灰写代码" type="application/atom+xml">
   
-  <entry>
-    <title><![CDATA[Mac下重置Mysql的root密码]]></title>
-    <link href="http://lulee007.gitcafe.io/2016/01/18/Mac%E4%B8%8B%E9%87%8D%E7%BD%AEMysql%E7%9A%84root%E5%AF%86%E7%A0%81/"/>
-    <id>http://lulee007.gitcafe.io/2016/01/18/Mac下重置Mysql的root密码/</id>
-    <published>2016-01-18T13:18:36.000Z</published>
-    <updated>2016-01-19T00:36:52.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>Mac上装了Mysql很长时间了，结果每次用的时候发现密码都不对上，密码忘了，这次长记性了，记下来。<br><a href="http://www.zuimoban.com/jiaocheng/mysql/2548.html" target="_blank" rel="external">参考:mac上安装mysql 以及root密码忘记或权限错误的解决办法</a></p>
-<a id="more"></a>
-<h2 id="u914D_u7F6Emysql_u73AF_u5883_u53D8_u91CF"><a href="#u914D_u7F6Emysql_u73AF_u5883_u53D8_u91CF" class="headerlink" title="配置mysql环境变量"></a>配置mysql环境变量</h2><p>在终端中输入：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo vi ~/bash_profile</span><br><span class="line"><span class="comment"># 按`i`键进入编辑模式</span></span><br></pre></td></tr></table></figure></p>
-<p>输入以下内容到文件最后:<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># mysql</span></span><br><span class="line"><span class="built_in">alias</span> mysql=<span class="string">'/usr/local/mysql/bin/mysql'</span></span><br><span class="line"><span class="built_in">alias</span> mysqladmin=<span class="string">'/usr/local/mysql/bin/mysqladmin'</span></span><br><span class="line"><span class="comment"># 按`esc`键，然后输入`wq`回车，即可保存退出。</span></span><br></pre></td></tr></table></figure></p>
-<p>一般出现的错误如下：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ERROR <span class="number">1045</span> (<span class="number">28000</span>): Access denied <span class="keyword">for</span> user <span class="string">'root'</span>@<span class="string">'localhost'</span> (using password: NO)</span><br><span class="line"><span class="comment"># 或者</span></span><br><span class="line">ERROR <span class="number">1045</span> (<span class="number">28000</span>): Access denied <span class="keyword">for</span> user <span class="string">'root'</span>@<span class="string">'localhost'</span> (using password: YES)</span><br></pre></td></tr></table></figure></p>
-<h2 id="u89E3_u51B3_u65B9_u6CD5"><a href="#u89E3_u51B3_u65B9_u6CD5" class="headerlink" title="解决方法"></a>解决方法</h2><ol>
-<li>停止 mysql server<br>通常是在 ‘系统偏好设置’ &gt; MySQL &gt; ‘Stop MySQL Server’  </li>
-<li><p>打开终端，输入：</p>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /usr/<span class="keyword">local</span>/mysql/bin/mysqld_safe <span class="comment">--skip-grant-tables</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>打开<strong>另一个新终端</strong>，输入:</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo /usr/<span class="built_in">local</span>/mysql/bin/mysql -u root</span><br><span class="line"><span class="comment"># 输入 Mac 系统用户密码后，</span></span><br><span class="line"><span class="comment"># 直接敲回车进入 mysql 终端，输入：</span></span><br><span class="line">UPDATE mysql.user SET authentication_string=PASSWORD(<span class="string">'新密码'</span>) WHERE User=<span class="string">'root'</span>;</span><br><span class="line">FLUSH PRIVILEGES;</span><br><span class="line"><span class="comment"># 输入 \q 退出 mysql 终端</span></span><br><span class="line">\q</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>重启MySQL.</p>
-</li>
-</ol>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>Mac上装了Mysql很长时间了，结果每次用的时候发现密码都不对上，密码忘了，这次长记性了，记下来。<br><a href="http://www.zuimoban.com/jiaocheng/mysql/2548.html">参考:mac上安装mysql 以及root密码忘记或权限错误的解决办法</a></p>]]>
-    
-    </summary>
-    
-      <category term="Mac" scheme="http://lulee007.gitcafe.io/tagsCN/Mac/"/>
-    
-      <category term="Mysql" scheme="http://lulee007.gitcafe.io/tagsCN/Mysql/"/>
-    
-      <category term="root" scheme="http://lulee007.gitcafe.io/tagsCN/root/"/>
-    
-      <category term="重置密码" scheme="http://lulee007.gitcafe.io/tagsCN/%E9%87%8D%E7%BD%AE%E5%AF%86%E7%A0%81/"/>
-    
-      <category term="技术" scheme="http://lulee007.gitcafe.io/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-  </entry>
   
-  <entry>
-    <title><![CDATA[Hexo博客优化配置之--为自己博客添加搜索引擎网页收录]]></title>
-    <link href="http://lulee007.gitcafe.io/2016/01/16/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E9%85%8D%E7%BD%AE%E4%B9%8B-%E4%B8%BA%E8%87%AA%E5%B7%B1%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E7%BD%91%E9%A1%B5%E6%94%B6%E5%BD%95/"/>
-    <id>http://lulee007.gitcafe.io/2016/01/16/Hexo博客优化配置之-为自己博客添加搜索引擎网页收录/</id>
-    <published>2016-01-16T07:55:14.000Z</published>
-    <updated>2016-01-18T01:44:05.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>从今年的一月七号开始，这个 Hexo 博客折腾了差不多十天，在使用 Yilia 这个主题过程中，发现有些地方不太满意,就把源码 fork<br>下来一版本自己进行折腾。 在折腾这个站内搜索的功能时间最长， 看了网上的一些教程，没有一个搞的顺的。最后自己看着官方文档进行<br>了尝试，将就着搞的差不多了:<br><a href="/">Hexo博客优化配置之–为自己博客添加站内搜索</a><br>为了让博客内容尽可能的被<strong>百度</strong>或者<strong>谷歌</strong>搜索到,需要将自己的博客上的博客链接添加到搜索引擎收录中。<br><strong>提醒:</strong> 如果你的博客在 github.io 上，想添加百度收录的直接 pass 吧。  </p>
-<a id="more"></a>
-<h2 id="u767E_u5EA6"><a href="#u767E_u5EA6" class="headerlink" title="百度"></a>百度</h2><p><strong>注意：</strong> 经过测试发现 gitcafe 也<em>不能够进行抓取</em>了，以下内容仅是记录当时的尝试过程。</p>
-<h3 id="u94FE_u63A5_u63D0_u4EA4_u65B9_u5F0F_u5B9E_u6D4B"><a href="#u94FE_u63A5_u63D0_u4EA4_u65B9_u5F0F_u5B9E_u6D4B" class="headerlink" title="链接提交方式实测"></a>链接提交方式实测</h3><blockquote>
-<p>如何选择链接提交方式<br>1、主动推送：最为快速的提交方式，推荐您将站点当天新产出链接立即通过此方式推送给百度，以保证新链接可以及时被百度收录。<br>2、自动推送：最为便捷的提交方式，请将自动推送的JS代码部署在站点的每一个页面源代码中，部署代码的页面在每次被浏览时，链接会被自动推送给百度。可以与主动推送配合使用。<br>3、sitemap：您可以定期将网站链接放到sitemap中，然后将sitemap提交给百度。百度会周期性的抓取检查您提交的sitemap，对其中的链接进行处理，但收录速度慢于主动推送。<br>4、手动提交：一次性提交链接给百度，可以使用此种方式。<br><em>百度站长平台为站长提供链接提交通道，您可以提交想被百度收录的链接，百度搜索引擎会按照标准处理，但不保证一定能够收录您提交的链接。</em></p>
-</blockquote>
-<p>最新的链接提交入口在<a href="http://zhanzhang.baidu.com/" target="_blank" rel="external">百度站长平台</a>&gt;&gt;<code>工具</code>板块左侧菜单栏下选择:<code>网页抓取</code>&gt;&gt;<code>链接提交</code>:<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160116-0%402x.png" alt="链接提交"></p>
-<h4 id="sitemap"><a href="#sitemap" class="headerlink" title="sitemap"></a>sitemap</h4><p>因为图个方便,在安装了<a href="https://github.com/coneycode/hexo-generator-baidu-sitemap" target="_blank" rel="external">百度 sitemap</a>后直接生成了适合百度的 sitemap ,所以就最先尝试了这个<code>sitemap</code>方式.<br>结果等了两天也没看状态更新过,一直是等待状态,太2了,是不是故意的.<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160116-1%402x.png" alt="等待"></p>
-<h4 id="u81EA_u52A8_u63A8_u9001"><a href="#u81EA_u52A8_u63A8_u9001" class="headerlink" title="自动推送"></a>自动推送</h4><p>这个简单,直接拷贝代码,放到网页中. 然并卵(笑哭)<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript"></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> bp = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</span><br><span class="line">    bp.src = <span class="string">'//push.zhanzhang.baidu.com/push.js'</span>;</span><br><span class="line">    <span class="keyword">var</span> s = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"script"</span>)[<span class="number">0</span>];</span><br><span class="line">    s.parentNode.insertBefore(bp, s);</span><br><span class="line">&#125;)();</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<h4 id="u624B_u52A8_u63D0_u4EA4"><a href="#u624B_u52A8_u63D0_u4EA4" class="headerlink" title="手动提交"></a>手动提交</h4><p>这个简单直接把sitemap里的网址整理出来按照要求上传即可</p>
-<h3 id="u4E3B_u52A8_u63A8_u9001"><a href="#u4E3B_u52A8_u63A8_u9001" class="headerlink" title="主动推送"></a>主动推送</h3><p>最后试试看主动推送这里参考<a href="http://lovenight.github.io/2015/11/18/%E5%90%91%E7%99%BE%E5%BA%A6%E6%8E%A8%E9%80%81hexo%E5%8D%9A%E5%AE%A2%E6%89%80%E6%9C%89%E9%93%BE%E6%8E%A5%E7%9A%84Python%E8%84%9A%E6%9C%AC/" target="_blank" rel="external">lovenight 的向百度推送hexo博客所有链接的Python脚本</a><br>不太懂 python ,在 mac 下对 python 脚本进行了简单的修改:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="comment"># @Author: LoveNight</span></span><br><span class="line"><span class="comment"># @Date:   2015-11-16 20:45:59</span></span><br><span class="line"><span class="comment"># @Last Modified by:   lulee007</span></span><br><span class="line"><span class="comment"># @Last Modified time: 2016-01-16 21:06:50</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup <span class="keyword">as</span> BS</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> codecs</span><br><span class="line"></span><br><span class="line"><span class="string">"""</span><br><span class="line">hexo 博客专用，向百度站长平台提交所有网址</span><br><span class="line"></span><br><span class="line">本脚本必须放在hexo博客的根目录下执行！需要已安装生成百度站点地图的插件。</span><br><span class="line">百度站长平台提交链接：http://zhanzhang.baidu.com/linksubmit/index</span><br><span class="line">主动推送：最为快速的提交方式，推荐您将站点当天新产出链接立即通过此方式推送给百度，以保证新链接可以及时被百度收录。</span><br><span class="line">从中找到自己的接口调用地址</span><br><span class="line">"""</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">url = <span class="string">'http://data.zz.baidu.com/urls?site=YOUR_BLOG_HOST&amp;token=YOUR_TOKEN'</span></span><br><span class="line">baidu_sitemap = os.path.join(sys.path[<span class="number">0</span>], <span class="string">'public'</span>, <span class="string">'baidusitemap.xml'</span>)</span><br><span class="line">google_sitemap = os.path.join(sys.path[<span class="number">0</span>], <span class="string">'public'</span>, <span class="string">'sitemap.xml'</span>)</span><br><span class="line"><span class="comment"># sitemap = [baidu_sitemap, google_sitemap]</span></span><br><span class="line">sitemap = [baidu_sitemap]</span><br><span class="line"></span><br><span class="line"><span class="comment"># assert (os.path.exists(baidu_sitemap) or os.path.exists(</span></span><br><span class="line"><span class="comment">#     google_sitemap)), "没找到任何网站地图，请检查！"</span></span><br><span class="line"><span class="keyword">assert</span> os.path.exists(baidu_sitemap) , <span class="string">"没找到任何网站地图，请检查！"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 从站点地图中读取网址列表</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getUrls</span><span class="params">()</span>:</span></span><br><span class="line">    urls = []</span><br><span class="line">    <span class="keyword">for</span> _ <span class="keyword">in</span> sitemap:</span><br><span class="line">        <span class="keyword">if</span> os.path.exists(_):</span><br><span class="line">            <span class="keyword">with</span> codecs.open(_, <span class="string">"r"</span>, <span class="string">"utf-8"</span>) <span class="keyword">as</span> f:</span><br><span class="line">                xml = f.read()</span><br><span class="line">            soup = BS(xml, <span class="string">"xml"</span>)</span><br><span class="line">            tags = soup.find_all(<span class="string">"loc"</span>)</span><br><span class="line">            urls += [x.string <span class="keyword">for</span> x <span class="keyword">in</span> tags]</span><br><span class="line">            <span class="keyword">if</span> _ == baidu_sitemap:</span><br><span class="line">                tags = soup.find_all(<span class="string">"breadCrumb"</span>, url=<span class="keyword">True</span>)</span><br><span class="line">                print(<span class="string">""</span>)</span><br><span class="line">                urls += [x[<span class="string">"url"</span>] <span class="keyword">for</span> x <span class="keyword">in</span> tags]</span><br><span class="line">    <span class="keyword">return</span> urls</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># POST提交网址列表</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">postUrls</span><span class="params">(urls)</span>:</span></span><br><span class="line">    urls = set(urls)  <span class="comment"># 先去重</span></span><br><span class="line">    print(<span class="string">"一共提取出 %s 个网址"</span> % len(urls))</span><br><span class="line">    data = <span class="string">"\n"</span>.join(urls)</span><br><span class="line">    <span class="keyword">return</span> requests.post(url, data=data).text</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line"></span><br><span class="line">    urls = getUrls()</span><br><span class="line">    result = postUrls(urls)</span><br><span class="line">    print(<span class="string">"提交结果："</span>)</span><br><span class="line">    print(result)</span><br><span class="line">```    </span><br><span class="line">如果你也是在 mac 下配置, 直接替换其中的`YOUR_BLOG_HOST`和`YOUR_TOKEN`然后运行此脚本即可得到类似的结果:</span><br></pre></td></tr></table></figure></p>
-<p>一共提取出 11 个网址<br>提交结果：<br>{“remain”:478,”success”:11}<br><code>``
-第二天看一下提交情况:
-![提交结果](http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160117-0%402x.png)
-但是在百度进行搜索时</code>site:lulee007.gitcafe.io`,还是只能看到一条。<br>最后想想是不是也不能抓取gitcafe了，进行了诊断。<br><strong><em>诊断:</em></strong>然后看到侧边栏还提供了抓取诊断工具，然后进行诊断一下吧，就输入了博客的其中一个链接:<br>呵呵了:<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160116-2%402x.png" alt="诊断结果"><br>dns 解析失败，这也抓不了 gitcafe ?  </p>
-<p><strong><em>白忙活了(无耐啊)</em></strong></p>
-<h2 id="u8C37_u6B4C"><a href="#u8C37_u6B4C" class="headerlink" title="谷歌"></a>谷歌</h2><h3 id="u6DFB_u52A0_u4E00_u4E2A_u8D44_u6E90_u7AD9"><a href="#u6DFB_u52A0_u4E00_u4E2A_u8D44_u6E90_u7AD9" class="headerlink" title="添加一个资源站"></a>添加一个资源站</h3><p>打开<a href="https://www.google.com/webmasters/tools/home?hl=zh-CN&amp;authuser=0" target="_blank" rel="external">google console</a>然后右上角有个<code>添加属性</code>按钮。<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160117-1%402x.png" alt="添加属性"><br>输入博客地址<code>lulee007.github.io</code>，我这里用 github 的地址测试。<br>点击<code>继续</code>后，会提示验证网站的所有权，<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160117-2%402x.png" alt="推荐方法"><br>这里采用备用的方法：<code>HTML标记</code><br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160117-3%402x.png" alt="HTML标记"><br>验证成功后结果：<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160117-4%402x.png" alt="验证通过结果"></p>
-<h3 id="u6DFB_u52A0_u7AD9_u70B9_u5730_u56FE"><a href="#u6DFB_u52A0_u7AD9_u70B9_u5730_u56FE" class="headerlink" title="添加站点地图"></a>添加站点地图</h3><p>这时打开上面的链接<code>Search Console</code>，或者通过资源列表页查看刚才添加的资源：<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160117-5%402x.png" alt="资源列表项"><br>点击<code>lulee007.github.io</code>标题就可以进入管理页。<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160117-6%402x.png" alt="管理概览"><br>在左边的侧边栏依次选择<code>抓取</code>&gt;&gt;<code>站点地图</code>，然后选择右边的<code>添加/测试站点地图</code>:<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_1.jpg" alt="添加站点地图"><br>添加后：<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160118-0%402x.png" alt="已添加站点一览"><br>这就完成了，等待一段时间后待谷歌进行抓取就可以，一般第二天看到结果了。<br>这时我第二天在谷歌搜索得到的结果：<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160118-1%402x.png" alt="搜索结果"><br>搜索的结果很准确，比百度强很多。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>从今年的一月七号开始，这个 Hexo 博客折腾了差不多十天，在使用 Yilia 这个主题过程中，发现有些地方不太满意,就把源码 fork<br>下来一版本自己进行折腾。 在折腾这个站内搜索的功能时间最长， 看了网上的一些教程，没有一个搞的顺的。最后自己看着官方文档进行<br>了尝试，将就着搞的差不多了:<br><a href="/">Hexo博客优化配置之–为自己博客添加站内搜索</a><br>为了让博客内容尽可能的被<strong>百度</strong>或者<strong>谷歌</strong>搜索到,需要将自己的博客上的博客链接添加到搜索引擎收录中。<br><strong>提醒:</strong> 如果你的博客在 github.io 上，想添加百度收录的直接 pass 吧。  </p>]]>
-    
-    </summary>
-    
-      <category term="Hexo" scheme="http://lulee007.gitcafe.io/tagsCN/Hexo/"/>
-    
-      <category term="百度搜索链接收录" scheme="http://lulee007.gitcafe.io/tagsCN/%E7%99%BE%E5%BA%A6%E6%90%9C%E7%B4%A2%E9%93%BE%E6%8E%A5%E6%94%B6%E5%BD%95/"/>
-    
-      <category term="谷歌搜索链接收录" scheme="http://lulee007.gitcafe.io/tagsCN/%E8%B0%B7%E6%AD%8C%E6%90%9C%E7%B4%A2%E9%93%BE%E6%8E%A5%E6%94%B6%E5%BD%95/"/>
-    
-      <category term="笔记" scheme="http://lulee007.gitcafe.io/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
+    <link rel="icon" href="/favicon.ico">
   
-  <entry>
-    <title><![CDATA[SSM：Struts2+Spring+Mybatis Web 项目搭建]]></title>
-    <link href="http://lulee007.gitcafe.io/2016/01/14/SSM-Struts2-Spring-Mybatis-Jersey-Web-%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/"/>
-    <id>http://lulee007.gitcafe.io/2016/01/14/SSM-Struts2-Spring-Mybatis-Jersey-Web-项目搭建/</id>
-    <published>2016-01-14T11:55:14.000Z</published>
-    <updated>2016-01-22T03:07:47.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>在 Intellij 中配置 SSM Web 开发框架。</p>
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xjzst.com1.z0.glb.clouddn.com/blog/pic/avatar/1.pic_hd.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Lulee007</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">码农，程序猿</p>
+		
+		<script>
+			(function() {
+				var cx = '015410210664254622126:iaoif_30spo';
+				var gcse = document.createElement('script');
+				gcse.type = 'text/javascript';
+				gcse.async = true;
+				gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+						'//cse.google.com/cse.js?cx=' + cx;
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(gcse, s);
+			})();
+		</script>
+		<gcse:searchbox-only></gcse:searchbox-only>
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/books/">阅读</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a target="_blank" href="https://github.com/lulee007/" title="github">
+									<i class="iconfont icon-github"></i>
+								</a>
+					        
+								<a target="_blank" href="http://weibo.com/lulee007/" title="weibo">
+									<i class="iconfont icon-weibo"></i>
+								</a>
+					        
+								<a target="_blank" href="mailto:lulee007@live.com" title="mail">
+									<i class="iconfont icon-mail"></i>
+								</a>
+					        
+								<a target="_blank" href="/atom.xml" title="rss">
+									<i class="iconfont icon-rss"></i>
+								</a>
+					        
+						</div>
+					</nav>
+				</section>
+
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tagsCN/Android-Studio/" style="font-size: 13.33px;">Android Studio</a> <a href="/tagsCN/AngularJs/" style="font-size: 13.33px;">AngularJs</a> <a href="/tagsCN/Cent-OS/" style="font-size: 10px;">Cent OS</a> <a href="/tagsCN/Cordova/" style="font-size: 13.33px;">Cordova</a> <a href="/tagsCN/Countly-Web-Server/" style="font-size: 10px;">Countly Web Server</a> <a href="/tagsCN/Github/" style="font-size: 10px;">Github</a> <a href="/tagsCN/HTML5/" style="font-size: 13.33px;">HTML5</a> <a href="/tagsCN/Hexo/" style="font-size: 16.67px;">Hexo</a> <a href="/tagsCN/Hybrid-App/" style="font-size: 13.33px;">Hybrid App</a> <a href="/tagsCN/Instrumentation/" style="font-size: 10px;">Instrumentation</a> <a href="/tagsCN/Ionic/" style="font-size: 13.33px;">Ionic</a> <a href="/tagsCN/Mac/" style="font-size: 20px;">Mac</a> <a href="/tagsCN/Mybatis3/" style="font-size: 10px;">Mybatis3</a> <a href="/tagsCN/Mysql/" style="font-size: 10px;">Mysql</a> <a href="/tagsCN/SVN/" style="font-size: 10px;">SVN</a> <a href="/tagsCN/Spring/" style="font-size: 10px;">Spring</a> <a href="/tagsCN/Struts2/" style="font-size: 10px;">Struts2</a> <a href="/tagsCN/Subversion/" style="font-size: 10px;">Subversion</a> <a href="/tagsCN/Unit-Test/" style="font-size: 10px;">Unit Test</a> <a href="/tagsCN/UnitTest/" style="font-size: 10px;">UnitTest</a> <a href="/tagsCN/root/" style="font-size: 10px;">root</a> <a href="/tagsCN/单元测试/" style="font-size: 10px;">单元测试</a> <a href="/tagsCN/命令/" style="font-size: 10px;">命令</a> <a href="/tagsCN/混合型移动应用/" style="font-size: 13.33px;">混合型移动应用</a> <a href="/tagsCN/百度搜索链接收录/" style="font-size: 10px;">百度搜索链接收录</a> <a href="/tagsCN/谷歌搜索链接收录/" style="font-size: 10px;">谷歌搜索链接收录</a> <a href="/tagsCN/配置/" style="font-size: 10px;">配置</a> <a href="/tagsCN/重置密码/" style="font-size: 10px;">重置密码</a>
+					</div>
+				</section>
+				
+
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://devswl.gitcafe.io/">SunBlog</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的火火…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>
+</div>
+
+    
+      <a id="fork_me_on_github" href="https://github.com/lulee007"><img style="position: fixed; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/c6286ade715e9bea433b4705870de482a654f78a/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_white_ffffff.png"></a>
+    
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Lulee007</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://7xjzst.com1.z0.glb.clouddn.com/blog/pic/avatar/1.pic_hd.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Lulee007</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">码农，程序猿</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/books/">阅读</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a target="_blank" href="https://github.com/lulee007/" title="github">
+							<i class="iconfont icon-github"></i>
+						</a>
+			        
+						<a target="_blank" href="http://weibo.com/lulee007/" title="weibo">
+							<i class="iconfont icon-weibo"></i>
+						</a>
+			        
+						<a target="_blank" href="mailto:lulee007@live.com" title="mail">
+							<i class="iconfont icon-mail"></i>
+						</a>
+			        
+						<a target="_blank" href="/atom.xml" title="rss">
+							<i class="iconfont icon-rss"></i>
+						</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-SSM-Struts2-Spring-Mybatis-Jersey-Web-项目搭建" class="article article-type-post" itemscope itemprop="blogPost">
+    
+    <div class="article-meta">
+      <a href="/2016/01/14/SSM-Struts2-Spring-Mybatis-Jersey-Web-项目搭建/" class="article-date">
+  	<time datetime="2016-01-14T11:55:14.000Z" itemprop="datePublished">2016-01-14</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    <gcse:searchresults></gcse:searchresults>
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      SSM：Struts2+Spring+Mybatis Web 项目搭建
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Mybatis3/">Mybatis3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Spring/">Spring</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Struts2/">Struts2</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/UnitTest/">UnitTest</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/技术/">技术</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+        <!-- Table of Contents -->
+        
+          
+            <div id="toc" class="article-toc">
+            <h2>目录</h2>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u524D_u8A00"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u9879_u76EE_u521B_u5EFA"><span class="toc-number">2.</span> <span class="toc-text">项目创建</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u521B_u5EFA_u65B0_u7684Maven_WebApp_u9879_u76EE"><span class="toc-number">2.1.</span> <span class="toc-text">创建新的Maven WebApp项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u914D_u7F6E_u9879_u76EE_u76EE_u5F55"><span class="toc-number">2.2.</span> <span class="toc-text">配置项目目录</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u914D_u7F6E_u9879_u76EE"><span class="toc-number">3.</span> <span class="toc-text">配置项目</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u914D_u7F6E_u6570_u636E_u5E93_u8FDE_u63A5mysql_db-properties"><span class="toc-number">3.1.</span> <span class="toc-text">配置数据库连接mysql_db.properties</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u914D_u7F6EMybatis_Generator"><span class="toc-number">3.2.</span> <span class="toc-text">配置Mybatis Generator</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u914D_u7F6EStruts2+Spring+Mybatis3"><span class="toc-number">3.3.</span> <span class="toc-text">配置Struts2+Spring+Mybatis3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u914D_u7F6ELog4j"><span class="toc-number">3.4.</span> <span class="toc-text">配置Log4j</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u914D_u7F6E_ApplicationContext"><span class="toc-number">3.5.</span> <span class="toc-text">配置 ApplicationContext</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u914D_u7F6EStruts2"><span class="toc-number">3.6.</span> <span class="toc-text">配置Struts2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u914D_u7F6Eweb-xml_u6587_u4EF6"><span class="toc-number">3.7.</span> <span class="toc-text">配置web.xml文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u914D_u7F6E_tomcat__u542F_u52A8"><span class="toc-number">3.8.</span> <span class="toc-text">配置 tomcat 启动</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u6D4B_u8BD5_u542F_u52A8"><span class="toc-number">4.</span> <span class="toc-text">测试启动</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u7F16_u5199UserService"><span class="toc-number">4.1.</span> <span class="toc-text">编写UserService</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u7F16_u5199UserAction"><span class="toc-number">4.2.</span> <span class="toc-text">编写UserAction</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#strtus_action_u63D2_u4EF6"><span class="toc-number">4.3.</span> <span class="toc-text">strtus action插件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u6700_u540E"><span class="toc-number">5.</span> <span class="toc-text">最后</span></a></li></ol>
+            </div>
+            <script type="text/javascript">
+              var _article = document.getElementsByClassName('article')[0];
+              <!-- setTimeout("_article.style.marginRight = '211px'",0);  -->
+              setTimeout("_article.className += ' article2'",0);
+              setTimeout("document.getElementById('toc').style.right = '15px'", 0);
+            </script>
+          
+        
+        <h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>在 Intellij 中配置 SSM Web 开发框架。</p>
 <ul>
 <li>Struts2 主要用它的视图统筹</li>
 <li>Spring 整个框架的统筹</li>
@@ -181,734 +404,155 @@
 </blockquote>
 <p>直接在浏览器输入<code>YOUR_HOST</code>+<code>config-browser/index.action</code>即可，如<code>http://localhost:8082/ssm_demo/config-browser/index.action</code><br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160122-3%402x.png" alt="confit-browser-1"><br>这个是我们的UserAction相关的信息：<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160122-4%402x.png" alt="confit-browser-user-action"></p>
 <h2 id="u6700_u540E"><a href="#u6700_u540E" class="headerlink" title="最后"></a>最后</h2><p>至此我们完成了所有配置，本文主要介绍了最基本的用法，如果需要其他功能在这个基础上进行扩展即可。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>在 Intellij 中配置 SSM Web 开发框架。</p>
-<ul>
-<li>Struts2 主要用它的视图统筹</li>
-<li>Spring 整个框架的统筹</li>
-<li>Mybatis3 持久层,MyBatis 是支持定制化SQL、存储过程以及高级映射的优秀的持久层框架</li>
-</ul>
-<p>参考：<a href="http://blog.csdn.net/u011403655/article/details/46843331">夕下奕林:Idea SpringMVC+Spring+MyBatis+Maven整合</a><br>]]>
+
+      
+    </div>
     
-    </summary>
-    
-      <category term="Mybatis3" scheme="http://lulee007.gitcafe.io/tagsCN/Mybatis3/"/>
-    
-      <category term="Spring" scheme="http://lulee007.gitcafe.io/tagsCN/Spring/"/>
-    
-      <category term="Struts2" scheme="http://lulee007.gitcafe.io/tagsCN/Struts2/"/>
-    
-      <category term="UnitTest" scheme="http://lulee007.gitcafe.io/tagsCN/UnitTest/"/>
-    
-      <category term="技术" scheme="http://lulee007.gitcafe.io/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-  </entry>
+  </div>
+
   
-  <entry>
-    <title><![CDATA[2016年度计划]]></title>
-    <link href="http://lulee007.gitcafe.io/2016/01/10/2016%E5%B9%B4%E5%BA%A6%E8%AE%A1%E5%88%92/"/>
-    <id>http://lulee007.gitcafe.io/2016/01/10/2016年度计划/</id>
-    <published>2016-01-10T13:45:22.000Z</published>
-    <updated>2016-01-12T05:46:15.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>自从毕业后到现在2年半了的时间了，感觉一直忙忙碌碌的工作、生活，从来都没有进行过年度规划。从学校到工作，接触到了很多东西：<br>C# PHP（Yii框架，ThinkPhp），Mongodb，Arcgis，ArcEngine，Android，Web，SSM，iOS，Windows Phone，Python，Html5 Hybrid App 。<br>看得很多，总结的很少。<br>最近正着手把之前在工作学习中的记下来笔记整理一下，也是对工作学习到现在的一个『交代』。新年伊始，已经过去了三十六分之一左右了，得约束下自己，先给自己列一个计划。<br><a id="more"></a></p>
-<h2 id="u6E90_u7801_u5B66_u4E60"><a href="#u6E90_u7801_u5B66_u4E60" class="headerlink" title="源码学习"></a>源码学习</h2><p>平时在github上看到不少很棒的开源代码，也用了其中的一部分，但仅限于此。我觉得还不够，知其然还得知其所以然。<a href="https://github.com/ibireme/YYKit" target="_blank" rel="external">YYKit</a>的作者<a href="https://github.com/ibireme" target="_blank" rel="external">ibireme</a>这个大神很牛逼啊。在devtang对他得专访他说的：</p>
-<blockquote>
-<p>我接触 iOS 开发的时间很早，但是一直都是在工作之余靠着兴趣自学的。14 年我还在人人网时，部门内部有个新项目需要 iOS 开发，我才得以有机会在工作中使用 iOS 相关的技术。全职转为 iOS 开发后，<strong><em>我花费了大量的时间阅读和学习各种开源的代码、研究其中的实现原理、尝试自己实现相关技术、尝试在工作中使用，这使得我在 iOS 开发技术上进步很快</em></strong>。对于 iOS 开发来说，我觉得自学能力是很重要的。<strong><em>主动去研究一些优秀的开源项目、多在工作中实践和学习，这样就能逐步提升个人技术水平了</em></strong>。</p>
-</blockquote>
-<p>更加激励我也要这样去努力。</p>
-<h3 id="iOS"><a href="#iOS" class="headerlink" title="iOS"></a>iOS</h3><ul>
-<li>SDWebImage</li>
-<li>YYKit</li>
-<li>Mantle</li>
-<li>MJRefresh</li>
-</ul>
-<h3 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h3><p><a href="http://a.codekk.com/" target="_blank" rel="external">源码解析网站</a>经常发布一些开源项目的源代码解析</p>
-<ul>
-<li>Glide</li>
-<li>android-Ultra-Pull-To-Refresh</li>
-<li>NineOldAnimations</li>
-<li>FlycoTabLayout</li>
-</ul>
-<h2 id="UWP__u5F00_u53D1Universal_Windows__u5E94_u7528"><a href="#UWP__u5F00_u53D1Universal_Windows__u5E94_u7528" class="headerlink" title="UWP 开发Universal Windows 应用"></a>UWP 开发Universal Windows 应用</h2><p>通用 Windows 平台 (UWP) 应用是一种基于通用 Windows 平台 (UWP) 生成的 Windows 体验<br>最近windows10份额也在逐渐增长，有机会尝试把之前的windows phone8 app转为UWP的。</p>
-<h2 id="u8BFB_u4E66"><a href="#u8BFB_u4E66" class="headerlink" title="读书"></a>读书</h2><p>书读的少，一直静不下来。<br>小说类：</p>
-<ul>
-<li>三体全集</li>
-<li>乖，摸摸头</li>
-<li>阿弥陀佛 么么哒<br>管理类：</li>
-<li>带队伍、抓执行</li>
-</ul>
-<h2 id="u535A_u5BA2"><a href="#u535A_u5BA2" class="headerlink" title="博客"></a>博客</h2><p>每月至少一篇</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>自从毕业后到现在2年半了的时间了，感觉一直忙忙碌碌的工作、生活，从来都没有进行过年度规划。从学校到工作，接触到了很多东西：<br>C# PHP（Yii框架，ThinkPhp），Mongodb，Arcgis，ArcEngine，Android，Web，SSM，iOS，Windows Phone，Python，Html5 Hybrid App 。<br>看得很多，总结的很少。<br>最近正着手把之前在工作学习中的记下来笔记整理一下，也是对工作学习到现在的一个『交代』。新年伊始，已经过去了三十六分之一左右了，得约束下自己，先给自己列一个计划。<br>]]>
     
-    </summary>
-    
-  </entry>
+<nav id="article-nav">
   
-  <entry>
-    <title><![CDATA[Hexo常用命令笔记]]></title>
-    <link href="http://lulee007.gitcafe.io/2016/01/09/Hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0/"/>
-    <id>http://lulee007.gitcafe.io/2016/01/09/Hexo常用命令笔记/</id>
-    <published>2016-01-09T04:20:23.000Z</published>
-    <updated>2016-01-09T06:17:17.000Z</updated>
-    <content type="html"><![CDATA[<p>参考：<a href="http://segmentfault.com/a/1190000002632530" target="_blank" rel="external">http://segmentfault.com/a/1190000002632530</a></p>
-<h2 id="hexo_u5B89_u88C5_u5347_u7EA7"><a href="#hexo_u5B89_u88C5_u5347_u7EA7" class="headerlink" title="hexo安装升级"></a>hexo安装升级</h2><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">npm</span> install hexo -g <span class="comment">#安装  </span></span><br><span class="line"><span class="built_in">npm</span> update hexo -g <span class="comment">#升级  </span></span><br><span class="line">hexo init <span class="comment">#初始化</span></span><br></pre></td></tr></table></figure>
-<h2 id="u5E38_u7528_u7B80_u5199"><a href="#u5E38_u7528_u7B80_u5199" class="headerlink" title="常用简写"></a>常用简写</h2><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo n <span class="string">"我的博客"</span> == hexo <span class="keyword">new</span> <span class="string">"我的博客"</span> <span class="preprocessor">#新建文章</span></span><br><span class="line">hexo p == hexo publish</span><br><span class="line">hexo g == hexo generate<span class="preprocessor">#生成</span></span><br><span class="line">hexo s == hexo <span class="keyword">server</span> <span class="preprocessor">#启动服务预览</span></span><br><span class="line">hexo d == hexo deploy<span class="preprocessor">#部署</span></span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<h2 id="u542F_u52A8_u672C_u5730_u670D_u52A1"><a href="#u542F_u52A8_u672C_u5730_u670D_u52A1" class="headerlink" title="启动本地服务"></a>启动本地服务</h2><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">server</span> <span class="preprocessor">#Hexo #会监视文件变动并自动更新，您无须重启服务器。</span></span><br><span class="line">hexo <span class="keyword">server</span> -s <span class="preprocessor">#静态模式</span></span><br><span class="line">hexo <span class="keyword">server</span> -p <span class="number">5000</span> <span class="preprocessor">#更改端口</span></span><br><span class="line">hexo <span class="keyword">server</span> -i <span class="number">192.168</span><span class="number">.1</span><span class="number">.1</span> <span class="preprocessor">#自定义 IP</span></span><br></pre></td></tr></table></figure>
-<h2 id="u76D1_u89C6_u6587_u4EF6_u53D8_u52A8"><a href="#u76D1_u89C6_u6587_u4EF6_u53D8_u52A8" class="headerlink" title="监视文件变动"></a>监视文件变动</h2><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">hexo</span> generate <span class="comment">#使用 Hexo 生成静态文件快速而且简单</span></span><br><span class="line">hexo generate --watch <span class="comment">#监视文件变动</span></span><br><span class="line">hexo clean <span class="comment">#清除缓存 网页正常情况下可以忽略此条命令</span></span><br></pre></td></tr></table></figure>
-<h2 id="u90E8_u7F72"><a href="#u90E8_u7F72" class="headerlink" title="部署"></a>部署</h2><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#两个命令的作用是相同的</span><br><span class="line">hexo <span class="keyword">generate</span> --deploy</span><br><span class="line">hexo deploy --<span class="keyword">generate</span></span><br><span class="line">hexo deploy -<span class="keyword">g</span></span><br><span class="line">hexo server -<span class="keyword">g</span></span><br></pre></td></tr></table></figure>
-<h2 id="u8349_u7A3F"><a href="#u8349_u7A3F" class="headerlink" title="草稿"></a>草稿</h2><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># 新建草稿</span></span><br><span class="line">hexo <span class="keyword">new</span> draft &lt;title&gt;</span><br><span class="line"><span class="preprocessor"># 发布草稿为post</span></span><br><span class="line">hexo publish draft &lt;title&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="u6A21_u7248"><a href="#u6A21_u7248" class="headerlink" title="模版"></a>模版</h2><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> <span class="string">"postName"</span> <span class="preprocessor">#新建文章</span></span><br><span class="line">hexo <span class="keyword">new</span> page <span class="string">"pageName"</span> <span class="preprocessor">#新建页面</span></span><br><span class="line">hexo generate <span class="preprocessor">#生成静态页面至public目录</span></span><br><span class="line">hexo <span class="keyword">server</span> <span class="preprocessor">#开启预览访问端口（默认端口4000，'ctrl + c'关闭server）</span></span><br><span class="line">hexo deploy <span class="preprocessor">#将.deploy目录部署到GitHub</span></span><br><span class="line"></span><br><span class="line">hexo <span class="keyword">new</span> [layout] &lt;title&gt;</span><br><span class="line">hexo <span class="keyword">new</span> photo <span class="string">"My Gallery"</span></span><br><span class="line">hexo <span class="keyword">new</span> <span class="string">"Hello World"</span> --lang tw</span><br></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>变量</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>layout</td>
-<td>布局</td>
-</tr>
-<tr>
-<td>title</td>
-<td>标题</td>
-</tr>
-<tr>
-<td>date</td>
-<td>文件建立日期</td>
-</tr>
-</tbody>
-</table>
-<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">title</span>: <span class="string">使用Hexo搭建个人博客</span></span><br><span class="line"><span class="attribute">layout</span>: <span class="string">post</span></span><br><span class="line"><span class="attribute">date</span>: <span class="string">2014-03-03 19:07:43</span></span><br><span class="line"><span class="attribute">comments</span>: <span class="string">true</span></span><br><span class="line"><span class="attribute">categories</span>: <span class="string">Blog</span></span><br><span class="line"><span class="attribute">tags</span>: <span class="string">[Hexo]</span></span><br><span class="line"><span class="attribute">keywords</span>: <span class="string">Hexo, Blog</span></span><br><span class="line"><span class="attribute">description</span>: <span class="string">生命在于折腾，又把博客折腾到Hexo了。给Hexo点赞。</span></span><br></pre></td></tr></table></figure>
-<h2 id="u6A21_u7248_uFF08Scaffold_uFF09"><a href="#u6A21_u7248_uFF08Scaffold_uFF09" class="headerlink" title="模版（Scaffold）"></a>模版（Scaffold）</h2><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> photo <span class="string">"My Gallery"</span></span><br></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>变量</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>layout</td>
-<td>布局</td>
-</tr>
-<tr>
-<td>title</td>
-<td>标题</td>
-</tr>
-<tr>
-<td>date</td>
-<td>文件建立日期</td>
-</tr>
-</tbody>
-</table>
-<h2 id="u8BBE_u7F6E_u6587_u7AE0_u6458_u8981"><a href="#u8BBE_u7F6E_u6587_u7AE0_u6458_u8981" class="headerlink" title="设置文章摘要"></a>设置文章摘要</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#以上是文章摘要</span><br><span class="line"><span class="comment">&lt;!--more--&gt;</span></span><br><span class="line">#以下是余下全文</span><br></pre></td></tr></table></figure>
-<h2 id="u5199_u4F5C"><a href="#u5199_u4F5C" class="headerlink" title="写作"></a>写作</h2><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="built_in">new</span> page &lt;title&gt;</span><br><span class="line">hexo <span class="built_in">new</span> <span class="built_in">post</span> &lt;title&gt;</span><br></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>变量</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>:title</td>
-<td>标题</td>
-</tr>
-<tr>
-<td>:year</td>
-<td>建立的年份（4 位数）</td>
-</tr>
-<tr>
-<td>:month</td>
-<td>建立的月份（2 位数）</td>
-</tr>
-<tr>
-<td>:i_month</td>
-<td>建立的月份（去掉开头的零）</td>
-</tr>
-<tr>
-<td>:day</td>
-<td>建立的日期（2 位数）</td>
-</tr>
-<tr>
-<td>:i_day</td>
-<td>建立的日期（去掉开头的零）</td>
-</tr>
-</tbody>
-</table>
-<h2 id="u63A8_u9001_u5230_u670D_u52A1_u5668_u4E0A"><a href="#u63A8_u9001_u5230_u670D_u52A1_u5668_u4E0A" class="headerlink" title="推送到服务器上"></a>推送到服务器上</h2><p>一般步骤：<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">n</span> #写文章</span><br><span class="line">hexo <span class="keyword">g</span> #生成</span><br><span class="line">hexo <span class="keyword">d</span> #部署 #可与hexo <span class="keyword">g</span>合并为 hexo <span class="keyword">d</span> -<span class="keyword">g</span></span><br></pre></td></tr></table></figure></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>参考：<a href="http://segmentfault.com/a/1190000002632530">http://segmentfault.com/a/1190000002632530</a></p>
-<h2 id="hexo_u5B89_u88C5_u5347_u7EA7"><a href="#hexo_u5B89_u88C5_u5347_u7EA7" class="headerlink" title="hexo安装升级"></a>hexo安装升级</h2><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">npm</span> install hexo -g <span class="comment">#安装  </span></span><br><span class="line"><span class="built_in">npm</span> update hexo -g <span class="comment">#升级  </span></span><br><span class="line">hexo init <span class="comment">#初始化</span></span><br></pre></td></tr></table></figure>
-<h2 id="u5E38_u7528_u7B80_u5199"><a href="#u5E38_u7528_u7B80_u5199" class="headerlink" title="常用简写"></a>常用简写</h2><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo n <span class="string">"我的博客"</span> == hexo <span class="keyword">new</span> <span class="string">"我的博客"</span> <span class="preprocessor">#新建文章</span></span><br><span class="line">hexo p == hexo publish</span><br><span class="line">hexo g == hexo generate<span class="preprocessor">#生成</span></span><br><span class="line">hexo s == hexo <span class="keyword">server</span> <span class="preprocessor">#启动服务预览</span></span><br><span class="line">hexo d == hexo deploy<span class="preprocessor">#部署</span></span><br></pre></td></tr></table></figure>]]>
-    
-    </summary>
-    
-      <category term="Hexo" scheme="http://lulee007.gitcafe.io/tagsCN/Hexo/"/>
-    
-      <category term="命令" scheme="http://lulee007.gitcafe.io/tagsCN/%E5%91%BD%E4%BB%A4/"/>
-    
-      <category term="笔记" scheme="http://lulee007.gitcafe.io/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
+    <a href="/2016/01/16/Hexo博客优化配置之-为自己博客添加搜索引擎网页收录/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Hexo博客优化配置之--为自己博客添加搜索引擎网页收录
+        
+      </div>
+    </a>
   
-  <entry>
-    <title><![CDATA[Hexo博客优化配置]]></title>
-    <link href="http://lulee007.gitcafe.io/2016/01/08/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E9%85%8D%E7%BD%AE/"/>
-    <id>http://lulee007.gitcafe.io/2016/01/08/Hexo博客优化配置/</id>
-    <published>2016-01-08T04:13:10.000Z</published>
-    <updated>2016-01-18T05:45:24.000Z</updated>
-    <content type="html"><![CDATA[<h3 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h3><p>记录一下搭建此博客期间的做的优化配置：</p>
-<ul>
-<li>语言配置</li>
-<li>访问统计</li>
-<li>分享</li>
-<li>评论</li>
-<li>Rss</li>
-<li>百度站内搜索</li>
-<li>谷歌统计分析</li>
-<li>谷歌站内搜索<a id="more"></a>
-<h3 id="u8BED_u8A00_u914D_u7F6E"><a href="#u8BED_u8A00_u914D_u7F6E" class="headerlink" title="语言配置"></a>语言配置</h3><code>_config.yml</code>中的<code>language</code>要配置为选定的主题<code>yilia</code>文件夹下的<code>language</code>目录下的文件，如：<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">language</span>: <span class="string">zh-Hans</span></span><br><span class="line"><span class="attribute">language</span>: <span class="string">en</span></span><br><span class="line"><span class="attribute">language</span>: <span class="string">zh-hk</span></span><br><span class="line"><span class="attribute">language</span>: <span class="string">zh-tw</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>这里修改 <code>zh-Hans</code>为标准的<code>zh-cn</code>,并添加一些汉化内容<br>语言配置用法:<br><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># 不带参数的</span></span><br><span class="line">__(<span class="string">'xxxx'</span>)</span><br><span class="line"><span class="preprocessor"># 带参数的</span></span><br><span class="line">_p(<span class="string">'xxx'</span>,xx)</span><br></pre></td></tr></table></figure></p>
-<h3 id="u535A_u5BA2_u8BBF_u95EE_u7EDF_u8BA1"><a href="#u535A_u5BA2_u8BBF_u95EE_u7EDF_u8BA1" class="headerlink" title="博客访问统计"></a>博客访问统计</h3><h4 id="u4E0D_u849C_u5B50_u7EDF_u8BA1_u663E_u793A"><a href="#u4E0D_u849C_u5B50_u7EDF_u8BA1_u663E_u793A" class="headerlink" title="不蒜子统计显示"></a>不蒜子统计显示</h4><p>添加站点统计配置为<a href="http://busuanzi.ibruce.info/" target="_blank" rel="external">不蒜子</a>统计，并且可开关<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">busuanzi:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
-<h4 id="u767E_u5EA6_u7EDF_u8BA1"><a href="#u767E_u5EA6_u7EDF_u8BA1" class="headerlink" title="百度统计"></a>百度统计</h4><p><strong>更新:</strong> 百度统计,提示DNS无法解析IP错误,暂时无法使用</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">baidu_tongji:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<h3 id="u5206_u4EAB"><a href="#u5206_u4EAB" class="headerlink" title="分享"></a>分享</h3><p>配置自己的分享</p>
-<h4 id="u56FD_u5185_u7684jiathis"><a href="#u56FD_u5185_u7684jiathis" class="headerlink" title="国内的jiathis"></a>国内的jiathis</h4><p>将<code>themes/yilia/_partial/share_jia.ejs</code>中的内容替换为：<br><figure class="highlight erb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"jiathis_style"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"jiathis_txt"</span>&gt;</span></span>&lt;%=<span class="ruby"> _<span class="number">_</span>(<span class="string">'post.share'</span>) </span>%&gt;<span class="xml">: &amp;nbsp; <span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"jiathis_button_weixin"</span>&gt;</span>微信<span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"jiathis_button_cqq"</span>&gt;</span>QQ好友<span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"jiathis_button_qzone"</span>&gt;</span>QQ空间<span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"jiathis_button_tsina"</span>&gt;</span>新浪微博<span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"http://www.jiathis.com/share?uid=2080230"</span> <span class="attribute">class</span>=<span class="value">"jiathis jiathis_txt jiathis_separator jtico jtico_jiathis"</span> <span class="attribute">target</span>=<span class="value">"_blank"</span>&gt;</span>更多<span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"jiathis_counter_style"</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"http://v3.jiathis.com/code/jia.js?uid=2080230"</span> <span class="attribute">charset</span>=<span class="value">"utf-8"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>
-<p>其中<code>uid</code>为自己在<a href="/www.jiathis.com">jiathis</a>注册的<code>uid</code></p>
-<h4 id="u56FD_u5916_u7684addthis"><a href="#u56FD_u5916_u7684addthis" class="headerlink" title="国外的addthis"></a>国外的addthis</h4><p>将<code>themes/yilia/_partial/share_jia.ejs</code>中的内容替换为：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Go to www.addthis.com/dashboard to customize your tools --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"addthis_sharing_toolbox"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-568f54bcfd6a7b04"</span> <span class="attribute">async</span>=<span class="value">"async"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>其中<code>pubid</code>为在<a href="https://www.addthis.com/" target="_blank" rel="external">addthis</a>自己注册的<code>pubid</code></p>
-<h3 id="u8BC4_u8BBA"><a href="#u8BC4_u8BBA" class="headerlink" title="评论"></a>评论</h3><p>配置多说<br>注册登录<a href="http://duoshuo.com/" target="_blank" rel="external">多说</a>点击进入后台管理，然后添加一个新的站点，<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20160108-1%402x.png" alt="addproject"></p>
-<p>记住其中的shotname</p>
-<p><img src="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20160108-3%402x.png" alt="filldetail"><br>然后填写到<code>themes/yilia/_config.yml</code>的<code>duoshuo: lulee007blog</code>即可。</p>
-<h3 id="Rss"><a href="#Rss" class="headerlink" title="Rss"></a>Rss</h3><p>添加Rss，需要先安装rss生成模块：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> hexo-generator-feed <span class="comment">--save</span></span></span><br></pre></td></tr></table></figure></p>
-<p>然后在<code>themes/yilia/_config.yml</code>开启rss<br><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">rss</span>: <span class="string">/atom.xml</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="u6DFB_u52A0_u7AD9_u70B9_u5730_u56FE_u63D2_u4EF6"><a href="#u6DFB_u52A0_u7AD9_u70B9_u5730_u56FE_u63D2_u4EF6" class="headerlink" title="添加站点地图插件"></a>添加站点地图插件</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> hexo-generator-sitmap <span class="comment">--save</span></span></span><br></pre></td></tr></table></figure>
-<p>会在每次<code>hexo generator</code>后自动生成到网站根目录</p>
-<h3 id="u6DFB_u52A0_u6587_u7AE0_u76EE_u5F55"><a href="#u6DFB_u52A0_u6587_u7AE0_u76EE_u5F55" class="headerlink" title="添加文章目录"></a>添加文章目录</h3><p>添加文章目录功能到 yilia 主题中</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h3 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h3><p>记录一下搭建此博客期间的做的优化配置：</p>
-<ul>
-<li>语言配置</li>
-<li>访问统计</li>
-<li>分享</li>
-<li>评论</li>
-<li>Rss</li>
-<li>百度站内搜索</li>
-<li>谷歌统计分析</li>
-<li>谷歌站内搜索]]>
-    
-    </summary>
-    
-      <category term="Hexo" scheme="http://lulee007.gitcafe.io/tagsCN/Hexo/"/>
-    
-      <category term="配置" scheme="http://lulee007.gitcafe.io/tagsCN/%E9%85%8D%E7%BD%AE/"/>
-    
-      <category term="笔记" scheme="http://lulee007.gitcafe.io/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
   
-  <entry>
-    <title><![CDATA[Mac下使用Github与Hexo搭建静态博客]]></title>
-    <link href="http://lulee007.gitcafe.io/2016/01/07/Mac%E4%B8%8B%E4%BD%BF%E7%94%A8Github%E4%B8%8EHexo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://lulee007.gitcafe.io/2016/01/07/Mac下使用Github与Hexo搭建静态博客/</id>
-    <published>2016-01-07T11:55:30.000Z</published>
-    <updated>2016-01-16T07:08:36.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>从今年的一月七号开始,看到好友<a href="/">老孙</a>在搞自己的 Hexo 博客,弄的挺起劲的。心生好奇也想搞搞,<br>加之之前也在工作学习中看到不少人都有在自己的博客中发布一些自己的学习工作心得,然后自己 google 了一番<br>发现眼前一亮,从去年年初开始就一直在用 markdown 做笔记,都是把工作学习中的笔记写在<code>Wiz笔记</code>里的，但是<br>记在笔记里的终究不是用来分享。这次这个 Hexo 静态网页博客正好支持 markdown ,加上支持<br>发布到 github 和 gitcafe 上,不用花钱申请域名,也不用申请存储空前,所有文章通过 markdown 来编写,然后渲染成网页<br>文章也很方便撰写，保存，跨平台，迁移方便。果断进行了折腾^_^。<br>于是进行 google ，找了一些教程来搭建一个个人静态博客。<br>其间看到阮一峰的一篇<a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html" target="_blank" rel="external">博文</a>中提到的,<br>喜欢写Blog的人会经历三个阶段:</p>
-<blockquote>
-<p>第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。<br>第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。<br>第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。</p>
-</blockquote>
-<p>哈哈，感觉说到了心坎。</p>
-<p>然后在知乎上看到一个讨论『<a href="https://www.zhihu.com/question/20962496" target="_blank" rel="external">如何在 GitHub 上写博客？</a>』，里面的cnfeat总结的博客搭建过程，其中他的一篇《<a href="http://zhuanlan.zhihu.com/cnfeat/19743861" target="_blank" rel="external">为什么你要写博客？</a>》列出了一个博客的值得写的原因：</p>
-<blockquote>
-<ol>
-<li>重新认识自己  </li>
-<li>提供持续学习的动力  </li>
-<li>积累更多的知识  </li>
-<li>提高将事情讲清楚的能力  </li>
-<li>分享带来的连锁反应  </li>
-<li>帮你找到志同道合的人  </li>
-<li>记录成长  </li>
-<li>培养持续做一件事情的能力  </li>
-<li>讨论反思</li>
-<li>搜寻到你意想不到东西</li>
-<li>一个人在做一件属于自己的事</li>
-<li>互联网的身份识别</li>
-</ol>
-</blockquote>
-<a id="more"></a>
-<h2 id="u73AF_u5883_u642D_u5EFA"><a href="#u73AF_u5883_u642D_u5EFA" class="headerlink" title="环境搭建"></a>环境搭建</h2><p>这里主要记录自己在mac下进行博客搭建的过程，主要通过Terminal来完成。<br>主要涉及到的hexo和github。其中hexo是基于nodejs，这里通过Terminal来安装。</p>
-<blockquote>
-<p>Installing Hexo is quite easy. However, you do need to have a couple of other things installed first:  </p>
-<ul>
-<li>Node.js  </li>
-<li>Git</li>
-</ul>
-</blockquote>
-<h3 id="u5B89_u88C5Node-js"><a href="#u5B89_u88C5Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p>安装nodejs最佳方式是通过nvm来安装</p>
-<h4 id="u901A_u8FC7nvm_u5B89_u88C5"><a href="#u901A_u8FC7nvm_u5B89_u88C5" class="headerlink" title="通过nvm安装"></a>通过nvm安装</h4><p>通过cUrl安装nvm：<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl  http<span class="variable">s:</span>//raw.github.<span class="keyword">com</span>/creationix/nvm/master/install.<span class="keyword">sh</span> | <span class="keyword">sh</span></span><br></pre></td></tr></table></figure></p>
-<p>Once nvm is installed, restart the terminal and run the following command to install Node.js.<br>当nvm安装完成后，关闭terminal 然后再重新打开，并输入以下命令来安装Node.js:<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm <span class="keyword">install</span> <span class="number">4</span></span><br></pre></td></tr></table></figure></p>
-<h4 id="u901A_u8FC7_u5B89_u88C5_u5305_u6765_u5B89_u88C5"><a href="#u901A_u8FC7_u5B89_u88C5_u5305_u6765_u5B89_u88C5" class="headerlink" title="通过安装包来安装"></a>通过安装包来安装</h4><p>直接在<a href="http://nodejs.org/" target="_blank" rel="external">官网</a>下载并运行<a href="https://nodejs.org/dist/v5.4.0/node-v5.4.0.pkg" target="_blank" rel="external">安装包v5.4.0 Stable</a></p>
-<h2 id="u5B89_u88C5Hexo"><a href="#u5B89_u88C5Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>当Node.js安装完成后，这时就可以通过npm来安装hexo了：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> -<span class="keyword">g</span> hexo-cli</span></span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p>You may encounter some problems when compiling. Please install Xcode from App Store first. After Xcode is installed, open Xcode and go to Preferences -&gt; Download -&gt; Command Line Tools -&gt; Install to install command line tools.  </p>
-</blockquote>
-<p>如果在安装过程中编译出现了问题，请先从App Store安装Xcode，安装完Xcode后打开Xcode打开菜单栏 Preferences -&gt; Download -&gt; Command Line Tools -&gt; Install来安装xcode命令行工具。<br>或者直接通过命令行进行安装：<br><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcode-<span class="built_in">select</span> <span class="comment">--install</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="Hexo_u521D_u59CB_u5316_u914D_u7F6E"><a href="#Hexo_u521D_u59CB_u5316_u914D_u7F6E" class="headerlink" title="Hexo初始化配置"></a>Hexo初始化配置</h2><p>这里参考了:  </p>
-<ul>
-<li>wsgzao的<a href="http://wsgzao.github.io/post/hexo-guide/" target="_blank" rel="external">使用GitHub和Hexo搭建免费静态Blog</a>  </li>
-<li>zipperary的<a href="http://zipperary.com/2013/05/29/hexo-guide-3/" target="_blank" rel="external">hexo系列教程</a></li>
-</ul>
-<h3 id="u521D_u59CB_u5316hexo"><a href="#u521D_u59CB_u5316hexo" class="headerlink" title="初始化hexo"></a>初始化hexo</h3><p>在Terminal里切换到一个空的目录下，我们将用来初始化hexo，假设我们选择的目录是<code>hexo</code><br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将会在我们的`hexo`目录下生成一个新的文件夹`blog`</span></span><br><span class="line">hexo init blog</span><br><span class="line"><span class="comment"># 切换到新生成的blog目录下</span></span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line"><span class="comment"># 安装hexo的依赖项</span></span><br><span class="line">hexo install</span><br></pre></td></tr></table></figure></p>
-<p>最终会得到以下的目录结构<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── scripts</span><br><span class="line">├── source</span><br><span class="line"><span class="string">|      ├── _drafts</span></span><br><span class="line"><span class="string">|      └── _posts</span></span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure></p>
-<h3 id="u672C_u5730_u67E5_u770B"><a href="#u672C_u5730_u67E5_u770B" class="headerlink" title="本地查看"></a>本地查看</h3><p>现在我们已经搭建起本地的hexo博客了，在我们的<code>blog</code>目录下执行以下命令，然后到浏览器输入<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> 看看效果。<br><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">hexo <span class="keyword">server</span></span><br></pre></td></tr></table></figure></p>
-<p>至此我们的本地博客就搭建好了。</p>
-<h2 id="u521B_u5EFA_u4E00_u4E2AGithub_Repository"><a href="#u521B_u5EFA_u4E00_u4E2AGithub_Repository" class="headerlink" title="创建一个Github Repository"></a>创建一个Github Repository</h2><p>在自己Github主页右下角，创建一个新的repository。比如我的Github账号是<code>lulee007</code>，那么我应该创建的repository名字应该是<code>lulee.github.io</code>。</p>
-<h2 id="u914D_u7F6EGithu_SSH_keys"><a href="#u914D_u7F6EGithu_SSH_keys" class="headerlink" title="配置Githu SSH keys"></a>配置Githu SSH keys</h2><p>因为目前已经在使用Github,而且注册也比较简单，也可以参考：<a href="http://pchou.info/web-build/2013/01/03/build-github-blog-page-01.html" target="_blank" rel="external">一步步在GitHub上创建博客主页 全系列</a>by pchou，所以直接说一下SSH keys的配置。</p>
-<blockquote>
-<p>SSH keys are a way to identify trusted computers, without involving passwords.</p>
-</blockquote>
-<p>利用ssh keys 可以直接和github建立链接而不必每次pull request都输入用户名密码。<br>有英语阅读能力的直接参考官方的<a href="https://help.github.com/articles/generating-ssh-keys/" target="_blank" rel="external">Generating SSH keys</a>。里面讲的很详细，包括如何利用已有的ssh keys，加入到github上。</p>
-<h2 id="u90E8_u7F72"><a href="#u90E8_u7F72" class="headerlink" title="部署"></a>部署</h2><h3 id="u4FEE_u6539Hexo_u914D_u7F6E"><a href="#u4FEE_u6539Hexo_u914D_u7F6E" class="headerlink" title="修改Hexo配置"></a>修改Hexo配置</h3><p>要部署到github上需要修改Hexo的<code>_config.yml</code>，<code>_config.yml</code>在<code>blog</code>目录下，要把下面的<code>lulee007</code>都换成你的账号名：<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: git</span><br><span class="line">  <span class="attribute">repository</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:lulee007/lulee007.github.io.git</span><br><span class="line">  <span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure></p>
-<p><strong><em>注意：</em></strong> 每个冒号后面都要有一个空格<br><code>repository</code> 这个链接也可以直接在github上复制：<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160108-0%402x.png" alt="copyssh"></p>
-<h3 id="u5B89_u88C5git_u63D2_u4EF6_u5230hexo_u4E2D"><a href="#u5B89_u88C5git_u63D2_u4EF6_u5230hexo_u4E2D" class="headerlink" title="安装git插件到hexo中"></a>安装git插件到hexo中</h3><p>由于默认hexo没有没安装此插件，所以得手动安装<br>在Terminal中在<code>blog</code>目录下输入：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> hexo-deployer-git <span class="comment">--save</span></span></span><br></pre></td></tr></table></figure></p>
-<p>这样就安装好了git插件了，配合上面的配置，很方便就能把博客部署到github上。</p>
-<h3 id="u90E8_u7F72_u5230github"><a href="#u90E8_u7F72_u5230github" class="headerlink" title="部署到github"></a>部署到github</h3><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">hexo</span> generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-<p><strong><em>注意：</em></strong>每次修改文章后，都需要执行：  </p>
-<pre><code>hexo generate
-</code></pre><p>这样才能把修改后的文章重新生成静态网页。<br>最后：<br>在浏览器访问lulee007.github.io就能看到你的成就了</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>从今年的一月七号开始,看到好友<a href="/">老孙</a>在搞自己的 Hexo 博客,弄的挺起劲的。心生好奇也想搞搞,<br>加之之前也在工作学习中看到不少人都有在自己的博客中发布一些自己的学习工作心得,然后自己 google 了一番<br>发现眼前一亮,从去年年初开始就一直在用 markdown 做笔记,都是把工作学习中的笔记写在<code>Wiz笔记</code>里的，但是<br>记在笔记里的终究不是用来分享。这次这个 Hexo 静态网页博客正好支持 markdown ,加上支持<br>发布到 github 和 gitcafe 上,不用花钱申请域名,也不用申请存储空前,所有文章通过 markdown 来编写,然后渲染成网页<br>文章也很方便撰写，保存，跨平台，迁移方便。果断进行了折腾^_^。<br>于是进行 google ，找了一些教程来搭建一个个人静态博客。<br>其间看到阮一峰的一篇<a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html">博文</a>中提到的,<br>喜欢写Blog的人会经历三个阶段:</p>
-<blockquote>
-<p>第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。<br>第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。<br>第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。</p>
-</blockquote>
-<p>哈哈，感觉说到了心坎。</p>
-<p>然后在知乎上看到一个讨论『<a href="https://www.zhihu.com/question/20962496">如何在 GitHub 上写博客？</a>』，里面的cnfeat总结的博客搭建过程，其中他的一篇《<a href="http://zhuanlan.zhihu.com/cnfeat/19743861">为什么你要写博客？</a>》列出了一个博客的值得写的原因：</p>
-<blockquote>
-<ol>
-<li>重新认识自己  </li>
-<li>提供持续学习的动力  </li>
-<li>积累更多的知识  </li>
-<li>提高将事情讲清楚的能力  </li>
-<li>分享带来的连锁反应  </li>
-<li>帮你找到志同道合的人  </li>
-<li>记录成长  </li>
-<li>培养持续做一件事情的能力  </li>
-<li>讨论反思</li>
-<li>搜寻到你意想不到东西</li>
-<li>一个人在做一件属于自己的事</li>
-<li>互联网的身份识别</li>
-</ol>
-</blockquote>]]>
-    
-    </summary>
-    
-      <category term="Github" scheme="http://lulee007.gitcafe.io/tagsCN/Github/"/>
-    
-      <category term="Hexo" scheme="http://lulee007.gitcafe.io/tagsCN/Hexo/"/>
-    
-      <category term="Mac" scheme="http://lulee007.gitcafe.io/tagsCN/Mac/"/>
-    
-      <category term="笔记" scheme="http://lulee007.gitcafe.io/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
+    <a href="/2016/01/10/2016年度计划/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">2016年度计划</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <link href="http://lulee007.gitcafe.io/2016/01/07/hello-world/"/>
-    <id>http://lulee007.gitcafe.io/2016/01/07/hello-world/</id>
-    <published>2016-01-07T11:28:47.000Z</published>
-    <updated>2016-01-07T11:28:47.000Z</updated>
-    <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start"><a href="#Quick_Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create_a_new_post"><a href="#Create_a_new_post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server"><a href="#Run_server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files"><a href="#Generate_static_files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites"><a href="#Deploy_to_remote_sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io]]>
-    </summary>
+</nav>
+
+    <span id="busuanzi_container_page_pv"
+      style="display: inline;vertical-align: middle;width: 100%; position:absolute; bottom:0; text-align:center;font-size: x-small;color: darkcyan;margin-bottom: 8px;">
+  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+</span>
+
+
     
-  </entry>
+</article>
+<div class="share">
   
-  <entry>
-    <title><![CDATA[Cordova+Ionic+AngularJs做混合移动App开发之--学习路线]]></title>
-    <link href="http://lulee007.gitcafe.io/2015/10/23/Cordova-Ionic-Angularjs%E5%81%9A%E6%B7%B7%E5%90%88%E7%A7%BB%E5%8A%A8App%E5%BC%80%E5%8F%91%E4%B9%8B-%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/"/>
-    <id>http://lulee007.gitcafe.io/2015/10/23/Cordova-Ionic-Angularjs做混合移动App开发之-学习路线/</id>
-    <published>2015-10-23T12:59:23.000Z</published>
-    <updated>2016-01-18T05:46:00.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="u73AF_u5883_u642D_u5EFA"><a href="#u73AF_u5883_u642D_u5EFA" class="headerlink" title="环境搭建"></a>环境搭建</h2><p>参考另一篇：<a href="/lulee007.github.io/">Mac下安装cordova+ionic+angularjs做混合移动app开发</a></p>
-<h2 id="u5E38_u89C4_u5F00_u53D1_uFF1A"><a href="#u5E38_u89C4_u5F00_u53D1_uFF1A" class="headerlink" title="常规开发："></a>常规开发：</h2><p>标准的mvc模式:</p>
-<ul>
-<li>m: 模型 service api获取数据</li>
-<li>c: 控制器 controller</li>
-<li>v: 视图 数据绑定，展示数据 html</li>
-</ul>
-<a id="more"></a>
-<h2 id="u63D2_u4EF6_u5F00_u53D1_uFF1A"><a href="#u63D2_u4EF6_u5F00_u53D1_uFF1A" class="headerlink" title="插件开发："></a>插件开发：</h2><h2 id="u771F_u673A_u6A21_u62DF_u5668_u8C03_u8BD5"><a href="#u771F_u673A_u6A21_u62DF_u5668_u8C03_u8BD5" class="headerlink" title="真机模拟器调试"></a>真机模拟器调试</h2><h3 id="android"><a href="#android" class="headerlink" title="android"></a>android</h3><h3 id="ios"><a href="#ios" class="headerlink" title="ios"></a>ios</h3><h2 id="u5E38_u7528_u547D_u4EE4_uFF1A"><a href="#u5E38_u7528_u547D_u4EE4_uFF1A" class="headerlink" title="常用命令："></a>常用命令：</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 构建所有平台代码</span></span><br><span class="line">ionic build</span><br><span class="line"><span class="comment"># 构建Android</span></span><br><span class="line">ionic build android</span><br><span class="line"><span class="comment"># 构建ios 模拟器</span></span><br><span class="line">ionic build ios</span><br><span class="line"><span class="comment"># 构建ios 设备</span></span><br><span class="line">ionic build --device ios</span><br><span class="line"><span class="comment"># 运行app到设备上</span></span><br><span class="line">ionic run --device ios/android</span><br><span class="line"><span class="comment"># 运行在模拟器上（android genymotion 请用--device）</span></span><br><span class="line">ionic run --emulate ios/android</span><br><span class="line"></span><br><span class="line"><span class="comment"># 开启本地浏览器调试</span></span><br><span class="line">ionic serve</span><br><span class="line"><span class="comment"># 添加ios平台</span></span><br><span class="line">ionic platform add ios</span><br><span class="line"><span class="comment"># 移除android平台</span></span><br><span class="line">ionic platform remove android</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装插件 xxx可以为id，目录，url</span></span><br><span class="line">cordova plugin add xxx</span><br><span class="line"><span class="comment"># 移除插件 xxx只能为插件id</span></span><br><span class="line">cordova plugin remove xxxx</span><br></pre></td></tr></table></figure>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h2 id="u73AF_u5883_u642D_u5EFA"><a href="#u73AF_u5883_u642D_u5EFA" class="headerlink" title="环境搭建"></a>环境搭建</h2><p>参考另一篇：<a href="/lulee007.github.io/">Mac下安装cordova+ionic+angularjs做混合移动app开发</a></p>
-<h2 id="u5E38_u89C4_u5F00_u53D1_uFF1A"><a href="#u5E38_u89C4_u5F00_u53D1_uFF1A" class="headerlink" title="常规开发："></a>常规开发：</h2><p>标准的mvc模式:</p>
-<ul>
-<li>m: 模型 service api获取数据</li>
-<li>c: 控制器 controller</li>
-<li>v: 视图 数据绑定，展示数据 html</li>
-</ul>]]>
-    
-    </summary>
-    
-      <category term="AngularJs" scheme="http://lulee007.gitcafe.io/tagsCN/AngularJs/"/>
-    
-      <category term="Cordova" scheme="http://lulee007.gitcafe.io/tagsCN/Cordova/"/>
-    
-      <category term="HTML5" scheme="http://lulee007.gitcafe.io/tagsCN/HTML5/"/>
-    
-      <category term="Hybrid App" scheme="http://lulee007.gitcafe.io/tagsCN/Hybrid-App/"/>
-    
-      <category term="Ionic" scheme="http://lulee007.gitcafe.io/tagsCN/Ionic/"/>
-    
-      <category term="混合型移动应用" scheme="http://lulee007.gitcafe.io/tagsCN/%E6%B7%B7%E5%90%88%E5%9E%8B%E7%A7%BB%E5%8A%A8%E5%BA%94%E7%94%A8/"/>
-    
-      <category term="笔记" scheme="http://lulee007.gitcafe.io/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
+  <div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_weixin">微信</a>
+		<a class="jiathis_button_cqq">QQ好友</a>
+		<a class="jiathis_button_qzone">QQ空间</a>
+		<a class="jiathis_button_tsina">新浪微博</a>
+		<a href="http://www.jiathis.com/share?uid=2080230" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+		<a class="jiathis_counter_style"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=2080230" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+<!-- JiaThis Button BEGIN -->
+
   
-  <entry>
-    <title><![CDATA[Mac下cordova+ionic+angularjs做混合移动app开发之--安装环境配置]]></title>
-    <link href="http://lulee007.gitcafe.io/2015/10/10/Mac%E4%B8%8BCordova-Ionic-AngularJs%E5%81%9A%E6%B7%B7%E5%90%88%E7%A7%BB%E5%8A%A8App%E5%BC%80%E5%8F%91%E4%B9%8B--%E5%AE%89%E8%A3%85%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
-    <id>http://lulee007.gitcafe.io/2015/10/10/Mac下Cordova-Ionic-AngularJs做混合移动App开发之--安装环境配置/</id>
-    <published>2015-10-10T11:49:59.000Z</published>
-    <updated>2016-01-18T05:43:18.000Z</updated>
-    <content type="html"><![CDATA[<h3 id="u5B89_u88C5Nodejs_3A"><a href="#u5B89_u88C5Nodejs_3A" class="headerlink" title="安装Nodejs:"></a>安装Nodejs:</h3><p>下载并打开<code>node-v0.12.4.pkg</code>进行安装</p>
-<h3 id="u66F4_u6362nodejs__u7684npm_u5305_u7BA1_u7406_u5668_u7684_u6E90_uFF1A"><a href="#u66F4_u6362nodejs__u7684npm_u5305_u7BA1_u7406_u5668_u7684_u6E90_uFF1A" class="headerlink" title="更换nodejs 的npm包管理器的源："></a>更换<code>nodejs</code> 的<code>npm</code>包管理器的源：</h3><h4 id="u5B89_u88C5nodejs"><a href="#u5B89_u88C5nodejs" class="headerlink" title="安装nodejs"></a>安装<code>nodejs</code></h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#先移除之前的源，因为国内访问比较慢或者访问不了</span></span><br><span class="line">gem sources --remove https://rubygems.org/</span><br><span class="line"><span class="comment">#添加淘宝的镜像源</span></span><br><span class="line">gem sources <span class="operator">-a</span> http://ruby.taobao.org/</span><br><span class="line"><span class="comment">#查看一下有没有更新成功</span></span><br><span class="line">gem sources <span class="operator">-l</span></span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<h4 id="u5B89_u88C5cordova_u4EE5_u53CAionic"><a href="#u5B89_u88C5cordova_u4EE5_u53CAionic" class="headerlink" title="安装cordova以及ionic"></a>安装<code>cordova</code>以及<code>ionic</code></h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#使用管理员权限，并安装cordova到全局位置</span></span><br><span class="line">sudo npm install -g cordova</span><br><span class="line"><span class="comment">#同样的，安装 ionic</span></span><br><span class="line">sudo npm install -g ionic</span><br></pre></td></tr></table></figure>
-<h4 id="u5B89_u88C5ios_u771F_u673A_u8C03_u8BD5ios-deploy"><a href="#u5B89_u88C5ios_u771F_u673A_u8C03_u8BD5ios-deploy" class="headerlink" title="安装ios真机调试ios-deploy"></a>安装ios真机调试<code>ios-deploy</code></h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#安装ios-deploy 到全局位置</span></span><br><span class="line">sudo npm install -g ios-deploy</span><br></pre></td></tr></table></figure>
-<h4 id="u5B89_u88C5bower"><a href="#u5B89_u88C5bower" class="headerlink" title="安装bower"></a>安装<code>bower</code></h4><p><code>bower</code>是<code>node</code>的一个工具，安装<code>bower</code>用于管理browser端的前端资源<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install -g bower</span><br></pre></td></tr></table></figure></p>
-<!-- more -->
-<h3 id="u5B89_u88C5IntelliJ_IDEA"><a href="#u5B89_u88C5IntelliJ_IDEA" class="headerlink" title="安装IntelliJ IDEA"></a>安装IntelliJ IDEA</h3><ul>
-<li>下载并打开<code>ideaIU-14.1.4.dmg</code>直接把<code>IntelliJ</code>拖入<code>Application</code>就可以了</li>
-</ul>
-<h3 id="u5B89_u88C5IntelliJ_IDEA_u63D2_u4EF6"><a href="#u5B89_u88C5IntelliJ_IDEA_u63D2_u4EF6" class="headerlink" title="安装IntelliJ IDEA插件"></a>安装IntelliJ IDEA插件</h3><p>需要常用的插件有：</p>
-<ul>
-<li>genymotion ,开发用的Android模拟器，速度应该是最快的了</li>
-<li>markdown</li>
-<li>ionic</li>
-<li>cordova</li>
-</ul>
-<p><img src="http://7xjzst.com1.z0.glb.clouddn.com/gif_installplugins.gif" alt="Plugin安装截图"></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h3 id="u5B89_u88C5Nodejs_3A"><a href="#u5B89_u88C5Nodejs_3A" class="headerlink" title="安装Nodejs:"></a>安装Nodejs:</h3><p>下载并打开<code>node-v0.12.4.pkg</code>进行安装</p>
-<h3 id="u66F4_u6362nodejs__u7684npm_u5305_u7BA1_u7406_u5668_u7684_u6E90_uFF1A"><a href="#u66F4_u6362nodejs__u7684npm_u5305_u7BA1_u7406_u5668_u7684_u6E90_uFF1A" class="headerlink" title="更换nodejs 的npm包管理器的源："></a>更换<code>nodejs</code> 的<code>npm</code>包管理器的源：</h3><h4 id="u5B89_u88C5nodejs"><a href="#u5B89_u88C5nodejs" class="headerlink" title="安装nodejs"></a>安装<code>nodejs</code></h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#先移除之前的源，因为国内访问比较慢或者访问不了</span></span><br><span class="line">gem sources --remove https://rubygems.org/</span><br><span class="line"><span class="comment">#添加淘宝的镜像源</span></span><br><span class="line">gem sources <span class="operator">-a</span> http://ruby.taobao.org/</span><br><span class="line"><span class="comment">#查看一下有没有更新成功</span></span><br><span class="line">gem sources <span class="operator">-l</span></span><br></pre></td></tr></table></figure>]]>
-    
-    </summary>
-    
-      <category term="AngularJs" scheme="http://lulee007.gitcafe.io/tagsCN/AngularJs/"/>
-    
-      <category term="Cordova" scheme="http://lulee007.gitcafe.io/tagsCN/Cordova/"/>
-    
-      <category term="HTML5" scheme="http://lulee007.gitcafe.io/tagsCN/HTML5/"/>
-    
-      <category term="Hybrid App" scheme="http://lulee007.gitcafe.io/tagsCN/Hybrid-App/"/>
-    
-      <category term="Ionic" scheme="http://lulee007.gitcafe.io/tagsCN/Ionic/"/>
-    
-      <category term="Mac" scheme="http://lulee007.gitcafe.io/tagsCN/Mac/"/>
-    
-      <category term="混合型移动应用" scheme="http://lulee007.gitcafe.io/tagsCN/%E6%B7%B7%E5%90%88%E5%9E%8B%E7%A7%BB%E5%8A%A8%E5%BA%94%E7%94%A8/"/>
-    
-      <category term="笔记" scheme="http://lulee007.gitcafe.io/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
+
   
-  <entry>
-    <title><![CDATA[Mac下Android Studio与Subversion集成的问题]]></title>
-    <link href="http://lulee007.gitcafe.io/2015/06/28/Mac%E4%B8%8BAndroidStudio%E4%B8%8ESubversion%E9%9B%86%E6%88%90%E7%9A%84%E9%97%AE%E9%A2%98/"/>
-    <id>http://lulee007.gitcafe.io/2015/06/28/Mac下AndroidStudio与Subversion集成的问题/</id>
-    <published>2015-06-28T12:35:17.000Z</published>
-    <updated>2016-01-11T13:12:32.000Z</updated>
-    <content type="html"><![CDATA[<p>由于Mac10.10下的subversion版本是1.7，而使用smartsvn8.6 <code>checkout</code>版本提示需要<code>upgrade to 1.8</code><br>这样一来，使得android studio import 进来的svn项目无法使用集成好的subversion进行管理了，会出现如下错误：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">svn: E155021: This client is too old to work  </span><br><span class="line">with the working copy at xxx (format <span class="string">'31'</span>)</span><br></pre></td></tr></table></figure></p>
-<p>进过一番搜索得到的解决方法记录如下：<br><a id="more"></a></p>
-<h2 id="u5347_u7EA7subversion"><a href="#u5347_u7EA7subversion" class="headerlink" title="升级subversion"></a><a name="updatesvn">升级subversion</a></h2><ul>
-<li><p><a name="brewupdatesvn">通过brew升级subversion:</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install svn</span><br></pre></td></tr></table></figure>
-<p>安装完成之后会有提示：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">==&gt; Summary</span><br><span class="line">🍺  /usr/<span class="built_in">local</span>/Cellar/subversion/<span class="number">1.8</span>.<span class="number">13</span>: <span class="number">116</span> files, <span class="number">9.4</span>M</span><br></pre></td></tr></table></figure>
-<p>此时新的svn客户端被安装到<code>/usr/local/Cellar/subversion/1.8.13</code>目录下了。<br>查看原来svn的位置</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">which</span> svn</span><br></pre></td></tr></table></figure>
-<p>得到如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/<span class="built_in">local</span>/bin/svn</span><br></pre></td></tr></table></figure>
-<p>进入到这个<code>/usr/local/bin/svn</code>目录</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/bin/svn</span><br></pre></td></tr></table></figure>
-<p>备份当前svn到<code>bak.svn</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir bak.svn</span><br><span class="line">mv svn* ./bak.svn</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><a name="replacesvn">替换当前svn：</a><br>建立<code>/usr/local/Cellar/subversion/1.8.13</code>软连接到当前目录<code>usr/local/bin</code>  </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln <span class="operator">-s</span> /usr/<span class="built_in">local</span>/Cellar/subversion/<span class="number">1.8</span>.<span class="number">11</span>/bin/svn* ./</span><br></pre></td></tr></table></figure>
-<p>重新启动系统新的svn就可以用了。</p>
-</li>
-</ul>
-<h2 id="u914D_u7F6Eandroid_studio"><a href="#u914D_u7F6Eandroid_studio" class="headerlink" title="配置android studio"></a><a name="setupas">配置android studio</a></h2><p>  打开android studio项目，从菜单栏里打开<code>android studio</code> &gt; <code>preferences</code>:<br>  <img src="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-10@2x.png" alt="preferences"><br>  选择<code>Version Control</code>展开后选择<code>Subversion</code><br>  勾选 “Use command line client”并输入刚才通过命令<code>which svn</code>得到的svn的路径<code>/usr/local/bin/svn</code> 点击ok<br>  最终如下图所示：<br>  <img src="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-11@2x.png" alt="setup"></p>
-<h2 id="u542F_u7528android_studio_svn"><a href="#u542F_u7528android_studio_svn" class="headerlink" title="启用android studio svn"></a><a name="enablesvn">启用android studio svn</a></h2><p>  打开菜单 <code>VCS</code>&gt; <code>Enable Version Control Integration.</code>，这时就可以使用了。<br>  <img src="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-12@2x.png" alt="enable svn">  </p>
-<h2 id="u53C2_u8003"><a href="#u53C2_u8003" class="headerlink" title="参考"></a>参考</h2><ul>
-<li>upgrade svn via brew<br><a href="http://blog.csdn.net/duanyipeng/article/details/44747689" target="_blank" rel="external">http://blog.csdn.net/duanyipeng/article/details/44747689</a></li>
-<li>AndroidStudio svn 1.8<br><a href="http://stackoverflow.com/questions/25294420/svn-e155021-this-client-is-too-old-to-work-with-the-working-copy-at-xxx-forma" target="_blank" rel="external">http://stackoverflow.com/questions/25294420/svn-e155021-this-client-is-too-old-to-work-with-the-working-copy-at-xxx-forma</a></li>
-</ul>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>由于Mac10.10下的subversion版本是1.7，而使用smartsvn8.6 <code>checkout</code>版本提示需要<code>upgrade to 1.8</code><br>这样一来，使得android studio import 进来的svn项目无法使用集成好的subversion进行管理了，会出现如下错误：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">svn: E155021: This client is too old to work  </span><br><span class="line">with the working copy at xxx (format <span class="string">'31'</span>)</span><br></pre></td></tr></table></figure></p>
-<p>进过一番搜索得到的解决方法记录如下：<br>]]>
+</div>
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="SSM-Struts2-Spring-Mybatis-Jersey-Web-项目搭建" data-title="SSM：Struts2+Spring+Mybatis Web 项目搭建" data-url="http://lulee007.gitcafe.io/2016/01/14/SSM-Struts2-Spring-Mybatis-Jersey-Web-项目搭建/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"lulee007blog"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Lulee007
+    	</div>
+      	<div class="footer-right">
+      		由<a href="http://hexo.io/" target="_blank">Hexo</a>强力驱动  主题: <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> 来自 Litten
+      	</div>
+        <div>
+        <span id="busuanzi_container_site_pv">
+            本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        </span>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
     
-    </summary>
-    
-      <category term="Android Studio" scheme="http://lulee007.gitcafe.io/tagsCN/Android-Studio/"/>
-    
-      <category term="Mac" scheme="http://lulee007.gitcafe.io/tagsCN/Mac/"/>
-    
-      <category term="SVN" scheme="http://lulee007.gitcafe.io/tagsCN/SVN/"/>
-    
-      <category term="Subversion" scheme="http://lulee007.gitcafe.io/tagsCN/Subversion/"/>
-    
-      <category term="笔记" scheme="http://lulee007.gitcafe.io/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Mac10.10.3下AndroidStudio单元测试——instrumentation]]></title>
-    <link href="http://lulee007.gitcafe.io/2015/06/21/Mac-10-10-3%E4%B8%8BAndroidStudio%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95-instrumentation/"/>
-    <id>http://lulee007.gitcafe.io/2015/06/21/Mac-10-10-3下AndroidStudio单元测试-instrumentation/</id>
-    <published>2015-06-21T11:45:37.000Z</published>
-    <updated>2016-01-11T12:55:30.000Z</updated>
-    <content type="html"><![CDATA[<p>测试环境：</p>
-<ul>
-<li>Android Studio 1.2.2</li>
-<li>Mac OS 10.10.3</li>
-</ul>
-<a id="more"></a>
-<h2 id="u4EE3_u7801"><a href="#u4EE3_u7801" class="headerlink" title="代码"></a><a name="code">代码</a></h2><ol>
-<li><p><a name="createclass">新建类代码：</a></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestHelper</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isNull</span><span class="params">(String a)</span></span>&#123;</span><br><span class="line">      <span class="keyword">if</span>(a==<span class="keyword">null</span>)&#123;</span><br><span class="line">          <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">      &#125;<span class="keyword">else</span></span><br><span class="line">      &#123;</span><br><span class="line">          <span class="keyword">return</span>  <span class="keyword">false</span>;</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isLowCase</span><span class="params">(String a)</span></span>&#123;</span><br><span class="line">      <span class="keyword">return</span> a.toLowerCase().equals(a);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><a name="genTestClass">通过android studio 提示自动生成测试代码：<br>把光标移到类名称上，然后按组合键<code>alt</code>+<code>enter</code>，选择第一个<em>Create Test</em>如下图：<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-1@2x.png" alt="Create Test"><br>弹出生成测试类对话框，其中superclass选择<code>InstrumentationTestCase</code>，<br>勾选需要测试的方法,点击Ok后选择生成的目标package文件夹就可以了。<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-2@2x.png" alt="TestCase Dialog"><br>会在src/Androidtest package目录下生成对应的测试类<code>TestHelper</code></a></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestHelperTest</span> <span class="keyword">extends</span> <span class="title">InstrumentationTestCase</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testIsNull</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        TestHelper testHelper =<span class="keyword">new</span> TestHelper();</span><br><span class="line">        assertEquals(<span class="keyword">true</span>, testHelper.isNull(<span class="keyword">null</span>));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testIsLowCase</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        TestHelper testHelper =<span class="keyword">new</span> TestHelper();</span><br><span class="line">        assertEquals(<span class="keyword">true</span>, testHelper.isLowCase(<span class="string">"C"</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h2 id="u6D4B_u8BD5"><a href="#u6D4B_u8BD5" class="headerlink" title="测试"></a><a name="test">测试</a></h2><p>在android studio一排按钮的最上层，点击“运行”旁边的配置按钮，选择“edit configurations”<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-3@2x.png" alt="run config"><br>在配置里点击新建按钮，添加“Android Test”<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-4@2x.png" alt="add new config"><br>给Test添加一个名称Name:“MyTest”<br>选择Module为“app”<br>Test对象为“All in package”,并确认Package框里选择的是我们测试类的所在的包名。<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-5@2x.png" alt="set config"><br>点击Ok后，点击菜单栏里的Run图标<br>等待启动完成后在输出栏里可以看到我们的测试结果：<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-6@2x.png" alt="test resutl"><br>可以看到我们的测试结果有<em>Done:4 of 4 Failed:1</em> 一个错误，testIsLowCase 传入的时<code>C</code>不是小写字母。  </p>
-<h2 id="u6DFB_u52A0_u6D4B_u8BD5"><a href="#u6DFB_u52A0_u6D4B_u8BD5" class="headerlink" title="添加测试"></a><a name="addtest">添加测试</a></h2><p>打开刚才的测试类TestHelper,添加一个方法：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">addTest</span><span class="params">(<span class="keyword">int</span> a)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a+a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>将光标放到 addTest名称上，按组合键<code>alt</code>+<code>enter</code>选择 Generate missed test methods<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-8@2x.png" alt="generate missed test mothod"><br>选择需要添加的TestMethod<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-9@2x.png" alt="choose missed methods"><br>这时候会在TestHelperTest类里生成新的测试方法：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testAddTest</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>添加好代码就可以进行测试了。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>测试环境：</p>
-<ul>
-<li>Android Studio 1.2.2</li>
-<li>Mac OS 10.10.3</li>
-</ul>]]>
-    
-    </summary>
-    
-      <category term="Android Studio" scheme="http://lulee007.gitcafe.io/tagsCN/Android-Studio/"/>
-    
-      <category term="Instrumentation" scheme="http://lulee007.gitcafe.io/tagsCN/Instrumentation/"/>
-    
-      <category term="Mac" scheme="http://lulee007.gitcafe.io/tagsCN/Mac/"/>
-    
-      <category term="Unit Test" scheme="http://lulee007.gitcafe.io/tagsCN/Unit-Test/"/>
-    
-      <category term="单元测试" scheme="http://lulee007.gitcafe.io/tagsCN/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
-    
-      <category term="笔记" scheme="http://lulee007.gitcafe.io/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[CentOS5.5下安装Countly-Web-Server过程记录]]></title>
-    <link href="http://lulee007.gitcafe.io/2015/06/12/CentOS-5-5%E4%B8%8B%E5%AE%89%E8%A3%85Countly-Web-Server%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/"/>
-    <id>http://lulee007.gitcafe.io/2015/06/12/CentOS-5-5下安装Countly-Web-Server过程记录/</id>
-    <published>2015-06-12T13:57:12.000Z</published>
-    <updated>2016-01-11T13:03:02.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>由于工作需要，需要在CentOS 5.5 下安装Countly Web Server，把过程记录下来</p>
-<a id="more"></a>
-<h2 id="1-__u7CFB_u7EDF_u66F4_u65B0_u4E0E_u4E2D_u6587_u8BED_u8A00_u5305_u5B89_u88C5"><a href="#1-__u7CFB_u7EDF_u66F4_u65B0_u4E0E_u4E2D_u6587_u8BED_u8A00_u5305_u5B89_u88C5" class="headerlink" title="1. 系统更新与中文语言包安装"></a>1. 系统更新与中文语言包安装</h2><h2 id="2-__u57FA_u672C_u73AF_u5883_u914D_u7F6E_uFF1A"><a href="#2-__u57FA_u672C_u73AF_u5883_u914D_u7F6E_uFF1A" class="headerlink" title="2. 基本环境配置："></a>2. 基本环境配置：</h2><h3 id="2-1-_NodeJS_u5B89_u88C5"><a href="#2-1-_NodeJS_u5B89_u88C5" class="headerlink" title="2.1. NodeJS安装"></a>2.1. NodeJS安装</h3><ol>
-<li><p>依赖项安装</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install gcc gcc-c++ openssl-devel</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>下载并解压安装 nodejs</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt</span><br><span class="line">wget –c http://nodejs.org/dist/v0.<span class="number">12.4</span>/node-v0.<span class="number">12.4</span>.tar.gz</span><br><span class="line">tar zxvf node-v0.<span class="number">12.4</span>.tar.gz</span><br><span class="line"><span class="built_in">cd</span> node-v0.<span class="number">12.4</span></span><br><span class="line">./configure --prefix=/usr/<span class="built_in">local</span>/nodejs</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
-<p>注意此时会有错误输出信息：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./configure  File <span class="string">"./configure"</span>, line <span class="number">442</span></span><br><span class="line">fpu = <span class="string">'vfpv3'</span> <span class="keyword">if</span> armv7 <span class="keyword">else</span> <span class="string">'vfpv2'</span></span><br><span class="line">^ <span class="built_in">SyntaxError</span>: invalid syntax</span><br></pre></td></tr></table></figure>
-<p>这是因为Python当前版本 2.4.3 不够,需要升级Python</p>
-</li>
-<li><p>升级Python：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd /opt</span><br><span class="line">wget -c http:<span class="comment">//www.python.org/ftp/python/2.7.3/Python-2.7.3.tar.bz2</span></span><br><span class="line">tar jxvf Python-<span class="number">2.7</span><span class="number">.3</span>.tar.bz2</span><br><span class="line">cd Python-<span class="number">2.7</span><span class="number">.3</span></span><br><span class="line">./configure</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
-<p>正常情况下即使python2.7安装成功后，系统默认指向的python仍然是2.4.3版本，考虑到yum是基于python2.4.3才能正常工作，不敢轻易卸载。<br><em>解决方法：</em></p>
-<ul>
-<li><p>建立软连接</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mv /usr/bin/python /usr/bin/python.bak</span><br><span class="line">ln <span class="operator">-s</span> /usr/<span class="built_in">local</span>/bin/python2.<span class="number">7</span> /usr/bin/python</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使yum配置指向特定版本python2.4</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /usr/bin/yum</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>将第一行显示的<code>#/usr/bin/python</code>修改为<code>#/usr/bin/python2.4</code><br>保存修改<code>:wq</code></p>
-</li>
-<li><p>继续上面的步骤重新安装NodeJS：</p>
-<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /opt/<span class="keyword">node</span><span class="identifier"></span><span class="title">-v0</span>.<span class="number">12.4</span></span><br><span class="line">./configure --<span class="variable">prefix=</span>/usr/local/nodejs</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
-<p>注意，又有新的错误：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ImportError: No module named bz2</span><br><span class="line">make[<span class="number">1</span>]: *** [/opt/node-v0.<span class="number">12.4</span>/out/Release/obj/gen/libraries.cc] 错误 <span class="number">1</span></span><br><span class="line">make[<span class="number">1</span>]: Leaving directory <span class="string">'/opt/node-v0.12.4/out'</span></span><br><span class="line">make: *** [node] 错误 <span class="number">2</span></span><br></pre></td></tr></table></figure>
-<p>这个错误是由于python中没有装bz2的库导致的</p>
-</li>
-<li><p>继续安装bz2</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">yum install -y bzip2*</span><br><span class="line"><span class="built_in">cd</span> /opt/Python-<span class="number">2.7</span>.<span class="number">2</span>/Modules/zlib</span><br><span class="line">./configure</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
-<p>重新安装python</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /opt/Python-<span class="number">2.7</span><span class="number">.2</span>/</span><br><span class="line">python2<span class="number">.7</span> setup.py install</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>继续上面的步骤重新安装NodeJS：</p>
-<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /opt/<span class="keyword">node</span><span class="identifier"></span><span class="title">-v0</span>.<span class="number">12.4</span></span><br><span class="line">./configure --<span class="variable">prefix=</span>/usr/local/nodejs</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
-<p>这次应该可以安装成功了</p>
-</li>
-<li><p>配置NodeJS环境变量</p>
-<ul>
-<li>进入profile编辑环境变量<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/profile</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>在<code>export PATH USER LOGNAME MAIL HOSTNAME HISTSIZE HISTCONTROL</code> 一行的【上面】添加如下内容:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#set for nodejs</span></span><br><span class="line"><span class="built_in">export</span> NODE_HOME=/usr/<span class="built_in">local</span>/nodejs</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$NODE_HOME</span>/bin:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
-<p><code>:wq</code>保存并退出，编译/etc/profile 使配置生效</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> /etc/profile</span><br></pre></td></tr></table></figure>
-<p>输入测试：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
-<p>得到版本号<code>v0.12.4</code></p>
-</li>
-</ol>
-<h3 id="2-2_Ngnix_u5B89_u88C5"><a href="#2-2_Ngnix_u5B89_u88C5" class="headerlink" title="2.2 Ngnix安装"></a>2.2 Ngnix安装</h3><ol>
-<li><p>在安装nginx前，需要确保系统安装了g++、gcc、openssl-devel、pcre-devel和zlib-devel 和libevent</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum install pcre-devel  libevent  openssl</span><br><span class="line">yum -y install zlib zlib-devel  pcre</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>下载、解压安装Nginx</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">wget -c http://nginx.org/download/nginx-<span class="number">1.8</span>.<span class="number">0</span>.tar.gz</span><br><span class="line">tar –zxv –f nginx-<span class="number">1.8</span>.<span class="number">0</span>.tar.gz</span><br><span class="line"><span class="built_in">cd</span> nginx-<span class="number">1.8</span>.<span class="number">0</span></span><br><span class="line">./configure --prefix=/usr/<span class="built_in">local</span>/nginx</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>测试nginx<br>开启：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/<span class="built_in">local</span>/nginx/sbin/nginx</span><br></pre></td></tr></table></figure>
-<p>测试http访问</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl localhost</span><br></pre></td></tr></table></figure>
-<p>得到以下输出信息表示成功安装并开启nginx</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">  &lt;!DOCTYPE html&gt;</span><br><span class="line">  &lt;html&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">  &lt;title&gt;Welcome to nginx!&lt;/title&gt;</span><br><span class="line">  &lt;style&gt;</span><br><span class="line">      body &#123;</span><br><span class="line">          width: <span class="number">35</span>em;</span><br><span class="line">          margin: <span class="number">0</span> auto;</span><br><span class="line">          font-family: Tahoma, Verdana, Arial, sans-serif;</span><br><span class="line">      &#125;</span><br><span class="line">  &lt;/style&gt;</span><br><span class="line">  &lt;/head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">  &lt;h1&gt;Welcome to nginx!&lt;/h1&gt;</span><br><span class="line">  &lt;p&gt;If you see this page, the nginx web server is successfully installed and</span><br><span class="line">  working. Further configuration is required.&lt;/p&gt;</span><br><span class="line">  &lt;p&gt;For online documentation and support please refer to</span><br><span class="line">  &lt;a href=<span class="string">"http://nginx.org/"</span>&gt;nginx.org&lt;/a&gt;.&lt;br/&gt;</span><br><span class="line">  Commercial support is available at</span><br><span class="line">  &lt;a href=<span class="string">"http://nginx.com/"</span>&gt;nginx.com&lt;/a&gt;.&lt;/p&gt;</span><br><span class="line">  &lt;p&gt;&lt;em&gt;Thank you <span class="keyword">for</span> using nginx.&lt;/em&gt;&lt;/p&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">  &lt;/html&gt;</span><br><span class="line">  &lt;/pre&gt;</span><br><span class="line">  ```  </span><br><span class="line"></span><br><span class="line"><span class="comment">## 3. 安装Countly Web Server</span></span><br><span class="line"></span><br><span class="line"><span class="number">1</span>. 下载到/opt，并解压</span><br><span class="line">  ```bash</span><br><span class="line">  <span class="built_in">cd</span> /opt</span><br><span class="line">  wget –c https://github.com/Countly/countly-server/archive/master.zip</span><br><span class="line">  unzip countly-server-master.zip</span><br><span class="line">  mv ./countly-server-master ./countly</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>复制countly web配置文件，并修改配置</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/countly/frontend/express/</span><br><span class="line">cp config.sample.js  config.js</span><br><span class="line">vi config.js</span><br></pre></td></tr></table></figure>
-<p>将<code>mongodb</code>服务器地址<code>host</code>修改为<code>192.168.8.16</code>，保存并退出<br><code>:wq</code></p>
-</li>
-<li><p>复制api配置文件，并修改mongodb host</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ../../api/</span><br><span class="line">cp config.sample.js  config.js</span><br><span class="line">vi config.js</span><br></pre></td></tr></table></figure>
-<p>将<code>mongodb</code>服务器地址<code>host</code>修改为<code>192.168.8.16</code>，保存并退出<br><code>:wq</code></p>
-</li>
-<li><p>复制 countly.config.js</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/countly/frontend/express/public/javascripts/countly/</span><br><span class="line">cp countly.config.sample.js  countly.config.js</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>此时如果执行<code>node /opt/countly/api/api.js</code> node会报错误，没有time 组件，需要安装<code>time</code>组件<br>使用淘宝提供的源进行安装</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm --registry http://registry.cnpmjs.org/ install time</span><br></pre></td></tr></table></figure>
-<p>这个时间比较长，会进行<code>node-gyp rebuild</code>,安装完成后，就可以测试<code>node /opt/countly/api/api.js</code>和 <code>node /opt/countly/frontend/express/app.js</code>了</p>
-</li>
-</ol>
-<h2 id="4-__u914D_u7F6E_u670D_u52A1_u81EA_u542F_u52A8"><a href="#4-__u914D_u7F6E_u670D_u52A1_u81EA_u542F_u52A8" class="headerlink" title="4. 配置服务自启动"></a>4. 配置服务自启动</h2><h3 id="4-1__u5B89_u88C5supervisor__u8FDB_u7A0B_u7BA1_u7406_uFF0C_u8BBE_u7F6E_u81EA_u542F_u52A8"><a href="#4-1__u5B89_u88C5supervisor__u8FDB_u7A0B_u7BA1_u7406_uFF0C_u8BBE_u7F6E_u81EA_u542F_u52A8" class="headerlink" title="4.1 安装supervisor 进程管理，设置自启动"></a>4.1 安装supervisor 进程管理，设置自启动</h3><ol>
-<li><p>下载并安装supervisor</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt &amp;&amp; wget -c --no-check-certificate https://pypi.python.org/packages/<span class="built_in">source</span>/s/supervisor/supervisor-<span class="number">3.1</span>.<span class="number">1</span>.tar.gz</span><br><span class="line">tar zxvf supervisor-<span class="number">3.1</span>.<span class="number">1</span>.tar.gz</span><br><span class="line"><span class="built_in">cd</span> supervisor-<span class="number">3.1</span>.<span class="number">1</span></span><br><span class="line">python setup.py install</span><br></pre></td></tr></table></figure>
-<p><em>如果出现错误：</em></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"setup.py"</span>, line <span class="number">32</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    from setuptools import setup, find_packages</span><br><span class="line">ImportError: No module named setuptools</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>下载安装python组件：setuptools17.0</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">unzip setuptools-<span class="number">17.0</span>.zip</span><br><span class="line"><span class="built_in">cd</span> setuptools-<span class="number">17.0</span></span><br><span class="line">python setup.py install</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>继续用python安装 supervisor</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/supervisor-<span class="number">3.1</span>.<span class="number">1</span></span><br><span class="line">python setup.py install</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>编辑countly-supervisor.conf</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /opt/countly/bin/config/supervisord.conf</span><br></pre></td></tr></table></figure>
-<p>将<code>%(here)s/../..</code>和<code>%(here)s</code> 替换为<code>/opt/countly</code>,保存修改<code>:wq</code></p>
-</li>
-<li><p>配置supervisor文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span>_supervisord_conf &gt; /etc/supervisord.conf</span><br><span class="line">vi /etc/supervisord.conf</span><br></pre></td></tr></table></figure>
-<p>将最后两行取消注释，改为：</p>
-<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="keyword">include</span>]</span><br><span class="line">files = <span class="regexp">/opt/countly</span><span class="regexp">/bin/config</span><span class="regexp">/supervisord.conf</span></span><br></pre></td></tr></table></figure>
-<p>保存 <code>:wq</code></p>
-</li>
-<li><p>配置supervisor 自启动</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/init.d/supervisor</span><br></pre></td></tr></table></figure>
-<p>添加加入代码：  </p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span></span><br><span class="line"><span class="comment"># supervisor Startup script for the Countly HTTP Server</span></span><br><span class="line"><span class="comment"># it is v.0.0.2 version.</span></span><br><span class="line"><span class="comment"># chkconfig: - 85 15</span></span><br><span class="line"><span class="comment"># description: Countly</span></span><br><span class="line"><span class="comment"># processname: supervisor</span></span><br><span class="line"><span class="comment"># pidfile: /var/run/supervisor.pid</span></span><br><span class="line"><span class="comment"># config: /etc/supervisord.conf</span></span><br><span class="line"></span><br><span class="line">supervisordd=/usr/<span class="built_in">local</span>/bin/supervisord</span><br><span class="line">supervisor_config=/etc/supervisord.conf</span><br><span class="line">supervisor_pid=/var/run/supervisor.pid</span><br><span class="line"></span><br><span class="line">RETVAL=<span class="number">0</span></span><br><span class="line">prog=<span class="string">"supervisor"</span></span><br><span class="line"><span class="comment"># Source function library.</span></span><br><span class="line">. /etc/rc.d/init.d/<span class="built_in">functions</span></span><br><span class="line"><span class="comment"># Source networking configuration.</span></span><br><span class="line">. /etc/sysconfig/network</span><br><span class="line"><span class="comment"># Check that networking is up.</span></span><br><span class="line"></span><br><span class="line">[ <span class="variable">$&#123;NETWORKING&#125;</span> = <span class="string">"no"</span> ] &amp;&amp; <span class="built_in">exit</span> <span class="number">0</span></span><br><span class="line">[ -x <span class="variable">$supervisordd</span> ] || <span class="built_in">exit</span> <span class="number">0</span></span><br><span class="line"><span class="comment"># Start supervisor daemons functions.</span></span><br><span class="line"><span class="function"><span class="title">start</span></span>() &#123;</span><br><span class="line">PATH=/sbin:/usr/sbin:/bin:/usr/bin:/usr/<span class="built_in">local</span>/nodejs/bin</span><br><span class="line"><span class="keyword">if</span> [ <span class="operator">-e</span> <span class="variable">$supervisor_pid</span> ];<span class="keyword">then</span></span><br><span class="line">   <span class="built_in">echo</span> <span class="string">"supervisor already running...."</span></span><br><span class="line">   <span class="built_in">exit</span> <span class="number">1</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line">   <span class="built_in">echo</span>  $<span class="string">"Starting <span class="variable">$prog</span> with conf:<span class="variable">$supervisor_config</span>"</span></span><br><span class="line">daemon <span class="variable">$supervisordd</span> --configuration <span class="variable">$&#123;supervisor_config&#125;</span></span><br><span class="line">   RETVAL=$?</span><br><span class="line">   <span class="built_in">echo</span></span><br><span class="line">   [ <span class="variable">$RETVAL</span> = <span class="number">0</span> ] &amp;&amp; touch /var/lock/subsys/supervisor</span><br><span class="line">   <span class="built_in">return</span> <span class="variable">$RETVAL</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Stop supervisor daemons functions.</span></span><br><span class="line"><span class="function"><span class="title">stop</span></span>() &#123;</span><br><span class="line">        <span class="built_in">echo</span> -n $<span class="string">"Stopping <span class="variable">$prog</span>: "</span></span><br><span class="line">        killproc <span class="variable">$supervisordd</span></span><br><span class="line">        RETVAL=$?</span><br><span class="line">        <span class="built_in">echo</span></span><br><span class="line">        [ <span class="variable">$RETVAL</span> = <span class="number">0</span> ] &amp;&amp; rm <span class="operator">-f</span> /var/lock/subsys/supervisor /var/run/supervisor.pid</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># reload supervisor service functions.</span></span><br><span class="line"><span class="function"><span class="title">reload</span></span>() &#123;</span><br><span class="line"> PATH=/sbin:/usr/sbin:/bin:/usr/bin:/usr/<span class="built_in">local</span>/nodejs/bin</span><br><span class="line">    <span class="built_in">echo</span> -n $<span class="string">"Reloading <span class="variable">$prog</span>: "</span></span><br><span class="line">    <span class="comment">#kill -HUP `cat $&#123;supervisor_pid&#125;`</span></span><br><span class="line">    killproc <span class="variable">$supervisordd</span> -HUP</span><br><span class="line">    RETVAL=$?</span><br><span class="line">    <span class="built_in">echo</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># See how we were called.</span></span><br><span class="line"><span class="keyword">case</span> <span class="string">"<span class="variable">$1</span>"</span> <span class="keyword">in</span></span><br><span class="line">start)</span><br><span class="line">        start</span><br><span class="line">        ;;</span><br><span class="line">stop)</span><br><span class="line">        stop</span><br><span class="line">        ;;</span><br><span class="line">reload)</span><br><span class="line">        reload</span><br><span class="line">        ;;</span><br><span class="line">restart)</span><br><span class="line">        stop</span><br><span class="line">        start</span><br><span class="line">        ;;</span><br><span class="line">status)</span><br><span class="line">        status <span class="variable">$prog</span></span><br><span class="line">        RETVAL=$?</span><br><span class="line">        ;;</span><br><span class="line">*)</span><br><span class="line">        <span class="built_in">echo</span> $<span class="string">"Usage: <span class="variable">$prog</span> &#123;start|stop|restart|reload|status|help&#125;"</span></span><br><span class="line">        <span class="built_in">exit</span> <span class="number">1</span></span><br><span class="line"><span class="keyword">esac</span></span><br><span class="line"><span class="built_in">exit</span> <span class="variable">$RETVAL</span></span><br></pre></td></tr></table></figure>
-<p>保存修改 <code>:wq</code><br>设置文件属性为可执行</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod a+x /etc/init.d/supervisor</span><br></pre></td></tr></table></figure>
-<p>测试：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service supervisor start</span><br></pre></td></tr></table></figure>
-<p>可以看到：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Starting supervisor with conf:/etc/supervisord.conf</span><br><span class="line"></span><br><span class="line">                                                           [确定]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>添加到开机启动项中：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/rc.local</span><br></pre></td></tr></table></figure>
-<p>加入：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/supervisor start</span><br></pre></td></tr></table></figure>
-<p>保存 <code>:wq</code></p>
-</li>
-</ol>
-<h3 id="4-2__u914D_u7F6ENginx_u81EA_u542F_u52A8"><a href="#4-2__u914D_u7F6ENginx_u81EA_u542F_u52A8" class="headerlink" title="4.2 配置Nginx自启动"></a>4.2 配置Nginx自启动</h3><ol>
-<li><p>添加nginx脚本</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/init.d/nginx</span><br></pre></td></tr></table></figure>
-<p>加入下面的内容：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span></span><br><span class="line"><span class="comment"># nginx Startup script for the Nginx HTTP Server</span></span><br><span class="line"><span class="comment"># it is v.0.0.2 version.</span></span><br><span class="line"><span class="comment"># chkconfig: - 85 15</span></span><br><span class="line"><span class="comment"># description: Nginx is a high-performance web and proxy server.</span></span><br><span class="line"><span class="comment">#              It has a lot of features, but it's not for everyone.</span></span><br><span class="line"><span class="comment"># processname: nginx</span></span><br><span class="line"><span class="comment"># pidfile: /var/run/nginx.pid</span></span><br><span class="line"><span class="comment"># config: /usr/local/nginx/conf/nginx.conf</span></span><br><span class="line">nginxd=/usr/<span class="built_in">local</span>/nginx/sbin/nginx</span><br><span class="line">nginx_config=/usr/<span class="built_in">local</span>/nginx/conf/nginx.conf</span><br><span class="line">nginx_pid=/var/run/nginx.pid</span><br><span class="line">RETVAL=<span class="number">0</span></span><br><span class="line">prog=<span class="string">"nginx"</span></span><br><span class="line"><span class="comment"># Source function library.</span></span><br><span class="line">. /etc/rc.d/init.d/<span class="built_in">functions</span></span><br><span class="line"><span class="comment"># Source networking configuration.</span></span><br><span class="line">. /etc/sysconfig/network</span><br><span class="line"><span class="comment"># Check that networking is up.</span></span><br><span class="line">[ <span class="variable">$&#123;NETWORKING&#125;</span> = <span class="string">"no"</span> ] &amp;&amp; <span class="built_in">exit</span> <span class="number">0</span></span><br><span class="line">[ -x <span class="variable">$nginxd</span> ] || <span class="built_in">exit</span> <span class="number">0</span></span><br><span class="line"><span class="comment"># Start nginx daemons functions.</span></span><br><span class="line"><span class="function"><span class="title">start</span></span>() &#123;</span><br><span class="line"><span class="keyword">if</span> [ <span class="operator">-e</span> <span class="variable">$nginx_pid</span> ];<span class="keyword">then</span></span><br><span class="line">   <span class="built_in">echo</span> <span class="string">"nginx already running...."</span></span><br><span class="line">   <span class="built_in">exit</span> <span class="number">1</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line">   <span class="built_in">echo</span> -n $<span class="string">"Starting <span class="variable">$prog</span>: "</span></span><br><span class="line">   daemon <span class="variable">$nginxd</span> -c <span class="variable">$&#123;nginx_config&#125;</span></span><br><span class="line">   RETVAL=$?</span><br><span class="line">   <span class="built_in">echo</span></span><br><span class="line">   [ <span class="variable">$RETVAL</span> = <span class="number">0</span> ] &amp;&amp; touch /var/lock/subsys/nginx</span><br><span class="line">   <span class="built_in">return</span> <span class="variable">$RETVAL</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment"># Stop nginx daemons functions.</span></span><br><span class="line"><span class="function"><span class="title">stop</span></span>() &#123;</span><br><span class="line">        <span class="built_in">echo</span> -n $<span class="string">"Stopping <span class="variable">$prog</span>: "</span></span><br><span class="line">        killproc <span class="variable">$nginxd</span></span><br><span class="line">        RETVAL=$?</span><br><span class="line">        <span class="built_in">echo</span></span><br><span class="line">        [ <span class="variable">$RETVAL</span> = <span class="number">0</span> ] &amp;&amp; rm <span class="operator">-f</span> /var/lock/subsys/nginx /var/run/nginx.pid</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment"># reload nginx service functions.</span></span><br><span class="line"><span class="function"><span class="title">reload</span></span>() &#123;</span><br><span class="line">    <span class="built_in">echo</span> -n $<span class="string">"Reloading <span class="variable">$prog</span>: "</span></span><br><span class="line">    <span class="comment">#kill -HUP `cat $&#123;nginx_pid&#125;`</span></span><br><span class="line">    killproc <span class="variable">$nginxd</span> -HUP</span><br><span class="line">    RETVAL=$?</span><br><span class="line">    <span class="built_in">echo</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment"># See how we were called.</span></span><br><span class="line"><span class="keyword">case</span> <span class="string">"<span class="variable">$1</span>"</span> <span class="keyword">in</span></span><br><span class="line">start)</span><br><span class="line">        start</span><br><span class="line">        ;;</span><br><span class="line">stop)</span><br><span class="line">        stop</span><br><span class="line">        ;;</span><br><span class="line">reload)</span><br><span class="line">        reload</span><br><span class="line">        ;;</span><br><span class="line">restart)</span><br><span class="line">        stop</span><br><span class="line">        start</span><br><span class="line">        ;;</span><br><span class="line">status)</span><br><span class="line">        status <span class="variable">$prog</span></span><br><span class="line">        RETVAL=$?</span><br><span class="line">        ;;</span><br><span class="line">*)</span><br><span class="line">        <span class="built_in">echo</span> $<span class="string">"Usage: <span class="variable">$prog</span> &#123;start|stop|restart|reload|status|help&#125;"</span></span><br><span class="line">        <span class="built_in">exit</span> <span class="number">1</span></span><br><span class="line"><span class="keyword">esac</span></span><br><span class="line"><span class="built_in">exit</span> <span class="variable">$RETVAL</span></span><br></pre></td></tr></table></figure>
-<p>保存并退出<code>:wq</code><br>设置文件的访问权限(<code>a+x</code> ==&gt; all user can execute  所有用户可执行)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod a+x /etc/init.d/nginx</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>添加到开机启动项中</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/rc.local</span><br></pre></td></tr></table></figure>
-<p>加入一行<code>/etc/init.d/nginx start</code>保存并退出，下次重启会生效。</p>
-</li>
-<li><p>完成所有配置,重启服务器。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reboot</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>重新打开terminal输入：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl localhost</span><br></pre></td></tr></table></figure>
-<p>得到：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Moved Temporarily. Redirecting to /login</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h2 id="5-__u8BF4_u660E"><a href="#5-__u8BF4_u660E" class="headerlink" title="5. 说明"></a>5. 说明</h2><p>过程中参考了这些文章<br>安装中文语言支持包<br><a href="http://www.xshell.net/linux/GNOM.html" target="_blank" rel="external">http://www.xshell.net/linux/GNOM.html</a></p>
-<p>CentOS安装NodeJS<br><a href="http://zhaohe162.blog.163.com/blog/static/38216797201402234212981/" target="_blank" rel="external">http://zhaohe162.blog.163.com/blog/static/38216797201402234212981/</a></p>
-<p>给nodejs的npm更换源<br><a href="http://blog.sina.com.cn/s/blog_77a8ce670101cdd3.html" target="_blank" rel="external">http://blog.sina.com.cn/s/blog_77a8ce670101cdd3.html</a></p>
-<p>升级CentOS5.6_X64 python2.4.3到2.7<br><a href="http://hxl2009.blog.51cto.com/779549/1031310" target="_blank" rel="external">http://hxl2009.blog.51cto.com/779549/1031310</a></p>
-<p>python中没有装bz2的库<br><a href="http://flyer2010.iteye.com/blog/1699946" target="_blank" rel="external">http://flyer2010.iteye.com/blog/1699946</a></p>
-<p>配置环境变量<br><a href="http://blog.csdn.net/zhaoweitco/article/details/12677089" target="_blank" rel="external">http://blog.csdn.net/zhaoweitco/article/details/12677089</a></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>由于工作需要，需要在CentOS 5.5 下安装Countly Web Server，把过程记录下来</p>]]>
-    
-    </summary>
-    
-      <category term="Cent OS" scheme="http://lulee007.gitcafe.io/tagsCN/Cent-OS/"/>
-    
-      <category term="Countly Web Server" scheme="http://lulee007.gitcafe.io/tagsCN/Countly-Web-Server/"/>
-    
-      <category term="笔记" scheme="http://lulee007.gitcafe.io/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-</feed>
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="http://lib.sinaapp.com/js/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+  <script src="/js/jquery.imagesloaded.min.js" type="text/javascript"></script>
+  <script src="/gallery/gallery.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="/gallery/gallery.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-51346799-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+
+
+  </div>
+
+</body>
+</html>
