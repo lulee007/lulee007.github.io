@@ -2480,3 +2480,15 @@ pre .css ~ * .id {
 .icon-douban:before:hover {
   color: #06d611;
 }
+.gsc-resultsHeader {
+  display: none !important;
+}
+.gsc-result .gs-title {
+  height: 1.5em !important;
+}
+.gsc-webResult .gsc-result {
+  padding: 0px 0 16px 0 !important;
+}
+.article-entry table {
+  margin: 0px 0 !important;
+}

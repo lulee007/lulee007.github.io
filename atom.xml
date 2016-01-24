@@ -99,7 +99,7 @@
     <link href="http://lulee007.gitcafe.io/2016/01/14/SSM-Struts2-Spring-Mybatis-Jersey-Web-%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/"/>
     <id>http://lulee007.gitcafe.io/2016/01/14/SSM-Struts2-Spring-Mybatis-Jersey-Web-项目搭建/</id>
     <published>2016-01-14T11:55:14.000Z</published>
-    <updated>2016-01-22T03:07:47.000Z</updated>
+    <updated>2016-01-22T06:48:48.000Z</updated>
     <content type="html"><![CDATA[<h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>在 Intellij 中配置 SSM Web 开发框架。</p>
 <ul>
 <li>Struts2 主要用它的视图统筹</li>
@@ -180,7 +180,7 @@
 <p>Browsable view of loaded configuration 浏览已加载的配置<br>Shows all accessible action URLs 查看所有可以访问的URL</p>
 </blockquote>
 <p>直接在浏览器输入<code>YOUR_HOST</code>+<code>config-browser/index.action</code>即可，如<code>http://localhost:8082/ssm_demo/config-browser/index.action</code><br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160122-3%402x.png" alt="confit-browser-1"><br>这个是我们的UserAction相关的信息：<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160122-4%402x.png" alt="confit-browser-user-action"></p>
-<h2 id="u6700_u540E"><a href="#u6700_u540E" class="headerlink" title="最后"></a>最后</h2><p>至此我们完成了所有配置，本文主要介绍了最基本的用法，如果需要其他功能在这个基础上进行扩展即可。</p>
+<h2 id="u6700_u540E"><a href="#u6700_u540E" class="headerlink" title="最后"></a>最后</h2><p>至此我们完成了所有配置，本文主要介绍了最基本的用法，如果需要其他功能在这个基础上进行扩展即可。<br>项目源码：<a href="https://github.com/lulee007/ssm_demo" target="_blank" rel="external">https://github.com/lulee007/ssm_demo</a> tag:basic-ssm</p>
 ]]></content>
     <summary type="html">
     <![CDATA[<h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>在 Intellij 中配置 SSM Web 开发框架。</p>
