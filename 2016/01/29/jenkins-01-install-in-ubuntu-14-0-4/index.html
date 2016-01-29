@@ -6,35 +6,27 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Mac10.10.3下AndroidStudio单元测试——instrumentation | 小灰灰写代码</title>
+  <title>Jenkins-01：在 Ubuntu 14.0.4 下安装 | 小灰灰写代码</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="测试环境：
-
-Android Studio 1.2.2
-Mac OS 10.10.3">
+  <meta name="description" content="持续集成是一种软件开发实践，对于提高软件开发效率并保障软件开发质量提供了理论基础。Jenkins 是一个开源软件项目，旨在提供一个开放易用的软件平台，使持续集成变成可能。这里简单记录一下安装过程。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mac10.10.3下AndroidStudio单元测试——instrumentation">
-<meta property="og:url" content="http://lulee007.gitcafe.io/2015/06/21/Mac-10-10-3下AndroidStudio单元测试-instrumentation/index.html">
+<meta property="og:title" content="Jenkins-01：在 Ubuntu 14.0.4 下安装">
+<meta property="og:url" content="http://lulee007.gitcafe.io/2016/01/29/jenkins-01-install-in-ubuntu-14-0-4/index.html">
 <meta property="og:site_name" content="小灰灰写代码">
-<meta property="og:description" content="测试环境：
-
-Android Studio 1.2.2
-Mac OS 10.10.3">
-<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-1@2x.png">
-<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-2@2x.png">
-<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-3@2x.png">
-<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-4@2x.png">
-<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-5@2x.png">
-<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-6@2x.png">
-<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-8@2x.png">
-<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-9@2x.png">
-<meta property="og:updated_time" content="2016-01-11T12:55:30.000Z">
+<meta property="og:description" content="持续集成是一种软件开发实践，对于提高软件开发效率并保障软件开发质量提供了理论基础。Jenkins 是一个开源软件项目，旨在提供一个开放易用的软件平台，使持续集成变成可能。这里简单记录一下安装过程。">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160129-3%402x.png">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160129-1%402x.png">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160129-4%402x.png">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160129-2%402x.png">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160129-0%402x.png">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160129-5%402x.png">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160129-6%402x.png">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160129-7%402x.png">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160129-8%402x.png">
+<meta property="og:updated_time" content="2016-01-29T09:22:24.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mac10.10.3下AndroidStudio单元测试——instrumentation">
-<meta name="twitter:description" content="测试环境：
-
-Android Studio 1.2.2
-Mac OS 10.10.3">
+<meta name="twitter:title" content="Jenkins-01：在 Ubuntu 14.0.4 下安装">
+<meta name="twitter:description" content="持续集成是一种软件开发实践，对于提高软件开发效率并保障软件开发质量提供了理论基础。Jenkins 是一个开源软件项目，旨在提供一个开放易用的软件平台，使持续集成变成可能。这里简单记录一下安装过程。">
   
     <link rel="alternative" href="/atom.xml" title="小灰灰写代码" type="application/atom+xml">
   
@@ -248,11 +240,11 @@ Mac OS 10.10.3">
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-Mac-10-10-3下AndroidStudio单元测试-instrumentation" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-jenkins-01-install-in-ubuntu-14-0-4" class="article article-type-post" itemscope itemprop="blogPost">
     
     <div class="article-meta">
-      <a href="/2015/06/21/Mac-10-10-3下AndroidStudio单元测试-instrumentation/" class="article-date">
-  	<time datetime="2015-06-21T11:45:37.000Z" itemprop="datePublished">2015-06-21</time>
+      <a href="/2016/01/29/jenkins-01-install-in-ubuntu-14-0-4/" class="article-date">
+  	<time datetime="2016-01-29T12:51:24.000Z" itemprop="datePublished">2016-01-29</time>
 </a>
     </div>
   
@@ -265,7 +257,7 @@ Mac OS 10.10.3">
         
   
     <h1 class="article-title" itemprop="name">
-      Mac10.10.3下AndroidStudio单元测试——instrumentation
+      Jenkins-01：在 Ubuntu 14.0.4 下安装
     </h1>
   
 
@@ -274,12 +266,12 @@ Mac OS 10.10.3">
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Android-Studio/">Android Studio</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Instrumentation/">Instrumentation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Mac/">Mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Unit-Test/">Unit Test</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/单元测试/">单元测试</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Jenkins/">Jenkins</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Ubuntu/">Ubuntu</a></li></ul>
 	</div>
 
         
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/笔记/">笔记</a>
+	<a class="article-category-link" href="/categories/技术/">技术</a>
 	</div>
 
 
@@ -295,7 +287,7 @@ Mac OS 10.10.3">
           
             <div id="toc" class="article-toc">
             <h2>目录</h2>
-              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u4EE3_u7801"><span class="toc-number">1.</span> <span class="toc-text">代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u6D4B_u8BD5"><span class="toc-number">2.</span> <span class="toc-text">测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u6DFB_u52A0_u6D4B_u8BD5"><span class="toc-number">3.</span> <span class="toc-text">添加测试</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u5B89_u88C5"><span class="toc-number">1.</span> <span class="toc-text">安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u5728_u547D_u4EE4_u884C_u4E0B_u5B89_u88C5"><span class="toc-number">1.1.</span> <span class="toc-text">在命令行下安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u4E0B_u8F7D_u5B89_u88C5_u5305_u5B89_u88C5"><span class="toc-number">1.2.</span> <span class="toc-text">下载安装包安装</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Jenkins__u76EE_u5F55"><span class="toc-number">2.</span> <span class="toc-text">Jenkins 目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u5F00_u542F_u4E0E_u5173_u95ED"><span class="toc-number">3.</span> <span class="toc-text">开启与关闭</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u8BBF_u95EE"><span class="toc-number">4.</span> <span class="toc-text">访问</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u66F4_u6362_u8BED_u8A00"><span class="toc-number">5.</span> <span class="toc-text">更换语言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u66F4_u6539_u6D4F_u89C8_u5668_u9996_u9009_u8BED_u8A00"><span class="toc-number">5.1.</span> <span class="toc-text">更改浏览器首选语言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u6DFB_u52A0_jenkins__u8BED_u8A00_u63D2_u4EF6"><span class="toc-number">5.2.</span> <span class="toc-text">添加 jenkins 语言插件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u53C2_u8003"><span class="toc-number">6.</span> <span class="toc-text">参考</span></a></li></ol>
             </div>
             <script type="text/javascript">
               var _article = document.getElementsByClassName('article')[0];
@@ -305,24 +297,23 @@ Mac OS 10.10.3">
             </script>
           
         
-        <p>测试环境：</p>
-<ul>
-<li>Android Studio 1.2.2</li>
-<li>Mac OS 10.10.3</li>
+        <p>持续集成是一种软件开发实践，对于提高软件开发效率并保障软件开发质量提供了理论基础。Jenkins 是一个开源软件项目，旨在提供一个开放易用的软件平台，使持续集成变成可能。<br>这里简单记录一下安装过程。<br><a id="more"></a></p>
+<h2 id="u5B89_u88C5"><a href="#u5B89_u88C5" class="headerlink" title="安装"></a>安装</h2><h3 id="u5728_u547D_u4EE4_u884C_u4E0B_u5B89_u88C5"><a href="#u5728_u547D_u4EE4_u884C_u4E0B_u5B89_u88C5" class="headerlink" title="在命令行下安装"></a>在命令行下安装</h3><p>输入下面的代码即可进行下载安装：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -  </span><br><span class="line">sudo sh -c <span class="string">'echo deb http://pkg.jenkins-ci.org/debian binary/ &gt; /etc/apt/sources.list.d/jenkins.list'</span>  </span><br><span class="line">sudo apt-get update  </span><br><span class="line">sudo apt-get install jenkins</span><br></pre></td></tr></table></figure></p>
+<p><strong>提醒：</strong> 最后两部要进行下载操作会比较慢，jenkins 包大小大概 60MB+。</p>
+<h3 id="u4E0B_u8F7D_u5B89_u88C5_u5305_u5B89_u88C5"><a href="#u4E0B_u8F7D_u5B89_u88C5_u5305_u5B89_u88C5" class="headerlink" title="下载安装包安装"></a>下载安装包安装</h3><p>打开<a href="http://jenkins-ci.org/" target="_blank" rel="external">官网</a>，在右侧的侧边栏选择<a href="http://pkg.jenkins-ci.org/debian/" target="_blank" rel="external">Ubuntu/Debian</a><br>在新打开的页面选择合适的版本下载<a href="http://pkg.jenkins-ci.org/debian/binary/jenkins_1.646_all.deb" target="_blank" rel="external">jenkins_1.646_all.deb</a><br>然后直接双击<code>deb</code>文件，会打开<code>Ubuntu</code>下的<code>Ubuntu Software Center</code>，点击右侧的<code>install</code>即可安装。</p>
+<h2 id="Jenkins__u76EE_u5F55"><a href="#Jenkins__u76EE_u5F55" class="headerlink" title="Jenkins 目录"></a>Jenkins 目录</h2><ul>
+<li>安装目录：<code>/var/lib/jenkins</code>  </li>
+<li>日志目录：<code>/var/log/jenkins/jenkins.log</code>   </li>
 </ul>
-<a id="more"></a>
-<h2 id="u4EE3_u7801"><a href="#u4EE3_u7801" class="headerlink" title="代码"></a><a name="code">代码</a></h2><ol>
-<li><p><a name="createclass">新建类代码：</a></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestHelper</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isNull</span><span class="params">(String a)</span></span>&#123;</span><br><span class="line">      <span class="keyword">if</span>(a==<span class="keyword">null</span>)&#123;</span><br><span class="line">          <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">      &#125;<span class="keyword">else</span></span><br><span class="line">      &#123;</span><br><span class="line">          <span class="keyword">return</span>  <span class="keyword">false</span>;</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isLowCase</span><span class="params">(String a)</span></span>&#123;</span><br><span class="line">      <span class="keyword">return</span> a.toLowerCase().equals(a);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><a name="genTestClass">通过android studio 提示自动生成测试代码：<br>把光标移到类名称上，然后按组合键<code>alt</code>+<code>enter</code>，选择第一个<em>Create Test</em>如下图：<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-1@2x.png" alt="Create Test"><br>弹出生成测试类对话框，其中superclass选择<code>InstrumentationTestCase</code>，<br>勾选需要测试的方法,点击Ok后选择生成的目标package文件夹就可以了。<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-2@2x.png" alt="TestCase Dialog"><br>会在src/Androidtest package目录下生成对应的测试类<code>TestHelper</code></a></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestHelperTest</span> <span class="keyword">extends</span> <span class="title">InstrumentationTestCase</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testIsNull</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        TestHelper testHelper =<span class="keyword">new</span> TestHelper();</span><br><span class="line">        assertEquals(<span class="keyword">true</span>, testHelper.isNull(<span class="keyword">null</span>));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testIsLowCase</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        TestHelper testHelper =<span class="keyword">new</span> TestHelper();</span><br><span class="line">        assertEquals(<span class="keyword">true</span>, testHelper.isLowCase(<span class="string">"C"</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h2 id="u6D4B_u8BD5"><a href="#u6D4B_u8BD5" class="headerlink" title="测试"></a><a name="test">测试</a></h2><p>在android studio一排按钮的最上层，点击“运行”旁边的配置按钮，选择“edit configurations”<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-3@2x.png" alt="run config"><br>在配置里点击新建按钮，添加“Android Test”<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-4@2x.png" alt="add new config"><br>给Test添加一个名称Name:“MyTest”<br>选择Module为“app”<br>Test对象为“All in package”,并确认Package框里选择的是我们测试类的所在的包名。<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-5@2x.png" alt="set config"><br>点击Ok后，点击菜单栏里的Run图标<br>等待启动完成后在输出栏里可以看到我们的测试结果：<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-6@2x.png" alt="test resutl"><br>可以看到我们的测试结果有<em>Done:4 of 4 Failed:1</em> 一个错误，testIsLowCase 传入的时<code>C</code>不是小写字母。  </p>
-<h2 id="u6DFB_u52A0_u6D4B_u8BD5"><a href="#u6DFB_u52A0_u6D4B_u8BD5" class="headerlink" title="添加测试"></a><a name="addtest">添加测试</a></h2><p>打开刚才的测试类TestHelper,添加一个方法：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">addTest</span><span class="params">(<span class="keyword">int</span> a)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a+a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>将光标放到 addTest名称上，按组合键<code>alt</code>+<code>enter</code>选择 Generate missed test methods<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-8@2x.png" alt="generate missed test mothod"><br>选择需要添加的TestMethod<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-9@2x.png" alt="choose missed methods"><br>这时候会在TestHelperTest类里生成新的测试方法：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testAddTest</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>添加好代码就可以进行测试了。</p>
+<h2 id="u5F00_u542F_u4E0E_u5173_u95ED"><a href="#u5F00_u542F_u4E0E_u5173_u95ED" class="headerlink" title="开启与关闭"></a>开启与关闭</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 开启</span></span><br><span class="line">sudo /etc/init.d/jenkins start  </span><br><span class="line"><span class="comment"># 关闭</span></span><br><span class="line">sudo /etc/init.d/jenkins stop</span><br></pre></td></tr></table></figure>
+<h2 id="u8BBF_u95EE"><a href="#u8BBF_u95EE" class="headerlink" title="访问"></a>访问</h2><p>打开浏览器输入<code>http://localhost:8080/</code>或者<code>http://YOUR_IP:8080</code><br>把<code>YOUR_IP</code>换为本机的 ip 地址即可。</p>
+<h2 id="u66F4_u6362_u8BED_u8A00"><a href="#u66F4_u6362_u8BED_u8A00" class="headerlink" title="更换语言"></a>更换语言</h2><p>第一次打开后，如果显示的是不是中文的，需要对浏览器进行语言设置，因为 Jenkins 的介面的语言, 是靠检测<br>浏览器的语言来自动调整的。<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160129-3%402x.png" alt="default-jenkins">  </p>
+<h3 id="u66F4_u6539_u6D4F_u89C8_u5668_u9996_u9009_u8BED_u8A00"><a href="#u66F4_u6539_u6D4F_u89C8_u5668_u9996_u9009_u8BED_u8A00" class="headerlink" title="更改浏览器首选语言"></a>更改浏览器首选语言</h3><p>以 Firefox 为例<br>打开 Firefox 的 <code>preference</code> ，切换到 <code>content</code> 选项卡，<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160129-1%402x.png" alt="open-preference-0"><br>或者从工具栏里打开<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160129-4%402x.png" alt="open-preference-1"><br>然后点击<code>choose</code>并在弹出来的<code>language</code>对话框中<br>添加一个新的<code>chinese/china[zh-cn]</code>点击<code>add</code>，然后点<code>ok</code>完成配置。<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160129-2%402x.png" alt="browser-language-setting"><br>这时再重新刷新一下浏览器发现已经是中文了。<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160129-0%402x.png" alt="jenkins-chinese">  </p>
+<h3 id="u6DFB_u52A0_jenkins__u8BED_u8A00_u63D2_u4EF6"><a href="#u6DFB_u52A0_jenkins__u8BED_u8A00_u63D2_u4EF6" class="headerlink" title="添加 jenkins 语言插件"></a>添加 jenkins 语言插件</h3><p>点击左侧的侧边栏项 <code>Manage Jenkins</code>，然后点击右侧打开的<code>Manage Plugins</code>，<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160129-5%402x.png" alt="install-locale-plugin"><br>然后点击<code>available</code>，<br>在搜索框中输入<code>locale</code>安装搜索到的插件，选择<code>Install without restart</code>。<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160129-6%402x.png" alt="install-locale-plugin"><br>这时 Jenkins 开始下载安装 Locale 插件，这时勾选下面的<code>Restart Jenkins when installation ...</code><br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160129-7%402x.png" alt="install-locale-plugin"><br>当重启完成后，回到<code>Manage Jenkins</code>点击<code>Configure System</code>，然后找到<code>locale</code>部分，填写默认语言 (Default Language) 为<code>zh_cn</code><br>，然后勾选<code>Ignore browser preference and force this language to all users</code>，最后点击<br><code>Save</code>即可。<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160129-8%402x.png" alt="config-locale"><br>这时显示的已经是中文了。</p>
+<h2 id="u53C2_u8003"><a href="#u53C2_u8003" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="http://blog.csdn.net/ruisheng_412/article/details/8066330" target="_blank" rel="external">ubuntu 12.04中安装Jenkins</a></li>
+<li><a href="https://dotblogs.com.tw/chhuang/2013/09/04/116304" target="_blank" rel="external">調整 Jenkins 顯示語言介面</a></li>
+</ul>
 
       
     </div>
@@ -333,18 +324,9 @@ Mac OS 10.10.3">
     
 <nav id="article-nav">
   
-    <a href="/2015/06/28/Mac下AndroidStudio与Subversion集成的问题/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Mac下Android Studio与Subversion集成的问题
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/06/12/CentOS-5-5下安装Countly-Web-Server过程记录/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">CentOS5.5下安装Countly-Web-Server过程记录</div>
+    <a href="/2016/01/23/Hexo博客优化配置之-为自己博客添加站内搜索/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hexo博客优化配置之--为自己博客添加站内搜索</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -383,7 +365,7 @@ Mac OS 10.10.3">
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Mac-10-10-3下AndroidStudio单元测试-instrumentation" data-title="Mac10.10.3下AndroidStudio单元测试——instrumentation" data-url="http://lulee007.gitcafe.io/2015/06/21/Mac-10-10-3下AndroidStudio单元测试-instrumentation/"></div>
+	<div class="ds-thread" data-thread-key="jenkins-01-install-in-ubuntu-14-0-4" data-title="Jenkins-01：在 Ubuntu 14.0.4 下安装" data-url="http://lulee007.gitcafe.io/2016/01/29/jenkins-01-install-in-ubuntu-14-0-4/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
