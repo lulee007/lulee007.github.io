@@ -5,10 +5,10 @@
     
   <url>
     <loc>http://lulee007.gitcafe.io/2016/01/29/jenkins-01-install-in-ubuntu-14-0-4/</loc>
-    <lastmod>2016-01-29T09:22:24.000Z</lastmod>
+    <lastmod>2016-02-02T13:58:13.000Z</lastmod>
     <data>
         <display>
-        <title>Jenkins-01：在 Ubuntu 14.0.4 下安装</title>
+        <title>Jenkins-01：在 Ubuntu 14.0.4 下安装与配置 Jenkins</title>
         <pubTime>2016-01-29T12:51:24.000Z</pubTime>
         
         <tag>Jenkins</tag>
@@ -25,10 +25,24 @@
     </url>
 
     
+  <url>
+    <loc>http://lulee007.gitcafe.io/2016/01/07/hello-world/</loc>
+    <lastmod>2016-02-02T12:37:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2016-01-07T11:21:24.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
     
   <url>
     <loc>http://lulee007.gitcafe.io/2016/01/14/SSM-Struts2-Spring-Mybatis3-Web-%E9%A1%B9%E7%9B%AE%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2016-01-26T07:41:49.000Z</lastmod>
+    <lastmod>2016-02-01T00:57:18.000Z</lastmod>
     <data>
         <display>
         <title>SSM：Struts2+Spring+Mybatis+Jersey Web 项目单元测试</title>
@@ -53,6 +67,7 @@
     </data>
     </url>
 
+    
     
   <url>
     <loc>http://lulee007.gitcafe.io/2016/01/14/SSM-Struts2-Spring-Mybatis-Jersey-Web-%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/</loc>
@@ -369,21 +384,6 @@
              
               <breadCrumb title="笔记" url="http://lulee007.gitcafe.io/categories/%E7%AC%94%E8%AE%B0/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://lulee007.gitcafe.io/2016/01/07/hello-world/</loc>
-    <lastmod>2016-01-07T11:28:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World</title>
-        <pubTime>2016-01-07T11:28:47.000Z</pubTime>
-        
-         
-           
         </display>
     </data>
     </url>
