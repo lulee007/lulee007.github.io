@@ -2,13 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://lulee007.gitcafe.io/2016/02/01/jenkins-02-config-android/</loc>
+    <lastmod>2016-02-04T03:32:28.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://lulee007.gitcafe.io/2016/01/29/jenkins-01-install-in-ubuntu-14-0-4/</loc>
     <lastmod>2016-02-02T13:58:13.000Z</lastmod>
   </url>
   
   <url>
     <loc>http://lulee007.gitcafe.io/2016/01/07/hello-world/</loc>
-    <lastmod>2016-02-02T12:37:19.000Z</lastmod>
+    <lastmod>2016-02-02T12:37:21.000Z</lastmod>
   </url>
   
   <url>

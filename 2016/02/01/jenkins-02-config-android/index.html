@@ -6,17 +6,33 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>小灰灰写代码</title>
+  <title>Jenkins-02：配置 Android 自动构建 | 小灰灰写代码</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="iOS，Android，Windows Phone，Web 技术积累博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="小灰灰写代码">
-<meta property="og:url" content="http://lulee007.gitcafe.io/index.html">
+  <meta name="description" content="安装配置所需的 Android SDK ， Gradle，Git，以及如何构建测试任务，打包等。  
+&amp;lt;– more –&amp;gt;
+Jenkins 配置配置 Android SDK由于在国内的特殊环境，下载 Android SDK 不太方便，这里使用国内的第三方网站提供的AndroidDevTools将下载下来的压缩包解压缩到/opt/android_sdk目录下。打开终端，编辑 .bashr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Jenkins-02：配置 Android 自动构建">
+<meta property="og:url" content="http://lulee007.gitcafe.io/2016/02/01/jenkins-02-config-android/index.html">
 <meta property="og:site_name" content="小灰灰写代码">
-<meta property="og:description" content="iOS，Android，Windows Phone，Web 技术积累博客">
+<meta property="og:description" content="安装配置所需的 Android SDK ， Gradle，Git，以及如何构建测试任务，打包等。  
+&amp;lt;– more –&amp;gt;
+Jenkins 配置配置 Android SDK由于在国内的特殊环境，下载 Android SDK 不太方便，这里使用国内的第三方网站提供的AndroidDevTools将下载下来的压缩包解压缩到/opt/android_sdk目录下。打开终端，编辑 .bashr">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160204-6@2x.png">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160203-0@2x.png">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160204-0@2x.png">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160204-2@2x.png">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160204-1@2x.png">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160204-3@2x.png">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160204-4@2x.png">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160204-5@2x.png">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160204-5@2x.png">
+<meta property="og:updated_time" content="2016-02-04T03:32:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小灰灰写代码">
-<meta name="twitter:description" content="iOS，Android，Windows Phone，Web 技术积累博客">
+<meta name="twitter:title" content="Jenkins-02：配置 Android 自动构建">
+<meta name="twitter:description" content="安装配置所需的 Android SDK ， Gradle，Git，以及如何构建测试任务，打包等。  
+&amp;lt;– more –&amp;gt;
+Jenkins 配置配置 Android SDK由于在国内的特殊环境，下载 Android SDK 不太方便，这里使用国内的第三方网站提供的AndroidDevTools将下载下来的压缩包解压缩到/opt/android_sdk目录下。打开终端，编辑 .bashr">
   
     <link rel="alternative" href="/atom.xml" title="小灰灰写代码" type="application/atom+xml">
   
@@ -230,9 +246,7 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
-  
-    <article id="post-jenkins-02-config-android" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-jenkins-02-config-android" class="article article-type-post" itemscope itemprop="blogPost">
     
     <div class="article-meta">
       <a href="/2016/02/01/jenkins-02-config-android/" class="article-date">
@@ -248,18 +262,46 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/01/jenkins-02-config-android/">Jenkins-02：配置 Android 自动构建</a>
+    <h1 class="article-title" itemprop="name">
+      Jenkins-02：配置 Android 自动构建
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Jenkins/">Jenkins</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/技术/">技术</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
       
         
         <!-- Table of Contents -->
+        
+          
+            <div id="toc" class="article-toc">
+            <h2>目录</h2>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Jenkins__u914D_u7F6E"><span class="toc-number">1.</span> <span class="toc-text">Jenkins 配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u914D_u7F6E_Android_SDK"><span class="toc-number">1.1.</span> <span class="toc-text">配置 Android SDK</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u914D_u7F6E_Git"><span class="toc-number">1.2.</span> <span class="toc-text">配置 Git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u914D_u7F6E_Gradle"><span class="toc-number">1.3.</span> <span class="toc-text">配置 Gradle</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#u4E0B_u8F7D_Gradle"><span class="toc-number">1.3.1.</span> <span class="toc-text">下载 Gradle</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u914D_u7F6E_GRADLE_HOME"><span class="toc-number">1.3.2.</span> <span class="toc-text">配置 GRADLE_HOME</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u914D_u7F6E_Jenkins_Gradle"><span class="toc-number">1.3.3.</span> <span class="toc-text">配置 Jenkins Gradle</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u6784_u5EFA_u6253_u5305_u4EFB_u52A1"><span class="toc-number">2.</span> <span class="toc-text">构建打包任务</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u65B0_u5EFA"><span class="toc-number">2.1.</span> <span class="toc-text">新建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u914D_u7F6E_u4EFB_u52A1"><span class="toc-number">2.2.</span> <span class="toc-text">配置任务</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#u6E90_u7801_u7BA1_u7406"><span class="toc-number">2.2.1.</span> <span class="toc-text">源码管理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u914D_u7F6E_u6784_u5EFA_u89E6_u53D1_u5668"><span class="toc-number">2.2.2.</span> <span class="toc-text">配置构建触发器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u914D_u7F6E_u6784_u5EFA_u4EFB_u52A1"><span class="toc-number">2.2.3.</span> <span class="toc-text">配置构建任务</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u914D_u7F6E_u6784_u5EFA_u540E_u64CD_u4F5C"><span class="toc-number">2.2.4.</span> <span class="toc-text">配置构建后操作</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u8FD0_u884C_u4E00_u6B21_u6784_u5EFA"><span class="toc-number">3.</span> <span class="toc-text">运行一次构建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u53C2_u8003"><span class="toc-number">4.</span> <span class="toc-text">参考</span></a></li></ol>
+            </div>
+            <script type="text/javascript">
+              var _article = document.getElementsByClassName('article')[0];
+              <!-- setTimeout("_article.style.marginRight = '211px'",0);  -->
+              setTimeout("_article.className += ' article2'",0);
+              setTimeout("document.getElementById('toc').style.right = '15px'", 0);
+            </script>
+          
         
         <p>安装配置所需的 Android SDK ， Gradle，Git，以及如何构建测试任务，打包等。  </p>
 <p>&lt;– more –&gt;</p>
@@ -317,645 +359,73 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Jenkins/">Jenkins</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/技术/">技术</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
 
   
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/01/29/jenkins-01-install-in-ubuntu-14-0-4/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Jenkins-01：在 Ubuntu 14.0.4 下安装与配置 Jenkins</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+    <span id="busuanzi_container_page_pv"
+      style="display: inline;vertical-align: middle;width: 100%; position:absolute; bottom:0; text-align:center;font-size: x-small;color: darkcyan;margin-bottom: 8px;">
+  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+</span>
+
+
+    
 </article>
 <div class="share">
+  
+  <div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_weixin">微信</a>
+		<a class="jiathis_button_cqq">QQ好友</a>
+		<a class="jiathis_button_qzone">QQ空间</a>
+		<a class="jiathis_button_tsina">新浪微博</a>
+		<a href="http://www.jiathis.com/share?uid=2080230" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+		<a class="jiathis_counter_style"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=2080230" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+<!-- JiaThis Button BEGIN -->
+
   
 
   
 </div>
 
-
-
-
-  
-    <article id="post-jenkins-01-install-in-ubuntu-14-0-4" class="article article-type-post" itemscope itemprop="blogPost">
-    
-    <div class="article-meta">
-      <a href="/2016/01/29/jenkins-01-install-in-ubuntu-14-0-4/" class="article-date">
-  	<time datetime="2016-01-29T12:51:24.000Z" itemprop="datePublished">2016-01-29</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/29/jenkins-01-install-in-ubuntu-14-0-4/">Jenkins-01：在 Ubuntu 14.0.4 下安装与配置 Jenkins</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>持续集成是一种软件开发实践，对于提高软件开发效率并保障软件开发质量提供了理论基础。Jenkins 是一个开源软件项目，旨在提供一个开放易用的软件平台，使持续集成变成可能。<br>通俗的说就是：</p>
-<blockquote>
-<p>能用机器干的活尽量不用人干，提高效率、节省成本、避免失误。</p>
-</blockquote>
-<p>这里简单记录一下安装过程。</p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Jenkins/">Jenkins</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Ubuntu/">Ubuntu</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/技术/">技术</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/01/29/jenkins-01-install-in-ubuntu-14-0-4/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-
-  
-</article>
-<div class="share">
-  
-
-  
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="jenkins-02-config-android" data-title="Jenkins-02：配置 Android 自动构建" data-url="http://lulee007.gitcafe.io/2016/02/01/jenkins-02-config-android/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"lulee007blog"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
 </div>
 
 
 
 
-  
-    <article id="post-Hexo博客优化配置之-为自己博客添加站内搜索" class="article article-type-post" itemscope itemprop="blogPost">
-    
-    <div class="article-meta">
-      <a href="/2016/01/23/Hexo博客优化配置之-为自己博客添加站内搜索/" class="article-date">
-  	<time datetime="2016-01-23T09:55:14.000Z" itemprop="datePublished">2016-01-23</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/23/Hexo博客优化配置之-为自己博客添加站内搜索/">Hexo博客优化配置之--为自己博客添加站内搜索</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>在配置 Hexo 博客期间根据参考了很多网上的方法，进行站内搜索集成结果都不太满意：</p>
-<ol>
-<li>百度<br>搜索都是以在检索的时候加入<code>site:www.xxx.com</code> 方式进行搜索，体验不是很好<br>而且百度这种搜索方式是你提交的 sitemap 链接到百度站内搜索收录才能在搜索结果中显示出来，结果我在测试的时候，<br>使用 github 和 gitcafe 进行测试时，发现百度都抓取不了这两个网站的数据了。只能作罢，在我的另一篇文章中有亲测结果，<a href="/2016/01/16/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E9%85%8D%E7%BD%AE%E4%B9%8B-%E4%B8%BA%E8%87%AA%E5%B7%B1%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E7%BD%91%E9%A1%B5%E6%94%B6%E5%BD%95/">Hexo博客优化配置之–为自己博客添加搜索引擎网页收录</a>。</li>
-<li>Hexo 自带的 Google Search<br>这种和百度的搜索类似，检索的时候加入<code>site:www.xxx.com</code> 方式进行搜索，用起来不爽。</li>
-<li>Swiftype<br>先后参考了<a href="http://www.jerryfu.net/post/search-engine-for-hexo-with-swiftype.html">jerryfu: 利用swiftype为hexo添加站内搜索</a>和<a href="http://blog.moyizhou.cn/web/search-engine-for-static-pages/#swiftype">Rimo: 静态博客如何实现站内搜索</a>以及<a href="http://guoyuxiang.com/2015/07/27/%E5%9F%BA%E4%BA%8Eswiftype%E5%BA%94%E7%94%A8%E4%BA%8EHexo-Yilia-%E4%B8%BB%E9%A2%98%E7%9A%84%E7%AB%99%E5%86%85%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/">Mjolnir: 基于swiftype应用于Hexo Yilia 主题的站内搜索引擎</a> 的文章，但是很奇怪，总觉得 swiftype 的接口不太稳定，在上面提到的这些博客中，只有Rimo的博客站内搜索是可<br>用的，其他的弹出来的搜索结果都是空白，我自己的博客里集成后测试也是空白，只好作罢。</li>
-<li>在 Google 搜索时，输入了<code>site:lulee007.gitcafe.io</code> 意外发现 Google 的另外一个产品 <code>Google Console</code><br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160123-2%402x.png" alt="google console"><br>然后在配置 Google Console 的过程中发现了 Google 提供的<em>自定义搜索</em>，经过配置后发现挺好用（其实还是要先上得了 Google）。<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160123-3%402x.png" alt="自定义搜索">
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/站内搜索/">站内搜索</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/技术/">技术</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/01/23/Hexo博客优化配置之-为自己博客添加站内搜索/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-
-  
-</article>
-<div class="share">
-  
-
-  
-</div>
-
-
-
-
-  
-    <article id="post-Mac下重置Mysql的root密码" class="article article-type-post" itemscope itemprop="blogPost">
-    
-    <div class="article-meta">
-      <a href="/2016/01/18/Mac下重置Mysql的root密码/" class="article-date">
-  	<time datetime="2016-01-18T13:18:36.000Z" itemprop="datePublished">2016-01-18</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/18/Mac下重置Mysql的root密码/">Mac下重置Mysql的root密码</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>Mac上装了Mysql很长时间了，结果每次用的时候发现密码都不对上，密码忘了，这次长记性了，记下来。<br><a href="http://www.zuimoban.com/jiaocheng/mysql/2548.html">参考:mac上安装mysql 以及root密码忘记或权限错误的解决办法</a></p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Mac/">Mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Mysql/">Mysql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/root/">root</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/重置密码/">重置密码</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/技术/">技术</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/01/18/Mac下重置Mysql的root密码/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-
-  
-</article>
-<div class="share">
-  
-
-  
-</div>
-
-
-
-
-  
-    <article id="post-Hexo博客优化配置之-为自己博客添加搜索引擎网页收录" class="article article-type-post" itemscope itemprop="blogPost">
-    
-    <div class="article-meta">
-      <a href="/2016/01/16/Hexo博客优化配置之-为自己博客添加搜索引擎网页收录/" class="article-date">
-  	<time datetime="2016-01-16T07:55:14.000Z" itemprop="datePublished">2016-01-16</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/16/Hexo博客优化配置之-为自己博客添加搜索引擎网页收录/">Hexo博客优化配置之--为自己博客添加搜索引擎网页收录</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>从今年的一月七号开始，这个 Hexo 博客折腾了差不多十天，在使用 Yilia 这个主题过程中，发现有些地方不太满意,就把源码 fork<br>下来一版本自己进行折腾。 在折腾这个站内搜索的功能时间最长， 看了网上的一些教程，没有一个搞的顺的。最后自己看着官方文档进行<br>了尝试，将就着搞的差不多了:<br><a href="/">Hexo博客优化配置之–为自己博客添加站内搜索</a><br>为了让博客内容尽可能的被<strong>百度</strong>或者<strong>谷歌</strong>搜索到,需要将自己的博客上的博客链接添加到搜索引擎收录中。<br><strong>提醒:</strong> 如果你的博客在 github.io 上，想添加百度收录的直接 pass 吧。  </p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/百度搜索链接收录/">百度搜索链接收录</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/谷歌搜索链接收录/">谷歌搜索链接收录</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/笔记/">笔记</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/01/16/Hexo博客优化配置之-为自己博客添加搜索引擎网页收录/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-
-  
-</article>
-<div class="share">
-  
-
-  
-</div>
-
-
-
-
-  
-    <article id="post-SSM-Struts2-Spring-Mybatis3-Web-项目单元测试" class="article article-type-post" itemscope itemprop="blogPost">
-    
-    <div class="article-meta">
-      <a href="/2016/01/14/SSM-Struts2-Spring-Mybatis3-Web-项目单元测试/" class="article-date">
-  	<time datetime="2016-01-14T11:55:14.000Z" itemprop="datePublished">2016-01-14</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/14/SSM-Struts2-Spring-Mybatis3-Web-项目单元测试/">SSM：Struts2+Spring+Mybatis+Jersey Web 项目单元测试</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>在参与写web项目的时候越到后期发现对自己写的 Service 以及 Controller 进行单元测试的必要性，因为有些项目已经开始上线测试，需要保证接口的稳定性，而且涉及到多人协作完成一个需求，需要把其划分为不同的部分，保证自己开发的部分的稳定，方便其他人继续其他的步骤。<br>Struts2+Spring+Mybatis+Jersey Web 项目下对 Service 的单元测试</p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Mybatis3/">Mybatis3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Spring/">Spring</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Struts2/">Struts2</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/UnitTest/">UnitTest</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/单元测试/">单元测试</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/技术/">技术</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/01/14/SSM-Struts2-Spring-Mybatis3-Web-项目单元测试/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-
-  
-</article>
-<div class="share">
-  
-
-  
-</div>
-
-
-
-
-  
-    <article id="post-SSM-Struts2-Spring-Mybatis-Jersey-Web-项目搭建" class="article article-type-post" itemscope itemprop="blogPost">
-    
-    <div class="article-meta">
-      <a href="/2016/01/14/SSM-Struts2-Spring-Mybatis-Jersey-Web-项目搭建/" class="article-date">
-  	<time datetime="2016-01-14T11:55:14.000Z" itemprop="datePublished">2016-01-14</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/14/SSM-Struts2-Spring-Mybatis-Jersey-Web-项目搭建/">SSM：Struts2+Spring+Mybatis Web 项目搭建</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>在 Intellij 中配置 SSM Web 开发框架。</p>
-<ul>
-<li>Struts2 主要用它的视图统筹</li>
-<li>Spring 整个框架的统筹</li>
-<li>Mybatis3 持久层,MyBatis 是支持定制化SQL、存储过程以及高级映射的优秀的持久层框架</li>
-</ul>
-<p>参考：<a href="http://blog.csdn.net/u011403655/article/details/46843331">夕下奕林:Idea SpringMVC+Spring+MyBatis+Maven整合</a><br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Mybatis3/">Mybatis3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Spring/">Spring</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Struts2/">Struts2</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/UnitTest/">UnitTest</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/技术/">技术</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/01/14/SSM-Struts2-Spring-Mybatis-Jersey-Web-项目搭建/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-
-  
-</article>
-<div class="share">
-  
-
-  
-</div>
-
-
-
-
-  
-    <article id="post-2016年度计划" class="article article-type-post" itemscope itemprop="blogPost">
-    
-    <div class="article-meta">
-      <a href="/2016/01/10/2016年度计划/" class="article-date">
-  	<time datetime="2016-01-10T13:45:22.000Z" itemprop="datePublished">2016-01-10</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/10/2016年度计划/">2016年度计划</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>自从毕业后到现在2年半了的时间了，感觉一直忙忙碌碌的工作、生活，从来都没有进行过年度规划。从学校到工作，接触到了很多东西：<br>C# PHP（Yii框架，ThinkPhp），Mongodb，Arcgis，ArcEngine，Android，Web，SSM，iOS，Windows Phone，Python，Html5 Hybrid App 。<br>看得很多，总结的很少。<br>最近正着手把之前在工作学习中的记下来笔记整理一下，也是对工作学习到现在的一个『交代』。新年伊始，已经过去了三十六分之一左右了，得约束下自己，先给自己列一个计划。<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/01/10/2016年度计划/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-
-  
-</article>
-<div class="share">
-  
-
-  
-</div>
-
-
-
-
-  
-    <article id="post-Hexo常用命令笔记" class="article article-type-post" itemscope itemprop="blogPost">
-    
-    <div class="article-meta">
-      <a href="/2016/01/09/Hexo常用命令笔记/" class="article-date">
-  	<time datetime="2016-01-09T04:20:23.000Z" itemprop="datePublished">2016-01-09</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/09/Hexo常用命令笔记/">Hexo常用命令笔记</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>参考：<a href="http://segmentfault.com/a/1190000002632530">http://segmentfault.com/a/1190000002632530</a></p>
-<h2 id="hexo_u5B89_u88C5_u5347_u7EA7"><a href="#hexo_u5B89_u88C5_u5347_u7EA7" class="headerlink" title="hexo安装升级"></a>hexo安装升级</h2><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">npm</span> install hexo -g <span class="comment">#安装  </span></span><br><span class="line"><span class="built_in">npm</span> update hexo -g <span class="comment">#升级  </span></span><br><span class="line">hexo init <span class="comment">#初始化</span></span><br></pre></td></tr></table></figure>
-<h2 id="u5E38_u7528_u7B80_u5199"><a href="#u5E38_u7528_u7B80_u5199" class="headerlink" title="常用简写"></a>常用简写</h2><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo n <span class="string">"我的博客"</span> == hexo <span class="keyword">new</span> <span class="string">"我的博客"</span> <span class="preprocessor">#新建文章</span></span><br><span class="line">hexo p == hexo publish</span><br><span class="line">hexo g == hexo generate<span class="preprocessor">#生成</span></span><br><span class="line">hexo s == hexo <span class="keyword">server</span> <span class="preprocessor">#启动服务预览</span></span><br><span class="line">hexo d == hexo deploy<span class="preprocessor">#部署</span></span><br></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/命令/">命令</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/笔记/">笔记</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/01/09/Hexo常用命令笔记/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-
-  
-</article>
-<div class="share">
-  
-
-  
-</div>
-
-
-
-
-  
-    <article id="post-Hexo博客优化配置" class="article article-type-post" itemscope itemprop="blogPost">
-    
-    <div class="article-meta">
-      <a href="/2016/01/08/Hexo博客优化配置/" class="article-date">
-  	<time datetime="2016-01-08T04:13:10.000Z" itemprop="datePublished">2016-01-08</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/08/Hexo博客优化配置/">Hexo博客优化配置</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h3><p>记录一下搭建此博客前前后后的做的优化配置：</p>
-<ul>
-<li>语言配置</li>
-<li>访问统计</li>
-<li>分享</li>
-<li>评论</li>
-<li>Rss</li>
-<li>百度站内搜索</li>
-<li>谷歌统计分析</li>
-<li>谷歌站内搜索
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/配置/">配置</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/技术/">技术</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/01/08/Hexo博客优化配置/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-
-  
-</article>
-<div class="share">
-  
-
-  
-</div>
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一页&raquo;</a>
-    </nav>
-  
 </div>
       <footer id="footer">
   <div class="outer">
@@ -988,8 +458,8 @@
 		fancybox: true,
 		mathjax: false,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
