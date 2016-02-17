@@ -3,9 +3,16 @@
 
 
     
+    
+    
+    
+    
+    
+    
+    
   <url>
     <loc>http://lulee007.gitcafe.io/2016/02/01/jenkins-02-config-android/</loc>
-    <lastmod>2016-02-05T09:05:54.000Z</lastmod>
+    <lastmod>2016-02-16T13:46:32.000Z</lastmod>
     <data>
         <display>
         <title>Jenkins-02：配置 Android 自动构建</title>
@@ -14,6 +21,28 @@
         <tag>Android</tag>
          
         <tag>Jenkins</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://lulee007.gitcafe.io/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://lulee007.gitcafe.io/2016/01/08/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E9%85%8D%E7%BD%AE/</loc>
+    <lastmod>2016-02-16T12:58:52.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo博客优化配置</title>
+        <pubTime>2016-01-08T04:13:10.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+        <tag>配置</tag>
          
          
            
@@ -90,7 +119,6 @@
     </url>
 
     
-    
   <url>
     <loc>http://lulee007.gitcafe.io/2016/01/14/SSM-Struts2-Spring-Mybatis-Jersey-Web-%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/</loc>
     <lastmod>2016-01-26T07:09:47.000Z</lastmod>
@@ -106,28 +134,6 @@
         <tag>Struts2</tag>
          
         <tag>UnitTest</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://lulee007.gitcafe.io/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://lulee007.gitcafe.io/2016/01/08/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E9%85%8D%E7%BD%AE/</loc>
-    <lastmod>2016-01-24T07:36:07.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hexo博客优化配置</title>
-        <pubTime>2016-01-08T04:13:10.000Z</pubTime>
-        
-        <tag>Hexo</tag>
-         
-        <tag>配置</tag>
          
          
            
@@ -160,7 +166,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>http://lulee007.gitcafe.io/2016/01/18/Mac%E4%B8%8B%E9%87%8D%E7%BD%AEMysql%E7%9A%84root%E5%AF%86%E7%A0%81/</loc>

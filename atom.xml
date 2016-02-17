@@ -4,7 +4,7 @@
   <subtitle><![CDATA[码农，程序猿，伪全栈]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://lulee007.gitcafe.io/"/>
-  <updated>2016-02-05T09:05:54.000Z</updated>
+  <updated>2016-02-16T13:46:32.000Z</updated>
   <id>http://lulee007.gitcafe.io/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://lulee007.gitcafe.io/2016/02/01/jenkins-02-config-android/"/>
     <id>http://lulee007.gitcafe.io/2016/02/01/jenkins-02-config-android/</id>
     <published>2016-02-01T11:13:04.000Z</published>
-    <updated>2016-02-05T09:05:54.000Z</updated>
+    <updated>2016-02-16T13:46:32.000Z</updated>
     <content type="html"><![CDATA[<p>安装配置所需的 Android SDK ， Gradle，Git，以及如何构建测试任务，打包等。  </p>
 <a id="more"></a>
 <h2 id="Jenkins__u914D_u7F6E"><a href="#Jenkins__u914D_u7F6E" class="headerlink" title="Jenkins 配置"></a>Jenkins 配置</h2><h3 id="u914D_u7F6E_Android_SDK"><a href="#u914D_u7F6E_Android_SDK" class="headerlink" title="配置 Android SDK"></a>配置 Android SDK</h3><p>由于在国内的特殊环境，下载 Android SDK 不太方便，这里使用国内的第三方网站提供的<a href="http://www.androiddevtools.cn/" target="_blank" rel="external">AndroidDevTools</a><br>将下载下来的压缩包解压缩到<code>/opt/android_sdk</code>目录下。<br>打开终端，编辑 <code>.bashrc</code> :<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">vi ~/.bashrc</span><br><span class="line"><span class="comment"># 在文件最后添加如下代码</span></span><br><span class="line"><span class="comment"># ANDROID</span></span><br><span class="line"><span class="built_in">export</span> ANDROID_HOME=/opt/android_sdk</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$&#123;ANDROID_HOME&#125;</span>/tools:<span class="variable">$&#123;ANDROID_HOME&#125;</span>/platform-tools:<span class="variable">$PATH</span></span><br><span class="line"><span class="comment"># :wq 保存并退出</span></span><br><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br><span class="line"><span class="comment"># 测试 配置是否成功</span></span><br><span class="line">android -h</span><br><span class="line"><span class="comment"># 以下是输出内容</span></span><br><span class="line">       Usage:</span><br><span class="line">       android [global options] action [action options]</span><br><span class="line">       Global options:</span><br><span class="line">  <span class="operator">-s</span> --silent     : Silent mode, shows errors only.</span><br><span class="line">  -v --verbose    : Verbose mode, shows errors, warnings and all messages.</span><br><span class="line">     --clear-cache: Clear the SDK Manager repository manifest cache.</span><br><span class="line">  -h --help       : Help on a specific command.</span><br></pre></td></tr></table></figure></p>
@@ -611,7 +611,7 @@
     <link href="http://lulee007.gitcafe.io/2016/01/08/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E9%85%8D%E7%BD%AE/"/>
     <id>http://lulee007.gitcafe.io/2016/01/08/Hexo博客优化配置/</id>
     <published>2016-01-08T04:13:10.000Z</published>
-    <updated>2016-01-24T07:36:07.000Z</updated>
+    <updated>2016-02-16T12:58:52.000Z</updated>
     <content type="html"><![CDATA[<h3 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h3><p>记录一下搭建此博客前前后后的做的优化配置：</p>
 <ul>
 <li>语言配置</li>
