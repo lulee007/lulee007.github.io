@@ -27,7 +27,7 @@
 <meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_1.jpg">
 <meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160118-0%402x.png">
 <meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160118-1%402x.png">
-<meta property="og:updated_time" content="2016-02-18T00:55:16.000Z">
+<meta property="og:updated_time" content="2016-02-17T11:15:45.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo博客优化配置之--为自己博客添加搜索引擎网页收录">
 <meta name="twitter:description" content="前言从今年的一月七号开始，这个 Hexo 博客折腾了差不多十天，在使用 Yilia 这个主题过程中，发现有些地方不太满意,就把源码 fork下来一版本自己进行折腾。 在折腾这个站内搜索的功能时间最长， 看了网上的一些教程，没有一个搞的顺的。最后自己看着官方文档进行了尝试，将就着搞的差不多了:Hexo博客优化配置之–为自己博客添加站内搜索为了让博客内容尽可能的被百度或者谷歌搜索到,需要将自己的博客上">
@@ -287,7 +287,7 @@
 
         
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/笔记/">笔记</a>
+	<a class="article-category-link" href="/categories/技术/">技术</a>
 	</div>
 
 
@@ -313,7 +313,7 @@
             </script>
           
         
-        <h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>从今年的一月七号开始，这个 Hexo 博客折腾了差不多十天，在使用 Yilia 这个主题过程中，发现有些地方不太满意,就把源码 fork<br>下来一版本自己进行折腾。 在折腾这个站内搜索的功能时间最长， 看了网上的一些教程，没有一个搞的顺的。最后自己看着官方文档进行<br>了尝试，将就着搞的差不多了:<br><a href="/">Hexo博客优化配置之–为自己博客添加站内搜索</a><br>为了让博客内容尽可能的被<strong>百度</strong>或者<strong>谷歌</strong>搜索到,需要将自己的博客上的博客链接添加到搜索引擎收录中。<br><strong>提醒:</strong> 如果你的博客在 github.io 上，想添加百度收录的直接 pass 吧。  </p>
+        <h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>从今年的一月七号开始，这个 Hexo 博客折腾了差不多十天，在使用 Yilia 这个主题过程中，发现有些地方不太满意,就把源码 fork<br>下来一版本自己进行折腾。 在折腾这个站内搜索的功能时间最长， 看了网上的一些教程，没有一个搞的顺的。最后自己看着官方文档进行<br>了尝试，将就着搞的差不多了:<br><a href="/">Hexo博客优化配置之–为自己博客添加站内搜索</a><br>为了让博客内容尽可能的被<strong>百度</strong>或者<strong>谷歌</strong>搜索到,需要将自己的博客上的博客链接添加到搜索引擎收录中。<br><strong>提醒:</strong> 如果你的博客在 github.io 或者 gitcafe.io  上，想添加百度收录的直接 pass 吧。  </p>
 <a id="more"></a>
 <h2 id="u767E_u5EA6"><a href="#u767E_u5EA6" class="headerlink" title="百度"></a>百度</h2><p><strong>注意：</strong> 经过测试发现 gitcafe 也<em>不能够进行抓取</em>了，以下内容仅是记录当时的尝试过程。</p>
 <h3 id="u94FE_u63A5_u63D0_u4EA4_u65B9_u5F0F_u5B9E_u6D4B"><a href="#u94FE_u63A5_u63D0_u4EA4_u65B9_u5F0F_u5B9E_u6D4B" class="headerlink" title="链接提交方式实测"></a>链接提交方式实测</h3><blockquote>
@@ -323,7 +323,74 @@
 <h4 id="sitemap"><a href="#sitemap" class="headerlink" title="sitemap"></a>sitemap</h4><p>因为图个方便,在安装了<a href="https://github.com/coneycode/hexo-generator-baidu-sitemap" target="_blank" rel="external">百度 sitemap</a>后直接生成了适合百度的 sitemap ,所以就最先尝试了这个<code>sitemap</code>方式.<br>结果等了两天也没看状态更新过,一直是等待状态,太2了,是不是故意的.<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160116-1%402x.png" alt="等待"></p>
 <h4 id="u81EA_u52A8_u63A8_u9001"><a href="#u81EA_u52A8_u63A8_u9001" class="headerlink" title="自动推送"></a>自动推送</h4><p>这个简单,直接拷贝代码,放到网页中. 然并卵(笑哭)<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript"></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> bp = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</span><br><span class="line">    bp.src = <span class="string">'//push.zhanzhang.baidu.com/push.js'</span>;</span><br><span class="line">    <span class="keyword">var</span> s = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"script"</span>)[<span class="number">0</span>];</span><br><span class="line">    s.parentNode.insertBefore(bp, s);</span><br><span class="line">&#125;)();</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <h4 id="u624B_u52A8_u63D0_u4EA4"><a href="#u624B_u52A8_u63D0_u4EA4" class="headerlink" title="手动提交"></a>手动提交</h4><p>这个简单直接把sitemap里的网址整理出来按照要求上传即可</p>
-<h3 id="u4E3B_u52A8_u63A8_u9001"><a href="#u4E3B_u52A8_u63A8_u9001" class="headerlink" title="主动推送"></a>主动推送</h3><p>最后试试看主动推送这里参考<a href="http://lovenight.github.io/2015/11/18/%E5%90%91%E7%99%BE%E5%BA%A6%E6%8E%A8%E9%80%81hexo%E5%8D%9A%E5%AE%A2%E6%89%80%E6%9C%89%E9%93%BE%E6%8E%A5%E7%9A%84Python%E8%84%9A%E6%9C%AC/" target="_blank" rel="external">lovenight 的向百度推送 hexo 博客所有链接的 Python 脚本</a><br>不太懂 python ,在 mac 下对 python 脚本进行了简单的修改:<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="comment"># @Author: LoveNight</span></span><br><span class="line"><span class="comment"># @Date:   2015-11-16 20:45:59</span></span><br><span class="line"><span class="comment"># @Last Modified by:   lulee007</span></span><br><span class="line"><span class="comment"># @Last Modified time: 2016-01-16 21:06:50</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup <span class="keyword">as</span> BS</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> codecs</span><br><span class="line"></span><br><span class="line"><span class="string">"""</span><br><span class="line">hexo 博客专用，向百度站长平台提交所有网址</span><br><span class="line"></span><br><span class="line">本脚本必须放在 hexo 博客的根目录下执行！需要已安装生成百度站点地图的插件。</span><br><span class="line">百度站长平台提交链接：http://zhanzhang.baidu.com/linksubmit/index</span><br><span class="line">主动推送：最为快速的提交方式，推荐您将站点当天新产出链接立即通过此方式推送给百度，以保证新链接可以及时被百度收录。</span><br><span class="line">从中找到自己的接口调用地址</span><br><span class="line">"""</span></span><br><span class="line"></span><br><span class="line">url = <span class="string">'http://data.zz.baidu.com/urls?site=YOUR_BLOG_HOST&amp;token=YOUR_TOKEN'</span></span><br><span class="line">baidu_sitemap = os.path.join(sys.path[<span class="number">0</span>], <span class="string">'public'</span>, <span class="string">'baidusitemap.xml'</span>)</span><br><span class="line">google_sitemap = os.path.join(sys.path[<span class="number">0</span>], <span class="string">'public'</span>, <span class="string">'sitemap.xml'</span>)</span><br><span class="line"><span class="comment"># sitemap = [baidu_sitemap, google_sitemap]</span></span><br><span class="line">sitemap = [baidu_sitemap]</span><br><span class="line"></span><br><span class="line"><span class="comment"># assert (os.path.exists(baidu_sitemap) or os.path.exists(</span></span><br><span class="line"><span class="comment">#     google_sitemap)), "没找到任何网站地图，请检查！"</span></span><br><span class="line"><span class="keyword">assert</span> os.path.exists(baidu_sitemap) , <span class="string">"没找到任何网站地图，请检查！"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 从站点地图中读取网址列表</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getUrls</span><span class="params">()</span>:</span></span><br><span class="line">    urls = []</span><br><span class="line">    <span class="keyword">for</span> _ <span class="keyword">in</span> sitemap:</span><br><span class="line">        <span class="keyword">if</span> os.path.exists(_):</span><br><span class="line">            <span class="keyword">with</span> codecs.open(_, <span class="string">"r"</span>, <span class="string">"utf-8"</span>) <span class="keyword">as</span> f:</span><br><span class="line">                xml = f.read()</span><br><span class="line">            soup = BS(xml, <span class="string">"xml"</span>)</span><br><span class="line">            tags = soup.find_all(<span class="string">"loc"</span>)</span><br><span class="line">            urls += [x.string <span class="keyword">for</span> x <span class="keyword">in</span> tags]</span><br><span class="line">            <span class="keyword">if</span> _ == baidu_sitemap:</span><br><span class="line">                tags = soup.find_all(<span class="string">"breadCrumb"</span>, url=<span class="keyword">True</span>)</span><br><span class="line">                print(<span class="string">""</span>)</span><br><span class="line">                urls += [x[<span class="string">"url"</span>] <span class="keyword">for</span> x <span class="keyword">in</span> tags]</span><br><span class="line">    <span class="keyword">return</span> urls</span><br><span class="line"></span><br><span class="line"><span class="comment"># POST提交网址列表</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">postUrls</span><span class="params">(urls)</span>:</span></span><br><span class="line">    urls = set(urls)  <span class="comment"># 先去重</span></span><br><span class="line">    print(<span class="string">"一共提取出 %s 个网址"</span> % len(urls))</span><br><span class="line">    data = <span class="string">"\n"</span>.join(urls)</span><br><span class="line">    <span class="keyword">return</span> requests.post(url, data=data).text</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line"></span><br><span class="line">    urls = getUrls()</span><br><span class="line">    result = postUrls(urls)</span><br><span class="line">    print(<span class="string">"提交结果："</span>)</span><br><span class="line">    print(result)  </span><br><span class="line"></span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line">如果你也是在 mac 下配置, 直接替换其中的`YOUR_BLOG_HOST`和`YOUR_TOKEN`然后运行此脚本即可得到类似的结果:  </span><br><span class="line">```sh</span><br><span class="line">一共提取出 <span class="number">11</span> 个网址</span><br><span class="line">提交结果：</span><br><span class="line">&#123;<span class="string">"remain"</span>:<span class="number">478</span>,<span class="string">"success"</span>:<span class="number">11</span>&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="u4E3B_u52A8_u63A8_u9001"><a href="#u4E3B_u52A8_u63A8_u9001" class="headerlink" title="主动推送"></a>主动推送</h3><p>最后试试看主动推送这里参考<a href="http://lovenight.github.io/2015/11/18/%E5%90%91%E7%99%BE%E5%BA%A6%E6%8E%A8%E9%80%81hexo%E5%8D%9A%E5%AE%A2%E6%89%80%E6%9C%89%E9%93%BE%E6%8E%A5%E7%9A%84Python%E8%84%9A%E6%9C%AC/" target="_blank" rel="external">lovenight 的向百度推送 hexo 博客所有链接的 Python 脚本</a><br>不太懂 python ,试着在 mac 下对 python 脚本进行了简单的修改:</p>
+<pre><code class="py">
+<span class="comment">#!/usr/bin/env python</span>
+<span class="comment"># -*- coding: utf-8 -*-</span>
+<span class="comment"># @Author: LoveNight</span>
+<span class="comment"># @Date:   2015-11-16 20:45:59</span>
+<span class="comment"># @Last Modified by:   lulee007</span>
+<span class="comment"># @Last Modified time: 2016-01-16 21:06:50</span>
+<span class="keyword">import</span> os
+<span class="keyword">import</span> sys
+<span class="keyword">import</span> json
+<span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup <span class="keyword">as</span> BS
+<span class="keyword">import</span> requests
+<span class="keyword">import</span> codecs
+
+<span class="string">"""
+hexo 博客专用，向百度站长平台提交所有网址
+
+本脚本必须放在 hexo 博客的根目录下执行！需要已安装生成百度站点地图的插件。
+百度站长平台提交链接：http://zhanzhang.baidu.com/linksubmit/index
+主动推送：最为快速的提交方式，推荐您将站点当天新产出链接立即通过此方式推送给百度，以保证新链接可以及时被百度收录。
+从中找到自己的接口调用地址
+"""</span>
+
+url = <span class="string">'http://data.zz.baidu.com/urls?site=YOUR_BLOG_HOST&amp;token=YOUR_TOKEN'</span>
+baidu_sitemap = os.path.join(sys.path[<span class="number">0</span>], <span class="string">'public'</span>, <span class="string">'baidusitemap.xml'</span>)
+google_sitemap = os.path.join(sys.path[<span class="number">0</span>], <span class="string">'public'</span>, <span class="string">'sitemap.xml'</span>)
+<span class="comment"># sitemap = [baidu_sitemap, google_sitemap]</span>
+sitemap = [baidu_sitemap]
+
+<span class="comment"># assert (os.path.exists(baidu_sitemap) or os.path.exists(</span>
+<span class="comment">#     google_sitemap)), "没找到任何网站地图，请检查！"</span>
+<span class="keyword">assert</span> os.path.exists(baidu_sitemap) , <span class="string">"没找到任何网站地图，请检查！"</span>
+
+<span class="comment"># 从站点地图中读取网址列表</span>
+<span class="function"><span class="keyword">def</span> <span class="title">getUrls</span><span class="params">()</span>:</span>
+    urls = []
+    <span class="keyword">for</span> _ <span class="keyword">in</span> sitemap:
+        <span class="keyword">if</span> os.path.exists(_):
+            <span class="keyword">with</span> codecs.open(_, <span class="string">"r"</span>, <span class="string">"utf-8"</span>) <span class="keyword">as</span> f:
+                xml = f.read()
+            soup = BS(xml, <span class="string">"xml"</span>)
+            tags = soup.find_all(<span class="string">"loc"</span>)
+            urls += [x.string <span class="keyword">for</span> x <span class="keyword">in</span> tags]
+            <span class="keyword">if</span> _ == baidu_sitemap:
+                tags = soup.find_all(<span class="string">"breadCrumb"</span>, url=<span class="keyword">True</span>)
+                print(<span class="string">""</span>)
+                urls += [x[<span class="string">"url"</span>] <span class="keyword">for</span> x <span class="keyword">in</span> tags]
+    <span class="keyword">return</span> urls
+
+<span class="comment"># POST提交网址列表</span>
+<span class="function"><span class="keyword">def</span> <span class="title">postUrls</span><span class="params">(urls)</span>:</span>
+    urls = set(urls)  <span class="comment"># 先去重</span>
+    print(<span class="string">"一共提取出 %s 个网址"</span> % len(urls))
+    data = <span class="string">"\n"</span>.join(urls)
+    <span class="keyword">return</span> requests.post(url, data=data).text
+
+<span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:
+
+    urls = getUrls()
+    result = postUrls(urls)
+    print(<span class="string">"提交结果："</span>)
+    print(result)
+</code></pre>
+<p>如果你也是在 mac 下配置, 直接替换其中的<code>YOUR_BLOG_HOST</code>和<code>YOUR_TOKEN</code>然后运行此脚本即可得到类似的结果:  </p>
+
+一共提取出 11 个网址, 提交结果：{'remain':'478','success':'11'}
+
 <p>第二天看一下提交情况:<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160117-0%402x.png" alt="提交结果"><br>但是在百度进行搜索时<code>site:lulee007.gitcafe.io</code>,还是只能看到一条。<br>最后想想是不是也不能抓取gitcafe了，进行了诊断。<br><strong><em>诊断:</em></strong>然后看到侧边栏还提供了抓取诊断工具，然后进行诊断一下吧，就输入了博客的其中一个链接:<br>呵呵了:<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160116-2%402x.png" alt="诊断结果"><br>dns 解析失败，这也抓不了 gitcafe ?  </p>
 <p><strong><em>白忙活了(无耐啊)</em></strong></p>
 <h2 id="u8C37_u6B4C"><a href="#u8C37_u6B4C" class="headerlink" title="谷歌"></a>谷歌</h2><h3 id="u6DFB_u52A0_u4E00_u4E2A_u8D44_u6E90_u7AD9"><a href="#u6DFB_u52A0_u4E00_u4E2A_u8D44_u6E90_u7AD9" class="headerlink" title="添加一个资源站"></a>添加一个资源站</h3><p>打开<a href="https://www.google.com/webmasters/tools/home?hl=zh-CN&amp;authuser=0" target="_blank" rel="external">google console</a>然后右上角有个<code>添加属性</code>按钮。<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160117-1%402x.png" alt="添加属性"><br>输入博客地址<code>lulee007.github.io</code>，我这里用 github 的地址测试。<br>点击<code>继续</code>后，会提示验证网站的所有权，<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160117-2%402x.png" alt="推荐方法"><br>这里采用备用的方法：<code>HTML标记</code><br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160117-3%402x.png" alt="HTML标记"><br>验证成功后结果：<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160117-4%402x.png" alt="验证通过结果"></p>
