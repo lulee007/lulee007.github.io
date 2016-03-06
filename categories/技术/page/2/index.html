@@ -6,18 +6,17 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Mac下重置Mysql的root密码 | 小灰灰写代码</title>
+  <title>Category: 技术 | 小灰灰写代码</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言Mac上装了Mysql很长时间了，结果每次用的时候发现密码都不对上，密码忘了，这次长记性了，记下来。参考:mac上安装mysql 以及root密码忘记或权限错误的解决办法">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Mac下重置Mysql的root密码">
-<meta property="og:url" content="http://lulee007.gitcafe.io/2016/01/18/Mac下重置Mysql的root密码/index.html">
+  <meta name="description" content="iOS，Android，Windows Phone，Web 技术积累博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="小灰灰写代码">
+<meta property="og:url" content="http://lulee007.gitcafe.io/categories/技术/page/2/index.html">
 <meta property="og:site_name" content="小灰灰写代码">
-<meta property="og:description" content="前言Mac上装了Mysql很长时间了，结果每次用的时候发现密码都不对上，密码忘了，这次长记性了，记下来。参考:mac上安装mysql 以及root密码忘记或权限错误的解决办法">
-<meta property="og:updated_time" content="2016-01-19T00:36:52.000Z">
+<meta property="og:description" content="iOS，Android，Windows Phone，Web 技术积累博客">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mac下重置Mysql的root密码">
-<meta name="twitter:description" content="前言Mac上装了Mysql很长时间了，结果每次用的时候发现密码都不对上，密码忘了，这次长记性了，记下来。参考:mac上安装mysql 以及root密码忘记或权限错误的解决办法">
+<meta name="twitter:title" content="小灰灰写代码">
+<meta name="twitter:description" content="iOS，Android，Windows Phone，Web 技术积累博客">
   
     <link rel="alternative" href="/atom.xml" title="小灰灰写代码" type="application/atom+xml">
   
@@ -243,160 +242,61 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-Mac下重置Mysql的root密码" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap">
+  
+  
     
-    <div class="article-meta">
-      <a href="/2016/01/18/Mac下重置Mysql的root密码/" class="article-date">
-  	<time datetime="2016-01-18T13:18:36.000Z" itemprop="datePublished">2016-01-18</time>
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2016" class="archive-year">2016</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2016/01/08/Hexo博客优化配置/" class="archive-article-date">
+  	<time datetime="2016-01-08T04:13:10.000Z" itemprop="datePublished">1月 8日</time>
 </a>
-    </div>
+        </div>
+    	 
   
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      Mac下重置Mysql的root密码
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2016/01/08/Hexo博客优化配置/">Hexo博客优化配置</a>
     </h1>
   
 
-      </header>
-      
-      <div class="article-info article-info-post">
-        
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Mac/">Mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Mysql/">Mysql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/root/">root</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/重置密码/">重置密码</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/配置/">配置</a></li></ul>
 	</div>
 
-        
+          
 	<div class="article-category tagcloud">
 	<a class="article-category-link" href="/categories/技术/">技术</a>
 	</div>
 
 
+        </div>
         <div class="clearfix"></div>
-      </div>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-        <!-- Table of Contents -->
-        
-          
-            <div id="toc" class="article-toc">
-            <h2>目录</h2>
-              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u524D_u8A00"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u914D_u7F6Emysql_u73AF_u5883_u53D8_u91CF"><span class="toc-number">2.</span> <span class="toc-text">配置mysql环境变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u89E3_u51B3_u65B9_u6CD5"><span class="toc-number">3.</span> <span class="toc-text">解决方法</span></a></li></ol>
-            </div>
-            <script type="text/javascript">
-              var _article = document.getElementsByClassName('article')[0];
-              <!-- setTimeout("_article.style.marginRight = '211px'",0);  -->
-              setTimeout("_article.className += ' article2'",0);
-              setTimeout("document.getElementById('toc').style.right = '15px'", 0);
-            </script>
-          
-        
-        <h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>Mac上装了Mysql很长时间了，结果每次用的时候发现密码都不对上，密码忘了，这次长记性了，记下来。<br><a href="http://www.zuimoban.com/jiaocheng/mysql/2548.html" target="_blank" rel="external">参考:mac上安装mysql 以及root密码忘记或权限错误的解决办法</a></p>
-<a id="more"></a>
-<h2 id="u914D_u7F6Emysql_u73AF_u5883_u53D8_u91CF"><a href="#u914D_u7F6Emysql_u73AF_u5883_u53D8_u91CF" class="headerlink" title="配置mysql环境变量"></a>配置mysql环境变量</h2><p>在终端中输入：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo vi ~/bash_profile</span><br><span class="line"><span class="comment"># 按`i`键进入编辑模式</span></span><br></pre></td></tr></table></figure></p>
-<p>输入以下内容到文件最后:<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># mysql</span></span><br><span class="line"><span class="built_in">alias</span> mysql=<span class="string">'/usr/local/mysql/bin/mysql'</span></span><br><span class="line"><span class="built_in">alias</span> mysqladmin=<span class="string">'/usr/local/mysql/bin/mysqladmin'</span></span><br><span class="line"><span class="comment"># 按`esc`键，然后输入`wq`回车，即可保存退出。</span></span><br></pre></td></tr></table></figure></p>
-<p>一般出现的错误如下：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ERROR <span class="number">1045</span> (<span class="number">28000</span>): Access denied <span class="keyword">for</span> user <span class="string">'root'</span>@<span class="string">'localhost'</span> (using password: NO)</span><br><span class="line"><span class="comment"># 或者</span></span><br><span class="line">ERROR <span class="number">1045</span> (<span class="number">28000</span>): Access denied <span class="keyword">for</span> user <span class="string">'root'</span>@<span class="string">'localhost'</span> (using password: YES)</span><br></pre></td></tr></table></figure></p>
-<h2 id="u89E3_u51B3_u65B9_u6CD5"><a href="#u89E3_u51B3_u65B9_u6CD5" class="headerlink" title="解决方法"></a>解决方法</h2><ol>
-<li>停止 mysql server<br>通常是在 ‘系统偏好设置’ &gt; MySQL &gt; ‘Stop MySQL Server’  </li>
-<li><p>打开终端，输入：</p>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /usr/<span class="keyword">local</span>/mysql/bin/mysqld_safe <span class="comment">--skip-grant-tables</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>打开<strong>另一个新终端</strong>，输入:</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo /usr/<span class="built_in">local</span>/mysql/bin/mysql -u root</span><br><span class="line"><span class="comment"># 输入 Mac 系统用户密码后，</span></span><br><span class="line"><span class="comment"># 直接敲回车进入 mysql 终端，输入：</span></span><br><span class="line">UPDATE mysql.user SET authentication_string=PASSWORD(<span class="string">'新密码'</span>) WHERE User=<span class="string">'root'</span>;</span><br><span class="line">FLUSH PRIVILEGES;</span><br><span class="line"><span class="comment"># 输入 \q 退出 mysql 终端</span></span><br><span class="line">\q</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>重启MySQL.</p>
-</li>
-</ol>
-
-      
-    </div>
-    
+    </header>
   </div>
-
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2016/01/19/Git常用命令/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Git常用命令
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2016/01/16/Hexo博客优化配置之-为自己博客添加搜索引擎网页收录/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hexo博客优化配置之--为自己博客添加搜索引擎网页收录</div>
-      <strong class="article-nav-caption">></strong>
-    </a>
-  
-</nav>
-
-    <p style="height: 10px;"></p>
-<span id="busuanzi_container_page_pv"
-      style="display: inline;vertical-align: middle;width: 100%; position:absolute; bottom:0; text-align:center;font-size: x-small;color: darkcyan;margin-bottom: 8px;">
-  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
-</span>
-<p style="height: 10px;"></p>
-
-
-    
 </article>
-<div class="share">
   
-  <div class="share_jia">
-	<!-- JiaThis Button BEGIN -->
-	<div class="jiathis_style">
-		<span class="jiathis_txt">分享到: &nbsp; </span>
-		<a class="jiathis_button_weixin">微信</a>
-		<a class="jiathis_button_cqq">QQ好友</a>
-		<a class="jiathis_button_qzone">QQ空间</a>
-		<a class="jiathis_button_tsina">新浪微博</a>
-		<a href="http://www.jiathis.com/share?uid=2080230" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
-		<a class="jiathis_counter_style"></a>
-	</div>
-	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=2080230" charset="utf-8"></script>
-	<!-- JiaThis Button END -->
-</div>
-<!-- JiaThis Button BEGIN -->
-
+  
+    </div></section>
   
 
+    
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/categories/技术/">&laquo; 上一页</a><a class="page-number" href="/categories/技术/">1</a><span class="page-number current">2</span>
+    </nav>
   
-</div>
-
-<div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Mac下重置Mysql的root密码" data-title="Mac下重置Mysql的root密码" data-url="http://lulee007.gitcafe.io/2016/01/18/Mac下重置Mysql的root密码/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"lulee007blog"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
-
-
-
 
 </div>
       <footer id="footer">
@@ -431,10 +331,10 @@
 		mathjax: false,
 		animate: true,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
-		isCategory: false,
+		isCategory: true,
 		open_in_new: false
 	}
 </script>
