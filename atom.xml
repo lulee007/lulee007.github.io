@@ -4,7 +4,7 @@
   <subtitle><![CDATA[码农，程序猿，伪全栈]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://lulee007.gitcafe.io/"/>
-  <updated>2016-02-16T13:46:32.000Z</updated>
+  <updated>2016-03-06T08:13:49.000Z</updated>
   <id>http://lulee007.gitcafe.io/</id>
   
   <author>
@@ -13,6 +13,61 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[在小米路由器 mini 中安装 Transmission 下载器]]></title>
+    <link href="http://lulee007.gitcafe.io/2016/02/22/add-transmission-in-miwif/"/>
+    <id>http://lulee007.gitcafe.io/2016/02/22/add-transmission-in-miwif/</id>
+    <published>2016-02-22T07:11:37.000Z</published>
+    <updated>2016-03-06T08:13:49.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="u5237_u5165_u5F00_u53D1_u7248"><a href="#u5237_u5165_u5F00_u53D1_u7248" class="headerlink" title="刷入开发版"></a>刷入开发版</h2><ol>
+<li><p>下载开发版 ROM<br>下载<a href="http://www1.miwifi.com/miwifi_download.html" target="_blank" rel="external">最新开发版本</a>，打开网页后选择 ROM 切换到 ROM 下载：<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160306-3%402x.png" alt="download-rom"></p>
+</li>
+<li><p>刷入开发板<br>查看<a href="http://bbs.xiaomi.cn/t-11720354" target="_blank" rel="external">刷机教程</a></p>
+<blockquote>
+<p>首先，请先准备一个U盘，并确保这个U盘的格式为FAT或FAT32.<br>接下来，就是具体的操作流程了。</p>
+<ol>
+<li>在miwifi.com官网下载路由器对应的ROM包，并将其放在U盘的根目录下，命名为miwifi.bin</li>
+<li>断开小米路由器mini的电源，将U盘插入路由器的USB接口</li>
+<li>按下reset按钮后重新接入电源，待指示灯变为黄色闪烁状态后松开reset键</li>
+<li>等待5~8分钟，刷机完成之后系统会自动重启并进入正常的启动状态（指示灯由黄灯常亮变为蓝灯常亮），此时，说明刷机成功完成！</li>
+</ol>
+<p>如果出现异常/失败/U盘无法读取状态，会进入红灯状态，建议重试或更换U盘再试。</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="u5237_u5165SSH"><a href="#u5237_u5165SSH" class="headerlink" title="刷入SSH"></a>刷入SSH</h2><ol>
+<li><p>下载 ssh 固件<br>下载<a href="https://d.miwifi.com/rom/ssh" target="_blank" rel="external">SSH 固件</a>，打开网页后，提示需要先进行登录，登录完成后才可以进入，之后点击『下载工具包』即可。<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160306-5%402x.png" alt="download-ssh"></p>
+</li>
+<li><p>刷入 ssh 固件</p>
+<blockquote>
+<ol>
+<li>请将下载的工具包bin文件复制到U盘（FAT/FAT32格式）的根目录下，保证文件名为miwifi_ssh.bin；</li>
+<li>断开小米路由器的电源，将U盘插入USB接口；</li>
+<li>按住reset按钮之后重新接入电源，指示灯变为黄色闪烁状态即可松开reset键；</li>
+<li>等待3-5秒后安装完成之后，小米路由器会自动重启，之后您就可以尽情折腾啦 ：）</li>
+</ol>
+</blockquote>
+</li>
+</ol>
+<h2 id="u5B89_u88C5_Transmission__u63D2_u4EF6"><a href="#u5B89_u88C5_Transmission__u63D2_u4EF6" class="headerlink" title="安装 Transmission 插件"></a>安装 Transmission 插件</h2><p>这里主要参考此贴<a href="http://www.miui.com/thread-2093928-1-1.html" target="_blank" rel="external">路由mini安装OpenWRT源的Transmission插件，实现PT下载（需SSH）</a>。但是楼主提供的修改OpenWRT源地址在国内很慢，想着国内会不会有镜像源，Google 了一下，找到了科大的镜像源。</p>
+<h3 id="u66F4_u6539OpenWrt_u6E90"><a href="#u66F4_u6539OpenWrt_u6E90" class="headerlink" title="更改OpenWrt源"></a>更改OpenWrt源</h3><p>修改帖子中提供的 OpenWRT 源地址：<a href="http://downloads.openwrt.org/" target="_blank" rel="external">http://downloads.openwrt.org/</a> 为 <a href="http://mirrors.ustc.edu.cn/openwrt，" target="_blank" rel="external">http://mirrors.ustc.edu.cn/openwrt，</a> 其中科大的镜像源是每次同步最新的一个版本，搜索时可能本文所列的已经不是最新的版本了。<br>例如 barrier_breaker 对应 14.07 。<br>这里只要对应上 cpu 架构：<code>ramips</code>和型号：<code>mt7620a</code>即可。<br>例如这里 14.07 版本的地址为： <a href="http://mirrors.ustc.edu.cn/openwrt/barrier_breaker/14.07/ramips/mt7620a/packages/base" target="_blank" rel="external">http://mirrors.ustc.edu.cn/openwrt/barrier_breaker/14.07/ramips/mt7620a/packages/base</a>  </p>
+<h2 id="u53C2_u8003"><a href="#u53C2_u8003" class="headerlink" title="参考"></a>参考</h2><p><a href="http://www.miui.com/thread-2093928-1-1.html" target="_blank" rel="external">http://www.miui.com/thread-2093928-1-1.html</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="u5237_u5165_u5F00_u53D1_u7248"><a href="#u5237_u5165_u5F00_u53D1_u7248" class="headerlink" title="刷入开发版"></a>刷入开发版</h2><ol>
+<li><p>下]]>
+    </summary>
+    
+      <category term="OpenWrt" scheme="http://lulee007.gitcafe.io/tagsCN/OpenWrt/"/>
+    
+      <category term="Transmission" scheme="http://lulee007.gitcafe.io/tagsCN/Transmission/"/>
+    
+      <category term="小米路由器" scheme="http://lulee007.gitcafe.io/tagsCN/%E5%B0%8F%E7%B1%B3%E8%B7%AF%E7%94%B1%E5%99%A8/"/>
+    
+      <category term="技术" scheme="http://lulee007.gitcafe.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Jenkins-02：配置 Android 自动构建]]></title>
@@ -203,6 +258,44 @@
       <category term="Hexo" scheme="http://lulee007.gitcafe.io/tagsCN/Hexo/"/>
     
       <category term="站内搜索" scheme="http://lulee007.gitcafe.io/tagsCN/%E7%AB%99%E5%86%85%E6%90%9C%E7%B4%A2/"/>
+    
+      <category term="技术" scheme="http://lulee007.gitcafe.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Git常用命令]]></title>
+    <link href="http://lulee007.gitcafe.io/2016/01/19/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>http://lulee007.gitcafe.io/2016/01/19/Git常用命令/</id>
+    <published>2016-01-19T11:55:14.000Z</published>
+    <updated>2016-03-06T07:14:24.000Z</updated>
+    <content type="html"><![CDATA[<p>记录自己在使用git 过程中常用的命令<br><a id="more"></a></p>
+<h2 id="u57FA_u7840_u547D_u4EE4"><a href="#u57FA_u7840_u547D_u4EE4" class="headerlink" title="基础命令"></a>基础命令</h2><h3 id="u8BBE_u7F6E_u7528_u6237"><a href="#u8BBE_u7F6E_u7528_u6237" class="headerlink" title="设置用户"></a>设置用户</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user<span class="class">.name</span> <span class="string">"Your Name"</span></span><br><span class="line">git config --global user<span class="class">.email</span> <span class="string">"email@example.com"</span></span><br></pre></td></tr></table></figure>
+<h3 id="u521D_u59CB_u5316_u4ED3_u5E93"><a href="#u521D_u59CB_u5316_u4ED3_u5E93" class="headerlink" title="初始化仓库"></a>初始化仓库</h3><p>初始化空目录<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout git<span class="annotation">@github</span>.<span class="string">com:</span>xxx/aaaa.git</span><br></pre></td></tr></table></figure></p>
+<p>将已有项目加入 git 管理<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line"># Initialized empty Git repository in <span class="regexp">/Users/</span>xxx<span class="regexp">/.git/</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="u6DFB_u52A0_u6587_u4EF6"><a href="#u6DFB_u52A0_u6587_u4EF6" class="headerlink" title="添加文件"></a>添加文件</h3><p>添加一个或多个，以空格隔开<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add <span class="type">file</span>-path-<span class="keyword">with</span>-name1 <span class="type">file</span>-path-<span class="keyword">with</span>-name2 <span class="type">file</span>-path-<span class="keyword">with</span>-name3 [<span class="type">file</span>-path-<span class="keyword">with</span>-<span class="property">name</span>-n]</span><br></pre></td></tr></table></figure></p>
+<p>添加所有文件<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">git</span> <span class="keyword">add </span>.</span><br></pre></td></tr></table></figure></p>
+<h3 id="u79FB_u9664_u5DF2_u7ECF_u6DFB_u52A0_u7684_u6587_u4EF6"><a href="#u79FB_u9664_u5DF2_u7ECF_u6DFB_u52A0_u7684_u6587_u4EF6" class="headerlink" title="移除已经添加的文件"></a>移除已经添加的文件</h3><p>移除已经经过 add 操作但未进行 commit 操作的文件<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="operator"><span class="keyword">reset</span> <span class="keyword">HEAD</span> &lt;<span class="keyword">file</span>&gt;...</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="u63D0_u4EA4_u52A0_u5165_u7684_u6587_u4EF6_u5230_u4ED3_u5E93"><a href="#u63D0_u4EA4_u52A0_u5165_u7684_u6587_u4EF6_u5230_u4ED3_u5E93" class="headerlink" title="提交加入的文件到仓库"></a>提交加入的文件到仓库</h3><p>加入的文件可以是新文件也可以是修改过的文件<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="operator"><span class="keyword">commit</span> -<span class="keyword">m</span> <span class="string">"写上提交此次的说明"</span></span></span><br></pre></td></tr></table></figure></p>
+<h3 id="u64A4_u9500_u5DF2_u7ECFcommit_u7684_u6587_u4EF6"><a href="#u64A4_u9500_u5DF2_u7ECFcommit_u7684_u6587_u4EF6" class="headerlink" title="撤销已经commit的文件"></a>撤销已经commit的文件</h3><p>撤销已经 commit 但未进行 push 操作的文件<br>首先使用<code>git reset HEAD^</code>退回到前一版本，然后被<code>commit</code>的文件会变为<code>added</code>状态，使用<code>git reset HEAD &lt;file&gt;</code>取消 add 操作<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 这是之前进行的 <span class="operator"><span class="keyword">commit</span></span><br><span class="line"># git <span class="keyword">commit</span> -<span class="keyword">m</span> <span class="string">"add file 1"</span></span><br><span class="line">git <span class="keyword">reset</span> <span class="comment">--soft HEAD^ #或HEAD^意为取消最后commit</span></span><br><span class="line"># 继续 git <span class="keyword">add</span> 其他操作</span><br><span class="line"># git <span class="keyword">add</span> <span class="keyword">file</span>-<span class="number">2</span></span><br><span class="line"># git <span class="keyword">commit</span> -<span class="keyword">m</span> <span class="string">"add file 2"</span></span><br><span class="line">git <span class="keyword">commit</span> <span class="comment">--amend -m "new commit"</span></span></span><br></pre></td></tr></table></figure></p>
+<p>这时候 <code>add file 1</code>将被撤销，<code>add file 2</code> 和 <code>new commit</code> 将被合并成新的 <code>new commit</code></p>
+<h3 id="u67E5_u770B_u72B6_u6001"><a href="#u67E5_u770B_u72B6_u6001" class="headerlink" title="查看状态"></a>查看状态</h3><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">status</span></span><br></pre></td></tr></table></figure>
+<h3 id="u67E5_u770B_commit__u5386_u53F2"><a href="#u67E5_u770B_commit__u5386_u53F2" class="headerlink" title="查看 commit 历史"></a>查看 commit 历史</h3><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="command">log</span></span><br></pre></td></tr></table></figure>
+<h3 id="u67E5_u770B_u6240_u6709_commit__u64CD_u4F5C_u5386_u53F2"><a href="#u67E5_u770B_u6240_u6709_commit__u64CD_u4F5C_u5386_u53F2" class="headerlink" title="查看所有 commit 操作历史"></a>查看所有 commit 操作历史</h3><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">git</span> reflog</span><br></pre></td></tr></table></figure>
+<h3 id="u4ECE_u77E5_u8BC6_u5E93_u4E2D_u5220_u9664_u73B0_u6709_u6587_u4EF6"><a href="#u4ECE_u77E5_u8BC6_u5E93_u4E2D_u5220_u9664_u73B0_u6709_u6587_u4EF6" class="headerlink" title="从知识库中删除现有文件"></a>从知识库中删除现有文件</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -name .DS_Store -print0 | xargs -<span class="number">0</span> git rm <span class="operator">-f</span> --ignore-unmatch</span><br></pre></td></tr></table></figure>
+<p>添加新的规则到<code>.gitignore</code><br><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">.DS_Store</span></span><br></pre></td></tr></table></figure></p>
+<p>然后<br>git add .gitignore<br>git commit -m ‘.DS_Store banished!’</p>
+<h3 id="TO_BE_CONTINUE"><a href="#TO_BE_CONTINUE" class="headerlink" title="TO BE CONTINUE"></a>TO BE CONTINUE</h3><h2 id="u53C2_u8003"><a href="#u53C2_u8003" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="http://www.cnblogs.com/newpanderking/p/4005698.html" target="_blank" rel="external">git 命令常用总结</a></li>
+<li><a href="http://www.douban.com/note/318248317/" target="_blank" rel="external">git commit 合并</a></li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>记录自己在使用git 过程中常用的命令<br>]]>
+    
+    </summary>
+    
+      <category term="Git命令" scheme="http://lulee007.gitcafe.io/tagsCN/Git%E5%91%BD%E4%BB%A4/"/>
     
       <category term="技术" scheme="http://lulee007.gitcafe.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
