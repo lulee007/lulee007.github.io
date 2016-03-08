@@ -3,9 +3,9 @@
   <title><![CDATA[小灰灰写代码]]></title>
   <subtitle><![CDATA[码农，程序猿，伪全栈]]></subtitle>
   <link href="/atom.xml" rel="self"/>
-  <link href="http://lulee007.gitcafe.io/"/>
+  <link href="http://lulee007.coding.me/"/>
   <updated>2016-03-06T10:00:30.000Z</updated>
-  <id>http://lulee007.gitcafe.io/</id>
+  <id>http://lulee007.coding.me/</id>
   
   <author>
     <name><![CDATA[Lulee007]]></name>
@@ -16,8 +16,8 @@
   
   <entry>
     <title><![CDATA[记录开发安卓应用时的各种『坑』]]></title>
-    <link href="http://lulee007.gitcafe.io/2016/03/02/all-kinds-of-trouble-in-android-development/"/>
-    <id>http://lulee007.gitcafe.io/2016/03/02/all-kinds-of-trouble-in-android-development/</id>
+    <link href="http://lulee007.coding.me/2016/03/02/all-kinds-of-trouble-in-android-development/"/>
+    <id>http://lulee007.coding.me/2016/03/02/all-kinds-of-trouble-in-android-development/</id>
     <published>2016-03-02T11:42:11.000Z</published>
     <updated>2016-03-06T10:00:30.000Z</updated>
     <content type="html"><![CDATA[<p>在开发安卓应用过程中遇到了一些比较坑的问题，在这里记录下来。<br><a id="more"></a></p>
@@ -44,19 +44,20 @@
     
     </summary>
     
-      <category term="Android" scheme="http://lulee007.gitcafe.io/tagsCN/Android/"/>
+      <category term="Android" scheme="http://lulee007.coding.me/tagsCN/Android/"/>
     
-      <category term="技术" scheme="http://lulee007.gitcafe.io/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="http://lulee007.coding.me/categories/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[在小米路由器 mini 中安装 Transmission 下载器]]></title>
-    <link href="http://lulee007.gitcafe.io/2016/02/22/add-transmission-in-miwif/"/>
-    <id>http://lulee007.gitcafe.io/2016/02/22/add-transmission-in-miwif/</id>
+    <link href="http://lulee007.coding.me/2016/02/22/add-transmission-in-miwif/"/>
+    <id>http://lulee007.coding.me/2016/02/22/add-transmission-in-miwif/</id>
     <published>2016-02-22T07:11:37.000Z</published>
-    <updated>2016-03-06T08:13:49.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="u5237_u5165_u5F00_u53D1_u7248"><a href="#u5237_u5165_u5F00_u53D1_u7248" class="headerlink" title="刷入开发版"></a>刷入开发版</h2><ol>
+    <updated>2016-03-07T01:19:19.000Z</updated>
+    <content type="html"><![CDATA[<p>最近入手了一个小米的路由器 mini，一直对其挂载硬盘比较感兴趣，抽空折腾了一下，为以后挂载 bt 下载器做准备。<br><a id="more"></a></p>
+<h2 id="u5237_u5165_u5F00_u53D1_u7248"><a href="#u5237_u5165_u5F00_u53D1_u7248" class="headerlink" title="刷入开发版"></a>刷入开发版</h2><ol>
 <li><p>下载开发版 ROM<br>下载<a href="http://www1.miwifi.com/miwifi_download.html" target="_blank" rel="external">最新开发版本</a>，打开网页后选择 ROM 切换到 ROM 下载：<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160306-3%402x.png" alt="download-rom"></p>
 </li>
 <li><p>刷入开发板<br>查看<a href="http://bbs.xiaomi.cn/t-11720354" target="_blank" rel="external">刷机教程</a></p>
@@ -91,24 +92,24 @@
 <h2 id="u53C2_u8003"><a href="#u53C2_u8003" class="headerlink" title="参考"></a>参考</h2><p><a href="http://www.miui.com/thread-2093928-1-1.html" target="_blank" rel="external">http://www.miui.com/thread-2093928-1-1.html</a></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h2 id="u5237_u5165_u5F00_u53D1_u7248"><a href="#u5237_u5165_u5F00_u53D1_u7248" class="headerlink" title="刷入开发版"></a>刷入开发版</h2><ol>
-<li><p>下]]>
+    <![CDATA[<p>最近入手了一个小米的路由器 mini，一直对其挂载硬盘比较感兴趣，抽空折腾了一下，为以后挂载 bt 下载器做准备。<br>]]>
+    
     </summary>
     
-      <category term="OpenWrt" scheme="http://lulee007.gitcafe.io/tagsCN/OpenWrt/"/>
+      <category term="OpenWrt" scheme="http://lulee007.coding.me/tagsCN/OpenWrt/"/>
     
-      <category term="Transmission" scheme="http://lulee007.gitcafe.io/tagsCN/Transmission/"/>
+      <category term="Transmission" scheme="http://lulee007.coding.me/tagsCN/Transmission/"/>
     
-      <category term="小米路由器" scheme="http://lulee007.gitcafe.io/tagsCN/%E5%B0%8F%E7%B1%B3%E8%B7%AF%E7%94%B1%E5%99%A8/"/>
+      <category term="小米路由器" scheme="http://lulee007.coding.me/tagsCN/%E5%B0%8F%E7%B1%B3%E8%B7%AF%E7%94%B1%E5%99%A8/"/>
     
-      <category term="技术" scheme="http://lulee007.gitcafe.io/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="http://lulee007.coding.me/categories/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Jenkins-02：配置 Android 自动构建]]></title>
-    <link href="http://lulee007.gitcafe.io/2016/02/01/jenkins-02-config-android/"/>
-    <id>http://lulee007.gitcafe.io/2016/02/01/jenkins-02-config-android/</id>
+    <link href="http://lulee007.coding.me/2016/02/01/jenkins-02-config-android/"/>
+    <id>http://lulee007.coding.me/2016/02/01/jenkins-02-config-android/</id>
     <published>2016-02-01T11:13:04.000Z</published>
     <updated>2016-02-16T13:46:32.000Z</updated>
     <content type="html"><![CDATA[<p>安装配置所需的 Android SDK ， Gradle，Git，以及如何构建测试任务，打包等。  </p>
@@ -172,18 +173,18 @@
     
     </summary>
     
-      <category term="Android" scheme="http://lulee007.gitcafe.io/tagsCN/Android/"/>
+      <category term="Android" scheme="http://lulee007.coding.me/tagsCN/Android/"/>
     
-      <category term="Jenkins" scheme="http://lulee007.gitcafe.io/tagsCN/Jenkins/"/>
+      <category term="Jenkins" scheme="http://lulee007.coding.me/tagsCN/Jenkins/"/>
     
-      <category term="技术" scheme="http://lulee007.gitcafe.io/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="http://lulee007.coding.me/categories/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Jenkins-01：在 Ubuntu 14.0.4 下安装与配置 Jenkins]]></title>
-    <link href="http://lulee007.gitcafe.io/2016/01/29/jenkins-01-install-in-ubuntu-14-0-4/"/>
-    <id>http://lulee007.gitcafe.io/2016/01/29/jenkins-01-install-in-ubuntu-14-0-4/</id>
+    <link href="http://lulee007.coding.me/2016/01/29/jenkins-01-install-in-ubuntu-14-0-4/"/>
+    <id>http://lulee007.coding.me/2016/01/29/jenkins-01-install-in-ubuntu-14-0-4/</id>
     <published>2016-01-29T12:51:24.000Z</published>
     <updated>2016-02-02T13:58:13.000Z</updated>
     <content type="html"><![CDATA[<p>持续集成是一种软件开发实践，对于提高软件开发效率并保障软件开发质量提供了理论基础。Jenkins 是一个开源软件项目，旨在提供一个开放易用的软件平台，使持续集成变成可能。<br>通俗的说就是：</p>
@@ -239,23 +240,23 @@
     
     </summary>
     
-      <category term="Jenkins" scheme="http://lulee007.gitcafe.io/tagsCN/Jenkins/"/>
+      <category term="Jenkins" scheme="http://lulee007.coding.me/tagsCN/Jenkins/"/>
     
-      <category term="Ubuntu" scheme="http://lulee007.gitcafe.io/tagsCN/Ubuntu/"/>
+      <category term="Ubuntu" scheme="http://lulee007.coding.me/tagsCN/Ubuntu/"/>
     
-      <category term="技术" scheme="http://lulee007.gitcafe.io/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="http://lulee007.coding.me/categories/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Hexo博客优化配置之--为自己博客添加站内搜索]]></title>
-    <link href="http://lulee007.gitcafe.io/2016/01/23/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E9%85%8D%E7%BD%AE%E4%B9%8B-%E4%B8%BA%E8%87%AA%E5%B7%B1%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E7%AB%99%E5%86%85%E6%90%9C%E7%B4%A2/"/>
-    <id>http://lulee007.gitcafe.io/2016/01/23/Hexo博客优化配置之-为自己博客添加站内搜索/</id>
+    <link href="http://lulee007.coding.me/2016/01/23/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E9%85%8D%E7%BD%AE%E4%B9%8B-%E4%B8%BA%E8%87%AA%E5%B7%B1%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E7%AB%99%E5%86%85%E6%90%9C%E7%B4%A2/"/>
+    <id>http://lulee007.coding.me/2016/01/23/Hexo博客优化配置之-为自己博客添加站内搜索/</id>
     <published>2016-01-23T09:55:14.000Z</published>
-    <updated>2016-01-24T07:12:47.000Z</updated>
+    <updated>2016-03-08T02:07:49.000Z</updated>
     <content type="html"><![CDATA[<h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>在配置 Hexo 博客期间根据参考了很多网上的方法，进行站内搜索集成结果都不太满意：</p>
 <ol>
-<li>百度<br>搜索都是以在检索的时候加入<code>site:www.xxx.com</code> 方式进行搜索，体验不是很好<br>而且百度这种搜索方式是你提交的 sitemap 链接到百度站内搜索收录才能在搜索结果中显示出来，结果我在测试的时候，<br>使用 github 和 gitcafe 进行测试时，发现百度都抓取不了这两个网站的数据了。只能作罢，在我的另一篇文章中有亲测结果，<a href="/2016/01/16/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E9%85%8D%E7%BD%AE%E4%B9%8B-%E4%B8%BA%E8%87%AA%E5%B7%B1%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E7%BD%91%E9%A1%B5%E6%94%B6%E5%BD%95/">Hexo博客优化配置之–为自己博客添加搜索引擎网页收录</a>。</li>
+<li>百度<br>搜索都是以在检索的时候加入<code>site:www.xxx.com</code> 方式进行搜索，体验不是很好<br>而且百度这种搜索方式是你提交的 sitemap 链接到百度站内搜索收录才能在搜索结果中显示出来，结果我在测试的时候，<br>使用 github 和 gitcafe 进行测试时，发现百度都抓取不了这两个网站的数据了。只能作罢，在我的另一篇文章中有亲测结果，<a href="/2016/01/16/Hexo博客优化配置之-为自己博客添加搜索引擎网页收录/">Hexo博客优化配置之–为自己博客添加搜索引擎网页收录</a>。</li>
 <li>Hexo 自带的 Google Search<br>这种和百度的搜索类似，检索的时候加入<code>site:www.xxx.com</code> 方式进行搜索，用起来不爽。</li>
 <li>Swiftype<br>先后参考了<a href="http://www.jerryfu.net/post/search-engine-for-hexo-with-swiftype.html" target="_blank" rel="external">jerryfu: 利用swiftype为hexo添加站内搜索</a>和<a href="http://blog.moyizhou.cn/web/search-engine-for-static-pages/#swiftype" target="_blank" rel="external">Rimo: 静态博客如何实现站内搜索</a>以及<a href="http://guoyuxiang.com/2015/07/27/%E5%9F%BA%E4%BA%8Eswiftype%E5%BA%94%E7%94%A8%E4%BA%8EHexo-Yilia-%E4%B8%BB%E9%A2%98%E7%9A%84%E7%AB%99%E5%86%85%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/" target="_blank" rel="external">Mjolnir: 基于swiftype应用于Hexo Yilia 主题的站内搜索引擎</a> 的文章，但是很奇怪，总觉得 swiftype 的接口不太稳定，在上面提到的这些博客中，只有Rimo的博客站内搜索是可<br>用的，其他的弹出来的搜索结果都是空白，我自己的博客里集成后测试也是空白，只好作罢。</li>
 <li>在 Google 搜索时，输入了<code>site:lulee007.gitcafe.io</code> 意外发现 Google 的另外一个产品 <code>Google Console</code><br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160123-2%402x.png" alt="google console"><br>然后在配置 Google Console 的过程中发现了 Google 提供的<em>自定义搜索</em>，经过配置后发现挺好用（其实还是要先上得了 Google）。<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160123-3%402x.png" alt="自定义搜索"><a id="more"></a>
@@ -279,30 +280,30 @@
 <h4 id="u914D_u7F6E_u641C_u7D22_u7ED3_u679C_u6837_u5F0F"><a href="#u914D_u7F6E_u641C_u7D22_u7ED3_u679C_u6837_u5F0F" class="headerlink" title="配置搜索结果样式"></a>配置搜索结果样式</h4><p>由于 Google Search 提供的默认样式太难看了，自己手动修改了一些。<br>打开 Yilia 主题下的<code>source/css/style.styl</code>文件，在文件末尾添加如下代码：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">//google search</span><br><span class="line">.gsc-resultsHeader &#123;</span><br><span class="line">  display: none !important;</span><br><span class="line">&#125;</span><br><span class="line">.gsc-result .gs-title &#123;</span><br><span class="line">  height: 1.5em !important;</span><br><span class="line">&#125;</span><br><span class="line">.gsc-webResult .gsc-result &#123;</span><br><span class="line">  padding: 0px 0 16px 0 !important;</span><br><span class="line">&#125;</span><br><span class="line">.article-entry table &#123;</span><br><span class="line">  margin: 0px 0 !important;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h2 id="u90E8_u7F72_u6D4B_u8BD5"><a href="#u90E8_u7F72_u6D4B_u8BD5" class="headerlink" title="部署测试"></a>部署测试</h2><p>生成 html 文件并部署到网站上：<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">d</span> -<span class="keyword">g</span></span><br></pre></td></tr></table></figure></p>
 <p><strong>注意：</strong> 请确保能访问的了 Google ，不然搜索框加载不了，自然也搜索不到结果。<br>打开博客，这是在左侧边栏应该可以看到 Google 自定义搜索框和按钮，输入测试词 <code>hexo</code>进行检索。<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160124-0%402x.png" alt="google search bar"><br>我这里使用已经配置好的 gitcafe 上的博客进行了演示，<br>敲回车后，应该会打开博客的新的网页<code>http://lulee007.gitcafe.io/search/index.html?q=hexo</code><br>展示搜索到的结果了。<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160124-1%402x.png" alt="search result"></p>
-<h2 id="u6700_u540E"><a href="#u6700_u540E" class="headerlink" title="最后"></a>最后</h2><p>如果检索不到内容，可能需要配合 Google Console 进行提交 站点地图，让 Google 对博客 sitemap 进行抓取<br>内容之后才行。可以在 Google 搜索 <code>site:lulee007.gitcafe.io</code> 测试能不能检索到你的博客，<br>把<code>lulee007.gitcafe.io</code>替换为你自己的博客。</p>
+<h2 id="u6700_u540E"><a href="#u6700_u540E" class="headerlink" title="最后"></a>最后</h2><p>如果检索不到内容，可能需要配合 Google Console 进行提交 站点地图，让 Google 对博客 sitemap 进行抓取<br>内容之后才行。可以在 Google 搜索 <code>site:lulee007.gitcafe.io</code> 测试能不能检索到你的博客，<br>把<code>lulee007.gitcafe.io</code>替换为你自己的博客。可以参考另一篇文章：<a href="/2016/01/16/Hexo博客优化配置之-为自己博客添加搜索引擎网页收录/">Hexo博客优化配置之–为自己博客添加搜索引擎网页收录</a></p>
 ]]></content>
     <summary type="html">
     <![CDATA[<h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>在配置 Hexo 博客期间根据参考了很多网上的方法，进行站内搜索集成结果都不太满意：</p>
 <ol>
-<li>百度<br>搜索都是以在检索的时候加入<code>site:www.xxx.com</code> 方式进行搜索，体验不是很好<br>而且百度这种搜索方式是你提交的 sitemap 链接到百度站内搜索收录才能在搜索结果中显示出来，结果我在测试的时候，<br>使用 github 和 gitcafe 进行测试时，发现百度都抓取不了这两个网站的数据了。只能作罢，在我的另一篇文章中有亲测结果，<a href="/2016/01/16/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E9%85%8D%E7%BD%AE%E4%B9%8B-%E4%B8%BA%E8%87%AA%E5%B7%B1%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E7%BD%91%E9%A1%B5%E6%94%B6%E5%BD%95/">Hexo博客优化配置之–为自己博客添加搜索引擎网页收录</a>。</li>
+<li>百度<br>搜索都是以在检索的时候加入<code>site:www.xxx.com</code> 方式进行搜索，体验不是很好<br>而且百度这种搜索方式是你提交的 sitemap 链接到百度站内搜索收录才能在搜索结果中显示出来，结果我在测试的时候，<br>使用 github 和 gitcafe 进行测试时，发现百度都抓取不了这两个网站的数据了。只能作罢，在我的另一篇文章中有亲测结果，<a href="/2016/01/16/Hexo博客优化配置之-为自己博客添加搜索引擎网页收录/">Hexo博客优化配置之–为自己博客添加搜索引擎网页收录</a>。</li>
 <li>Hexo 自带的 Google Search<br>这种和百度的搜索类似，检索的时候加入<code>site:www.xxx.com</code> 方式进行搜索，用起来不爽。</li>
 <li>Swiftype<br>先后参考了<a href="http://www.jerryfu.net/post/search-engine-for-hexo-with-swiftype.html">jerryfu: 利用swiftype为hexo添加站内搜索</a>和<a href="http://blog.moyizhou.cn/web/search-engine-for-static-pages/#swiftype">Rimo: 静态博客如何实现站内搜索</a>以及<a href="http://guoyuxiang.com/2015/07/27/%E5%9F%BA%E4%BA%8Eswiftype%E5%BA%94%E7%94%A8%E4%BA%8EHexo-Yilia-%E4%B8%BB%E9%A2%98%E7%9A%84%E7%AB%99%E5%86%85%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/">Mjolnir: 基于swiftype应用于Hexo Yilia 主题的站内搜索引擎</a> 的文章，但是很奇怪，总觉得 swiftype 的接口不太稳定，在上面提到的这些博客中，只有Rimo的博客站内搜索是可<br>用的，其他的弹出来的搜索结果都是空白，我自己的博客里集成后测试也是空白，只好作罢。</li>
 <li>在 Google 搜索时，输入了<code>site:lulee007.gitcafe.io</code> 意外发现 Google 的另外一个产品 <code>Google Console</code><br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160123-2%402x.png" alt="google console"><br>然后在配置 Google Console 的过程中发现了 Google 提供的<em>自定义搜索</em>，经过配置后发现挺好用（其实还是要先上得了 Google）。<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160123-3%402x.png" alt="自定义搜索">]]>
     
     </summary>
     
-      <category term="Hexo" scheme="http://lulee007.gitcafe.io/tagsCN/Hexo/"/>
+      <category term="Hexo" scheme="http://lulee007.coding.me/tagsCN/Hexo/"/>
     
-      <category term="站内搜索" scheme="http://lulee007.gitcafe.io/tagsCN/%E7%AB%99%E5%86%85%E6%90%9C%E7%B4%A2/"/>
+      <category term="站内搜索" scheme="http://lulee007.coding.me/tagsCN/%E7%AB%99%E5%86%85%E6%90%9C%E7%B4%A2/"/>
     
-      <category term="技术" scheme="http://lulee007.gitcafe.io/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="http://lulee007.coding.me/categories/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Git常用命令]]></title>
-    <link href="http://lulee007.gitcafe.io/2016/01/19/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
-    <id>http://lulee007.gitcafe.io/2016/01/19/Git常用命令/</id>
+    <link href="http://lulee007.coding.me/2016/01/19/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>http://lulee007.coding.me/2016/01/19/Git常用命令/</id>
     <published>2016-01-19T11:55:14.000Z</published>
     <updated>2016-03-06T07:14:24.000Z</updated>
     <content type="html"><![CDATA[<p>记录自己在使用git 过程中常用的命令<br><a id="more"></a></p>
@@ -331,16 +332,16 @@
     
     </summary>
     
-      <category term="Git命令" scheme="http://lulee007.gitcafe.io/tagsCN/Git%E5%91%BD%E4%BB%A4/"/>
+      <category term="Git命令" scheme="http://lulee007.coding.me/tagsCN/Git%E5%91%BD%E4%BB%A4/"/>
     
-      <category term="技术" scheme="http://lulee007.gitcafe.io/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="http://lulee007.coding.me/categories/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Mac下重置Mysql的root密码]]></title>
-    <link href="http://lulee007.gitcafe.io/2016/01/18/Mac%E4%B8%8B%E9%87%8D%E7%BD%AEMysql%E7%9A%84root%E5%AF%86%E7%A0%81/"/>
-    <id>http://lulee007.gitcafe.io/2016/01/18/Mac下重置Mysql的root密码/</id>
+    <link href="http://lulee007.coding.me/2016/01/18/Mac%E4%B8%8B%E9%87%8D%E7%BD%AEMysql%E7%9A%84root%E5%AF%86%E7%A0%81/"/>
+    <id>http://lulee007.coding.me/2016/01/18/Mac下重置Mysql的root密码/</id>
     <published>2016-01-18T13:18:36.000Z</published>
     <updated>2016-01-19T00:36:52.000Z</updated>
     <content type="html"><![CDATA[<h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>Mac上装了Mysql很长时间了，结果每次用的时候发现密码都不对上，密码忘了，这次长记性了，记下来。<br><a href="http://www.zuimoban.com/jiaocheng/mysql/2548.html" target="_blank" rel="external">参考:mac上安装mysql 以及root密码忘记或权限错误的解决办法</a></p>
@@ -365,25 +366,25 @@
     
     </summary>
     
-      <category term="Mac" scheme="http://lulee007.gitcafe.io/tagsCN/Mac/"/>
+      <category term="Mac" scheme="http://lulee007.coding.me/tagsCN/Mac/"/>
     
-      <category term="Mysql" scheme="http://lulee007.gitcafe.io/tagsCN/Mysql/"/>
+      <category term="Mysql" scheme="http://lulee007.coding.me/tagsCN/Mysql/"/>
     
-      <category term="root" scheme="http://lulee007.gitcafe.io/tagsCN/root/"/>
+      <category term="root" scheme="http://lulee007.coding.me/tagsCN/root/"/>
     
-      <category term="重置密码" scheme="http://lulee007.gitcafe.io/tagsCN/%E9%87%8D%E7%BD%AE%E5%AF%86%E7%A0%81/"/>
+      <category term="重置密码" scheme="http://lulee007.coding.me/tagsCN/%E9%87%8D%E7%BD%AE%E5%AF%86%E7%A0%81/"/>
     
-      <category term="技术" scheme="http://lulee007.gitcafe.io/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="http://lulee007.coding.me/categories/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Hexo博客优化配置之--为自己博客添加搜索引擎网页收录]]></title>
-    <link href="http://lulee007.gitcafe.io/2016/01/16/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E9%85%8D%E7%BD%AE%E4%B9%8B-%E4%B8%BA%E8%87%AA%E5%B7%B1%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E7%BD%91%E9%A1%B5%E6%94%B6%E5%BD%95/"/>
-    <id>http://lulee007.gitcafe.io/2016/01/16/Hexo博客优化配置之-为自己博客添加搜索引擎网页收录/</id>
+    <link href="http://lulee007.coding.me/2016/01/16/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E9%85%8D%E7%BD%AE%E4%B9%8B-%E4%B8%BA%E8%87%AA%E5%B7%B1%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E7%BD%91%E9%A1%B5%E6%94%B6%E5%BD%95/"/>
+    <id>http://lulee007.coding.me/2016/01/16/Hexo博客优化配置之-为自己博客添加搜索引擎网页收录/</id>
     <published>2016-01-16T07:55:14.000Z</published>
     <updated>2016-02-17T11:15:45.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>从今年的一月七号开始，这个 Hexo 博客折腾了差不多十天，在使用 Yilia 这个主题过程中，发现有些地方不太满意,就把源码 fork<br>下来一版本自己进行折腾。 在折腾这个站内搜索的功能时间最长， 看了网上的一些教程，没有一个搞的顺的。最后自己看着官方文档进行<br>了尝试，将就着搞的差不多了:<br><a href="/">Hexo博客优化配置之–为自己博客添加站内搜索</a><br>为了让博客内容尽可能的被<strong>百度</strong>或者<strong>谷歌</strong>搜索到,需要将自己的博客上的博客链接添加到搜索引擎收录中。<br><strong>提醒:</strong> 如果你的博客在 github.io 或者 gitcafe.io  上，想添加百度收录的直接 pass 吧。  </p>
+    <content type="html"><![CDATA[<h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>从今年的一月七号开始，这个 Hexo 博客折腾了差不多十天，在使用 Yilia 这个主题过程中，发现有些地方不太满意,就把源码 fork<br>下来一版本自己进行折腾。 在折腾这个站内搜索的功能时间最长， 看了网上的一些教程，没有一个搞的顺的。最后自己看着官方文档进行<br>了尝试，将就着搞的差不多了:<br><a href="/2016/01/23/Hexo博客优化配置之-为自己博客添加站内搜索/">Hexo博客优化配置之–为自己博客添加站内搜索</a><br>为了让博客内容尽可能的被<strong>百度</strong>或者<strong>谷歌</strong>搜索到,需要将自己的博客上的博客链接添加到搜索引擎收录中。<br><strong>提醒:</strong> 如果你的博客在 github.io 或者 gitcafe.io  上，想添加百度收录的直接 pass 吧。  </p>
 <a id="more"></a>
 <h2 id="u767E_u5EA6"><a href="#u767E_u5EA6" class="headerlink" title="百度"></a>百度</h2><p><strong>注意：</strong> 经过测试发现 gitcafe 也<em>不能够进行抓取</em>了，以下内容仅是记录当时的尝试过程。</p>
 <h3 id="u94FE_u63A5_u63D0_u4EA4_u65B9_u5F0F_u5B9E_u6D4B"><a href="#u94FE_u63A5_u63D0_u4EA4_u65B9_u5F0F_u5B9E_u6D4B" class="headerlink" title="链接提交方式实测"></a>链接提交方式实测</h3><blockquote>
@@ -467,24 +468,24 @@ sitemap = [baidu_sitemap]
 <h3 id="u6DFB_u52A0_u7AD9_u70B9_u5730_u56FE"><a href="#u6DFB_u52A0_u7AD9_u70B9_u5730_u56FE" class="headerlink" title="添加站点地图"></a>添加站点地图</h3><p>这时打开上面的链接<code>Search Console</code>，或者通过资源列表页查看刚才添加的资源：<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160117-5%402x.png" alt="资源列表项"><br>点击<code>lulee007.github.io</code>标题就可以进入管理页。<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160117-6%402x.png" alt="管理概览"><br>在左边的侧边栏依次选择<code>抓取</code>&gt;&gt;<code>站点地图</code>，然后选择右边的<code>添加/测试站点地图</code>:<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_1.jpg" alt="添加站点地图"><br>添加后：<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160118-0%402x.png" alt="已添加站点一览"><br>这就完成了，等待一段时间后待谷歌进行抓取就可以，一般第二天看到结果了。<br>这时我第二天在谷歌搜索得到的结果：<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160118-1%402x.png" alt="搜索结果"><br>搜索的结果很准确，比百度强很多。</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>从今年的一月七号开始，这个 Hexo 博客折腾了差不多十天，在使用 Yilia 这个主题过程中，发现有些地方不太满意,就把源码 fork<br>下来一版本自己进行折腾。 在折腾这个站内搜索的功能时间最长， 看了网上的一些教程，没有一个搞的顺的。最后自己看着官方文档进行<br>了尝试，将就着搞的差不多了:<br><a href="/">Hexo博客优化配置之–为自己博客添加站内搜索</a><br>为了让博客内容尽可能的被<strong>百度</strong>或者<strong>谷歌</strong>搜索到,需要将自己的博客上的博客链接添加到搜索引擎收录中。<br><strong>提醒:</strong> 如果你的博客在 github.io 或者 gitcafe.io  上，想添加百度收录的直接 pass 吧。  </p>]]>
+    <![CDATA[<h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>从今年的一月七号开始，这个 Hexo 博客折腾了差不多十天，在使用 Yilia 这个主题过程中，发现有些地方不太满意,就把源码 fork<br>下来一版本自己进行折腾。 在折腾这个站内搜索的功能时间最长， 看了网上的一些教程，没有一个搞的顺的。最后自己看着官方文档进行<br>了尝试，将就着搞的差不多了:<br><a href="/2016/01/23/Hexo博客优化配置之-为自己博客添加站内搜索/">Hexo博客优化配置之–为自己博客添加站内搜索</a><br>为了让博客内容尽可能的被<strong>百度</strong>或者<strong>谷歌</strong>搜索到,需要将自己的博客上的博客链接添加到搜索引擎收录中。<br><strong>提醒:</strong> 如果你的博客在 github.io 或者 gitcafe.io  上，想添加百度收录的直接 pass 吧。  </p>]]>
     
     </summary>
     
-      <category term="Hexo" scheme="http://lulee007.gitcafe.io/tagsCN/Hexo/"/>
+      <category term="Hexo" scheme="http://lulee007.coding.me/tagsCN/Hexo/"/>
     
-      <category term="百度搜索链接收录" scheme="http://lulee007.gitcafe.io/tagsCN/%E7%99%BE%E5%BA%A6%E6%90%9C%E7%B4%A2%E9%93%BE%E6%8E%A5%E6%94%B6%E5%BD%95/"/>
+      <category term="百度搜索链接收录" scheme="http://lulee007.coding.me/tagsCN/%E7%99%BE%E5%BA%A6%E6%90%9C%E7%B4%A2%E9%93%BE%E6%8E%A5%E6%94%B6%E5%BD%95/"/>
     
-      <category term="谷歌搜索链接收录" scheme="http://lulee007.gitcafe.io/tagsCN/%E8%B0%B7%E6%AD%8C%E6%90%9C%E7%B4%A2%E9%93%BE%E6%8E%A5%E6%94%B6%E5%BD%95/"/>
+      <category term="谷歌搜索链接收录" scheme="http://lulee007.coding.me/tagsCN/%E8%B0%B7%E6%AD%8C%E6%90%9C%E7%B4%A2%E9%93%BE%E6%8E%A5%E6%94%B6%E5%BD%95/"/>
     
-      <category term="技术" scheme="http://lulee007.gitcafe.io/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="http://lulee007.coding.me/categories/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[SSM：Struts2+Spring+Mybatis+Jersey Web 项目单元测试]]></title>
-    <link href="http://lulee007.gitcafe.io/2016/01/14/SSM-Struts2-Spring-Mybatis3-Web-%E9%A1%B9%E7%9B%AE%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
-    <id>http://lulee007.gitcafe.io/2016/01/14/SSM-Struts2-Spring-Mybatis3-Web-项目单元测试/</id>
+    <link href="http://lulee007.coding.me/2016/01/14/SSM-Struts2-Spring-Mybatis3-Web-%E9%A1%B9%E7%9B%AE%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
+    <id>http://lulee007.coding.me/2016/01/14/SSM-Struts2-Spring-Mybatis3-Web-项目单元测试/</id>
     <published>2016-01-14T11:55:14.000Z</published>
     <updated>2016-02-01T00:57:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>在参与写web项目的时候越到后期发现对自己写的 Service 以及 Controller 进行单元测试的必要性，因为有些项目已经开始上线测试，需要保证接口的稳定性，而且涉及到多人协作完成一个需求，需要把其划分为不同的部分，保证自己开发的部分的稳定，方便其他人继续其他的步骤。<br>Struts2+Spring+Mybatis+Jersey Web 项目下对 Service 的单元测试</p>
@@ -518,24 +519,24 @@ sitemap = [baidu_sitemap]
     
     </summary>
     
-      <category term="Mybatis3" scheme="http://lulee007.gitcafe.io/tagsCN/Mybatis3/"/>
+      <category term="Mybatis3" scheme="http://lulee007.coding.me/tagsCN/Mybatis3/"/>
     
-      <category term="Spring" scheme="http://lulee007.gitcafe.io/tagsCN/Spring/"/>
+      <category term="Spring" scheme="http://lulee007.coding.me/tagsCN/Spring/"/>
     
-      <category term="Struts2" scheme="http://lulee007.gitcafe.io/tagsCN/Struts2/"/>
+      <category term="Struts2" scheme="http://lulee007.coding.me/tagsCN/Struts2/"/>
     
-      <category term="UnitTest" scheme="http://lulee007.gitcafe.io/tagsCN/UnitTest/"/>
+      <category term="UnitTest" scheme="http://lulee007.coding.me/tagsCN/UnitTest/"/>
     
-      <category term="单元测试" scheme="http://lulee007.gitcafe.io/tagsCN/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
+      <category term="单元测试" scheme="http://lulee007.coding.me/tagsCN/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
     
-      <category term="技术" scheme="http://lulee007.gitcafe.io/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="http://lulee007.coding.me/categories/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[SSM：Struts2+Spring+Mybatis Web 项目搭建]]></title>
-    <link href="http://lulee007.gitcafe.io/2016/01/14/SSM-Struts2-Spring-Mybatis-Jersey-Web-%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/"/>
-    <id>http://lulee007.gitcafe.io/2016/01/14/SSM-Struts2-Spring-Mybatis-Jersey-Web-项目搭建/</id>
+    <link href="http://lulee007.coding.me/2016/01/14/SSM-Struts2-Spring-Mybatis-Jersey-Web-%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/"/>
+    <id>http://lulee007.coding.me/2016/01/14/SSM-Struts2-Spring-Mybatis-Jersey-Web-项目搭建/</id>
     <published>2016-01-14T11:55:14.000Z</published>
     <updated>2016-01-26T07:09:47.000Z</updated>
     <content type="html"><![CDATA[<h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>在 Intellij 中配置 SSM Web 开发框架。</p>
@@ -631,22 +632,22 @@ sitemap = [baidu_sitemap]
     
     </summary>
     
-      <category term="Mybatis3" scheme="http://lulee007.gitcafe.io/tagsCN/Mybatis3/"/>
+      <category term="Mybatis3" scheme="http://lulee007.coding.me/tagsCN/Mybatis3/"/>
     
-      <category term="Spring" scheme="http://lulee007.gitcafe.io/tagsCN/Spring/"/>
+      <category term="Spring" scheme="http://lulee007.coding.me/tagsCN/Spring/"/>
     
-      <category term="Struts2" scheme="http://lulee007.gitcafe.io/tagsCN/Struts2/"/>
+      <category term="Struts2" scheme="http://lulee007.coding.me/tagsCN/Struts2/"/>
     
-      <category term="UnitTest" scheme="http://lulee007.gitcafe.io/tagsCN/UnitTest/"/>
+      <category term="UnitTest" scheme="http://lulee007.coding.me/tagsCN/UnitTest/"/>
     
-      <category term="技术" scheme="http://lulee007.gitcafe.io/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="http://lulee007.coding.me/categories/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[2016年度计划]]></title>
-    <link href="http://lulee007.gitcafe.io/2016/01/10/2016%E5%B9%B4%E5%BA%A6%E8%AE%A1%E5%88%92/"/>
-    <id>http://lulee007.gitcafe.io/2016/01/10/2016年度计划/</id>
+    <link href="http://lulee007.coding.me/2016/01/10/2016%E5%B9%B4%E5%BA%A6%E8%AE%A1%E5%88%92/"/>
+    <id>http://lulee007.coding.me/2016/01/10/2016年度计划/</id>
     <published>2016-01-10T13:45:22.000Z</published>
     <updated>2016-01-12T05:46:15.000Z</updated>
     <content type="html"><![CDATA[<h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>自从毕业后到现在2年半了的时间了，感觉一直忙忙碌碌的工作、生活，从来都没有进行过年度规划。从学校到工作，接触到了很多东西：<br>C# PHP（Yii框架，ThinkPhp），Mongodb，Arcgis，ArcEngine，Android，Web，SSM，iOS，Windows Phone，Python，Html5 Hybrid App 。<br>看得很多，总结的很少。<br>最近正着手把之前在工作学习中的记下来笔记整理一下，也是对工作学习到现在的一个『交代』。新年伊始，已经过去了三十六分之一左右了，得约束下自己，先给自己列一个计划。<br><a id="more"></a></p>
@@ -687,8 +688,8 @@ sitemap = [baidu_sitemap]
   
   <entry>
     <title><![CDATA[Hexo常用命令笔记]]></title>
-    <link href="http://lulee007.gitcafe.io/2016/01/09/Hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0/"/>
-    <id>http://lulee007.gitcafe.io/2016/01/09/Hexo常用命令笔记/</id>
+    <link href="http://lulee007.coding.me/2016/01/09/Hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0/"/>
+    <id>http://lulee007.coding.me/2016/01/09/Hexo常用命令笔记/</id>
     <published>2016-01-09T04:20:23.000Z</published>
     <updated>2016-01-09T06:17:17.000Z</updated>
     <content type="html"><![CDATA[<p>参考：<a href="http://segmentfault.com/a/1190000002632530" target="_blank" rel="external">http://segmentfault.com/a/1190000002632530</a></p>
@@ -791,18 +792,18 @@ sitemap = [baidu_sitemap]
     
     </summary>
     
-      <category term="Hexo" scheme="http://lulee007.gitcafe.io/tagsCN/Hexo/"/>
+      <category term="Hexo" scheme="http://lulee007.coding.me/tagsCN/Hexo/"/>
     
-      <category term="命令" scheme="http://lulee007.gitcafe.io/tagsCN/%E5%91%BD%E4%BB%A4/"/>
+      <category term="命令" scheme="http://lulee007.coding.me/tagsCN/%E5%91%BD%E4%BB%A4/"/>
     
-      <category term="笔记" scheme="http://lulee007.gitcafe.io/categories/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="http://lulee007.coding.me/categories/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Hexo博客优化配置]]></title>
-    <link href="http://lulee007.gitcafe.io/2016/01/08/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E9%85%8D%E7%BD%AE/"/>
-    <id>http://lulee007.gitcafe.io/2016/01/08/Hexo博客优化配置/</id>
+    <link href="http://lulee007.coding.me/2016/01/08/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E9%85%8D%E7%BD%AE/"/>
+    <id>http://lulee007.coding.me/2016/01/08/Hexo博客优化配置/</id>
     <published>2016-01-08T04:13:10.000Z</published>
     <updated>2016-02-16T12:58:52.000Z</updated>
     <content type="html"><![CDATA[<h3 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h3><p>记录一下搭建此博客前前后后的做的优化配置：</p>
@@ -852,18 +853,18 @@ sitemap = [baidu_sitemap]
     
     </summary>
     
-      <category term="Hexo" scheme="http://lulee007.gitcafe.io/tagsCN/Hexo/"/>
+      <category term="Hexo" scheme="http://lulee007.coding.me/tagsCN/Hexo/"/>
     
-      <category term="配置" scheme="http://lulee007.gitcafe.io/tagsCN/%E9%85%8D%E7%BD%AE/"/>
+      <category term="配置" scheme="http://lulee007.coding.me/tagsCN/%E9%85%8D%E7%BD%AE/"/>
     
-      <category term="技术" scheme="http://lulee007.gitcafe.io/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="http://lulee007.coding.me/categories/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Mac下使用Github与Hexo搭建静态博客]]></title>
-    <link href="http://lulee007.gitcafe.io/2016/01/07/Mac%E4%B8%8B%E4%BD%BF%E7%94%A8Github%E4%B8%8EHexo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://lulee007.gitcafe.io/2016/01/07/Mac下使用Github与Hexo搭建静态博客/</id>
+    <link href="http://lulee007.coding.me/2016/01/07/Mac%E4%B8%8B%E4%BD%BF%E7%94%A8Github%E4%B8%8EHexo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://lulee007.coding.me/2016/01/07/Mac下使用Github与Hexo搭建静态博客/</id>
     <published>2016-01-07T11:55:30.000Z</published>
     <updated>2016-01-16T07:08:36.000Z</updated>
     <content type="html"><![CDATA[<h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>从今年的一月七号开始,看到好友<a href="/">老孙</a>在搞自己的 Hexo 博客,弄的挺起劲的。心生好奇也想搞搞,<br>加之之前也在工作学习中看到不少人都有在自己的博客中发布一些自己的学习工作心得,然后自己 google 了一番<br>发现眼前一亮,从去年年初开始就一直在用 markdown 做笔记,都是把工作学习中的笔记写在<code>Wiz笔记</code>里的，但是<br>记在笔记里的终究不是用来分享。这次这个 Hexo 静态网页博客正好支持 markdown ,加上支持<br>发布到 github 和 gitcafe 上,不用花钱申请域名,也不用申请存储空前,所有文章通过 markdown 来编写,然后渲染成网页<br>文章也很方便撰写，保存，跨平台，迁移方便。果断进行了折腾^_^。<br>于是进行 google ，找了一些教程来搭建一个个人静态博客。<br>其间看到阮一峰的一篇<a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html" target="_blank" rel="external">博文</a>中提到的,<br>喜欢写Blog的人会经历三个阶段:</p>
@@ -956,20 +957,20 @@ sitemap = [baidu_sitemap]
     
     </summary>
     
-      <category term="Github" scheme="http://lulee007.gitcafe.io/tagsCN/Github/"/>
+      <category term="Github" scheme="http://lulee007.coding.me/tagsCN/Github/"/>
     
-      <category term="Hexo" scheme="http://lulee007.gitcafe.io/tagsCN/Hexo/"/>
+      <category term="Hexo" scheme="http://lulee007.coding.me/tagsCN/Hexo/"/>
     
-      <category term="Mac" scheme="http://lulee007.gitcafe.io/tagsCN/Mac/"/>
+      <category term="Mac" scheme="http://lulee007.coding.me/tagsCN/Mac/"/>
     
-      <category term="笔记" scheme="http://lulee007.gitcafe.io/categories/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="http://lulee007.coding.me/categories/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Hello World]]></title>
-    <link href="http://lulee007.gitcafe.io/2016/01/07/hello-world/"/>
-    <id>http://lulee007.gitcafe.io/2016/01/07/hello-world/</id>
+    <link href="http://lulee007.coding.me/2016/01/07/hello-world/"/>
+    <id>http://lulee007.coding.me/2016/01/07/hello-world/</id>
     <published>2016-01-07T11:21:24.000Z</published>
     <updated>2016-02-02T12:37:21.000Z</updated>
     <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
@@ -991,8 +992,8 @@ sitemap = [baidu_sitemap]
   
   <entry>
     <title><![CDATA[Cordova+Ionic+AngularJs做混合移动App开发之--学习路线]]></title>
-    <link href="http://lulee007.gitcafe.io/2015/10/23/Cordova-Ionic-Angularjs%E5%81%9A%E6%B7%B7%E5%90%88%E7%A7%BB%E5%8A%A8App%E5%BC%80%E5%8F%91%E4%B9%8B-%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/"/>
-    <id>http://lulee007.gitcafe.io/2015/10/23/Cordova-Ionic-Angularjs做混合移动App开发之-学习路线/</id>
+    <link href="http://lulee007.coding.me/2015/10/23/Cordova-Ionic-Angularjs%E5%81%9A%E6%B7%B7%E5%90%88%E7%A7%BB%E5%8A%A8App%E5%BC%80%E5%8F%91%E4%B9%8B-%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/"/>
+    <id>http://lulee007.coding.me/2015/10/23/Cordova-Ionic-Angularjs做混合移动App开发之-学习路线/</id>
     <published>2015-10-23T12:59:23.000Z</published>
     <updated>2016-01-18T05:46:00.000Z</updated>
     <content type="html"><![CDATA[<h2 id="u73AF_u5883_u642D_u5EFA"><a href="#u73AF_u5883_u642D_u5EFA" class="headerlink" title="环境搭建"></a>环境搭建</h2><p>参考另一篇：<a href="/lulee007.github.io/">Mac下安装cordova+ionic+angularjs做混合移动app开发</a></p>
@@ -1016,26 +1017,26 @@ sitemap = [baidu_sitemap]
     
     </summary>
     
-      <category term="AngularJs" scheme="http://lulee007.gitcafe.io/tagsCN/AngularJs/"/>
+      <category term="AngularJs" scheme="http://lulee007.coding.me/tagsCN/AngularJs/"/>
     
-      <category term="Cordova" scheme="http://lulee007.gitcafe.io/tagsCN/Cordova/"/>
+      <category term="Cordova" scheme="http://lulee007.coding.me/tagsCN/Cordova/"/>
     
-      <category term="HTML5" scheme="http://lulee007.gitcafe.io/tagsCN/HTML5/"/>
+      <category term="HTML5" scheme="http://lulee007.coding.me/tagsCN/HTML5/"/>
     
-      <category term="Hybrid App" scheme="http://lulee007.gitcafe.io/tagsCN/Hybrid-App/"/>
+      <category term="Hybrid App" scheme="http://lulee007.coding.me/tagsCN/Hybrid-App/"/>
     
-      <category term="Ionic" scheme="http://lulee007.gitcafe.io/tagsCN/Ionic/"/>
+      <category term="Ionic" scheme="http://lulee007.coding.me/tagsCN/Ionic/"/>
     
-      <category term="混合型移动应用" scheme="http://lulee007.gitcafe.io/tagsCN/%E6%B7%B7%E5%90%88%E5%9E%8B%E7%A7%BB%E5%8A%A8%E5%BA%94%E7%94%A8/"/>
+      <category term="混合型移动应用" scheme="http://lulee007.coding.me/tagsCN/%E6%B7%B7%E5%90%88%E5%9E%8B%E7%A7%BB%E5%8A%A8%E5%BA%94%E7%94%A8/"/>
     
-      <category term="笔记" scheme="http://lulee007.gitcafe.io/categories/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="http://lulee007.coding.me/categories/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Mac下cordova+ionic+angularjs做混合移动app开发之--安装环境配置]]></title>
-    <link href="http://lulee007.gitcafe.io/2015/10/10/Mac%E4%B8%8BCordova-Ionic-AngularJs%E5%81%9A%E6%B7%B7%E5%90%88%E7%A7%BB%E5%8A%A8App%E5%BC%80%E5%8F%91%E4%B9%8B--%E5%AE%89%E8%A3%85%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
-    <id>http://lulee007.gitcafe.io/2015/10/10/Mac下Cordova-Ionic-AngularJs做混合移动App开发之--安装环境配置/</id>
+    <link href="http://lulee007.coding.me/2015/10/10/Mac%E4%B8%8BCordova-Ionic-AngularJs%E5%81%9A%E6%B7%B7%E5%90%88%E7%A7%BB%E5%8A%A8App%E5%BC%80%E5%8F%91%E4%B9%8B--%E5%AE%89%E8%A3%85%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    <id>http://lulee007.coding.me/2015/10/10/Mac下Cordova-Ionic-AngularJs做混合移动App开发之--安装环境配置/</id>
     <published>2015-10-10T11:49:59.000Z</published>
     <updated>2016-01-18T05:43:18.000Z</updated>
     <content type="html"><![CDATA[<h3 id="u5B89_u88C5Nodejs_3A"><a href="#u5B89_u88C5Nodejs_3A" class="headerlink" title="安装Nodejs:"></a>安装Nodejs:</h3><p>下载并打开<code>node-v0.12.4.pkg</code>进行安装</p>
@@ -1063,28 +1064,28 @@ sitemap = [baidu_sitemap]
     
     </summary>
     
-      <category term="AngularJs" scheme="http://lulee007.gitcafe.io/tagsCN/AngularJs/"/>
+      <category term="AngularJs" scheme="http://lulee007.coding.me/tagsCN/AngularJs/"/>
     
-      <category term="Cordova" scheme="http://lulee007.gitcafe.io/tagsCN/Cordova/"/>
+      <category term="Cordova" scheme="http://lulee007.coding.me/tagsCN/Cordova/"/>
     
-      <category term="HTML5" scheme="http://lulee007.gitcafe.io/tagsCN/HTML5/"/>
+      <category term="HTML5" scheme="http://lulee007.coding.me/tagsCN/HTML5/"/>
     
-      <category term="Hybrid App" scheme="http://lulee007.gitcafe.io/tagsCN/Hybrid-App/"/>
+      <category term="Hybrid App" scheme="http://lulee007.coding.me/tagsCN/Hybrid-App/"/>
     
-      <category term="Ionic" scheme="http://lulee007.gitcafe.io/tagsCN/Ionic/"/>
+      <category term="Ionic" scheme="http://lulee007.coding.me/tagsCN/Ionic/"/>
     
-      <category term="Mac" scheme="http://lulee007.gitcafe.io/tagsCN/Mac/"/>
+      <category term="Mac" scheme="http://lulee007.coding.me/tagsCN/Mac/"/>
     
-      <category term="混合型移动应用" scheme="http://lulee007.gitcafe.io/tagsCN/%E6%B7%B7%E5%90%88%E5%9E%8B%E7%A7%BB%E5%8A%A8%E5%BA%94%E7%94%A8/"/>
+      <category term="混合型移动应用" scheme="http://lulee007.coding.me/tagsCN/%E6%B7%B7%E5%90%88%E5%9E%8B%E7%A7%BB%E5%8A%A8%E5%BA%94%E7%94%A8/"/>
     
-      <category term="笔记" scheme="http://lulee007.gitcafe.io/categories/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="http://lulee007.coding.me/categories/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Mac下Android Studio与Subversion集成的问题]]></title>
-    <link href="http://lulee007.gitcafe.io/2015/06/28/Mac%E4%B8%8BAndroidStudio%E4%B8%8ESubversion%E9%9B%86%E6%88%90%E7%9A%84%E9%97%AE%E9%A2%98/"/>
-    <id>http://lulee007.gitcafe.io/2015/06/28/Mac下AndroidStudio与Subversion集成的问题/</id>
+    <link href="http://lulee007.coding.me/2015/06/28/Mac%E4%B8%8BAndroidStudio%E4%B8%8ESubversion%E9%9B%86%E6%88%90%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>http://lulee007.coding.me/2015/06/28/Mac下AndroidStudio与Subversion集成的问题/</id>
     <published>2015-06-28T12:35:17.000Z</published>
     <updated>2016-01-11T13:12:32.000Z</updated>
     <content type="html"><![CDATA[<p>由于Mac10.10下的subversion版本是1.7，而使用smartsvn8.6 <code>checkout</code>版本提示需要<code>upgrade to 1.8</code><br>这样一来，使得android studio import 进来的svn项目无法使用集成好的subversion进行管理了，会出现如下错误：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">svn: E155021: This client is too old to work  </span><br><span class="line">with the working copy at xxx (format <span class="string">'31'</span>)</span><br></pre></td></tr></table></figure></p>
@@ -1121,22 +1122,22 @@ sitemap = [baidu_sitemap]
     
     </summary>
     
-      <category term="Android Studio" scheme="http://lulee007.gitcafe.io/tagsCN/Android-Studio/"/>
+      <category term="Android Studio" scheme="http://lulee007.coding.me/tagsCN/Android-Studio/"/>
     
-      <category term="Mac" scheme="http://lulee007.gitcafe.io/tagsCN/Mac/"/>
+      <category term="Mac" scheme="http://lulee007.coding.me/tagsCN/Mac/"/>
     
-      <category term="SVN" scheme="http://lulee007.gitcafe.io/tagsCN/SVN/"/>
+      <category term="SVN" scheme="http://lulee007.coding.me/tagsCN/SVN/"/>
     
-      <category term="Subversion" scheme="http://lulee007.gitcafe.io/tagsCN/Subversion/"/>
+      <category term="Subversion" scheme="http://lulee007.coding.me/tagsCN/Subversion/"/>
     
-      <category term="笔记" scheme="http://lulee007.gitcafe.io/categories/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="http://lulee007.coding.me/categories/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Mac10.10.3下AndroidStudio单元测试——instrumentation]]></title>
-    <link href="http://lulee007.gitcafe.io/2015/06/21/Mac-10-10-3%E4%B8%8BAndroidStudio%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95-instrumentation/"/>
-    <id>http://lulee007.gitcafe.io/2015/06/21/Mac-10-10-3下AndroidStudio单元测试-instrumentation/</id>
+    <link href="http://lulee007.coding.me/2015/06/21/Mac-10-10-3%E4%B8%8BAndroidStudio%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95-instrumentation/"/>
+    <id>http://lulee007.coding.me/2015/06/21/Mac-10-10-3下AndroidStudio单元测试-instrumentation/</id>
     <published>2015-06-21T11:45:37.000Z</published>
     <updated>2016-01-11T12:55:30.000Z</updated>
     <content type="html"><![CDATA[<p>测试环境：</p>
@@ -1167,24 +1168,24 @@ sitemap = [baidu_sitemap]
     
     </summary>
     
-      <category term="Android Studio" scheme="http://lulee007.gitcafe.io/tagsCN/Android-Studio/"/>
+      <category term="Android Studio" scheme="http://lulee007.coding.me/tagsCN/Android-Studio/"/>
     
-      <category term="Instrumentation" scheme="http://lulee007.gitcafe.io/tagsCN/Instrumentation/"/>
+      <category term="Instrumentation" scheme="http://lulee007.coding.me/tagsCN/Instrumentation/"/>
     
-      <category term="Mac" scheme="http://lulee007.gitcafe.io/tagsCN/Mac/"/>
+      <category term="Mac" scheme="http://lulee007.coding.me/tagsCN/Mac/"/>
     
-      <category term="Unit Test" scheme="http://lulee007.gitcafe.io/tagsCN/Unit-Test/"/>
+      <category term="Unit Test" scheme="http://lulee007.coding.me/tagsCN/Unit-Test/"/>
     
-      <category term="单元测试" scheme="http://lulee007.gitcafe.io/tagsCN/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
+      <category term="单元测试" scheme="http://lulee007.coding.me/tagsCN/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
     
-      <category term="笔记" scheme="http://lulee007.gitcafe.io/categories/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="http://lulee007.coding.me/categories/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[CentOS5.5下安装Countly-Web-Server过程记录]]></title>
-    <link href="http://lulee007.gitcafe.io/2015/06/12/CentOS-5-5%E4%B8%8B%E5%AE%89%E8%A3%85Countly-Web-Server%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/"/>
-    <id>http://lulee007.gitcafe.io/2015/06/12/CentOS-5-5下安装Countly-Web-Server过程记录/</id>
+    <link href="http://lulee007.coding.me/2015/06/12/CentOS-5-5%E4%B8%8B%E5%AE%89%E8%A3%85Countly-Web-Server%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/"/>
+    <id>http://lulee007.coding.me/2015/06/12/CentOS-5-5下安装Countly-Web-Server过程记录/</id>
     <published>2015-06-12T13:57:12.000Z</published>
     <updated>2016-01-11T13:03:02.000Z</updated>
     <content type="html"><![CDATA[<h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>由于工作需要，需要在CentOS 5.5 下安装Countly Web Server，把过程记录下来</p>
@@ -1344,11 +1345,11 @@ sitemap = [baidu_sitemap]
     
     </summary>
     
-      <category term="Cent OS" scheme="http://lulee007.gitcafe.io/tagsCN/Cent-OS/"/>
+      <category term="Cent OS" scheme="http://lulee007.coding.me/tagsCN/Cent-OS/"/>
     
-      <category term="Countly Web Server" scheme="http://lulee007.gitcafe.io/tagsCN/Countly-Web-Server/"/>
+      <category term="Countly Web Server" scheme="http://lulee007.coding.me/tagsCN/Countly-Web-Server/"/>
     
-      <category term="笔记" scheme="http://lulee007.gitcafe.io/categories/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="http://lulee007.coding.me/categories/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   

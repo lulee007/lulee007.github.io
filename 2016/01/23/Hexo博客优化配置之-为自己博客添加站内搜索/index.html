@@ -13,7 +13,7 @@
 百度搜索都是以在检索的时候加入site:www.xxx.com 方式进行搜索，体验不是很好而且百度这种搜索方式是你提交的 sitemap 链接到百度站内搜索收录才能在搜索结果中显示出来，结果我在测试的时候，使用 github 和 gitcafe 进行测试时，发现百度都抓取不了这两个网站的数据了。只能作罢，在">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo博客优化配置之--为自己博客添加站内搜索">
-<meta property="og:url" content="http://lulee007.gitcafe.io/2016/01/23/Hexo博客优化配置之-为自己博客添加站内搜索/index.html">
+<meta property="og:url" content="http://lulee007.coding.me/2016/01/23/Hexo博客优化配置之-为自己博客添加站内搜索/index.html">
 <meta property="og:site_name" content="小灰灰写代码">
 <meta property="og:description" content="前言在配置 Hexo 博客期间根据参考了很多网上的方法，进行站内搜索集成结果都不太满意：
 
@@ -27,7 +27,7 @@
 <meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160123-11%402x.png">
 <meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160124-0%402x.png">
 <meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160124-1%402x.png">
-<meta property="og:updated_time" content="2016-01-24T07:12:47.000Z">
+<meta property="og:updated_time" content="2016-03-08T02:07:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo博客优化配置之--为自己博客添加站内搜索">
 <meta name="twitter:description" content="前言在配置 Hexo 博客期间根据参考了很多网上的方法，进行站内搜索集成结果都不太满意：
@@ -66,7 +66,7 @@
 
 		<script>
 			(function() {
-				var cx = '015410210664254622126:iaoif_30spo';
+				var cx = '015410210664254622126:zzeov19ptnm';
 				var gcse = document.createElement('script');
 				gcse.type = 'text/javascript';
 				gcse.async = true;
@@ -317,7 +317,7 @@
         
         <h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>在配置 Hexo 博客期间根据参考了很多网上的方法，进行站内搜索集成结果都不太满意：</p>
 <ol>
-<li>百度<br>搜索都是以在检索的时候加入<code>site:www.xxx.com</code> 方式进行搜索，体验不是很好<br>而且百度这种搜索方式是你提交的 sitemap 链接到百度站内搜索收录才能在搜索结果中显示出来，结果我在测试的时候，<br>使用 github 和 gitcafe 进行测试时，发现百度都抓取不了这两个网站的数据了。只能作罢，在我的另一篇文章中有亲测结果，<a href="/2016/01/16/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E9%85%8D%E7%BD%AE%E4%B9%8B-%E4%B8%BA%E8%87%AA%E5%B7%B1%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E7%BD%91%E9%A1%B5%E6%94%B6%E5%BD%95/">Hexo博客优化配置之–为自己博客添加搜索引擎网页收录</a>。</li>
+<li>百度<br>搜索都是以在检索的时候加入<code>site:www.xxx.com</code> 方式进行搜索，体验不是很好<br>而且百度这种搜索方式是你提交的 sitemap 链接到百度站内搜索收录才能在搜索结果中显示出来，结果我在测试的时候，<br>使用 github 和 gitcafe 进行测试时，发现百度都抓取不了这两个网站的数据了。只能作罢，在我的另一篇文章中有亲测结果，<a href="/2016/01/16/Hexo博客优化配置之-为自己博客添加搜索引擎网页收录/">Hexo博客优化配置之–为自己博客添加搜索引擎网页收录</a>。</li>
 <li>Hexo 自带的 Google Search<br>这种和百度的搜索类似，检索的时候加入<code>site:www.xxx.com</code> 方式进行搜索，用起来不爽。</li>
 <li>Swiftype<br>先后参考了<a href="http://www.jerryfu.net/post/search-engine-for-hexo-with-swiftype.html" target="_blank" rel="external">jerryfu: 利用swiftype为hexo添加站内搜索</a>和<a href="http://blog.moyizhou.cn/web/search-engine-for-static-pages/#swiftype" target="_blank" rel="external">Rimo: 静态博客如何实现站内搜索</a>以及<a href="http://guoyuxiang.com/2015/07/27/%E5%9F%BA%E4%BA%8Eswiftype%E5%BA%94%E7%94%A8%E4%BA%8EHexo-Yilia-%E4%B8%BB%E9%A2%98%E7%9A%84%E7%AB%99%E5%86%85%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/" target="_blank" rel="external">Mjolnir: 基于swiftype应用于Hexo Yilia 主题的站内搜索引擎</a> 的文章，但是很奇怪，总觉得 swiftype 的接口不太稳定，在上面提到的这些博客中，只有Rimo的博客站内搜索是可<br>用的，其他的弹出来的搜索结果都是空白，我自己的博客里集成后测试也是空白，只好作罢。</li>
 <li>在 Google 搜索时，输入了<code>site:lulee007.gitcafe.io</code> 意外发现 Google 的另外一个产品 <code>Google Console</code><br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160123-2%402x.png" alt="google console"><br>然后在配置 Google Console 的过程中发现了 Google 提供的<em>自定义搜索</em>，经过配置后发现挺好用（其实还是要先上得了 Google）。<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160123-3%402x.png" alt="自定义搜索"><a id="more"></a>
@@ -341,7 +341,7 @@
 <h4 id="u914D_u7F6E_u641C_u7D22_u7ED3_u679C_u6837_u5F0F"><a href="#u914D_u7F6E_u641C_u7D22_u7ED3_u679C_u6837_u5F0F" class="headerlink" title="配置搜索结果样式"></a>配置搜索结果样式</h4><p>由于 Google Search 提供的默认样式太难看了，自己手动修改了一些。<br>打开 Yilia 主题下的<code>source/css/style.styl</code>文件，在文件末尾添加如下代码：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">//google search</span><br><span class="line">.gsc-resultsHeader &#123;</span><br><span class="line">  display: none !important;</span><br><span class="line">&#125;</span><br><span class="line">.gsc-result .gs-title &#123;</span><br><span class="line">  height: 1.5em !important;</span><br><span class="line">&#125;</span><br><span class="line">.gsc-webResult .gsc-result &#123;</span><br><span class="line">  padding: 0px 0 16px 0 !important;</span><br><span class="line">&#125;</span><br><span class="line">.article-entry table &#123;</span><br><span class="line">  margin: 0px 0 !important;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h2 id="u90E8_u7F72_u6D4B_u8BD5"><a href="#u90E8_u7F72_u6D4B_u8BD5" class="headerlink" title="部署测试"></a>部署测试</h2><p>生成 html 文件并部署到网站上：<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">d</span> -<span class="keyword">g</span></span><br></pre></td></tr></table></figure></p>
 <p><strong>注意：</strong> 请确保能访问的了 Google ，不然搜索框加载不了，自然也搜索不到结果。<br>打开博客，这是在左侧边栏应该可以看到 Google 自定义搜索框和按钮，输入测试词 <code>hexo</code>进行检索。<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160124-0%402x.png" alt="google search bar"><br>我这里使用已经配置好的 gitcafe 上的博客进行了演示，<br>敲回车后，应该会打开博客的新的网页<code>http://lulee007.gitcafe.io/search/index.html?q=hexo</code><br>展示搜索到的结果了。<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160124-1%402x.png" alt="search result"></p>
-<h2 id="u6700_u540E"><a href="#u6700_u540E" class="headerlink" title="最后"></a>最后</h2><p>如果检索不到内容，可能需要配合 Google Console 进行提交 站点地图，让 Google 对博客 sitemap 进行抓取<br>内容之后才行。可以在 Google 搜索 <code>site:lulee007.gitcafe.io</code> 测试能不能检索到你的博客，<br>把<code>lulee007.gitcafe.io</code>替换为你自己的博客。</p>
+<h2 id="u6700_u540E"><a href="#u6700_u540E" class="headerlink" title="最后"></a>最后</h2><p>如果检索不到内容，可能需要配合 Google Console 进行提交 站点地图，让 Google 对博客 sitemap 进行抓取<br>内容之后才行。可以在 Google 搜索 <code>site:lulee007.gitcafe.io</code> 测试能不能检索到你的博客，<br>把<code>lulee007.gitcafe.io</code>替换为你自己的博客。可以参考另一篇文章：<a href="/2016/01/16/Hexo博客优化配置之-为自己博客添加搜索引擎网页收录/">Hexo博客优化配置之–为自己博客添加搜索引擎网页收录</a></p>
 
       
     </div>
@@ -404,7 +404,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Hexo博客优化配置之-为自己博客添加站内搜索" data-title="Hexo博客优化配置之--为自己博客添加站内搜索" data-url="http://lulee007.gitcafe.io/2016/01/23/Hexo博客优化配置之-为自己博客添加站内搜索/"></div>
+	<div class="ds-thread" data-thread-key="Hexo博客优化配置之-为自己博客添加站内搜索" data-title="Hexo博客优化配置之--为自己博客添加站内搜索" data-url="http://lulee007.coding.me/2016/01/23/Hexo博客优化配置之-为自己博客添加站内搜索/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

@@ -8,15 +8,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>小灰灰写代码</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="iOS，Android，Windows Phone，Web 技术积累博客">
+  <meta name="description" content="Android，Web，Windows Phone，iOS， 技术积累博客">
 <meta property="og:type" content="website">
 <meta property="og:title" content="小灰灰写代码">
-<meta property="og:url" content="http://lulee007.gitcafe.io/index.html">
+<meta property="og:url" content="http://lulee007.coding.me/index.html">
 <meta property="og:site_name" content="小灰灰写代码">
-<meta property="og:description" content="iOS，Android，Windows Phone，Web 技术积累博客">
+<meta property="og:description" content="Android，Web，Windows Phone，iOS， 技术积累博客">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小灰灰写代码">
-<meta name="twitter:description" content="iOS，Android，Windows Phone，Web 技术积累博客">
+<meta name="twitter:description" content="Android，Web，Windows Phone，iOS， 技术积累博客">
   
     <link rel="alternative" href="/atom.xml" title="小灰灰写代码" type="application/atom+xml">
   
@@ -50,7 +50,7 @@
 
 		<script>
 			(function() {
-				var cx = '015410210664254622126:iaoif_30spo';
+				var cx = '015410210664254622126:zzeov19ptnm';
 				var gcse = document.createElement('script');
 				gcse.type = 'text/javascript';
 				gcse.async = true;
@@ -335,43 +335,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
-        <!-- Table of Contents -->
-        
-        <h2 id="u5237_u5165_u5F00_u53D1_u7248"><a href="#u5237_u5165_u5F00_u53D1_u7248" class="headerlink" title="刷入开发版"></a>刷入开发版</h2><ol>
-<li><p>下载开发版 ROM<br>下载<a href="http://www1.miwifi.com/miwifi_download.html" target="_blank" rel="external">最新开发版本</a>，打开网页后选择 ROM 切换到 ROM 下载：<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160306-3%402x.png" alt="download-rom"></p>
-</li>
-<li><p>刷入开发板<br>查看<a href="http://bbs.xiaomi.cn/t-11720354" target="_blank" rel="external">刷机教程</a></p>
-<blockquote>
-<p>首先，请先准备一个U盘，并确保这个U盘的格式为FAT或FAT32.<br>接下来，就是具体的操作流程了。</p>
-<ol>
-<li>在miwifi.com官网下载路由器对应的ROM包，并将其放在U盘的根目录下，命名为miwifi.bin</li>
-<li>断开小米路由器mini的电源，将U盘插入路由器的USB接口</li>
-<li>按下reset按钮后重新接入电源，待指示灯变为黄色闪烁状态后松开reset键</li>
-<li>等待5~8分钟，刷机完成之后系统会自动重启并进入正常的启动状态（指示灯由黄灯常亮变为蓝灯常亮），此时，说明刷机成功完成！</li>
-</ol>
-<p>如果出现异常/失败/U盘无法读取状态，会进入红灯状态，建议重试或更换U盘再试。</p>
-</blockquote>
-</li>
-</ol>
-<h2 id="u5237_u5165SSH"><a href="#u5237_u5165SSH" class="headerlink" title="刷入SSH"></a>刷入SSH</h2><ol>
-<li><p>下载 ssh 固件<br>下载<a href="https://d.miwifi.com/rom/ssh" target="_blank" rel="external">SSH 固件</a>，打开网页后，提示需要先进行登录，登录完成后才可以进入，之后点击『下载工具包』即可。<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160306-5%402x.png" alt="download-ssh"></p>
-</li>
-<li><p>刷入 ssh 固件</p>
-<blockquote>
-<ol>
-<li>请将下载的工具包bin文件复制到U盘（FAT/FAT32格式）的根目录下，保证文件名为miwifi_ssh.bin；</li>
-<li>断开小米路由器的电源，将U盘插入USB接口；</li>
-<li>按住reset按钮之后重新接入电源，指示灯变为黄色闪烁状态即可松开reset键；</li>
-<li>等待3-5秒后安装完成之后，小米路由器会自动重启，之后您就可以尽情折腾啦 ：）</li>
-</ol>
-</blockquote>
-</li>
-</ol>
-<h2 id="u5B89_u88C5_Transmission__u63D2_u4EF6"><a href="#u5B89_u88C5_Transmission__u63D2_u4EF6" class="headerlink" title="安装 Transmission 插件"></a>安装 Transmission 插件</h2><p>这里主要参考此贴<a href="http://www.miui.com/thread-2093928-1-1.html" target="_blank" rel="external">路由mini安装OpenWRT源的Transmission插件，实现PT下载（需SSH）</a>。但是楼主提供的修改OpenWRT源地址在国内很慢，想着国内会不会有镜像源，Google 了一下，找到了科大的镜像源。</p>
-<h3 id="u66F4_u6539OpenWrt_u6E90"><a href="#u66F4_u6539OpenWrt_u6E90" class="headerlink" title="更改OpenWrt源"></a>更改OpenWrt源</h3><p>修改帖子中提供的 OpenWRT 源地址：<a href="http://downloads.openwrt.org/" target="_blank" rel="external">http://downloads.openwrt.org/</a> 为 <a href="http://mirrors.ustc.edu.cn/openwrt，" target="_blank" rel="external">http://mirrors.ustc.edu.cn/openwrt，</a> 其中科大的镜像源是每次同步最新的一个版本，搜索时可能本文所列的已经不是最新的版本了。<br>例如 barrier_breaker 对应 14.07 。<br>这里只要对应上 cpu 架构：<code>ramips</code>和型号：<code>mt7620a</code>即可。<br>例如这里 14.07 版本的地址为： <a href="http://mirrors.ustc.edu.cn/openwrt/barrier_breaker/14.07/ramips/mt7620a/packages/base" target="_blank" rel="external">http://mirrors.ustc.edu.cn/openwrt/barrier_breaker/14.07/ramips/mt7620a/packages/base</a>  </p>
-<h2 id="u53C2_u8003"><a href="#u53C2_u8003" class="headerlink" title="参考"></a>参考</h2><p><a href="http://www.miui.com/thread-2093928-1-1.html" target="_blank" rel="external">http://www.miui.com/thread-2093928-1-1.html</a></p>
-
+        <p>最近入手了一个小米的路由器 mini，一直对其挂载硬盘比较感兴趣，抽空折腾了一下，为以后挂载 bt 下载器做准备。<br>
       
     </div>
     
@@ -388,6 +352,10 @@
 	</div>
 
 
+      
+        <p class="article-more-link">
+          <a  href="/2016/02/22/add-transmission-in-miwif/#more">阅读全文 >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -568,7 +536,7 @@
       
         <h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>在配置 Hexo 博客期间根据参考了很多网上的方法，进行站内搜索集成结果都不太满意：</p>
 <ol>
-<li>百度<br>搜索都是以在检索的时候加入<code>site:www.xxx.com</code> 方式进行搜索，体验不是很好<br>而且百度这种搜索方式是你提交的 sitemap 链接到百度站内搜索收录才能在搜索结果中显示出来，结果我在测试的时候，<br>使用 github 和 gitcafe 进行测试时，发现百度都抓取不了这两个网站的数据了。只能作罢，在我的另一篇文章中有亲测结果，<a href="/2016/01/16/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E9%85%8D%E7%BD%AE%E4%B9%8B-%E4%B8%BA%E8%87%AA%E5%B7%B1%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E7%BD%91%E9%A1%B5%E6%94%B6%E5%BD%95/">Hexo博客优化配置之–为自己博客添加搜索引擎网页收录</a>。</li>
+<li>百度<br>搜索都是以在检索的时候加入<code>site:www.xxx.com</code> 方式进行搜索，体验不是很好<br>而且百度这种搜索方式是你提交的 sitemap 链接到百度站内搜索收录才能在搜索结果中显示出来，结果我在测试的时候，<br>使用 github 和 gitcafe 进行测试时，发现百度都抓取不了这两个网站的数据了。只能作罢，在我的另一篇文章中有亲测结果，<a href="/2016/01/16/Hexo博客优化配置之-为自己博客添加搜索引擎网页收录/">Hexo博客优化配置之–为自己博客添加搜索引擎网页收录</a>。</li>
 <li>Hexo 自带的 Google Search<br>这种和百度的搜索类似，检索的时候加入<code>site:www.xxx.com</code> 方式进行搜索，用起来不爽。</li>
 <li>Swiftype<br>先后参考了<a href="http://www.jerryfu.net/post/search-engine-for-hexo-with-swiftype.html">jerryfu: 利用swiftype为hexo添加站内搜索</a>和<a href="http://blog.moyizhou.cn/web/search-engine-for-static-pages/#swiftype">Rimo: 静态博客如何实现站内搜索</a>以及<a href="http://guoyuxiang.com/2015/07/27/%E5%9F%BA%E4%BA%8Eswiftype%E5%BA%94%E7%94%A8%E4%BA%8EHexo-Yilia-%E4%B8%BB%E9%A2%98%E7%9A%84%E7%AB%99%E5%86%85%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/">Mjolnir: 基于swiftype应用于Hexo Yilia 主题的站内搜索引擎</a> 的文章，但是很奇怪，总觉得 swiftype 的接口不太稳定，在上面提到的这些博客中，只有Rimo的博客站内搜索是可<br>用的，其他的弹出来的搜索结果都是空白，我自己的博客里集成后测试也是空白，只好作罢。</li>
 <li>在 Google 搜索时，输入了<code>site:lulee007.gitcafe.io</code> 意外发现 Google 的另外一个产品 <code>Google Console</code><br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160123-2%402x.png" alt="google console"><br>然后在配置 Google Console 的过程中发现了 Google 提供的<em>自定义搜索</em>，经过配置后发现挺好用（其实还是要先上得了 Google）。<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160123-3%402x.png" alt="自定义搜索">
@@ -766,7 +734,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>从今年的一月七号开始，这个 Hexo 博客折腾了差不多十天，在使用 Yilia 这个主题过程中，发现有些地方不太满意,就把源码 fork<br>下来一版本自己进行折腾。 在折腾这个站内搜索的功能时间最长， 看了网上的一些教程，没有一个搞的顺的。最后自己看着官方文档进行<br>了尝试，将就着搞的差不多了:<br><a href="/">Hexo博客优化配置之–为自己博客添加站内搜索</a><br>为了让博客内容尽可能的被<strong>百度</strong>或者<strong>谷歌</strong>搜索到,需要将自己的博客上的博客链接添加到搜索引擎收录中。<br><strong>提醒:</strong> 如果你的博客在 github.io 或者 gitcafe.io  上，想添加百度收录的直接 pass 吧。  </p>
+        <h2 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h2><p>从今年的一月七号开始，这个 Hexo 博客折腾了差不多十天，在使用 Yilia 这个主题过程中，发现有些地方不太满意,就把源码 fork<br>下来一版本自己进行折腾。 在折腾这个站内搜索的功能时间最长， 看了网上的一些教程，没有一个搞的顺的。最后自己看着官方文档进行<br>了尝试，将就着搞的差不多了:<br><a href="/2016/01/23/Hexo博客优化配置之-为自己博客添加站内搜索/">Hexo博客优化配置之–为自己博客添加站内搜索</a><br>为了让博客内容尽可能的被<strong>百度</strong>或者<strong>谷歌</strong>搜索到,需要将自己的博客上的博客链接添加到搜索引擎收录中。<br><strong>提醒:</strong> 如果你的博客在 github.io 或者 gitcafe.io  上，想添加百度收录的直接 pass 吧。  </p>
       
     </div>
     
