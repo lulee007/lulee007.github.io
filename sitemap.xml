@@ -2,148 +2,199 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://devlu.me/2016/04/19/cross-site-duoshuo-comments-migration/</loc>
-    <lastmod>2016-04-20T02:58:42.000Z</lastmod>
+    <loc>http://devlu.me/2016/05/05/write-restful-api-doc-with-apiblueprint/</loc>
+    
+    <lastmod>2016-06-08T12:52:27.000Z</lastmod>
+    
   </url>
   
   <url>
-    <loc>http://devlu.me/google3adf7c7355763cfd.html</loc>
-    <lastmod>2016-04-14T02:30:45.000Z</lastmod>
+    <loc>http://devlu.me/2016/04/19/cross-site-duoshuo-comments-migration/</loc>
+    
+    <lastmod>2016-04-20T02:58:42.000Z</lastmod>
+    
   </url>
   
   <url>
     <loc>http://devlu.me/2016/01/23/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E9%85%8D%E7%BD%AE%E4%B9%8B-%E4%B8%BA%E8%87%AA%E5%B7%B1%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E7%AB%99%E5%86%85%E6%90%9C%E7%B4%A2/</loc>
+    
     <lastmod>2016-03-08T02:14:19.000Z</lastmod>
+    
   </url>
   
   <url>
     <loc>http://devlu.me/search/index.html</loc>
+    
     <lastmod>2016-03-08T01:52:33.000Z</lastmod>
+    
   </url>
   
   <url>
     <loc>http://devlu.me/2016/02/22/add-transmission-in-miwif/</loc>
+    
     <lastmod>2016-03-07T01:19:38.000Z</lastmod>
+    
   </url>
   
   <url>
     <loc>http://devlu.me/2016/03/02/all-kinds-of-trouble-in-android-development/</loc>
+    
     <lastmod>2016-03-06T10:00:30.000Z</lastmod>
+    
   </url>
   
   <url>
     <loc>http://devlu.me/2016/01/19/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
+    
     <lastmod>2016-03-06T07:14:24.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://devlu.me/about/index.html</loc>
-    <lastmod>2016-02-19T02:07:28.000Z</lastmod>
+    
   </url>
   
   <url>
     <loc>http://devlu.me/music/index.html</loc>
+    
     <lastmod>2016-02-17T13:58:24.000Z</lastmod>
+    
   </url>
   
   <url>
     <loc>http://devlu.me/gallery/index.html</loc>
+    
     <lastmod>2016-02-17T13:44:47.000Z</lastmod>
+    
   </url>
   
   <url>
     <loc>http://devlu.me/cartoon/index.html</loc>
+    
     <lastmod>2016-02-17T13:40:18.000Z</lastmod>
+    
   </url>
   
   <url>
     <loc>http://devlu.me/mv/index.html</loc>
+    
     <lastmod>2016-02-17T13:27:59.000Z</lastmod>
+    
   </url>
   
   <url>
     <loc>http://devlu.me/2016/01/16/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E9%85%8D%E7%BD%AE%E4%B9%8B-%E4%B8%BA%E8%87%AA%E5%B7%B1%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E7%BD%91%E9%A1%B5%E6%94%B6%E5%BD%95/</loc>
+    
     <lastmod>2016-02-17T11:15:45.000Z</lastmod>
+    
   </url>
   
   <url>
     <loc>http://devlu.me/books/index.html</loc>
+    
     <lastmod>2016-02-17T07:10:37.000Z</lastmod>
+    
   </url>
   
   <url>
     <loc>http://devlu.me/2016/02/01/jenkins-02-config-android/</loc>
+    
     <lastmod>2016-02-16T13:46:32.000Z</lastmod>
+    
   </url>
   
   <url>
     <loc>http://devlu.me/2016/01/08/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E9%85%8D%E7%BD%AE/</loc>
+    
     <lastmod>2016-02-16T12:58:52.000Z</lastmod>
+    
   </url>
   
   <url>
     <loc>http://devlu.me/2016/01/29/jenkins-01-install-in-ubuntu-14-0-4/</loc>
+    
     <lastmod>2016-02-02T13:58:13.000Z</lastmod>
+    
   </url>
   
   <url>
     <loc>http://devlu.me/2016/01/07/hello-world/</loc>
+    
     <lastmod>2016-02-02T12:37:21.000Z</lastmod>
+    
   </url>
   
   <url>
     <loc>http://devlu.me/2016/01/14/SSM-Struts2-Spring-Mybatis3-Web-%E9%A1%B9%E7%9B%AE%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/</loc>
+    
     <lastmod>2016-02-01T00:57:18.000Z</lastmod>
+    
   </url>
   
   <url>
     <loc>http://devlu.me/2016/01/14/SSM-Struts2-Spring-Mybatis-Jersey-Web-%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/</loc>
+    
     <lastmod>2016-01-26T07:09:47.000Z</lastmod>
+    
   </url>
   
   <url>
     <loc>http://devlu.me/2016/01/18/Mac%E4%B8%8B%E9%87%8D%E7%BD%AEMysql%E7%9A%84root%E5%AF%86%E7%A0%81/</loc>
+    
     <lastmod>2016-01-19T00:36:52.000Z</lastmod>
+    
   </url>
   
   <url>
     <loc>http://devlu.me/2015/10/23/Cordova-Ionic-Angularjs%E5%81%9A%E6%B7%B7%E5%90%88%E7%A7%BB%E5%8A%A8App%E5%BC%80%E5%8F%91%E4%B9%8B-%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/</loc>
+    
     <lastmod>2016-01-18T05:46:00.000Z</lastmod>
+    
   </url>
   
   <url>
     <loc>http://devlu.me/2015/10/10/Mac%E4%B8%8BCordova-Ionic-AngularJs%E5%81%9A%E6%B7%B7%E5%90%88%E7%A7%BB%E5%8A%A8App%E5%BC%80%E5%8F%91%E4%B9%8B--%E5%AE%89%E8%A3%85%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</loc>
+    
     <lastmod>2016-01-18T05:43:18.000Z</lastmod>
+    
   </url>
   
   <url>
     <loc>http://devlu.me/2016/01/07/Mac%E4%B8%8B%E4%BD%BF%E7%94%A8Github%E4%B8%8EHexo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</loc>
+    
     <lastmod>2016-01-16T07:08:36.000Z</lastmod>
+    
   </url>
   
   <url>
     <loc>http://devlu.me/2016/01/10/2016%E5%B9%B4%E5%BA%A6%E8%AE%A1%E5%88%92/</loc>
+    
     <lastmod>2016-01-12T05:46:15.000Z</lastmod>
+    
   </url>
   
   <url>
     <loc>http://devlu.me/2015/06/28/Mac%E4%B8%8BAndroidStudio%E4%B8%8ESubversion%E9%9B%86%E6%88%90%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
+    
     <lastmod>2016-01-11T13:12:32.000Z</lastmod>
+    
   </url>
   
   <url>
     <loc>http://devlu.me/2015/06/12/CentOS-5-5%E4%B8%8B%E5%AE%89%E8%A3%85Countly-Web-Server%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/</loc>
+    
     <lastmod>2016-01-11T13:03:02.000Z</lastmod>
+    
   </url>
   
   <url>
     <loc>http://devlu.me/2015/06/21/Mac-10-10-3%E4%B8%8BAndroidStudio%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95-instrumentation/</loc>
+    
     <lastmod>2016-01-11T12:55:30.000Z</lastmod>
+    
   </url>
   
   <url>
     <loc>http://devlu.me/2016/01/09/Hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0/</loc>
+    
     <lastmod>2016-01-09T06:17:17.000Z</lastmod>
+    
   </url>
   
 </urlset>

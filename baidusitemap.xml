@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://devlu.me/2016/05/05/write-restful-api-doc-with-apiblueprint/</loc>
+    <lastmod>2016-06-08T12:52:27.000Z</lastmod>
+    <data>
+        <display>
+        <title>使用 API BluePrint 编写 RESTful 接口文档</title>
+        <pubTime>2016-05-05T13:55:00.000Z</pubTime>
+        
+        <tag>RESTful</tag>
+         
+        <tag>接口文档</tag>
+         
+        <tag>BluePrint</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://devlu.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://devlu.me/2016/04/19/cross-site-duoshuo-comments-migration/</loc>
     <lastmod>2016-04-20T02:58:42.000Z</lastmod>
     <data>
@@ -57,9 +81,9 @@
         <title>在小米路由器 mini 中安装 Transmission 下载器</title>
         <pubTime>2016-02-22T07:11:37.000Z</pubTime>
         
-        <tag>OpenWrt</tag>
-         
         <tag>Transmission</tag>
+         
+        <tag>OpenWrt</tag>
          
         <tag>小米路由器</tag>
          
@@ -151,9 +175,9 @@
         <title>Jenkins-02：配置 Android 自动构建</title>
         <pubTime>2016-02-01T11:13:04.000Z</pubTime>
         
-        <tag>Android</tag>
-         
         <tag>Jenkins</tag>
+         
+        <tag>Android</tag>
          
          
            
@@ -232,13 +256,13 @@
         <title>SSM：Struts2+Spring+Mybatis+Jersey Web 项目单元测试</title>
         <pubTime>2016-01-14T11:55:14.000Z</pubTime>
         
-        <tag>Mybatis3</tag>
-         
         <tag>Spring</tag>
+         
+        <tag>UnitTest</tag>
          
         <tag>Struts2</tag>
          
-        <tag>UnitTest</tag>
+        <tag>Mybatis3</tag>
          
         <tag>单元测试</tag>
          
@@ -260,13 +284,13 @@
         <title>SSM：Struts2+Spring+Mybatis Web 项目搭建</title>
         <pubTime>2016-01-14T11:55:14.000Z</pubTime>
         
-        <tag>Mybatis3</tag>
-         
         <tag>Spring</tag>
+         
+        <tag>UnitTest</tag>
          
         <tag>Struts2</tag>
          
-        <tag>UnitTest</tag>
+        <tag>Mybatis3</tag>
          
          
            
@@ -312,15 +336,15 @@
         <title>Cordova+Ionic+AngularJs做混合移动App开发之--学习路线</title>
         <pubTime>2015-10-23T12:59:23.000Z</pubTime>
         
-        <tag>AngularJs</tag>
-         
         <tag>Cordova</tag>
          
-        <tag>HTML5</tag>
+        <tag>Ionic</tag>
+         
+        <tag>AngularJs</tag>
          
         <tag>Hybrid App</tag>
          
-        <tag>Ionic</tag>
+        <tag>HTML5</tag>
          
         <tag>混合型移动应用</tag>
          
@@ -342,17 +366,17 @@
         <title>Mac下cordova+ionic+angularjs做混合移动app开发之--安装环境配置</title>
         <pubTime>2015-10-10T11:49:59.000Z</pubTime>
         
-        <tag>AngularJs</tag>
+        <tag>Mac</tag>
          
         <tag>Cordova</tag>
          
-        <tag>HTML5</tag>
+        <tag>Ionic</tag>
+         
+        <tag>AngularJs</tag>
          
         <tag>Hybrid App</tag>
          
-        <tag>Ionic</tag>
-         
-        <tag>Mac</tag>
+        <tag>HTML5</tag>
          
         <tag>混合型移动应用</tag>
          
@@ -374,11 +398,11 @@
         <title>Mac下使用Github与Hexo搭建静态博客</title>
         <pubTime>2016-01-07T11:55:30.000Z</pubTime>
         
-        <tag>Github</tag>
+        <tag>Mac</tag>
          
         <tag>Hexo</tag>
          
-        <tag>Mac</tag>
+        <tag>Github</tag>
          
          
            
@@ -413,13 +437,13 @@
         <title>Mac下Android Studio与Subversion集成的问题</title>
         <pubTime>2015-06-28T12:35:17.000Z</pubTime>
         
-        <tag>Android Studio</tag>
-         
         <tag>Mac</tag>
          
-        <tag>SVN</tag>
+        <tag>Android Studio</tag>
          
         <tag>Subversion</tag>
+         
+        <tag>SVN</tag>
          
          
            
@@ -461,15 +485,15 @@
         <title>Mac10.10.3下AndroidStudio单元测试——instrumentation</title>
         <pubTime>2015-06-21T11:45:37.000Z</pubTime>
         
+        <tag>单元测试</tag>
+         
+        <tag>Mac</tag>
+         
         <tag>Android Studio</tag>
          
         <tag>Instrumentation</tag>
          
-        <tag>Mac</tag>
-         
         <tag>Unit Test</tag>
-         
-        <tag>单元测试</tag>
          
          
            
