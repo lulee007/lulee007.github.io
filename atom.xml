@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://devlu.me/"/>
-  <updated>2016-06-08T12:52:27.000Z</updated>
+  <updated>2016-07-09T14:15:36.000Z</updated>
   <id>http://devlu.me/</id>
   
   <author>
@@ -16,11 +16,81 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>在 Intellij IDEA 15 下调试 Python 项目</title>
+    <link href="http://devlu.me/2016/07/09/debug-python-project-in-intellij-idea/"/>
+    <id>http://devlu.me/2016/07/09/debug-python-project-in-intellij-idea/</id>
+    <published>2016-07-09T12:25:16.000Z</published>
+    <updated>2016-07-09T14:15:36.000Z</updated>
+    
+    <content type="html">&lt;p&gt;最近学着使用 Python 写了几个小脚本放在树莓派下面执行一些命令，没有系统学习过 Python，完全是 Google-Coding&lt;br&gt;，或者在 Python 控制台里练习各种写法，所以在 Intellij 下调试就比较重要了，能够及时错误，并修正代码。&lt;br&gt;在此也总结下在写 Python 脚本常使用的经验。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;virtualevn-使用&quot;&gt;&lt;a href=&quot;#virtualevn-使用&quot; class=&quot;headerlink&quot; title=&quot;virtualevn 使用&quot;&gt;&lt;/a&gt;virtualevn 使用&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;virtualenv 通过创建独立 Python 开发环境的工具, 来解决依赖、版本以及间接权限问题。 比如一个项目依赖 Django1.3 而当前全局开发环境为 Django1.7, 版本跨度过大, 导致不兼容使项目无法正在运行, 使用 virtualenv 可以解决这些问题。&lt;br&gt;virtualenv 创建一个拥有自己安装目录的环境, 这个环境不与其他虚拟环境共享库, 能够方便的管理 Python 版本和管理Python 库&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;之前没有尝试使用 virtualenv 因为觉得好麻烦，后来 python 脚本写多了，测试多了，发现好多包有冲突，也不方便将写好的脚本放到其他机器上运行，因为有时候会忘记安装了哪些包，所以最终尝试使用 virtualenv 来分离 python 项目的包依赖问题，当时也方便移植到我的树莓派上面。&lt;/p&gt;
+&lt;h3 id=&quot;virtualenv-安装&quot;&gt;&lt;a href=&quot;#virtualenv-安装&quot; class=&quot;headerlink&quot; title=&quot;virtualenv 安装&quot;&gt;&lt;/a&gt;virtualenv 安装&lt;/h3&gt;&lt;p&gt;直接使用&lt;code&gt;pip&lt;/code&gt;包管理器进行安装：&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;pip install virtualenv&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 或者需要使用 更高级别权限&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo pi install virtualenv&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&quot;virtualenv-基本使用&quot;&gt;&lt;a href=&quot;#virtualenv-基本使用&quot; class=&quot;headerlink&quot; title=&quot;virtualenv 基本使用&quot;&gt;&lt;/a&gt;virtualenv 基本使用&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;为项目配置 virtualenv 环境，在项目目录下执行：&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;virtualenv ./&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# output&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;New python executable &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Installing setuptools, pip...done.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这个时候会在当前目录下多出三个目录：&lt;code&gt;bin&lt;/code&gt;、&lt;code&gt;lib&lt;/code&gt;和&lt;code&gt;include&lt;/code&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;激活 virtualenv，还是在当前项目目录下执行：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;source&lt;/span&gt; ./bin/activate&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# output，注意这个时候在 终端下前面会多一个(xxxx)，这样表示已经激活当前 virtualenv&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;(xxxx)➜  xxxx&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;virtualenv 其他命令：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;查看当前依赖包：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;pip list&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# output 以下是当前已安装的包&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pip (8.1.2)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;setuptools (24.0.1)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;wheel (0.29.0)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;安装依赖包:&lt;br&gt;新建一个&lt;code&gt;requirements.txt&lt;/code&gt;文件，然后将需要的包写在里面即可，如：&lt;/p&gt;
+&lt;figure class=&quot;highlight ini&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;requests&lt;/span&gt;==&lt;span class=&quot;number&quot;&gt;2.9&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;beautifulsoup4&lt;/span&gt;==&lt;span class=&quot;number&quot;&gt;4.4&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;lxml&lt;/span&gt;==&lt;span class=&quot;number&quot;&gt;3.6&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;Pillow&lt;/span&gt;==&lt;span class=&quot;number&quot;&gt;2.2&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;然后使用命令进行安装：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;  pip install -r requirements.txt&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  ```  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  这样就会批量的进行安装依赖项了。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;* 关闭 virtualenv&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;```bash&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;deactivate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;Python-开发-–-使用-Intellij-IDEA-新建工程并带-virtualenv&quot;&gt;&lt;a href=&quot;#Python-开发-–-使用-Intellij-IDEA-新建工程并带-virtualenv&quot; class=&quot;headerlink&quot; title=&quot;Python 开发 – 使用 Intellij IDEA 新建工程并带 virtualenv&quot;&gt;&lt;/a&gt;Python 开发 – 使用 Intellij IDEA 新建工程并带 virtualenv&lt;/h3&gt;&lt;p&gt;以上步骤命令行配置使用，完全可以在 Intellij IDEA 下使用新建项目工程来完成。&lt;/p&gt;
+&lt;h4 id=&quot;新建一个-Python-工程&quot;&gt;&lt;a href=&quot;#新建一个-Python-工程&quot; class=&quot;headerlink&quot; title=&quot;新建一个 Python 工程&quot;&gt;&lt;/a&gt;新建一个 Python 工程&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;在 Intellij IDEA 菜单栏下依次选择 &lt;code&gt;File&lt;/code&gt;-&amp;gt;&lt;code&gt;New&lt;/code&gt;-&amp;gt;&lt;code&gt;Project...&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;然后在弹出的&lt;code&gt;New Project&lt;/code&gt;窗口中的左侧选择&lt;code&gt;Python&lt;/code&gt;，然后在右侧的 Python SDK 选择&lt;code&gt;New...&lt;/code&gt;，然后选择&lt;code&gt;Create VirtualEnv&lt;/code&gt;，如下图：&lt;br&gt;&lt;img src=&quot;http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160709-1@2x.png&quot; alt=&quot;create python project&quot;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;接着在弹出来的&lt;code&gt;Create Virtual Environment&lt;/code&gt;窗口中选择好相应的项目目录，以及 Python 版本，如下图：&lt;br&gt;&lt;img src=&quot;http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160709-2@2x.png&quot; alt=&quot;create virtualevn&quot;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;接着点&lt;code&gt;OK&lt;/code&gt;后，接着点&lt;code&gt;Next&lt;/code&gt;，来到&lt;code&gt;New Project&lt;/code&gt;页面，同样的设置好&lt;code&gt;Project Name&lt;/code&gt;、&lt;code&gt;Project Location&lt;/code&gt;，注意这里可以&lt;br&gt;直接先设置&lt;code&gt;Project Location&lt;/code&gt;，然后名称字段会自动填好，如无其他要求可以直接点&lt;code&gt;Finish&lt;/code&gt;完成创建。&lt;br&gt;&lt;img src=&quot;http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160709-3@2x.png&quot; alt=&quot;project overview&quot;&gt;&lt;br&gt;可以看到这里的目录和之前使用命令行创建的一样。&lt;br&gt;&lt;img src=&quot;http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160709-5@2x.png&quot; alt=&quot;project overview&quot;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;普通-Python-脚本调试&quot;&gt;&lt;a href=&quot;#普通-Python-脚本调试&quot; class=&quot;headerlink&quot; title=&quot;普通 Python 脚本调试&quot;&gt;&lt;/a&gt;普通 Python 脚本调试&lt;/h2&gt;&lt;p&gt;在有了上面的操作步骤之后，接下来对普通的 Python 脚本进行调试就比较方便了。&lt;/p&gt;
+&lt;h3 id=&quot;添加-Python-SDK&quot;&gt;&lt;a href=&quot;#添加-Python-SDK&quot; class=&quot;headerlink&quot; title=&quot;添加 Python SDK&quot;&gt;&lt;/a&gt;添加 Python SDK&lt;/h3&gt;&lt;p&gt;配置入口在项目的设置里，选择菜单栏&lt;code&gt;File&lt;/code&gt;-&amp;gt;&lt;code&gt;Project Structure...&lt;/code&gt;，如图：&lt;br&gt;&lt;img src=&quot;http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160709-6@2x.png&quot; alt=&quot;add python sdk&quot;&gt;&lt;br&gt;依次选择：左侧的&lt;code&gt;Project&lt;/code&gt;-&amp;gt;右侧的&lt;code&gt;Project SDK&lt;/code&gt;-&amp;gt;&lt;code&gt;New&lt;/code&gt;，剩下的步骤可以参考上面的第2,3步骤。&lt;/p&gt;
+&lt;h3 id=&quot;添加代码文件并进行调试&quot;&gt;&lt;a href=&quot;#添加代码文件并进行调试&quot; class=&quot;headerlink&quot; title=&quot;添加代码文件并进行调试&quot;&gt;&lt;/a&gt;添加代码文件并进行调试&lt;/h3&gt;&lt;p&gt;新建 &lt;code&gt;test.py&lt;/code&gt; 文件，输入以下内容：&lt;br&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;test in python ,debug with intellij&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;test_str=&lt;span class=&quot;string&quot;&gt;&#39;hello world&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;welcome boy!! \n %s&#39;&lt;/span&gt; % test_str&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;然后在这个文件第2行添加一个断点，然后右击选择&lt;code&gt;Debug test&lt;/code&gt;&lt;br&gt;&lt;img src=&quot;http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160709-7@2x.png&quot; alt=&quot;debug&quot;&gt;&lt;br&gt;这时进入&lt;code&gt;Debug&lt;/code&gt;模式，可以查看变量值，修改变量值。&lt;br&gt;&lt;img src=&quot;http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160709-8@2x.png&quot; alt=&quot;debug&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;参考&quot;&gt;&lt;a href=&quot;#参考&quot; class=&quot;headerlink&quot; title=&quot;参考&quot;&gt;&lt;/a&gt;参考&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/24769117/how-do-i-configure-a-python-interpreter-in-intellij-idea-with-the-pycharm-plugin&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;How do I configure a Python interpreter in IntelliJ IDEA with the PyCharm plugin?&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.jianshu.com/p/08c657bd34f1&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Python–Virtualenv简明教程&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近学着使用 Python 写了几个小脚本放在树莓派下面执行一些命令，没有系统学习过 Python，完全是 Google-Coding&lt;br&gt;，或者在 Python 控制台里练习各种写法，所以在 Intellij 下调试就比较重要了，能够及时错误，并修正代码。&lt;br&gt;在此也总结下在写 Python 脚本常使用的经验。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="http://devlu.me/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Intellij IDEA" scheme="http://devlu.me/tagsCN/Intellij-IDEA/"/>
+    
+      <category term="Python" scheme="http://devlu.me/tagsCN/Python/"/>
+    
+      <category term="Scrapy" scheme="http://devlu.me/tagsCN/Scrapy/"/>
+    
+  </entry>
+  
+  <entry>
     <title>使用 API BluePrint 编写 RESTful 接口文档</title>
     <link href="http://devlu.me/2016/05/05/write-restful-api-doc-with-apiblueprint/"/>
     <id>http://devlu.me/2016/05/05/write-restful-api-doc-with-apiblueprint/</id>
     <published>2016-05-05T13:55:00.000Z</published>
-    <updated>2016-06-08T12:52:27.000Z</updated>
+    <updated>2016-06-08T12:53:07.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;作为后台 RESTful 开发者，当完成了功能开发后，还有件事要做的是需要提供一个文档给调用者们。&lt;br&gt;那如何快速写出高大上的接口文档呢？在熟练使用 markdown 的情况下，当然是希望能用 markdown 的语法&lt;br&gt;来写。在这里介绍一下 API Blueprint ，它就是一个功能强大的高级别基于 markdown 的 Web API 描述语言。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -372,9 +442,9 @@
       <category term="技术" scheme="http://devlu.me/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="Jenkins" scheme="http://devlu.me/tagsCN/Jenkins/"/>
-    
       <category term="Android" scheme="http://devlu.me/tagsCN/Android/"/>
+    
+      <category term="Jenkins" scheme="http://devlu.me/tagsCN/Jenkins/"/>
     
   </entry>
   
@@ -859,6 +929,8 @@ sitemap = [baidu_sitemap]
       <category term="技术" scheme="http://devlu.me/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
+      <category term="单元测试" scheme="http://devlu.me/tagsCN/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
+    
       <category term="Spring" scheme="http://devlu.me/tagsCN/Spring/"/>
     
       <category term="UnitTest" scheme="http://devlu.me/tagsCN/UnitTest/"/>
@@ -866,8 +938,6 @@ sitemap = [baidu_sitemap]
       <category term="Struts2" scheme="http://devlu.me/tagsCN/Struts2/"/>
     
       <category term="Mybatis3" scheme="http://devlu.me/tagsCN/Mybatis3/"/>
-    
-      <category term="单元测试" scheme="http://devlu.me/tagsCN/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   
@@ -1202,9 +1272,9 @@ sitemap = [baidu_sitemap]
       <category term="笔记" scheme="http://devlu.me/categories/%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="Mac" scheme="http://devlu.me/tagsCN/Mac/"/>
-    
       <category term="Hexo" scheme="http://devlu.me/tagsCN/Hexo/"/>
+    
+      <category term="Mac" scheme="http://devlu.me/tagsCN/Mac/"/>
     
       <category term="Github" scheme="http://devlu.me/tagsCN/Github/"/>
     
@@ -1322,8 +1392,6 @@ sitemap = [baidu_sitemap]
       <category term="笔记" scheme="http://devlu.me/categories/%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="Mac" scheme="http://devlu.me/tagsCN/Mac/"/>
-    
       <category term="Cordova" scheme="http://devlu.me/tagsCN/Cordova/"/>
     
       <category term="Ionic" scheme="http://devlu.me/tagsCN/Ionic/"/>
@@ -1336,61 +1404,7 @@ sitemap = [baidu_sitemap]
     
       <category term="混合型移动应用" scheme="http://devlu.me/tagsCN/%E6%B7%B7%E5%90%88%E5%9E%8B%E7%A7%BB%E5%8A%A8%E5%BA%94%E7%94%A8/"/>
     
-  </entry>
-  
-  <entry>
-    <title>Mac下Android Studio与Subversion集成的问题</title>
-    <link href="http://devlu.me/2015/06/28/Mac%E4%B8%8BAndroidStudio%E4%B8%8ESubversion%E9%9B%86%E6%88%90%E7%9A%84%E9%97%AE%E9%A2%98/"/>
-    <id>http://devlu.me/2015/06/28/Mac下AndroidStudio与Subversion集成的问题/</id>
-    <published>2015-06-28T12:35:17.000Z</published>
-    <updated>2016-01-11T13:12:32.000Z</updated>
-    
-    <content type="html">&lt;p&gt;由于Mac10.10下的subversion版本是1.7，而使用smartsvn8.6 &lt;code&gt;checkout&lt;/code&gt;版本提示需要&lt;code&gt;upgrade to 1.8&lt;/code&gt;&lt;br&gt;这样一来，使得android studio import 进来的svn项目无法使用集成好的subversion进行管理了，会出现如下错误：&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;svn: E155021: This client is too old to work  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;with the working copy at xxx (format &lt;span class=&quot;string&quot;&gt;&#39;31&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;进过一番搜索得到的解决方法记录如下：&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;升级subversion&quot;&gt;&lt;a href=&quot;#升级subversion&quot; class=&quot;headerlink&quot; title=&quot;升级subversion&quot;&gt;&lt;/a&gt;&lt;a name=&quot;updatesvn&quot;&gt;升级subversion&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a name=&quot;brewupdatesvn&quot;&gt;通过brew升级subversion:&lt;/a&gt;&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;brew install svn&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;安装完成之后会有提示：&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;==&amp;gt; Summary&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;🍺  /usr/&lt;span class=&quot;built_in&quot;&gt;local&lt;/span&gt;/Cellar/subversion/1.8.13: 116 files, 9.4M&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;此时新的svn客户端被安装到&lt;code&gt;/usr/local/Cellar/subversion/1.8.13&lt;/code&gt;目录下了。&lt;br&gt;查看原来svn的位置&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;which&lt;/span&gt; svn&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;得到如下：&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;/usr/&lt;span class=&quot;built_in&quot;&gt;local&lt;/span&gt;/bin/svn&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;进入到这个&lt;code&gt;/usr/local/bin/svn&lt;/code&gt;目录&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; /usr/&lt;span class=&quot;built_in&quot;&gt;local&lt;/span&gt;/bin/svn&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;备份当前svn到&lt;code&gt;bak.svn&lt;/code&gt;&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;mkdir bak.svn&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mv svn* ./bak.svn&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a name=&quot;replacesvn&quot;&gt;替换当前svn：&lt;/a&gt;&lt;br&gt;建立&lt;code&gt;/usr/local/Cellar/subversion/1.8.13&lt;/code&gt;软连接到当前目录&lt;code&gt;usr/local/bin&lt;/code&gt;  &lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;ln &lt;span class=&quot;_&quot;&gt;-s&lt;/span&gt; /usr/&lt;span class=&quot;built_in&quot;&gt;local&lt;/span&gt;/Cellar/subversion/1.8.11/bin/svn* ./&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;重新启动系统新的svn就可以用了。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;配置android-studio&quot;&gt;&lt;a href=&quot;#配置android-studio&quot; class=&quot;headerlink&quot; title=&quot;配置android studio&quot;&gt;&lt;/a&gt;&lt;a name=&quot;setupas&quot;&gt;配置android studio&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;  打开android studio项目，从菜单栏里打开&lt;code&gt;android studio&lt;/code&gt; &amp;gt; &lt;code&gt;preferences&lt;/code&gt;:&lt;br&gt;  &lt;img src=&quot;http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-10@2x.png&quot; alt=&quot;preferences&quot;&gt;&lt;br&gt;  选择&lt;code&gt;Version Control&lt;/code&gt;展开后选择&lt;code&gt;Subversion&lt;/code&gt;&lt;br&gt;  勾选 “Use command line client”并输入刚才通过命令&lt;code&gt;which svn&lt;/code&gt;得到的svn的路径&lt;code&gt;/usr/local/bin/svn&lt;/code&gt; 点击ok&lt;br&gt;  最终如下图所示：&lt;br&gt;  &lt;img src=&quot;http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-11@2x.png&quot; alt=&quot;setup&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;启用android-studio-svn&quot;&gt;&lt;a href=&quot;#启用android-studio-svn&quot; class=&quot;headerlink&quot; title=&quot;启用android studio svn&quot;&gt;&lt;/a&gt;&lt;a name=&quot;enablesvn&quot;&gt;启用android studio svn&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;  打开菜单 &lt;code&gt;VCS&lt;/code&gt;&amp;gt; &lt;code&gt;Enable Version Control Integration.&lt;/code&gt;，这时就可以使用了。&lt;br&gt;  &lt;img src=&quot;http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-12@2x.png&quot; alt=&quot;enable svn&quot;&gt;  &lt;/p&gt;
-&lt;h2 id=&quot;参考&quot;&gt;&lt;a href=&quot;#参考&quot; class=&quot;headerlink&quot; title=&quot;参考&quot;&gt;&lt;/a&gt;参考&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;upgrade svn via brew&lt;br&gt;&lt;a href=&quot;http://blog.csdn.net/duanyipeng/article/details/44747689&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://blog.csdn.net/duanyipeng/article/details/44747689&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;AndroidStudio svn 1.8&lt;br&gt;&lt;a href=&quot;http://stackoverflow.com/questions/25294420/svn-e155021-this-client-is-too-old-to-work-with-the-working-copy-at-xxx-forma&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://stackoverflow.com/questions/25294420/svn-e155021-this-client-is-too-old-to-work-with-the-working-copy-at-xxx-forma&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;由于Mac10.10下的subversion版本是1.7，而使用smartsvn8.6 &lt;code&gt;checkout&lt;/code&gt;版本提示需要&lt;code&gt;upgrade to 1.8&lt;/code&gt;&lt;br&gt;这样一来，使得android studio import 进来的svn项目无法使用集成好的subversion进行管理了，会出现如下错误：&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;svn: E155021: This client is too old to work  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;with the working copy at xxx (format &lt;span class=&quot;string&quot;&gt;&#39;31&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;进过一番搜索得到的解决方法记录如下：&lt;br&gt;
-    
-    </summary>
-    
-      <category term="笔记" scheme="http://devlu.me/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-    
       <category term="Mac" scheme="http://devlu.me/tagsCN/Mac/"/>
-    
-      <category term="Android Studio" scheme="http://devlu.me/tagsCN/Android-Studio/"/>
-    
-      <category term="Subversion" scheme="http://devlu.me/tagsCN/Subversion/"/>
-    
-      <category term="SVN" scheme="http://devlu.me/tagsCN/SVN/"/>
     
   </entry>
   

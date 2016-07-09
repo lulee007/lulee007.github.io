@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://devlu.me/2016/07/09/debug-python-project-in-intellij-idea/</loc>
+    
+    <lastmod>2016-07-09T14:15:36.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://devlu.me/2016/05/05/write-restful-api-doc-with-apiblueprint/</loc>
     
-    <lastmod>2016-06-08T12:52:27.000Z</lastmod>
+    <lastmod>2016-06-08T12:53:07.000Z</lastmod>
     
   </url>
   
