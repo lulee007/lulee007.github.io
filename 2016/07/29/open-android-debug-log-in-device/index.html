@@ -6,17 +6,27 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Archives: 2016/4 | 小灰灰写代码</title>
+  <title>打开华为 Android 手机 DEBUG 日志 | 小灰灰写代码</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Android，Web，Windows Phone，iOS， 技术积累博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="小灰灰写代码">
-<meta property="og:url" content="http://devlu.me/archives/2016/04/index.html">
+  <meta name="description" content="最近使用华为安卓真机调试 App 时发现 App 里的日志不完整， DEBUG 和 VERBOSE 级别的日志都不能显示，只有 INFO级别以上日志才能正常输出，刚开始以为是 Android Studio 配置和手机的问题，在进行了修改之后发现还是不行。最终在网上看到了相关的文章，是手机把Log关掉了的原因，在此记录下操作步骤。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="打开华为 Android 手机 DEBUG 日志">
+<meta property="og:url" content="http://devlu.me/2016/07/29/open-android-debug-log-in-device/index.html">
 <meta property="og:site_name" content="小灰灰写代码">
-<meta property="og:description" content="Android，Web，Windows Phone，iOS， 技术积累博客">
+<meta property="og:description" content="最近使用华为安卓真机调试 App 时发现 App 里的日志不完整， DEBUG 和 VERBOSE 级别的日志都不能显示，只有 INFO级别以上日志才能正常输出，刚开始以为是 Android Studio 配置和手机的问题，在进行了修改之后发现还是不行。最终在网上看到了相关的文章，是手机把Log关掉了的原因，在此记录下操作步骤。">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog/pic/Screenshot_2016-07-29-09-03-47.png">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog/pic/Screenshot_2016-07-29-09-01-14.png">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog/pic/Screenshot_2016-07-29-09-07-34.jpeg">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog/pic/Screenshot_2016-07-29-09-07-41.jpeg">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog/pic/Screenshot_2016-07-29-09-01-28.png">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog/pic/Screenshot_2016-07-29-09-07-48.jpeg">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog/pic/Screenshot_2016-07-29-09-02-03.png">
+<meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog/pic/Screenshot_2016-07-29-09-07-55.jpeg">
+<meta property="og:updated_time" content="2016-07-29T01:48:40.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小灰灰写代码">
-<meta name="twitter:description" content="Android，Web，Windows Phone，iOS， 技术积累博客">
+<meta name="twitter:title" content="打开华为 Android 手机 DEBUG 日志">
+<meta name="twitter:description" content="最近使用华为安卓真机调试 App 时发现 App 里的日志不完整， DEBUG 和 VERBOSE 级别的日志都不能显示，只有 INFO级别以上日志才能正常输出，刚开始以为是 Android Studio 配置和手机的问题，在进行了修改之后发现还是不行。最终在网上看到了相关的文章，是手机把Log关掉了的原因，在此记录下操作步骤。">
+<meta name="twitter:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog/pic/Screenshot_2016-07-29-09-03-47.png">
   
     <link rel="alternative" href="/atom.xml" title="小灰灰写代码" type="application/atom+xml">
   
@@ -233,57 +243,157 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
-  
-  
+      <div class="body-wrap"><article id="post-open-android-debug-log-in-device" class="article article-type-post" itemscope itemprop="blogPost">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/04/19/cross-site-duoshuo-comments-migration/" class="archive-article-date">
-  	<time datetime="2016-04-19T11:57:15.000Z" itemprop="datePublished">4月 19日</time>
+    <div class="article-meta">
+      <a href="/2016/07/29/open-android-debug-log-in-device/" class="article-date">
+  	<time datetime="2016-07-29T10:51:01.000Z" itemprop="datePublished">2016-07-29</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/04/19/cross-site-duoshuo-comments-migration/">站点间迁移多说评论</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      打开华为 Android 手机 DEBUG 日志
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/多说评论/">多说评论</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/迁移/">迁移</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Debug/">Debug</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tagsCN/Log/">Log</a></li></ul>
 	</div>
 
-          
+        
 	<div class="article-category tagcloud">
 	<a class="article-category-link" href="/categories/技术/">技术</a>
 	</div>
 
 
-        </div>
         <div class="clearfix"></div>
-    </header>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+        <!-- Table of Contents -->
+        
+          
+            <div id="toc" class="article-toc">
+            <h2>目录</h2>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#解决方法："><span class="toc-number">1.</span> <span class="toc-text">解决方法：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考"><span class="toc-number">2.</span> <span class="toc-text">参考</span></a></li></ol>
+            </div>
+            <script type="text/javascript">
+              var _article = document.getElementsByClassName('article')[0];
+              <!-- setTimeout("_article.style.marginRight = '211px'",0);  -->
+              setTimeout("_article.className += ' article2'",0);
+              setTimeout("document.getElementById('toc').style.right = '15px'", 0);
+            </script>
+          
+        
+        <p>最近使用华为安卓真机调试 App 时发现 App 里的日志不完整， <code>DEBUG</code> 和 <code>VERBOSE</code> 级别的日志都不能显示，只有 <code>INFO</code><br>级别以上日志才能正常输出，刚开始以为是 Android Studio 配置和手机的问题，在进行了修改之后发现还是不行。<br>最终在网上看到了相关的文章，是手机把Log关掉了的原因，在此记录下操作步骤。</p>
+<a id="more"></a>
+<h2 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h2><p>自己的华为荣耀 7 和公司的测试机 华为 P6 都进行了设置，最终都可以正常输出日志了。</p>
+<ol>
+<li>进入手机工程模式<br>打开手机拨号界面，然后输入：<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">*#*</span>#2846579#<span class="strong">*#*</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog/pic/Screenshot_2016-07-29-09-03-47.png" alt="输入代码"></p>
+<p>  这个时候可以看到工程菜单  </p>
+<p>  <img src="http://7xjzst.com1.z0.glb.clouddn.com/blog/pic/Screenshot_2016-07-29-09-01-14.png" alt="工程菜单-荣耀7"><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog/pic/Screenshot_2016-07-29-09-07-34.jpeg" alt="工程菜单-P6"><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog/pic/Screenshot_2016-07-29-09-07-41.jpeg" alt="工程菜单-P6"></p>
+<ol>
+<li><p>然后选择<code>后台设置</code>进入后台设置<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog/pic/Screenshot_2016-07-29-09-01-28.png" alt="后台设置-荣耀7"><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog/pic/Screenshot_2016-07-29-09-07-48.jpeg" alt="后台设置-P6"></p>
+</li>
+<li><p>打开 Log<br>点击<code>LOG设置</code>，选择<code>LOG 打开</code>，或者选择<code>AP日志</code>。<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog/pic/Screenshot_2016-07-29-09-02-03.png" alt="打开LOG-荣耀7"><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog/pic/Screenshot_2016-07-29-09-07-55.jpeg" alt="打开LOG-P6"></p>
+</li>
+<li><p>测试<br>回到要调试的应用，查看 Android Studio 里的 Android Monitor应该可以看到输出的 DEBUG 日志了，<br>如果看不到可能需要重启手机再试。</p>
+</li>
+</ol>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="http://blog.csdn.net/lyhDream/article/details/17034179" target="_blank" rel="external">android的log.d不显示结果</a></li>
+</ul>
+
+      
+    </div>
+    
   </div>
+
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/07/09/debug-python-project-in-intellij-idea/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">在 Intellij IDEA 15 下调试 Python 项目</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+      
+      <p style="height: 10px;"></p>
+<span id="busuanzi_container_page_pv"
+      style="display: inline;vertical-align: middle;width: 100%; position:absolute; bottom:0; text-align:center;font-size: x-small;color: darkcyan;margin-bottom: 8px;">
+  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+</span>
+<p style="height: 10px;"></p>
+
+      
+    
 </article>
+<div class="share">
   
-  
-    </div></section>
+  <div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_weixin">微信</a>
+		<a class="jiathis_button_cqq">QQ好友</a>
+		<a class="jiathis_button_qzone">QQ空间</a>
+		<a class="jiathis_button_tsina">新浪微博</a>
+		<a href="http://www.jiathis.com/share?uid=2080230" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+		<a class="jiathis_counter_style"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=2080230" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+<!-- JiaThis Button BEGIN -->
+
   
 
-    
+  
+</div>
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="open-android-debug-log-in-device" data-title="打开华为 Android 手机 DEBUG 日志" data-url="http://devlu.me/2016/07/29/open-android-debug-log-in-device/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"devlu"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
 
 </div>
       <footer id="footer">
@@ -324,8 +434,8 @@
 		mathjax: false,
 		animate: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false

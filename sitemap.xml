@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://devlu.me/2016/07/29/open-android-debug-log-in-device/</loc>
+    
+    <lastmod>2016-07-29T01:48:40.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://devlu.me/2016/07/09/debug-python-project-in-intellij-idea/</loc>
     
     <lastmod>2016-07-09T14:15:36.000Z</lastmod>

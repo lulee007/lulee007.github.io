@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://devlu.me/2016/07/29/open-android-debug-log-in-device/</loc>
+    <lastmod>2016-07-29T01:48:40.000Z</lastmod>
+    <data>
+        <display>
+        <title>打开华为 Android 手机 DEBUG 日志</title>
+        <pubTime>2016-07-29T10:51:01.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>Debug</tag>
+         
+        <tag>Log</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://devlu.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://devlu.me/2016/07/09/debug-python-project-in-intellij-idea/</loc>
     <lastmod>2016-07-09T14:15:36.000Z</lastmod>
     <data>
@@ -422,9 +446,9 @@
         
         <tag>Hexo</tag>
          
-        <tag>Mac</tag>
-         
         <tag>Github</tag>
+         
+        <tag>Mac</tag>
          
          
            
