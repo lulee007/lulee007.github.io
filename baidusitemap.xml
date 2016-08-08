@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://devlu.me/2016/01/23/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E9%85%8D%E7%BD%AE%E4%B9%8B-%E4%B8%BA%E8%87%AA%E5%B7%B1%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E7%AB%99%E5%86%85%E6%90%9C%E7%B4%A2/</loc>
+    <lastmod>2016-08-08T05:59:55.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo博客优化配置之--为自己博客添加站内搜索</title>
+        <pubTime>2016-01-23T09:55:14.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+        <tag>站内搜索</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://devlu.me/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://devlu.me/2016/07/29/open-android-debug-log-in-device/</loc>
     <lastmod>2016-07-29T01:48:40.000Z</lastmod>
     <data>
@@ -86,28 +108,6 @@
         <tag>多说评论</tag>
          
         <tag>迁移</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://devlu.me/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://devlu.me/2016/01/23/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E9%85%8D%E7%BD%AE%E4%B9%8B-%E4%B8%BA%E8%87%AA%E5%B7%B1%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E7%AB%99%E5%86%85%E6%90%9C%E7%B4%A2/</loc>
-    <lastmod>2016-03-08T02:14:19.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hexo博客优化配置之--为自己博客添加站内搜索</title>
-        <pubTime>2016-01-23T09:55:14.000Z</pubTime>
-        
-        <tag>Hexo</tag>
-         
-        <tag>站内搜索</tag>
          
          
            
@@ -446,9 +446,9 @@
         
         <tag>Hexo</tag>
          
-        <tag>Github</tag>
-         
         <tag>Mac</tag>
+         
+        <tag>Github</tag>
          
          
            

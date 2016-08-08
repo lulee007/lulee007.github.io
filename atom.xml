@@ -571,11 +571,11 @@
     <link href="http://devlu.me/2016/01/23/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E9%85%8D%E7%BD%AE%E4%B9%8B-%E4%B8%BA%E8%87%AA%E5%B7%B1%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E7%AB%99%E5%86%85%E6%90%9C%E7%B4%A2/"/>
     <id>http://devlu.me/2016/01/23/Hexo博客优化配置之-为自己博客添加站内搜索/</id>
     <published>2016-01-23T09:55:14.000Z</published>
-    <updated>2016-03-08T02:14:19.000Z</updated>
+    <updated>2016-08-08T05:59:55.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;在配置 Hexo 博客期间根据参考了很多网上的方法，进行站内搜索集成结果都不太满意：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;百度&lt;br&gt;搜索都是以在检索的时候加入&lt;code&gt;site:www.xxx.com&lt;/code&gt; 方式进行搜索，体验不是很好&lt;br&gt;而且百度这种搜索方式是你提交的 sitemap 链接到百度站内搜索收录才能在搜索结果中显示出来，结果我在测试的时候，&lt;br&gt;使用 github 和 gitcafe 进行测试时，发现百度都抓取不了这两个网站的数据了。只能作罢，在我的另一篇文章中有亲测结果，&lt;a href=&quot;2016/01/16/Hexo博客优化配置之-为自己博客添加搜索引擎网页收录/&quot;&gt;Hexo博客优化配置之–为自己博客添加搜索引擎网页收录&lt;/a&gt;。&lt;/li&gt;
+&lt;li&gt;百度&lt;br&gt;搜索都是以在检索的时候加入&lt;code&gt;site:www.xxx.com&lt;/code&gt; 方式进行搜索，体验不是很好&lt;br&gt;而且百度这种搜索方式是你提交的 sitemap 链接到百度站内搜索收录才能在搜索结果中显示出来，结果我在测试的时候，&lt;br&gt;使用 github 和 gitcafe 进行测试时，发现百度都抓取不了这两个网站的数据了。只能作罢，在我的另一篇文章中有亲测结果，&lt;a href=&quot;/2016/01/16/Hexo博客优化配置之-为自己博客添加搜索引擎网页收录/&quot;&gt;Hexo博客优化配置之–为自己博客添加搜索引擎网页收录&lt;/a&gt;。&lt;/li&gt;
 &lt;li&gt;Hexo 自带的 Google Search&lt;br&gt;这种和百度的搜索类似，检索的时候加入&lt;code&gt;site:www.xxx.com&lt;/code&gt; 方式进行搜索，用起来不爽。&lt;/li&gt;
 &lt;li&gt;Swiftype&lt;br&gt;先后参考了&lt;a href=&quot;http://www.jerryfu.net/post/search-engine-for-hexo-with-swiftype.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;jerryfu: 利用swiftype为hexo添加站内搜索&lt;/a&gt;和&lt;a href=&quot;http://blog.moyizhou.cn/web/search-engine-for-static-pages/#swiftype&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Rimo: 静态博客如何实现站内搜索&lt;/a&gt;以及&lt;a href=&quot;http://guoyuxiang.com/2015/07/27/%E5%9F%BA%E4%BA%8Eswiftype%E5%BA%94%E7%94%A8%E4%BA%8EHexo-Yilia-%E4%B8%BB%E9%A2%98%E7%9A%84%E7%AB%99%E5%86%85%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Mjolnir: 基于swiftype应用于Hexo Yilia 主题的站内搜索引擎&lt;/a&gt; 的文章，但是很奇怪，总觉得 swiftype 的接口不太稳定，在上面提到的这些博客中，只有Rimo的博客站内搜索是可&lt;br&gt;用的，其他的弹出来的搜索结果都是空白，我自己的博客里集成后测试也是空白，只好作罢。&lt;/li&gt;
 &lt;/ol&gt;
@@ -608,7 +608,7 @@
     
       &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;在配置 Hexo 博客期间根据参考了很多网上的方法，进行站内搜索集成结果都不太满意：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;百度&lt;br&gt;搜索都是以在检索的时候加入&lt;code&gt;site:www.xxx.com&lt;/code&gt; 方式进行搜索，体验不是很好&lt;br&gt;而且百度这种搜索方式是你提交的 sitemap 链接到百度站内搜索收录才能在搜索结果中显示出来，结果我在测试的时候，&lt;br&gt;使用 github 和 gitcafe 进行测试时，发现百度都抓取不了这两个网站的数据了。只能作罢，在我的另一篇文章中有亲测结果，&lt;a href=&quot;2016/01/16/Hexo博客优化配置之-为自己博客添加搜索引擎网页收录/&quot;&gt;Hexo博客优化配置之–为自己博客添加搜索引擎网页收录&lt;/a&gt;。&lt;/li&gt;
+&lt;li&gt;百度&lt;br&gt;搜索都是以在检索的时候加入&lt;code&gt;site:www.xxx.com&lt;/code&gt; 方式进行搜索，体验不是很好&lt;br&gt;而且百度这种搜索方式是你提交的 sitemap 链接到百度站内搜索收录才能在搜索结果中显示出来，结果我在测试的时候，&lt;br&gt;使用 github 和 gitcafe 进行测试时，发现百度都抓取不了这两个网站的数据了。只能作罢，在我的另一篇文章中有亲测结果，&lt;a href=&quot;/2016/01/16/Hexo博客优化配置之-为自己博客添加搜索引擎网页收录/&quot;&gt;Hexo博客优化配置之–为自己博客添加搜索引擎网页收录&lt;/a&gt;。&lt;/li&gt;
 &lt;li&gt;Hexo 自带的 Google Search&lt;br&gt;这种和百度的搜索类似，检索的时候加入&lt;code&gt;site:www.xxx.com&lt;/code&gt; 方式进行搜索，用起来不爽。&lt;/li&gt;
 &lt;li&gt;Swiftype&lt;br&gt;先后参考了&lt;a href=&quot;http://www.jerryfu.net/post/search-engine-for-hexo-with-swiftype.html&quot;&gt;jerryfu: 利用swiftype为hexo添加站内搜索&lt;/a&gt;和&lt;a href=&quot;http://blog.moyizhou.cn/web/search-engine-for-static-pages/#swiftype&quot;&gt;Rimo: 静态博客如何实现站内搜索&lt;/a&gt;以及&lt;a href=&quot;http://guoyuxiang.com/2015/07/27/%E5%9F%BA%E4%BA%8Eswiftype%E5%BA%94%E7%94%A8%E4%BA%8EHexo-Yilia-%E4%B8%BB%E9%A2%98%E7%9A%84%E7%AB%99%E5%86%85%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/&quot;&gt;Mjolnir: 基于swiftype应用于Hexo Yilia 主题的站内搜索引擎&lt;/a&gt; 的文章，但是很奇怪，总觉得 swiftype 的接口不太稳定，在上面提到的这些博客中，只有Rimo的博客站内搜索是可&lt;br&gt;用的，其他的弹出来的搜索结果都是空白，我自己的博客里集成后测试也是空白，只好作罢。&lt;/li&gt;
 &lt;/ol&gt;
@@ -717,7 +717,7 @@
     <published>2016-01-16T07:55:14.000Z</published>
     <updated>2016-02-17T11:15:45.000Z</updated>
     
-    <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;从今年的一月七号开始，这个 Hexo 博客折腾了差不多十天，在使用 Yilia 这个主题过程中，发现有些地方不太满意,就把源码 fork&lt;br&gt;下来一版本自己进行折腾。 在折腾这个站内搜索的功能时间最长， 看了网上的一些教程，没有一个搞的顺的。最后自己看着官方文档进行&lt;br&gt;了尝试，将就着搞的差不多了:&lt;br&gt;&lt;a href=&quot;2016/01/23/Hexo博客优化配置之-为自己博客添加站内搜索/&quot;&gt;Hexo博客优化配置之–为自己博客添加站内搜索&lt;/a&gt;&lt;br&gt;为了让博客内容尽可能的被&lt;strong&gt;百度&lt;/strong&gt;或者&lt;strong&gt;谷歌&lt;/strong&gt;搜索到,需要将自己的博客上的博客链接添加到搜索引擎收录中。&lt;br&gt;&lt;strong&gt;提醒:&lt;/strong&gt; 如果你的博客在 github.io 或者 gitcafe.io  上，想添加百度收录的直接 pass 吧。  &lt;/p&gt;
+    <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;从今年的一月七号开始，这个 Hexo 博客折腾了差不多十天，在使用 Yilia 这个主题过程中，发现有些地方不太满意,就把源码 fork&lt;br&gt;下来一版本自己进行折腾。 在折腾这个站内搜索的功能时间最长， 看了网上的一些教程，没有一个搞的顺的。最后自己看着官方文档进行&lt;br&gt;了尝试，将就着搞的差不多了:&lt;br&gt;&lt;a href=&quot;/2016/01/23/Hexo博客优化配置之-为自己博客添加站内搜索/&quot;&gt;Hexo博客优化配置之–为自己博客添加站内搜索&lt;/a&gt;&lt;br&gt;为了让博客内容尽可能的被&lt;strong&gt;百度&lt;/strong&gt;或者&lt;strong&gt;谷歌&lt;/strong&gt;搜索到,需要将自己的博客上的博客链接添加到搜索引擎收录中。&lt;br&gt;&lt;strong&gt;提醒:&lt;/strong&gt; 如果你的博客在 github.io 或者 gitcafe.io  上，想添加百度收录的直接 pass 吧。  &lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h2 id=&quot;百度&quot;&gt;&lt;a href=&quot;#百度&quot; class=&quot;headerlink&quot; title=&quot;百度&quot;&gt;&lt;/a&gt;百度&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt; 经过测试发现 gitcafe 也&lt;em&gt;不能够进行抓取&lt;/em&gt;了，以下内容仅是记录当时的尝试过程。&lt;/p&gt;
 &lt;h3 id=&quot;链接提交方式实测&quot;&gt;&lt;a href=&quot;#链接提交方式实测&quot; class=&quot;headerlink&quot; title=&quot;链接提交方式实测&quot;&gt;&lt;/a&gt;链接提交方式实测&lt;/h3&gt;&lt;blockquote&gt;
@@ -803,7 +803,7 @@ sitemap = [baidu_sitemap]
     
     <summary type="html">
     
-      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;从今年的一月七号开始，这个 Hexo 博客折腾了差不多十天，在使用 Yilia 这个主题过程中，发现有些地方不太满意,就把源码 fork&lt;br&gt;下来一版本自己进行折腾。 在折腾这个站内搜索的功能时间最长， 看了网上的一些教程，没有一个搞的顺的。最后自己看着官方文档进行&lt;br&gt;了尝试，将就着搞的差不多了:&lt;br&gt;&lt;a href=&quot;2016/01/23/Hexo博客优化配置之-为自己博客添加站内搜索/&quot;&gt;Hexo博客优化配置之–为自己博客添加站内搜索&lt;/a&gt;&lt;br&gt;为了让博客内容尽可能的被&lt;strong&gt;百度&lt;/strong&gt;或者&lt;strong&gt;谷歌&lt;/strong&gt;搜索到,需要将自己的博客上的博客链接添加到搜索引擎收录中。&lt;br&gt;&lt;strong&gt;提醒:&lt;/strong&gt; 如果你的博客在 github.io 或者 gitcafe.io  上，想添加百度收录的直接 pass 吧。  &lt;/p&gt;
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;从今年的一月七号开始，这个 Hexo 博客折腾了差不多十天，在使用 Yilia 这个主题过程中，发现有些地方不太满意,就把源码 fork&lt;br&gt;下来一版本自己进行折腾。 在折腾这个站内搜索的功能时间最长， 看了网上的一些教程，没有一个搞的顺的。最后自己看着官方文档进行&lt;br&gt;了尝试，将就着搞的差不多了:&lt;br&gt;&lt;a href=&quot;/2016/01/23/Hexo博客优化配置之-为自己博客添加站内搜索/&quot;&gt;Hexo博客优化配置之–为自己博客添加站内搜索&lt;/a&gt;&lt;br&gt;为了让博客内容尽可能的被&lt;strong&gt;百度&lt;/strong&gt;或者&lt;strong&gt;谷歌&lt;/strong&gt;搜索到,需要将自己的博客上的博客链接添加到搜索引擎收录中。&lt;br&gt;&lt;strong&gt;提醒:&lt;/strong&gt; 如果你的博客在 github.io 或者 gitcafe.io  上，想添加百度收录的直接 pass 吧。  &lt;/p&gt;
     
     </summary>
     
@@ -1321,9 +1321,9 @@ sitemap = [baidu_sitemap]
     
       <category term="Hexo" scheme="http://devlu.me/tagsCN/Hexo/"/>
     
-      <category term="Github" scheme="http://devlu.me/tagsCN/Github/"/>
-    
       <category term="Mac" scheme="http://devlu.me/tagsCN/Mac/"/>
+    
+      <category term="Github" scheme="http://devlu.me/tagsCN/Github/"/>
     
   </entry>
   
