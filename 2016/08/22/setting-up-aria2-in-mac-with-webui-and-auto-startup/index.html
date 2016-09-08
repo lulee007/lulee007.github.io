@@ -26,7 +26,7 @@
 轻量：运行时不会占用过多资源，">
 <meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog/pic/QQ20160823-1@2x.png">
 <meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/blog/pic/QQ20160823-0@2x.png">
-<meta property="og:updated_time" content="2016-08-23T09:28:00.000Z">
+<meta property="og:updated_time" content="2016-09-08T09:58:27.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="配置 Aria2 实现在 Mac 下自启动并且带网页端管理">
 <meta name="twitter:description" content="Mac 下下载百度网盘资源的时候速度简直太慢了，客户端太慢和网页端下载经常断开，最近在网上查看 NAS 相关资料时无意发现了一个『神器』Aria2支持 Mac，先来看看这个『神器』都有哪些特性：
@@ -299,7 +299,7 @@
           
             <div id="toc" class="article-toc">
             <h2>目录</h2>
-              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-number">1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置自启动"><span class="toc-number">2.</span> <span class="toc-text">配置自启动</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#下载-webui-aria2"><span class="toc-number">2.1.</span> <span class="toc-text">下载 webui-aria2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#编写自启脚本"><span class="toc-number">2.2.</span> <span class="toc-text">编写自启脚本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加到开机启动项"><span class="toc-number">2.3.</span> <span class="toc-text">添加到开机启动项</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#下载测试"><span class="toc-number">3.</span> <span class="toc-text">下载测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考"><span class="toc-number">4.</span> <span class="toc-text">参考</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-number">1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置自启动"><span class="toc-number">2.</span> <span class="toc-text">配置自启动</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#下载-webui-aria2"><span class="toc-number">2.1.</span> <span class="toc-text">下载 webui-aria2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#编写自启脚本"><span class="toc-number">2.2.</span> <span class="toc-text">编写自启脚本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改文件权限"><span class="toc-number">2.3.</span> <span class="toc-text">修改文件权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加到开机启动项"><span class="toc-number">2.4.</span> <span class="toc-text">添加到开机启动项</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#下载测试"><span class="toc-number">3.</span> <span class="toc-text">下载测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考"><span class="toc-number">4.</span> <span class="toc-text">参考</span></a></li></ol>
             </div>
             <script type="text/javascript">
               var _article = document.getElementsByClassName('article')[0];
@@ -325,6 +325,15 @@
 <h2 id="配置自启动"><a href="#配置自启动" class="headerlink" title="配置自启动"></a>配置自启动</h2><h3 id="下载-webui-aria2"><a href="#下载-webui-aria2" class="headerlink" title="下载 webui-aria2"></a>下载 webui-aria2</h3><p>先把<a href="https://github.com/ziahamza/webui-aria2" target="_blank" rel="external">webui-aria2</a>代码克隆到本地目录：<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">git</span>@github.com:ziahamza/webui-aria2.git</span><br></pre></td></tr></table></figure></p>
 <h3 id="编写自启脚本"><a href="#编写自启脚本" class="headerlink" title="编写自启脚本"></a>编写自启脚本</h3><p>进入到刚才的 webui-aria2目录下，新建一个文件<code>aria2.sh</code>：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">touch</span> <span class="selector-tag">aria2</span><span class="selector-class">.sh</span></span><br></pre></td></tr></table></figure></p>
 <p>然后输入下面的代码并保存：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"start aria2 server"</span></span><br><span class="line">aria2c &amp;</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"start aria2 web ui server"</span></span><br><span class="line"><span class="comment"># git@github.com:ziahamza/webui-aria2.git</span></span><br><span class="line"><span class="built_in">cd</span> /Users/xxx/MyData/data/github/web/webui-aria2</span><br><span class="line"><span class="comment">#nohup 的使用是十分方便的，只需在要处理的命令前加上nohup 即可，标准输出和标准错误缺省会被重定向到nohup.out 文件中,nohup.out 在 当前目录下</span></span><br><span class="line">nohup python -m SimpleHTTPServer 9099 &amp;</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"exiting"</span></span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="修改文件权限"><a href="#修改文件权限" class="headerlink" title="修改文件权限"></a>修改文件权限</h3><p><strong>更新: 2016年09月08日</strong></p>
+<ol>
+<li><p>给 aria2.sh 文件执行权限：</p>
+<figure class="highlight cos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod +<span class="keyword">x</span> aria2.sh</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>让 aria2.sh 默认用自己常用的 terminal 工具打开。</p>
+<p>右键文件 －&gt; 显示简介：设置“打开方式”为自己的 terminal即可。</p>
+</li>
+</ol>
 <h3 id="添加到开机启动项"><a href="#添加到开机启动项" class="headerlink" title="添加到开机启动项"></a>添加到开机启动项</h3><ol>
 <li>在 Mac 桌面顶部菜单中，点击苹果图标，在弹出的菜单中，点击进入<code>系统偏好设置</code>。</li>
 <li>在打开<code>系统偏好设置</code>后，然后点击进入<code>用户与群组</code>设置选项。</li>
@@ -336,6 +345,7 @@
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
 <li><a href="http://www.jianshu.com/p/1290f8e7b326" target="_blank" rel="external">Mac下载神器aria2</a></li>
 <li><a href="https://github.com/ziahamza/webui-aria2/blob/master/directurl.md" target="_blank" rel="external">DirectURL</a></li>
+<li><a href="http://makaiqian.com/setting-boot/" target="_blank" rel="external">mac环境下开机自启动Shell脚本</a></li>
 </ul>
 
       
