@@ -9,6 +9,7 @@
   <title>Hexo博客优化配置之--为自己博客添加搜索引擎网页收录 | 小灰灰写代码</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="前言从今年的一月七号开始，这个 Hexo 博客折腾了差不多十天，在使用 Yilia 这个主题过程中，发现有些地方不太满意,就把源码 fork下来一版本自己进行折腾。 在折腾这个站内搜索的功能时间最长， 看了网上的一些教程，没有一个搞的顺的。最后自己看着官方文档进行了尝试，将就着搞的差不多了:Hexo博客优化配置之–为自己博客添加站内搜索为了让博客内容尽可能的被百度或者谷歌搜索到,需要将自己的博客上">
+<meta name="keywords" content="Hexo,百度搜索链接收录,谷歌搜索链接收录">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo博客优化配置之--为自己博客添加搜索引擎网页收录">
 <meta property="og:url" content="http://devlu.me/2016/01/16/Hexo博客优化配置之-为自己博客添加搜索引擎网页收录/index.html">
@@ -313,7 +314,7 @@
 </blockquote>
 <p>最新的链接提交入口在<a href="http://zhanzhang.baidu.com/" target="_blank" rel="external">百度站长平台</a>&gt;&gt;<code>工具</code>板块左侧菜单栏下选择:<code>网页抓取</code>&gt;&gt;<code>链接提交</code>:<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160116-0%402x.png" alt="链接提交"></p>
 <h4 id="sitemap"><a href="#sitemap" class="headerlink" title="sitemap"></a>sitemap</h4><p>因为图个方便,在安装了<a href="https://github.com/coneycode/hexo-generator-baidu-sitemap" target="_blank" rel="external">百度 sitemap</a>后直接生成了适合百度的 sitemap ,所以就最先尝试了这个<code>sitemap</code>方式.<br>结果等了两天也没看状态更新过,一直是等待状态,太2了,是不是故意的.<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160116-1%402x.png" alt="等待"></p>
-<h4 id="自动推送"><a href="#自动推送" class="headerlink" title="自动推送"></a>自动推送</h4><p>这个简单,直接拷贝代码,放到网页中. 然并卵(笑哭)<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> bp = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</span><br><span class="line">    bp.src = <span class="string">'//push.zhanzhang.baidu.com/push.js'</span>;</span><br><span class="line">    <span class="keyword">var</span> s = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"script"</span>)[<span class="number">0</span>];</span><br><span class="line">    s.parentNode.insertBefore(bp, s);</span><br><span class="line">&#125;)();</span><br><span class="line"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="自动推送"><a href="#自动推送" class="headerlink" title="自动推送"></a>自动推送</h4><p>这个简单,直接拷贝代码,放到网页中. 然并卵(笑哭)<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> bp = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</div><div class="line">    bp.src = <span class="string">'//push.zhanzhang.baidu.com/push.js'</span>;</div><div class="line">    <span class="keyword">var</span> s = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"script"</span>)[<span class="number">0</span>];</div><div class="line">    s.parentNode.insertBefore(bp, s);</div><div class="line">&#125;)();</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <h4 id="手动提交"><a href="#手动提交" class="headerlink" title="手动提交"></a>手动提交</h4><p>这个简单直接把sitemap里的网址整理出来按照要求上传即可</p>
 <h3 id="主动推送"><a href="#主动推送" class="headerlink" title="主动推送"></a>主动推送</h3><p>最后试试看主动推送这里参考<a href="http://lovenight.github.io/2015/11/18/%E5%90%91%E7%99%BE%E5%BA%A6%E6%8E%A8%E9%80%81hexo%E5%8D%9A%E5%AE%A2%E6%89%80%E6%9C%89%E9%93%BE%E6%8E%A5%E7%9A%84Python%E8%84%9A%E6%9C%AC/" target="_blank" rel="external">lovenight 的向百度推送 hexo 博客所有链接的 Python 脚本</a><br>不太懂 python ,试着在 mac 下对 python 脚本进行了简单的修改:</p>
 <pre><code class="py">
@@ -397,18 +398,18 @@ sitemap = [baidu_sitemap]
     
 <nav id="article-nav">
   
-    <a href="/2016/01/18/Mac下重置Mysql的root密码/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/01/14/SSM-Struts2-Spring-Mybatis-Jersey-Web-项目搭建/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          Mac下重置Mysql的root密码
+          SSM：Struts2+Spring+Mybatis Web 项目搭建
         
       </div>
     </a>
   
   
-    <a href="/2016/01/14/SSM-Struts2-Spring-Mybatis-Jersey-Web-项目搭建/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">SSM：Struts2+Spring+Mybatis Web 项目搭建</div>
+    <a href="/2016/01/18/Mac下重置Mysql的root密码/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Mac下重置Mysql的root密码</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -448,25 +449,18 @@ sitemap = [baidu_sitemap]
   
 </div>
 
-<div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Hexo博客优化配置之-为自己博客添加搜索引擎网页收录" data-title="Hexo博客优化配置之--为自己博客添加搜索引擎网页收录" data-url="http://devlu.me/2016/01/16/Hexo博客优化配置之-为自己博客添加搜索引擎网页收录/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"devlu"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
-
+<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+<script>
+var cloudTieConfig = {
+  url: document.location.href, 
+  sourceId: "",
+  productKey: "a23ed1d0deba43af9931fb7e7658d75d",
+  target: "cloud-tie-wrapper"
+};
+var yunManualLoad = true;
+Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
+</script>
 
 
 
@@ -475,7 +469,7 @@ sitemap = [baidu_sitemap]
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2016 Lulee007
+    		&copy; 2017 Lulee007
     	</div>
       	<div class="footer-right">
       		由<a href="http://hexo.io/" target="_blank">Hexo</a>强力驱动  主题: <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> 来自 Litten

@@ -9,6 +9,7 @@
   <title>记录开发安卓应用时的各种『坑』 | 小灰灰写代码</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="在开发安卓应用过程中遇到了一些比较坑的问题，在这里记录下来。">
+<meta name="keywords" content="Android">
 <meta property="og:type" content="article">
 <meta property="og:title" content="记录开发安卓应用时的各种『坑』">
 <meta property="og:url" content="http://devlu.me/2016/03/02/all-kinds-of-trouble-in-android-development/index.html">
@@ -310,9 +311,9 @@
 </li>
 </ol>
 <p>在项目中使用了一些开源项目后，会导致本项目里的主题和第三方项目主题混乱如：<br> toolbar back button more[…]menu 显示颜色不对<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160306-10%402x.png" alt="wrong-color-icon"><br>通常使用<code>android:background=&quot;?attr/colorPrimaryDark&quot;</code>，如果颜色不对，可以改为指明 color<br>属性即可<code>android:background=&quot;@color/colorPrimaryDark&quot;</code></p>
-<h3 id="Android模拟位置出错"><a href="#Android模拟位置出错" class="headerlink" title="Android模拟位置出错"></a>Android模拟位置出错</h3><p>在Android 4.4 上出现错误：<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">IllegalArgumentException: Incomplete <span class="keyword">location</span> <span class="title">object</span>, missing timestamp <span class="keyword">or</span> accuracy?</span><br></pre></td></tr></table></figure></p>
+<h3 id="Android模拟位置出错"><a href="#Android模拟位置出错" class="headerlink" title="Android模拟位置出错"></a>Android模拟位置出错</h3><p>在Android 4.4 上出现错误：<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">IllegalArgumentException: Incomplete <span class="keyword">location</span> <span class="title">object</span>, missing timestamp <span class="keyword">or</span> accuracy?</div></pre></td></tr></table></figure></p>
 <blockquote>
-<p>之前使用这个工具未出现这个问题，在网上查了一下发现还是版本的问题，在android4.2之后的版本里对Location这个类做个细微的改动，增加了setElapsedRealtimeNanos和getElapsedRealtimeNanos两个方法。而上面的错误就是没有为location的实例设置ElapsedRealtimeNanos，为了能适应不同的版本，增加如下代码：<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">if</span>(Build.VERSION.SDK_INT &gt; <span class="number">16</span>)&#123;  </span><br><span class="line">    location<span class="selector-class">.setElapsedRealtimeNanos</span>(SystemClock.elapsedRealtimeNanos());  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>之前使用这个工具未出现这个问题，在网上查了一下发现还是版本的问题，在android4.2之后的版本里对Location这个类做个细微的改动，增加了setElapsedRealtimeNanos和getElapsedRealtimeNanos两个方法。而上面的错误就是没有为location的实例设置ElapsedRealtimeNanos，为了能适应不同的版本，增加如下代码：<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">if</span>(Build.VERSION.SDK_INT &gt; <span class="number">16</span>)&#123;  </div><div class="line">    location<span class="selector-class">.setElapsedRealtimeNanos</span>(SystemClock.elapsedRealtimeNanos());  </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 </blockquote>
 <p><strong> 参考： </strong><br><a href="http://blog.csdn.net/chzphoenix/article/details/25206953" target="_blank" rel="external">Android模拟位置出错</a></p>
 
@@ -325,18 +326,18 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/04/19/cross-site-duoshuo-comments-migration/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/02/22/add-transmission-in-miwif/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          站点间迁移多说评论
+          在小米路由器 mini 中安装 Transmission 下载器
         
       </div>
     </a>
   
   
-    <a href="/2016/02/22/add-transmission-in-miwif/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">在小米路由器 mini 中安装 Transmission 下载器</div>
+    <a href="/2016/04/19/cross-site-duoshuo-comments-migration/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">站点间迁移多说评论</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -376,25 +377,18 @@
   
 </div>
 
-<div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="all-kinds-of-trouble-in-android-development" data-title="记录开发安卓应用时的各种『坑』" data-url="http://devlu.me/2016/03/02/all-kinds-of-trouble-in-android-development/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"devlu"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
-
+<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+<script>
+var cloudTieConfig = {
+  url: document.location.href, 
+  sourceId: "",
+  productKey: "a23ed1d0deba43af9931fb7e7658d75d",
+  target: "cloud-tie-wrapper"
+};
+var yunManualLoad = true;
+Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
+</script>
 
 
 
@@ -403,7 +397,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2016 Lulee007
+    		&copy; 2017 Lulee007
     	</div>
       	<div class="footer-right">
       		由<a href="http://hexo.io/" target="_blank">Hexo</a>强力驱动  主题: <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> 来自 Litten

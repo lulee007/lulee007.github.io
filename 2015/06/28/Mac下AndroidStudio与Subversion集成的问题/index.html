@@ -9,6 +9,7 @@
   <title>Mac下Android Studio与Subversion集成的问题 | 小灰灰写代码</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="由于Mac10.10下的subversion版本是1.7，而使用smartsvn8.6 checkout版本提示需要upgrade to 1.8这样一来，使得android studio import 进来的svn项目无法使用集成好的subversion进行管理了，会出现如下错误：12svn: E155021: This client is too old to work  with the wo">
+<meta name="keywords" content="Mac,Android Studio,Subversion,SVN">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mac下Android Studio与Subversion集成的问题">
 <meta property="og:url" content="http://devlu.me/2015/06/28/Mac下AndroidStudio与Subversion集成的问题/index.html">
@@ -295,24 +296,24 @@
             </script>
           
         
-        <p>由于Mac10.10下的subversion版本是1.7，而使用smartsvn8.6 <code>checkout</code>版本提示需要<code>upgrade to 1.8</code><br>这样一来，使得android studio import 进来的svn项目无法使用集成好的subversion进行管理了，会出现如下错误：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">svn: E155021: This client is too old to work  </span><br><span class="line">with the working copy at xxx (format <span class="string">'31'</span>)</span><br></pre></td></tr></table></figure></p>
+        <p>由于Mac10.10下的subversion版本是1.7，而使用smartsvn8.6 <code>checkout</code>版本提示需要<code>upgrade to 1.8</code><br>这样一来，使得android studio import 进来的svn项目无法使用集成好的subversion进行管理了，会出现如下错误：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">svn: E155021: This client is too old to work  </div><div class="line">with the working copy at xxx (format <span class="string">'31'</span>)</div></pre></td></tr></table></figure></p>
 <p>进过一番搜索得到的解决方法记录如下：<br><a id="more"></a></p>
 <h2 id="升级subversion"><a href="#升级subversion" class="headerlink" title="升级subversion"></a><a name="updatesvn">升级subversion</a></h2><ul>
 <li><p><a name="brewupdatesvn">通过brew升级subversion:</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install svn</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install svn</div></pre></td></tr></table></figure>
 <p>安装完成之后会有提示：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">==&gt; Summary</span><br><span class="line">🍺  /usr/<span class="built_in">local</span>/Cellar/subversion/1.8.13: 116 files, 9.4M</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">==&gt; Summary</div><div class="line">🍺  /usr/<span class="built_in">local</span>/Cellar/subversion/1.8.13: 116 files, 9.4M</div></pre></td></tr></table></figure>
 <p>此时新的svn客户端被安装到<code>/usr/local/Cellar/subversion/1.8.13</code>目录下了。<br>查看原来svn的位置</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">which</span> svn</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">which</span> svn</div></pre></td></tr></table></figure>
 <p>得到如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/<span class="built_in">local</span>/bin/svn</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/<span class="built_in">local</span>/bin/svn</div></pre></td></tr></table></figure>
 <p>进入到这个<code>/usr/local/bin/svn</code>目录</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/bin/svn</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/bin/svn</div></pre></td></tr></table></figure>
 <p>备份当前svn到<code>bak.svn</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir bak.svn</span><br><span class="line">mv svn* ./bak.svn</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mkdir bak.svn</div><div class="line">mv svn* ./bak.svn</div></pre></td></tr></table></figure>
 </li>
 <li><p><a name="replacesvn">替换当前svn：</a><br>建立<code>/usr/local/Cellar/subversion/1.8.13</code>软连接到当前目录<code>usr/local/bin</code>  </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln <span class="_">-s</span> /usr/<span class="built_in">local</span>/Cellar/subversion/1.8.11/bin/svn* ./</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ln <span class="_">-s</span> /usr/<span class="built_in">local</span>/Cellar/subversion/1.8.11/bin/svn* ./</div></pre></td></tr></table></figure>
 <p>重新启动系统新的svn就可以用了。</p>
 </li>
 </ul>
@@ -332,18 +333,18 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/10/10/Mac下Cordova-Ionic-AngularJs做混合移动App开发之--安装环境配置/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/06/21/Mac-10-10-3下AndroidStudio单元测试-instrumentation/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          Mac下cordova+ionic+angularjs做混合移动app开发之--安装环境配置
+          Mac10.10.3下AndroidStudio单元测试——instrumentation
         
       </div>
     </a>
   
   
-    <a href="/2015/06/21/Mac-10-10-3下AndroidStudio单元测试-instrumentation/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Mac10.10.3下AndroidStudio单元测试——instrumentation</div>
+    <a href="/2015/10/10/Mac下Cordova-Ionic-AngularJs做混合移动App开发之--安装环境配置/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Mac下cordova+ionic+angularjs做混合移动app开发之--安装环境配置</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -383,25 +384,18 @@
   
 </div>
 
-<div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Mac下AndroidStudio与Subversion集成的问题" data-title="Mac下Android Studio与Subversion集成的问题" data-url="http://devlu.me/2015/06/28/Mac下AndroidStudio与Subversion集成的问题/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"devlu"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
-
+<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+<script>
+var cloudTieConfig = {
+  url: document.location.href, 
+  sourceId: "",
+  productKey: "a23ed1d0deba43af9931fb7e7658d75d",
+  target: "cloud-tie-wrapper"
+};
+var yunManualLoad = true;
+Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
+</script>
 
 
 
@@ -410,7 +404,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2016 Lulee007
+    		&copy; 2017 Lulee007
     	</div>
       	<div class="footer-right">
       		由<a href="http://hexo.io/" target="_blank">Hexo</a>强力驱动  主题: <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> 来自 Litten

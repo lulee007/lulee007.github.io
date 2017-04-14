@@ -9,6 +9,7 @@
   <title>Mac下使用Github与Hexo搭建静态博客 | 小灰灰写代码</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="前言从今年的一月七号开始,看到好友老孙在搞自己的 Hexo 博客,弄的挺起劲的。心生好奇也想搞搞,加之之前也在工作学习中看到不少人都有在自己的博客中发布一些自己的学习工作心得,然后自己 google 了一番发现眼前一亮,从去年年初开始就一直在用 markdown 做笔记,都是把工作学习中的笔记写在Wiz笔记里的，但是记在笔记里的终究不是用来分享。这次这个 Hexo 静态网页博客正好支持 markd">
+<meta name="keywords" content="Hexo,Mac,Github">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mac下使用Github与Hexo搭建静态博客">
 <meta property="og:url" content="http://devlu.me/2016/01/07/Mac下使用Github与Hexo搭建静态博客/index.html">
@@ -325,22 +326,22 @@
 </ul>
 </blockquote>
 <h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p>安装nodejs最佳方式是通过nvm来安装</p>
-<h4 id="通过nvm安装"><a href="#通过nvm安装" class="headerlink" title="通过nvm安装"></a>通过nvm安装</h4><p>通过cUrl安装nvm：<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl  http<span class="variable">s:</span>//raw.github.<span class="keyword">com</span>/creationix/nvm/master/install.<span class="keyword">sh</span> | <span class="keyword">sh</span></span><br></pre></td></tr></table></figure></p>
-<p>Once nvm is installed, restart the terminal and run the following command to install Node.js.<br>当nvm安装完成后，关闭terminal 然后再重新打开，并输入以下命令来安装Node.js:<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm <span class="keyword">install</span> <span class="number">4</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="通过nvm安装"><a href="#通过nvm安装" class="headerlink" title="通过nvm安装"></a>通过nvm安装</h4><p>通过cUrl安装nvm：<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl  http<span class="variable">s:</span>//raw.github.<span class="keyword">com</span>/creationix/nvm/master/install.<span class="keyword">sh</span> | <span class="keyword">sh</span></div></pre></td></tr></table></figure></p>
+<p>Once nvm is installed, restart the terminal and run the following command to install Node.js.<br>当nvm安装完成后，关闭terminal 然后再重新打开，并输入以下命令来安装Node.js:<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nvm <span class="keyword">install</span> <span class="number">4</span></div></pre></td></tr></table></figure></p>
 <h4 id="通过安装包来安装"><a href="#通过安装包来安装" class="headerlink" title="通过安装包来安装"></a>通过安装包来安装</h4><p>直接在<a href="http://nodejs.org/" target="_blank" rel="external">官网</a>下载并运行<a href="https://nodejs.org/dist/v5.4.0/node-v5.4.0.pkg" target="_blank" rel="external">安装包v5.4.0 Stable</a></p>
-<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>当Node.js安装完成后，这时就可以通过npm来安装hexo了：<br><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-<span class="keyword">cli</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>当Node.js安装完成后，这时就可以通过npm来安装hexo了：<br><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g hexo-<span class="keyword">cli</span></div></pre></td></tr></table></figure></p>
 <blockquote>
 <p>You may encounter some problems when compiling. Please install Xcode from App Store first. After Xcode is installed, open Xcode and go to Preferences -&gt; Download -&gt; Command Line Tools -&gt; Install to install command line tools.  </p>
 </blockquote>
-<p>如果在安装过程中编译出现了问题，请先从App Store安装Xcode，安装完Xcode后打开Xcode打开菜单栏 Preferences -&gt; Download -&gt; Command Line Tools -&gt; Install来安装xcode命令行工具。<br>或者直接通过命令行进行安装：<br><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcode-<span class="keyword">select</span> <span class="comment">--install</span></span><br></pre></td></tr></table></figure></p>
+<p>如果在安装过程中编译出现了问题，请先从App Store安装Xcode，安装完Xcode后打开Xcode打开菜单栏 Preferences -&gt; Download -&gt; Command Line Tools -&gt; Install来安装xcode命令行工具。<br>或者直接通过命令行进行安装：<br><figure class="highlight ada"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xcode-<span class="keyword">select</span> <span class="comment">--install</span></div></pre></td></tr></table></figure></p>
 <h2 id="Hexo初始化配置"><a href="#Hexo初始化配置" class="headerlink" title="Hexo初始化配置"></a>Hexo初始化配置</h2><p>这里参考了:  </p>
 <ul>
 <li>wsgzao的<a href="http://wsgzao.github.io/post/hexo-guide/" target="_blank" rel="external">使用GitHub和Hexo搭建免费静态Blog</a>  </li>
 <li>zipperary的<a href="http://zipperary.com/2013/05/29/hexo-guide-3/" target="_blank" rel="external">hexo系列教程</a></li>
 </ul>
-<h3 id="初始化hexo"><a href="#初始化hexo" class="headerlink" title="初始化hexo"></a>初始化hexo</h3><p>在Terminal里切换到一个空的目录下，我们将用来初始化hexo，假设我们选择的目录是<code>hexo</code><br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将会在我们的`hexo`目录下生成一个新的文件夹`blog`</span></span><br><span class="line">hexo init blog</span><br><span class="line"><span class="comment"># 切换到新生成的blog目录下</span></span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line"><span class="comment"># 安装hexo的依赖项</span></span><br><span class="line">hexo install</span><br></pre></td></tr></table></figure></p>
-<p>最终会得到以下的目录结构<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── scripts</span><br><span class="line">├── source</span><br><span class="line"><span class="string">|      ├── _drafts</span></span><br><span class="line"><span class="string">|      └── _posts</span></span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure></p>
-<h3 id="本地查看"><a href="#本地查看" class="headerlink" title="本地查看"></a>本地查看</h3><p>现在我们已经搭建起本地的hexo博客了，在我们的<code>blog</code>目录下执行以下命令，然后到浏览器输入<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> 看看效果。<br><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">generate</span></span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure></p>
+<h3 id="初始化hexo"><a href="#初始化hexo" class="headerlink" title="初始化hexo"></a>初始化hexo</h3><p>在Terminal里切换到一个空的目录下，我们将用来初始化hexo，假设我们选择的目录是<code>hexo</code><br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 将会在我们的`hexo`目录下生成一个新的文件夹`blog`</span></div><div class="line">hexo init blog</div><div class="line"><span class="comment"># 切换到新生成的blog目录下</span></div><div class="line"><span class="built_in">cd</span> blog</div><div class="line"><span class="comment"># 安装hexo的依赖项</span></div><div class="line">hexo install</div></pre></td></tr></table></figure></p>
+<p>最终会得到以下的目录结构<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── _config.yml</div><div class="line">├── package.json</div><div class="line">├── scaffolds</div><div class="line">├── scripts</div><div class="line">├── source</div><div class="line"><span class="string">|      ├── _drafts</span></div><div class="line"><span class="string">|      └── _posts</span></div><div class="line">└── themes</div></pre></td></tr></table></figure></p>
+<h3 id="本地查看"><a href="#本地查看" class="headerlink" title="本地查看"></a>本地查看</h3><p>现在我们已经搭建起本地的hexo博客了，在我们的<code>blog</code>目录下执行以下命令，然后到浏览器输入<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> 看看效果。<br><figure class="highlight verilog"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo <span class="keyword">generate</span></div><div class="line">hexo server</div></pre></td></tr></table></figure></p>
 <p>至此我们的本地博客就搭建好了。</p>
 <h2 id="创建一个Github-Repository"><a href="#创建一个Github-Repository" class="headerlink" title="创建一个Github Repository"></a>创建一个Github Repository</h2><p>在自己Github主页右下角，创建一个新的repository。比如我的Github账号是<code>lulee007</code>，那么我应该创建的repository名字应该是<code>lulee.github.io</code>。</p>
 <h2 id="配置Githu-SSH-keys"><a href="#配置Githu-SSH-keys" class="headerlink" title="配置Githu SSH keys"></a>配置Githu SSH keys</h2><p>因为目前已经在使用Github,而且注册也比较简单，也可以参考：<a href="http://pchou.info/web-build/2013/01/03/build-github-blog-page-01.html" target="_blank" rel="external">一步步在GitHub上创建博客主页 全系列</a>by pchou，所以直接说一下SSH keys的配置。</p>
@@ -348,11 +349,11 @@
 <p>SSH keys are a way to identify trusted computers, without involving passwords.</p>
 </blockquote>
 <p>利用ssh keys 可以直接和github建立链接而不必每次pull request都输入用户名密码。<br>有英语阅读能力的直接参考官方的<a href="https://help.github.com/articles/generating-ssh-keys/" target="_blank" rel="external">Generating SSH keys</a>。里面讲的很详细，包括如何利用已有的ssh keys，加入到github上。</p>
-<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><h3 id="修改Hexo配置"><a href="#修改Hexo配置" class="headerlink" title="修改Hexo配置"></a>修改Hexo配置</h3><p>要部署到github上需要修改Hexo的<code>_config.yml</code>，<code>_config.yml</code>在<code>blog</code>目录下，要把下面的<code>lulee007</code>都换成你的账号名：<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: git</span><br><span class="line">  <span class="attribute">repository</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:lulee007/lulee007.github.io.git</span><br><span class="line">  <span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure></p>
+<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><h3 id="修改Hexo配置"><a href="#修改Hexo配置" class="headerlink" title="修改Hexo配置"></a>修改Hexo配置</h3><p>要部署到github上需要修改Hexo的<code>_config.yml</code>，<code>_config.yml</code>在<code>blog</code>目录下，要把下面的<code>lulee007</code>都换成你的账号名：<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">deploy</span>:</div><div class="line">  <span class="attribute">type</span>: git</div><div class="line">  <span class="attribute">repository</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:lulee007/lulee007.github.io.git</div><div class="line">  <span class="attribute">branch</span>: master</div></pre></td></tr></table></figure></p>
 <p><strong><em>注意：</em></strong> 每个冒号后面都要有一个空格<br><code>repository</code> 这个链接也可以直接在github上复制：<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160108-0%402x.png" alt="copyssh"></p>
-<h3 id="安装git插件到hexo中"><a href="#安装git插件到hexo中" class="headerlink" title="安装git插件到hexo中"></a>安装git插件到hexo中</h3><p>由于默认hexo没有没安装此插件，所以得手动安装<br>在Terminal中在<code>blog</code>目录下输入：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-deployer-git <span class="comment">--save</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="安装git插件到hexo中"><a href="#安装git插件到hexo中" class="headerlink" title="安装git插件到hexo中"></a>安装git插件到hexo中</h3><p>由于默认hexo没有没安装此插件，所以得手动安装<br>在Terminal中在<code>blog</code>目录下输入：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> hexo-deployer-git <span class="comment">--save</span></div></pre></td></tr></table></figure></p>
 <p>这样就安装好了git插件了，配合上面的配置，很方便就能把博客部署到github上。</p>
-<h3 id="部署到github"><a href="#部署到github" class="headerlink" title="部署到github"></a>部署到github</h3><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">generate</span></span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="部署到github"><a href="#部署到github" class="headerlink" title="部署到github"></a>部署到github</h3><figure class="highlight verilog"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo <span class="keyword">generate</span></div><div class="line">hexo deploy</div></pre></td></tr></table></figure>
 <p><strong><em>注意：</em></strong>每次修改文章后，都需要执行：  </p>
 <pre><code>hexo generate
 </code></pre><p>这样才能把修改后的文章重新生成静态网页。<br>最后：<br>在浏览器访问lulee007.github.io就能看到你的成就了</p>
@@ -366,18 +367,18 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/01/08/Hexo博客优化配置/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/01/07/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          Hexo博客优化配置
+          Hello World
         
       </div>
     </a>
   
   
-    <a href="/2016/01/07/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2016/01/08/Hexo博客优化配置/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hexo博客优化配置</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -417,25 +418,18 @@
   
 </div>
 
-<div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Mac下使用Github与Hexo搭建静态博客" data-title="Mac下使用Github与Hexo搭建静态博客" data-url="http://devlu.me/2016/01/07/Mac下使用Github与Hexo搭建静态博客/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"devlu"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
-
+<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+<script>
+var cloudTieConfig = {
+  url: document.location.href, 
+  sourceId: "",
+  productKey: "a23ed1d0deba43af9931fb7e7658d75d",
+  target: "cloud-tie-wrapper"
+};
+var yunManualLoad = true;
+Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
+</script>
 
 
 
@@ -444,7 +438,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2016 Lulee007
+    		&copy; 2017 Lulee007
     	</div>
       	<div class="footer-right">
       		由<a href="http://hexo.io/" target="_blank">Hexo</a>强力驱动  主题: <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> 来自 Litten

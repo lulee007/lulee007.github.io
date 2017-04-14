@@ -9,6 +9,7 @@
   <title>Mac下重置Mysql的root密码 | 小灰灰写代码</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="前言Mac上装了Mysql很长时间了，结果每次用的时候发现密码都不对上，密码忘了，这次长记性了，记下来。参考:mac上安装mysql 以及root密码忘记或权限错误的解决办法">
+<meta name="keywords" content="Mac,Mysql,root,重置密码">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mac下重置Mysql的root密码">
 <meta property="og:url" content="http://devlu.me/2016/01/18/Mac下重置Mysql的root密码/index.html">
@@ -293,16 +294,16 @@
         
         <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Mac上装了Mysql很长时间了，结果每次用的时候发现密码都不对上，密码忘了，这次长记性了，记下来。<br><a href="http://www.zuimoban.com/jiaocheng/mysql/2548.html" target="_blank" rel="external">参考:mac上安装mysql 以及root密码忘记或权限错误的解决办法</a></p>
 <a id="more"></a>
-<h2 id="配置mysql环境变量"><a href="#配置mysql环境变量" class="headerlink" title="配置mysql环境变量"></a>配置mysql环境变量</h2><p>在终端中输入：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo vi ~/bash_profile</span><br><span class="line"><span class="comment"># 按`i`键进入编辑模式</span></span><br></pre></td></tr></table></figure></p>
-<p>输入以下内容到文件最后:<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># mysql</span></span><br><span class="line"><span class="built_in">alias</span> mysql=<span class="string">'/usr/local/mysql/bin/mysql'</span></span><br><span class="line"><span class="built_in">alias</span> mysqladmin=<span class="string">'/usr/local/mysql/bin/mysqladmin'</span></span><br><span class="line"><span class="comment"># 按`esc`键，然后输入`wq`回车，即可保存退出。</span></span><br></pre></td></tr></table></figure></p>
-<p>一般出现的错误如下：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ERROR 1045 (28000): Access denied <span class="keyword">for</span> user <span class="string">'root'</span>@<span class="string">'localhost'</span> (using password: NO)</span><br><span class="line"><span class="comment"># 或者</span></span><br><span class="line">ERROR 1045 (28000): Access denied <span class="keyword">for</span> user <span class="string">'root'</span>@<span class="string">'localhost'</span> (using password: YES)</span><br></pre></td></tr></table></figure></p>
+<h2 id="配置mysql环境变量"><a href="#配置mysql环境变量" class="headerlink" title="配置mysql环境变量"></a>配置mysql环境变量</h2><p>在终端中输入：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo vi ~/bash_profile</div><div class="line"><span class="comment"># 按`i`键进入编辑模式</span></div></pre></td></tr></table></figure></p>
+<p>输入以下内容到文件最后:<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># mysql</span></div><div class="line"><span class="built_in">alias</span> mysql=<span class="string">'/usr/local/mysql/bin/mysql'</span></div><div class="line"><span class="built_in">alias</span> mysqladmin=<span class="string">'/usr/local/mysql/bin/mysqladmin'</span></div><div class="line"><span class="comment"># 按`esc`键，然后输入`wq`回车，即可保存退出。</span></div></pre></td></tr></table></figure></p>
+<p>一般出现的错误如下：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ERROR 1045 (28000): Access denied <span class="keyword">for</span> user <span class="string">'root'</span>@<span class="string">'localhost'</span> (using password: NO)</div><div class="line"><span class="comment"># 或者</span></div><div class="line">ERROR 1045 (28000): Access denied <span class="keyword">for</span> user <span class="string">'root'</span>@<span class="string">'localhost'</span> (using password: YES)</div></pre></td></tr></table></figure></p>
 <h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ol>
 <li>停止 mysql server<br>通常是在 ‘系统偏好设置’ &gt; MySQL &gt; ‘Stop MySQL Server’  </li>
 <li><p>打开终端，输入：</p>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /usr/<span class="keyword">local</span>/mysql/bin/mysqld_safe <span class="comment">--skip-grant-tables</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo /usr/<span class="keyword">local</span>/mysql/bin/mysqld_safe <span class="comment">--skip-grant-tables</span></div></pre></td></tr></table></figure>
 </li>
 <li><p>打开<strong>另一个新终端</strong>，输入:</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo /usr/<span class="built_in">local</span>/mysql/bin/mysql -u root</span><br><span class="line"><span class="comment"># 输入 Mac 系统用户密码后，</span></span><br><span class="line"><span class="comment"># 直接敲回车进入 mysql 终端，输入：</span></span><br><span class="line">UPDATE mysql.user SET authentication_string=PASSWORD(<span class="string">'新密码'</span>) WHERE User=<span class="string">'root'</span>;</span><br><span class="line">FLUSH PRIVILEGES;</span><br><span class="line"><span class="comment"># 输入 \q 退出 mysql 终端</span></span><br><span class="line">\q</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">sudo /usr/<span class="built_in">local</span>/mysql/bin/mysql -u root</div><div class="line"><span class="comment"># 输入 Mac 系统用户密码后，</span></div><div class="line"><span class="comment"># 直接敲回车进入 mysql 终端，输入：</span></div><div class="line">UPDATE mysql.user SET authentication_string=PASSWORD(<span class="string">'新密码'</span>) WHERE User=<span class="string">'root'</span>;</div><div class="line">FLUSH PRIVILEGES;</div><div class="line"><span class="comment"># 输入 \q 退出 mysql 终端</span></div><div class="line">\q</div></pre></td></tr></table></figure>
 </li>
 <li><p>重启MySQL.</p>
 </li>
@@ -317,18 +318,18 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/01/19/Git常用命令/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/01/16/Hexo博客优化配置之-为自己博客添加搜索引擎网页收录/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          Git常用命令
+          Hexo博客优化配置之--为自己博客添加搜索引擎网页收录
         
       </div>
     </a>
   
   
-    <a href="/2016/01/16/Hexo博客优化配置之-为自己博客添加搜索引擎网页收录/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hexo博客优化配置之--为自己博客添加搜索引擎网页收录</div>
+    <a href="/2016/01/19/Git常用命令/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Git常用命令</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -368,25 +369,18 @@
   
 </div>
 
-<div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Mac下重置Mysql的root密码" data-title="Mac下重置Mysql的root密码" data-url="http://devlu.me/2016/01/18/Mac下重置Mysql的root密码/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"devlu"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
-
+<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+<script>
+var cloudTieConfig = {
+  url: document.location.href, 
+  sourceId: "",
+  productKey: "a23ed1d0deba43af9931fb7e7658d75d",
+  target: "cloud-tie-wrapper"
+};
+var yunManualLoad = true;
+Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
+</script>
 
 
 
@@ -395,7 +389,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2016 Lulee007
+    		&copy; 2017 Lulee007
     	</div>
       	<div class="footer-right">
       		由<a href="http://hexo.io/" target="_blank">Hexo</a>强力驱动  主题: <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> 来自 Litten

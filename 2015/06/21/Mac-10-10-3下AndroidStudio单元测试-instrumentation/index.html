@@ -8,18 +8,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>Mac10.10.3下AndroidStudio单元测试——instrumentation | 小灰灰写代码</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="测试环境：
-
-Android Studio 1.2.2
-Mac OS 10.10.3">
+  <meta name="description" content="测试环境：  Android Studio 1.2.2 Mac OS 10.10.3">
+<meta name="keywords" content="Mac,Android Studio,Instrumentation,单元测试,Unit Test">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mac10.10.3下AndroidStudio单元测试——instrumentation">
 <meta property="og:url" content="http://devlu.me/2015/06/21/Mac-10-10-3下AndroidStudio单元测试-instrumentation/index.html">
 <meta property="og:site_name" content="小灰灰写代码">
-<meta property="og:description" content="测试环境：
-
-Android Studio 1.2.2
-Mac OS 10.10.3">
+<meta property="og:description" content="测试环境：  Android Studio 1.2.2 Mac OS 10.10.3">
 <meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-1@2x.png">
 <meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-2@2x.png">
 <meta property="og:image" content="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-3@2x.png">
@@ -31,10 +26,7 @@ Mac OS 10.10.3">
 <meta property="og:updated_time" content="2016-01-11T12:55:30.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac10.10.3下AndroidStudio单元测试——instrumentation">
-<meta name="twitter:description" content="测试环境：
-
-Android Studio 1.2.2
-Mac OS 10.10.3">
+<meta name="twitter:description" content="测试环境：  Android Studio 1.2.2 Mac OS 10.10.3">
 <meta name="twitter:image" content="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-1@2x.png">
   
     <link rel="alternative" href="/atom.xml" title="小灰灰写代码" type="application/atom+xml">
@@ -317,15 +309,15 @@ Mac OS 10.10.3">
 <a id="more"></a>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a><a name="code">代码</a></h2><ol>
 <li><p><a name="createclass">新建类代码：</a></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestHelper</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isNull</span><span class="params">(String a)</span></span>&#123;</span><br><span class="line">      <span class="keyword">if</span>(a==<span class="keyword">null</span>)&#123;</span><br><span class="line">          <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">      &#125;<span class="keyword">else</span></span><br><span class="line">      &#123;</span><br><span class="line">          <span class="keyword">return</span>  <span class="keyword">false</span>;</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isLowCase</span><span class="params">(String a)</span></span>&#123;</span><br><span class="line">      <span class="keyword">return</span> a.toLowerCase().equals(a);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestHelper</span> </span>&#123;</div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isNull</span><span class="params">(String a)</span></span>&#123;</div><div class="line">      <span class="keyword">if</span>(a==<span class="keyword">null</span>)&#123;</div><div class="line">          <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">      &#125;<span class="keyword">else</span></div><div class="line">      &#123;</div><div class="line">          <span class="keyword">return</span>  <span class="keyword">false</span>;</div><div class="line">      &#125;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isLowCase</span><span class="params">(String a)</span></span>&#123;</div><div class="line">      <span class="keyword">return</span> a.toLowerCase().equals(a);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 <li><p><a name="genTestClass">通过android studio 提示自动生成测试代码：<br>把光标移到类名称上，然后按组合键<code>alt</code>+<code>enter</code>，选择第一个<em>Create Test</em>如下图：<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-1@2x.png" alt="Create Test"><br>弹出生成测试类对话框，其中superclass选择<code>InstrumentationTestCase</code>，<br>勾选需要测试的方法,点击Ok后选择生成的目标package文件夹就可以了。<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-2@2x.png" alt="TestCase Dialog"><br>会在src/Androidtest package目录下生成对应的测试类<code>TestHelper</code></a></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestHelperTest</span> <span class="keyword">extends</span> <span class="title">InstrumentationTestCase</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testIsNull</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        TestHelper testHelper =<span class="keyword">new</span> TestHelper();</span><br><span class="line">        assertEquals(<span class="keyword">true</span>, testHelper.isNull(<span class="keyword">null</span>));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testIsLowCase</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        TestHelper testHelper =<span class="keyword">new</span> TestHelper();</span><br><span class="line">        assertEquals(<span class="keyword">true</span>, testHelper.isLowCase(<span class="string">"C"</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestHelperTest</span> <span class="keyword">extends</span> <span class="title">InstrumentationTestCase</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testIsNull</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">        TestHelper testHelper =<span class="keyword">new</span> TestHelper();</div><div class="line">        assertEquals(<span class="keyword">true</span>, testHelper.isNull(<span class="keyword">null</span>));</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testIsLowCase</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">        TestHelper testHelper =<span class="keyword">new</span> TestHelper();</div><div class="line">        assertEquals(<span class="keyword">true</span>, testHelper.isLowCase(<span class="string">"C"</span>));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ol>
 <h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a><a name="test">测试</a></h2><p>在android studio一排按钮的最上层，点击“运行”旁边的配置按钮，选择“edit configurations”<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-3@2x.png" alt="run config"><br>在配置里点击新建按钮，添加“Android Test”<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-4@2x.png" alt="add new config"><br>给Test添加一个名称Name:“MyTest”<br>选择Module为“app”<br>Test对象为“All in package”,并确认Package框里选择的是我们测试类的所在的包名。<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-5@2x.png" alt="set config"><br>点击Ok后，点击菜单栏里的Run图标<br>等待启动完成后在输出栏里可以看到我们的测试结果：<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-6@2x.png" alt="test resutl"><br>可以看到我们的测试结果有<em>Done:4 of 4 Failed:1</em> 一个错误，testIsLowCase 传入的时<code>C</code>不是小写字母。  </p>
-<h2 id="添加测试"><a href="#添加测试" class="headerlink" title="添加测试"></a><a name="addtest">添加测试</a></h2><p>打开刚才的测试类TestHelper,添加一个方法：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">addTest</span><span class="params">(<span class="keyword">int</span> a)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a+a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>将光标放到 addTest名称上，按组合键<code>alt</code>+<code>enter</code>选择 Generate missed test methods<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-8@2x.png" alt="generate missed test mothod"><br>选择需要添加的TestMethod<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-9@2x.png" alt="choose missed methods"><br>这时候会在TestHelperTest类里生成新的测试方法：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testAddTest</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="添加测试"><a href="#添加测试" class="headerlink" title="添加测试"></a><a name="addtest">添加测试</a></h2><p>打开刚才的测试类TestHelper,添加一个方法：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">addTest</span><span class="params">(<span class="keyword">int</span> a)</span></span>&#123;</div><div class="line">    <span class="keyword">return</span> a+a;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>将光标放到 addTest名称上，按组合键<code>alt</code>+<code>enter</code>选择 Generate missed test methods<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-8@2x.png" alt="generate missed test mothod"><br>选择需要添加的TestMethod<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/pic_QQ20150628-9@2x.png" alt="choose missed methods"><br>这时候会在TestHelperTest类里生成新的测试方法：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testAddTest</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>添加好代码就可以进行测试了。</p>
 
       
@@ -337,18 +329,18 @@ Mac OS 10.10.3">
     
 <nav id="article-nav">
   
-    <a href="/2015/06/28/Mac下AndroidStudio与Subversion集成的问题/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/06/12/CentOS-5-5下安装Countly-Web-Server过程记录/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          Mac下Android Studio与Subversion集成的问题
+          CentOS5.5下安装Countly-Web-Server过程记录
         
       </div>
     </a>
   
   
-    <a href="/2015/06/12/CentOS-5-5下安装Countly-Web-Server过程记录/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">CentOS5.5下安装Countly-Web-Server过程记录</div>
+    <a href="/2015/06/28/Mac下AndroidStudio与Subversion集成的问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Mac下Android Studio与Subversion集成的问题</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -388,25 +380,18 @@ Mac OS 10.10.3">
   
 </div>
 
-<div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Mac-10-10-3下AndroidStudio单元测试-instrumentation" data-title="Mac10.10.3下AndroidStudio单元测试——instrumentation" data-url="http://devlu.me/2015/06/21/Mac-10-10-3下AndroidStudio单元测试-instrumentation/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"devlu"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
-
+<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+<script>
+var cloudTieConfig = {
+  url: document.location.href, 
+  sourceId: "",
+  productKey: "a23ed1d0deba43af9931fb7e7658d75d",
+  target: "cloud-tie-wrapper"
+};
+var yunManualLoad = true;
+Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
+</script>
 
 
 
@@ -415,7 +400,7 @@ Mac OS 10.10.3">
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2016 Lulee007
+    		&copy; 2017 Lulee007
     	</div>
       	<div class="footer-right">
       		由<a href="http://hexo.io/" target="_blank">Hexo</a>强力驱动  主题: <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> 来自 Litten

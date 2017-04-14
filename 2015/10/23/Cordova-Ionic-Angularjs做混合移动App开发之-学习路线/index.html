@@ -8,31 +8,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>Cordova+Ionic+AngularJs做混合移动App开发之--学习路线 | 小灰灰写代码</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="环境搭建参考另一篇：Mac下安装cordova+ionic+angularjs做混合移动app开发
-常规开发：标准的mvc模式:
-
-m: 模型 service api获取数据
-c: 控制器 controller
-v: 视图 数据绑定，展示数据 html">
+  <meta name="description" content="环境搭建参考另一篇：Mac下安装cordova+ionic+angularjs做混合移动app开发 常规开发：标准的mvc模式:  m: 模型 service api获取数据 c: 控制器 controller v: 视图 数据绑定，展示数据 html">
+<meta name="keywords" content="Cordova,Ionic,AngularJs,Hybrid App,HTML5,混合型移动应用">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Cordova+Ionic+AngularJs做混合移动App开发之--学习路线">
 <meta property="og:url" content="http://devlu.me/2015/10/23/Cordova-Ionic-Angularjs做混合移动App开发之-学习路线/index.html">
 <meta property="og:site_name" content="小灰灰写代码">
-<meta property="og:description" content="环境搭建参考另一篇：Mac下安装cordova+ionic+angularjs做混合移动app开发
-常规开发：标准的mvc模式:
-
-m: 模型 service api获取数据
-c: 控制器 controller
-v: 视图 数据绑定，展示数据 html">
+<meta property="og:description" content="环境搭建参考另一篇：Mac下安装cordova+ionic+angularjs做混合移动app开发 常规开发：标准的mvc模式:  m: 模型 service api获取数据 c: 控制器 controller v: 视图 数据绑定，展示数据 html">
 <meta property="og:updated_time" content="2016-01-18T05:46:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Cordova+Ionic+AngularJs做混合移动App开发之--学习路线">
-<meta name="twitter:description" content="环境搭建参考另一篇：Mac下安装cordova+ionic+angularjs做混合移动app开发
-常规开发：标准的mvc模式:
-
-m: 模型 service api获取数据
-c: 控制器 controller
-v: 视图 数据绑定，展示数据 html">
+<meta name="twitter:description" content="环境搭建参考另一篇：Mac下安装cordova+ionic+angularjs做混合移动app开发 常规开发：标准的mvc模式:  m: 模型 service api获取数据 c: 控制器 controller v: 视图 数据绑定，展示数据 html">
   
     <link rel="alternative" href="/atom.xml" title="小灰灰写代码" type="application/atom+xml">
   
@@ -314,7 +300,7 @@ v: 视图 数据绑定，展示数据 html">
 <li>v: 视图 数据绑定，展示数据 html</li>
 </ul>
 <a id="more"></a>
-<h2 id="插件开发："><a href="#插件开发：" class="headerlink" title="插件开发："></a>插件开发：</h2><h2 id="真机模拟器调试"><a href="#真机模拟器调试" class="headerlink" title="真机模拟器调试"></a>真机模拟器调试</h2><h3 id="android"><a href="#android" class="headerlink" title="android"></a>android</h3><h3 id="ios"><a href="#ios" class="headerlink" title="ios"></a>ios</h3><h2 id="常用命令："><a href="#常用命令：" class="headerlink" title="常用命令："></a>常用命令：</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 构建所有平台代码</span></span><br><span class="line">ionic build</span><br><span class="line"><span class="comment"># 构建Android</span></span><br><span class="line">ionic build android</span><br><span class="line"><span class="comment"># 构建ios 模拟器</span></span><br><span class="line">ionic build ios</span><br><span class="line"><span class="comment"># 构建ios 设备</span></span><br><span class="line">ionic build --device ios</span><br><span class="line"><span class="comment"># 运行app到设备上</span></span><br><span class="line">ionic run --device ios/android</span><br><span class="line"><span class="comment"># 运行在模拟器上（android genymotion 请用--device）</span></span><br><span class="line">ionic run --emulate ios/android</span><br><span class="line"></span><br><span class="line"><span class="comment"># 开启本地浏览器调试</span></span><br><span class="line">ionic serve</span><br><span class="line"><span class="comment"># 添加ios平台</span></span><br><span class="line">ionic platform add ios</span><br><span class="line"><span class="comment"># 移除android平台</span></span><br><span class="line">ionic platform remove android</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装插件 xxx可以为id，目录，url</span></span><br><span class="line">cordova plugin add xxx</span><br><span class="line"><span class="comment"># 移除插件 xxx只能为插件id</span></span><br><span class="line">cordova plugin remove xxxx</span><br></pre></td></tr></table></figure>
+<h2 id="插件开发："><a href="#插件开发：" class="headerlink" title="插件开发："></a>插件开发：</h2><h2 id="真机模拟器调试"><a href="#真机模拟器调试" class="headerlink" title="真机模拟器调试"></a>真机模拟器调试</h2><h3 id="android"><a href="#android" class="headerlink" title="android"></a>android</h3><h3 id="ios"><a href="#ios" class="headerlink" title="ios"></a>ios</h3><h2 id="常用命令："><a href="#常用命令：" class="headerlink" title="常用命令："></a>常用命令：</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 构建所有平台代码</span></div><div class="line">ionic build</div><div class="line"><span class="comment"># 构建Android</span></div><div class="line">ionic build android</div><div class="line"><span class="comment"># 构建ios 模拟器</span></div><div class="line">ionic build ios</div><div class="line"><span class="comment"># 构建ios 设备</span></div><div class="line">ionic build --device ios</div><div class="line"><span class="comment"># 运行app到设备上</span></div><div class="line">ionic run --device ios/android</div><div class="line"><span class="comment"># 运行在模拟器上（android genymotion 请用--device）</span></div><div class="line">ionic run --emulate ios/android</div><div class="line"></div><div class="line"><span class="comment"># 开启本地浏览器调试</span></div><div class="line">ionic serve</div><div class="line"><span class="comment"># 添加ios平台</span></div><div class="line">ionic platform add ios</div><div class="line"><span class="comment"># 移除android平台</span></div><div class="line">ionic platform remove android</div><div class="line"></div><div class="line"><span class="comment"># 安装插件 xxx可以为id，目录，url</span></div><div class="line">cordova plugin add xxx</div><div class="line"><span class="comment"># 移除插件 xxx只能为插件id</span></div><div class="line">cordova plugin remove xxxx</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -325,18 +311,18 @@ v: 视图 数据绑定，展示数据 html">
     
 <nav id="article-nav">
   
-    <a href="/2016/01/07/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/10/10/Mac下Cordova-Ionic-AngularJs做混合移动App开发之--安装环境配置/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          Hello World
+          Mac下cordova+ionic+angularjs做混合移动app开发之--安装环境配置
         
       </div>
     </a>
   
   
-    <a href="/2015/10/10/Mac下Cordova-Ionic-AngularJs做混合移动App开发之--安装环境配置/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Mac下cordova+ionic+angularjs做混合移动app开发之--安装环境配置</div>
+    <a href="/2016/01/07/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -376,25 +362,18 @@ v: 视图 数据绑定，展示数据 html">
   
 </div>
 
-<div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Cordova-Ionic-Angularjs做混合移动App开发之-学习路线" data-title="Cordova+Ionic+AngularJs做混合移动App开发之--学习路线" data-url="http://devlu.me/2015/10/23/Cordova-Ionic-Angularjs做混合移动App开发之-学习路线/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"devlu"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
-
+<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+<script>
+var cloudTieConfig = {
+  url: document.location.href, 
+  sourceId: "",
+  productKey: "a23ed1d0deba43af9931fb7e7658d75d",
+  target: "cloud-tie-wrapper"
+};
+var yunManualLoad = true;
+Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
+</script>
 
 
 
@@ -403,7 +382,7 @@ v: 视图 数据绑定，展示数据 html">
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2016 Lulee007
+    		&copy; 2017 Lulee007
     	</div>
       	<div class="footer-right">
       		由<a href="http://hexo.io/" target="_blank">Hexo</a>强力驱动  主题: <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> 来自 Litten

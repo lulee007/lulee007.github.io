@@ -9,6 +9,7 @@
   <title>在 Intellij IDEA 15 下调试 Python 项目 | 小灰灰写代码</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="最近学着使用 Python 写了几个小脚本放在树莓派下面执行一些命令，没有系统学习过 Python，完全是 Google-Coding，或者在 Python 控制台里练习各种写法，所以在 Intellij 下调试就比较重要了，能够及时错误，并修正代码。在此也总结下在写 Python 脚本常使用的经验。">
+<meta name="keywords" content="Intellij IDEA,Python,Scrapy">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在 Intellij IDEA 15 下调试 Python 项目">
 <meta property="og:url" content="http://devlu.me/2016/07/09/debug-python-project-in-intellij-idea/index.html">
@@ -304,25 +305,25 @@
 <p>virtualenv 通过创建独立 Python 开发环境的工具, 来解决依赖、版本以及间接权限问题。 比如一个项目依赖 Django1.3 而当前全局开发环境为 Django1.7, 版本跨度过大, 导致不兼容使项目无法正在运行, 使用 virtualenv 可以解决这些问题。<br>virtualenv 创建一个拥有自己安装目录的环境, 这个环境不与其他虚拟环境共享库, 能够方便的管理 Python 版本和管理Python 库</p>
 </blockquote>
 <p>之前没有尝试使用 virtualenv 因为觉得好麻烦，后来 python 脚本写多了，测试多了，发现好多包有冲突，也不方便将写好的脚本放到其他机器上运行，因为有时候会忘记安装了哪些包，所以最终尝试使用 virtualenv 来分离 python 项目的包依赖问题，当时也方便移植到我的树莓派上面。</p>
-<h3 id="virtualenv-安装"><a href="#virtualenv-安装" class="headerlink" title="virtualenv 安装"></a>virtualenv 安装</h3><p>直接使用<code>pip</code>包管理器进行安装：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pip install virtualenv</span><br><span class="line"><span class="comment"># 或者需要使用 更高级别权限</span></span><br><span class="line">sudo pi install virtualenv</span><br></pre></td></tr></table></figure></p>
+<h3 id="virtualenv-安装"><a href="#virtualenv-安装" class="headerlink" title="virtualenv 安装"></a>virtualenv 安装</h3><p>直接使用<code>pip</code>包管理器进行安装：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">pip install virtualenv</div><div class="line"><span class="comment"># 或者需要使用 更高级别权限</span></div><div class="line">sudo pi install virtualenv</div></pre></td></tr></table></figure></p>
 <h3 id="virtualenv-基本使用"><a href="#virtualenv-基本使用" class="headerlink" title="virtualenv 基本使用"></a>virtualenv 基本使用</h3><ol>
-<li>为项目配置 virtualenv 环境，在项目目录下执行：<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">virtualenv ./</span><br><span class="line"><span class="comment"># output</span></span><br><span class="line">New python executable <span class="keyword">in</span></span><br><span class="line">Installing setuptools, pip...done.</span><br></pre></td></tr></table></figure>
+<li>为项目配置 virtualenv 环境，在项目目录下执行：<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">virtualenv ./</div><div class="line"><span class="comment"># output</span></div><div class="line">New python executable <span class="keyword">in</span></div><div class="line">Installing setuptools, pip...done.</div></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>这个时候会在当前目录下多出三个目录：<code>bin</code>、<code>lib</code>和<code>include</code></p>
 <ol>
 <li><p>激活 virtualenv，还是在当前项目目录下执行：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ./bin/activate</span><br><span class="line"><span class="comment"># output，注意这个时候在 终端下前面会多一个(xxxx)，这样表示已经激活当前 virtualenv</span></span><br><span class="line">(xxxx)➜  xxxx</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">source</span> ./bin/activate</div><div class="line"><span class="comment"># output，注意这个时候在 终端下前面会多一个(xxxx)，这样表示已经激活当前 virtualenv</span></div><div class="line">(xxxx)➜  xxxx</div></pre></td></tr></table></figure>
 </li>
 <li><p>virtualenv 其他命令：</p>
 <ul>
 <li><p>查看当前依赖包：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">pip list</span><br><span class="line"><span class="comment"># output 以下是当前已安装的包</span></span><br><span class="line">pip (8.1.2)</span><br><span class="line">setuptools (24.0.1)</span><br><span class="line">wheel (0.29.0)</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">pip list</div><div class="line"><span class="comment"># output 以下是当前已安装的包</span></div><div class="line">pip (8.1.2)</div><div class="line">setuptools (24.0.1)</div><div class="line">wheel (0.29.0)</div></pre></td></tr></table></figure>
 </li>
 <li><p>安装依赖包:<br>新建一个<code>requirements.txt</code>文件，然后将需要的包写在里面即可，如：</p>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">requests</span>==<span class="number">2.9</span>.<span class="number">1</span></span><br><span class="line"><span class="attr">beautifulsoup4</span>==<span class="number">4.4</span>.<span class="number">1</span></span><br><span class="line"><span class="attr">lxml</span>==<span class="number">3.6</span>.<span class="number">0</span></span><br><span class="line"><span class="attr">Pillow</span>==<span class="number">2.2</span>.<span class="number">1</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="attr">requests</span>==<span class="number">2.9</span>.<span class="number">1</span></div><div class="line"><span class="attr">beautifulsoup4</span>==<span class="number">4.4</span>.<span class="number">1</span></div><div class="line"><span class="attr">lxml</span>==<span class="number">3.6</span>.<span class="number">0</span></div><div class="line"><span class="attr">Pillow</span>==<span class="number">2.2</span>.<span class="number">1</span></div></pre></td></tr></table></figure>
 <p>然后使用命令进行安装：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">  pip install -r requirements.txt</span><br><span class="line">  ```  </span><br><span class="line">  这样就会批量的进行安装依赖项了。</span><br><span class="line"></span><br><span class="line">* 关闭 virtualenv</span><br><span class="line">```bash</span><br><span class="line">deactivate</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">  pip install -r requirements.txt</div><div class="line">  ```  </div><div class="line">  这样就会批量的进行安装依赖项了。</div><div class="line"></div><div class="line">* 关闭 virtualenv</div><div class="line">```bash</div><div class="line">deactivate</div></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
@@ -340,7 +341,7 @@
 </ol>
 <h2 id="普通-Python-脚本调试"><a href="#普通-Python-脚本调试" class="headerlink" title="普通 Python 脚本调试"></a>普通 Python 脚本调试</h2><p>在有了上面的操作步骤之后，接下来对普通的 Python 脚本进行调试就比较方便了。</p>
 <h3 id="添加-Python-SDK"><a href="#添加-Python-SDK" class="headerlink" title="添加 Python SDK"></a>添加 Python SDK</h3><p>配置入口在项目的设置里，选择菜单栏<code>File</code>-&gt;<code>Project Structure...</code>，如图：<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160709-6@2x.png" alt="add python sdk"><br>依次选择：左侧的<code>Project</code>-&gt;右侧的<code>Project SDK</code>-&gt;<code>New</code>，剩下的步骤可以参考上面的第2,3步骤。</p>
-<h3 id="添加代码文件并进行调试"><a href="#添加代码文件并进行调试" class="headerlink" title="添加代码文件并进行调试"></a>添加代码文件并进行调试</h3><p>新建 <code>test.py</code> 文件，输入以下内容：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">print</span> <span class="string">'test in python ,debug with intellij'</span></span><br><span class="line">test_str=<span class="string">'hello world'</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">'welcome boy!! \n %s'</span> % test_str</span><br></pre></td></tr></table></figure></p>
+<h3 id="添加代码文件并进行调试"><a href="#添加代码文件并进行调试" class="headerlink" title="添加代码文件并进行调试"></a>添加代码文件并进行调试</h3><p>新建 <code>test.py</code> 文件，输入以下内容：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">print</span> <span class="string">'test in python ,debug with intellij'</span></div><div class="line">test_str=<span class="string">'hello world'</span></div><div class="line"><span class="keyword">print</span> <span class="string">'welcome boy!! \n %s'</span> % test_str</div></pre></td></tr></table></figure></p>
 <p>然后在这个文件第2行添加一个断点，然后右击选择<code>Debug test</code><br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160709-7@2x.png" alt="debug"><br>这时进入<code>Debug</code>模式，可以查看变量值，修改变量值。<br><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog_pic_QQ20160709-8@2x.png" alt="debug"></p>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://stackoverflow.com/questions/24769117/how-do-i-configure-a-python-interpreter-in-intellij-idea-with-the-pycharm-plugin" target="_blank" rel="external">How do I configure a Python interpreter in IntelliJ IDEA with the PyCharm plugin?</a><br><a href="http://www.jianshu.com/p/08c657bd34f1" target="_blank" rel="external">Python–Virtualenv简明教程</a></p>
 
@@ -353,18 +354,18 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/07/29/open-android-debug-log-in-device/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/05/05/write-restful-api-doc-with-apiblueprint/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          打开华为 Android 手机 DEBUG 日志
+          使用 API BluePrint 编写 RESTful 接口文档
         
       </div>
     </a>
   
   
-    <a href="/2016/05/05/write-restful-api-doc-with-apiblueprint/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">使用 API BluePrint 编写 RESTful 接口文档</div>
+    <a href="/2016/07/29/open-android-debug-log-in-device/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">打开华为 Android 手机 DEBUG 日志</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -404,25 +405,18 @@
   
 </div>
 
-<div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="debug-python-project-in-intellij-idea" data-title="在 Intellij IDEA 15 下调试 Python 项目" data-url="http://devlu.me/2016/07/09/debug-python-project-in-intellij-idea/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"devlu"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
-
+<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+<script>
+var cloudTieConfig = {
+  url: document.location.href, 
+  sourceId: "",
+  productKey: "a23ed1d0deba43af9931fb7e7658d75d",
+  target: "cloud-tie-wrapper"
+};
+var yunManualLoad = true;
+Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
+</script>
 
 
 
@@ -431,7 +425,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2016 Lulee007
+    		&copy; 2017 Lulee007
     	</div>
       	<div class="footer-right">
       		由<a href="http://hexo.io/" target="_blank">Hexo</a>强力驱动  主题: <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> 来自 Litten

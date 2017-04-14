@@ -9,6 +9,7 @@
   <title>打开华为 Android 手机 DEBUG 日志 | 小灰灰写代码</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="最近使用华为安卓真机调试 App 时发现 App 里的日志不完整， DEBUG 和 VERBOSE 级别的日志都不能显示，只有 INFO级别以上日志才能正常输出，刚开始以为是 Android Studio 配置和手机的问题，在进行了修改之后发现还是不行。最终在网上看到了相关的文章，是手机把Log关掉了的原因，在此记录下操作步骤。">
+<meta name="keywords" content="Android,Debug,Log">
 <meta property="og:type" content="article">
 <meta property="og:title" content="打开华为 Android 手机 DEBUG 日志">
 <meta property="og:url" content="http://devlu.me/2016/07/29/open-android-debug-log-in-device/index.html">
@@ -304,7 +305,7 @@
 <a id="more"></a>
 <h2 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h2><p>自己的华为荣耀 7 和公司的测试机 华为 P6 都进行了设置，最终都可以正常输出日志了。</p>
 <ol>
-<li>进入手机工程模式<br>打开手机拨号界面，然后输入：<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">*#*</span>#2846579#<span class="strong">*#*</span></span><br></pre></td></tr></table></figure>
+<li>进入手机工程模式<br>打开手机拨号界面，然后输入：<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="strong">*#*</span>#2846579#<span class="strong">*#*</span></div></pre></td></tr></table></figure>
 </li>
 </ol>
 <p><img src="http://7xjzst.com1.z0.glb.clouddn.com/blog/pic/Screenshot_2016-07-29-09-03-47.png" alt="输入代码"></p>
@@ -331,18 +332,18 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/08/22/setting-up-aria2-in-mac-with-webui-and-auto-startup/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/07/09/debug-python-project-in-intellij-idea/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          配置 Aria2 实现在 Mac 下自启动并且带网页端管理
+          在 Intellij IDEA 15 下调试 Python 项目
         
       </div>
     </a>
   
   
-    <a href="/2016/07/09/debug-python-project-in-intellij-idea/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">在 Intellij IDEA 15 下调试 Python 项目</div>
+    <a href="/2016/08/22/setting-up-aria2-in-mac-with-webui-and-auto-startup/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">配置 Aria2 实现在 Mac 下自启动并且带网页端管理</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -382,25 +383,18 @@
   
 </div>
 
-<div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="open-android-debug-log-in-device" data-title="打开华为 Android 手机 DEBUG 日志" data-url="http://devlu.me/2016/07/29/open-android-debug-log-in-device/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"devlu"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
-
+<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+<script>
+var cloudTieConfig = {
+  url: document.location.href, 
+  sourceId: "",
+  productKey: "a23ed1d0deba43af9931fb7e7658d75d",
+  target: "cloud-tie-wrapper"
+};
+var yunManualLoad = true;
+Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
+</script>
 
 
 
@@ -409,7 +403,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2016 Lulee007
+    		&copy; 2017 Lulee007
     	</div>
       	<div class="footer-right">
       		由<a href="http://hexo.io/" target="_blank">Hexo</a>强力驱动  主题: <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> 来自 Litten

@@ -9,6 +9,7 @@
   <title>Git常用命令 | 小灰灰写代码</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="记录自己在使用git 过程中常用的命令">
+<meta name="keywords" content="Git命令">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git常用命令">
 <meta property="og:url" content="http://devlu.me/2016/01/19/Git常用命令/index.html">
@@ -292,20 +293,20 @@
           
         
         <p>记录自己在使用git 过程中常用的命令<br><a id="more"></a></p>
-<h2 id="基础命令"><a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h2><h3 id="设置用户"><a href="#设置用户" class="headerlink" title="设置用户"></a>设置用户</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user<span class="selector-class">.name</span> <span class="string">"Your Name"</span></span><br><span class="line">git config --global user<span class="selector-class">.email</span> <span class="string">"email@example.com"</span></span><br></pre></td></tr></table></figure>
-<h3 id="初始化仓库"><a href="#初始化仓库" class="headerlink" title="初始化仓库"></a>初始化仓库</h3><p>初始化空目录<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout git<span class="meta">@github</span>.<span class="string">com:</span>xxx/aaaa.git</span><br></pre></td></tr></table></figure></p>
-<p>将已有项目加入 git 管理<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line"># Initialized empty Git repository in <span class="regexp">/Users/</span>xxx<span class="regexp">/.git/</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="添加文件"><a href="#添加文件" class="headerlink" title="添加文件"></a>添加文件</h3><p>添加一个或多个，以空格隔开<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add <span class="built_in">file</span>-path-<span class="keyword">with</span>-name1 <span class="built_in">file</span>-path-<span class="keyword">with</span>-name2 <span class="built_in">file</span>-path-<span class="keyword">with</span>-name3 [<span class="built_in">file</span>-path-<span class="keyword">with</span>-<span class="built_in">name</span>-n]</span><br></pre></td></tr></table></figure></p>
-<p>添加所有文件<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">git</span> <span class="keyword">add </span>.</span><br></pre></td></tr></table></figure></p>
-<h3 id="移除已经添加的文件"><a href="#移除已经添加的文件" class="headerlink" title="移除已经添加的文件"></a>移除已经添加的文件</h3><p>移除已经经过 add 操作但未进行 commit 操作的文件<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">reset</span> <span class="keyword">HEAD</span> &lt;<span class="keyword">file</span>&gt;...</span><br></pre></td></tr></table></figure></p>
-<h3 id="提交加入的文件到仓库"><a href="#提交加入的文件到仓库" class="headerlink" title="提交加入的文件到仓库"></a>提交加入的文件到仓库</h3><p>加入的文件可以是新文件也可以是修改过的文件<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git</span> commit -m <span class="string">"写上提交此次的说明"</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="撤销已经commit的文件"><a href="#撤销已经commit的文件" class="headerlink" title="撤销已经commit的文件"></a>撤销已经commit的文件</h3><p>撤销已经 commit 但未进行 push 操作的文件<br>首先使用<code>git reset HEAD^</code>退回到前一版本，然后被<code>commit</code>的文件会变为<code>added</code>状态，使用<code>git reset HEAD &lt;file&gt;</code>取消 add 操作<br><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># 这是之前进行的 commit</span></span><br><span class="line"><span class="meta"># git commit -m "add file 1"</span></span><br><span class="line">git reset --soft HEAD^ #或HEAD^意为取消最后commit</span><br><span class="line"><span class="meta"># 继续 git add 其他操作</span></span><br><span class="line"><span class="meta"># git add file-2</span></span><br><span class="line"><span class="meta"># git commit -m "add file 2"</span></span><br><span class="line">git commit --amend -m <span class="string">"new commit"</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="基础命令"><a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h2><h3 id="设置用户"><a href="#设置用户" class="headerlink" title="设置用户"></a>设置用户</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global user<span class="selector-class">.name</span> <span class="string">"Your Name"</span></div><div class="line">git config --global user<span class="selector-class">.email</span> <span class="string">"email@example.com"</span></div></pre></td></tr></table></figure>
+<h3 id="初始化仓库"><a href="#初始化仓库" class="headerlink" title="初始化仓库"></a>初始化仓库</h3><p>初始化空目录<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout git<span class="meta">@github</span>.<span class="string">com:</span>xxx/aaaa.git</div></pre></td></tr></table></figure></p>
+<p>将已有项目加入 git 管理<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git init</div><div class="line"># Initialized empty Git repository in <span class="regexp">/Users/</span>xxx<span class="regexp">/.git/</span></div></pre></td></tr></table></figure></p>
+<h3 id="添加文件"><a href="#添加文件" class="headerlink" title="添加文件"></a>添加文件</h3><p>添加一个或多个，以空格隔开<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git add <span class="built_in">file</span>-path-<span class="keyword">with</span>-name1 <span class="built_in">file</span>-path-<span class="keyword">with</span>-name2 <span class="built_in">file</span>-path-<span class="keyword">with</span>-name3 [<span class="built_in">file</span>-path-<span class="keyword">with</span>-<span class="built_in">name</span>-n]</div></pre></td></tr></table></figure></p>
+<p>添加所有文件<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">git</span> <span class="keyword">add </span>.</div></pre></td></tr></table></figure></p>
+<h3 id="移除已经添加的文件"><a href="#移除已经添加的文件" class="headerlink" title="移除已经添加的文件"></a>移除已经添加的文件</h3><p>移除已经经过 add 操作但未进行 commit 操作的文件<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">reset</span> <span class="keyword">HEAD</span> &lt;<span class="keyword">file</span>&gt;...</div></pre></td></tr></table></figure></p>
+<h3 id="提交加入的文件到仓库"><a href="#提交加入的文件到仓库" class="headerlink" title="提交加入的文件到仓库"></a>提交加入的文件到仓库</h3><p>加入的文件可以是新文件也可以是修改过的文件<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git</span> commit -m <span class="string">"写上提交此次的说明"</span></div></pre></td></tr></table></figure></p>
+<h3 id="撤销已经commit的文件"><a href="#撤销已经commit的文件" class="headerlink" title="撤销已经commit的文件"></a>撤销已经commit的文件</h3><p>撤销已经 commit 但未进行 push 操作的文件<br>首先使用<code>git reset HEAD^</code>退回到前一版本，然后被<code>commit</code>的文件会变为<code>added</code>状态，使用<code>git reset HEAD &lt;file&gt;</code>取消 add 操作<br><figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta"># 这是之前进行的 commit</span></div><div class="line"><span class="meta"># git commit -m "add file 1"</span></div><div class="line">git reset --soft HEAD^ #或HEAD^意为取消最后commit</div><div class="line"><span class="meta"># 继续 git add 其他操作</span></div><div class="line"><span class="meta"># git add file-2</span></div><div class="line"><span class="meta"># git commit -m "add file 2"</span></div><div class="line">git commit --amend -m <span class="string">"new commit"</span></div></pre></td></tr></table></figure></p>
 <p>这时候 <code>add file 1</code>将被撤销，<code>add file 2</code> 和 <code>new commit</code> 将被合并成新的 <code>new commit</code></p>
-<h3 id="查看状态"><a href="#查看状态" class="headerlink" title="查看状态"></a>查看状态</h3><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">status</span></span><br></pre></td></tr></table></figure>
-<h3 id="查看-commit-历史"><a href="#查看-commit-历史" class="headerlink" title="查看 commit 历史"></a>查看 commit 历史</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br></pre></td></tr></table></figure>
-<h3 id="查看所有-commit-操作历史"><a href="#查看所有-commit-操作历史" class="headerlink" title="查看所有 commit 操作历史"></a>查看所有 commit 操作历史</h3><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git</span> reflog</span><br></pre></td></tr></table></figure>
-<h3 id="从知识库中删除现有文件"><a href="#从知识库中删除现有文件" class="headerlink" title="从知识库中删除现有文件"></a>从知识库中删除现有文件</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -name .DS_Store -print0 | xargs -0 git rm <span class="_">-f</span> --ignore-unmatch</span><br></pre></td></tr></table></figure>
-<p>添加新的规则到<code>.gitignore</code><br><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">.DS_Store</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="查看状态"><a href="#查看状态" class="headerlink" title="查看状态"></a>查看状态</h3><figure class="highlight fortran"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">status</span></div></pre></td></tr></table></figure>
+<h3 id="查看-commit-历史"><a href="#查看-commit-历史" class="headerlink" title="查看 commit 历史"></a>查看 commit 历史</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">log</span></div></pre></td></tr></table></figure>
+<h3 id="查看所有-commit-操作历史"><a href="#查看所有-commit-操作历史" class="headerlink" title="查看所有 commit 操作历史"></a>查看所有 commit 操作历史</h3><figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git</span> reflog</div></pre></td></tr></table></figure>
+<h3 id="从知识库中删除现有文件"><a href="#从知识库中删除现有文件" class="headerlink" title="从知识库中删除现有文件"></a>从知识库中删除现有文件</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">find . -name .DS_Store -print0 | xargs -0 git rm <span class="_">-f</span> --ignore-unmatch</div></pre></td></tr></table></figure>
+<p>添加新的规则到<code>.gitignore</code><br><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="title">.DS_Store</span></div></pre></td></tr></table></figure></p>
 <p>然后<br>git add .gitignore<br>git commit -m ‘.DS_Store banished!’</p>
 <h3 id="TO-BE-CONTINUE"><a href="#TO-BE-CONTINUE" class="headerlink" title="TO BE CONTINUE"></a>TO BE CONTINUE</h3><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
 <li><a href="http://www.cnblogs.com/newpanderking/p/4005698.html" target="_blank" rel="external">git 命令常用总结</a></li>
@@ -321,18 +322,18 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/01/23/Hexo博客优化配置之-为自己博客添加站内搜索/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/01/18/Mac下重置Mysql的root密码/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          Hexo博客优化配置之--为自己博客添加站内搜索
+          Mac下重置Mysql的root密码
         
       </div>
     </a>
   
   
-    <a href="/2016/01/18/Mac下重置Mysql的root密码/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Mac下重置Mysql的root密码</div>
+    <a href="/2016/01/23/Hexo博客优化配置之-为自己博客添加站内搜索/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hexo博客优化配置之--为自己博客添加站内搜索</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -372,25 +373,18 @@
   
 </div>
 
-<div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Git常用命令" data-title="Git常用命令" data-url="http://devlu.me/2016/01/19/Git常用命令/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"devlu"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
-
+<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+<script>
+var cloudTieConfig = {
+  url: document.location.href, 
+  sourceId: "",
+  productKey: "a23ed1d0deba43af9931fb7e7658d75d",
+  target: "cloud-tie-wrapper"
+};
+var yunManualLoad = true;
+Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
+</script>
 
 
 
@@ -399,7 +393,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2016 Lulee007
+    		&copy; 2017 Lulee007
     	</div>
       	<div class="footer-right">
       		由<a href="http://hexo.io/" target="_blank">Hexo</a>强力驱动  主题: <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> 来自 Litten
